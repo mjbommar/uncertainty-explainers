@@ -13,3 +13,5 @@ research/downloads/*.bin
 *.mp3
 !videos/*/publish/*.mp4
 .cache/
+research/downloads/*.txt
+research/.search-cache/

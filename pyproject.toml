@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Animated video explainers on conceptions of uncertainty, built on bc-modules"
 requires-python = ">=3.13"
 dependencies = [
-    "bc-core", "bc-content", "bc-web[all]", "bc-research", "bc-llm",
+    "bc-core", "bc-content[pdf]", "bc-web[all]", "bc-research", "bc-llm[openai]",
     "bc-gen[google]", "bc-num", "bc-viz", "bc-signal", "bc-image", "bc-audio", "bc-motion",
     "pyyaml>=6.0", "numpy>=2.0", "pillow>=11", "matplotlib>=3.9", "pydantic>=2.9", "httpx>=0.27",
     "inflect>=7.5.0", "simplemma>=2.0.0",

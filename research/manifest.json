@@ -1,0 +1,2390 @@
+{
+  "addington-1979-standard-of-proof": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "U.S. Supreme Court (Burger, C.J.)",
+    "chars": 35653,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://www.law.cornell.edu/supremecourt/text/441/418",
+    "found_by": "exa",
+    "kind": "html",
+    "note": "",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/addington-1979-standard-of-proof.html",
+    "retrieved": "2026-09-23",
+    "sha256": "eeadd2b38a170403d0f109f6a1f6c047fd96db8ea7646494e85673a17efc1d44",
+    "status": 200,
+    "tier": "http",
+    "title": "Addington v. Texas, 441 U.S. 418 (1979)",
+    "url": "https://www.law.cornell.edu/supremecourt/text/441/418",
+    "year": "1979"
+  },
+  "brier-1950-verification": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "aws_waf challenge",
+        "outcome": "challenge",
+        "status": 202,
+        "tier": "http"
+      },
+      {
+        "engine": "playwright",
+        "headless": true,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "browser"
+      }
+    ],
+    "authors": "Glenn W. Brier",
+    "chars": 194447,
+    "engine": "playwright",
+    "escalated": true,
+    "final_url": "https://journals.ametsoc.org/view/journals/mwre/78/1/1520-0493_1950_078_0001_vofeit_2_0_co_2.xml",
+    "found_by": "both",
+    "kind": "html",
+    "note": "",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/brier-1950-verification.html",
+    "retrieved": "2026-09-23",
+    "sha256": "47e732400a840a47082ab2e1a55dcd1ba9842eb6cf7e60dd66a313b7e5d9c080",
+    "status": 200,
+    "tier": "browser",
+    "title": "Verification of Forecasts Expressed in Terms of Probability",
+    "url": "https://journals.ametsoc.org/view/journals/mwre/78/1/1520-0493_1950_078_0001_vofeit_2_0_co_2.xml",
+    "year": "1950"
+  },
+  "broad-2007-cone-misinterpretations": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Kenneth Broad; Anthony Leiserowitz; Jessica Weinkle; Marissa Steketee",
+    "chars": 77335,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://journals.ametsoc.org/downloadpdf/view/journals/bams/88/5/bams-88-5-651.pdf",
+    "found_by": "exa",
+    "kind": "pdf",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/broad-2007-cone-misinterpretations.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "f3d19a434f3fafce9fe0caacae00ffff7a27a2fa1444d49bdfe20f60167d7dad",
+    "status": 200,
+    "tier": "http",
+    "title": "Misinterpretations of the \"Cone of Uncertainty\" in Florida during the 2004 Hurricane Season",
+    "url": "https://journals.ametsoc.org/downloadpdf/view/journals/bams/88/5/bams-88-5-651.pdf",
+    "year": "2007"
+  },
+  "budescu-2012-effective-communication-ipcc": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "David V. Budescu; Han-Hui Por; Stephen B. Broomell",
+    "chars": 63345,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://storm.colorado.edu/~whan/ATOC4800_5000/Spring_2018/Materials/Effective_communication_of_unc.pdf",
+    "found_by": "serpapi",
+    "kind": "pdf",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/budescu-2012-effective-communication-ipcc.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "4d4840ff4e7a96b0a0f86ea342d0458bd65c1c425b3d0c47b84cf0c0c4d97777",
+    "status": 200,
+    "tier": "http",
+    "title": "Effective communication of uncertainty in the IPCC reports",
+    "url": "https://storm.colorado.edu/~whan/ATOC4800_5000/Spring_2018/Materials/Effective_communication_of_unc.pdf",
+    "year": "2012"
+  },
+  "cia-definition-estimative-expressions": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "CIA Center for the Study of Intelligence (Studies in Intelligence)",
+    "chars": 16678,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://www.cia.gov/resources/csi/static/Def-of-Estimative-Expressions.pdf",
+    "found_by": "bc-research ensemble+triage (see ensemble/)",
+    "kind": "pdf",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/cia-definition-estimative-expressions.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "736b546e65499a5a25c4942273682d37840302aacb2d8d95fc7f43ae23b4880b",
+    "status": 200,
+    "tier": "http",
+    "title": "The Definition of Some Estimative Expressions",
+    "url": "https://www.cia.gov/resources/csi/static/Def-of-Estimative-Expressions.pdf",
+    "year": "1968"
+  },
+  "cpajournal-sop-94-6": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "The CPA Journal",
+    "chars": 25538,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "http://archives.cpajournal.com/old/16762539.htm",
+    "found_by": "serpapi",
+    "kind": "html",
+    "note": "Secondary. Primary SOP 94-6 blocked: eGrove (Cloudflare/AWS WAF captchas at every tier) and fasb.org PDF viewer (Cloudflare challenge at every tier)",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/cpajournal-sop-94-6.html",
+    "retrieved": "2026-09-23",
+    "sha256": "c706e8d9ba032b85c22e9bdb01366fdc2d47595b835cf79921e766ea35cc3073",
+    "status": 200,
+    "tier": "http",
+    "title": "New rules on disclosure of certain significant risks and uncertainties (on AICPA SOP 94-6, codified as ASC 275)",
+    "url": "http://archives.cpajournal.com/old/16762539.htm",
+    "year": "1995"
+  },
+  "denoeux-2023-belief-functions-lecture": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Thierry Denoeux",
+    "chars": 26985,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://www.hds.utc.fr/~tdenoeux/dokuwiki/_media/en/bf2023_lecture1.pdf",
+    "found_by": "exa",
+    "kind": "pdf",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/denoeux-2023-belief-functions-lecture.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "ff8f71ee8fdd7693160a6094d2e0dfcf017311fe23515410f5129edae7ab39ea",
+    "status": 200,
+    "tier": "http",
+    "title": "Theory of Belief Functions: Application to machine learning and statistics (lecture 1)",
+    "url": "https://www.hds.utc.fr/~tdenoeux/dokuwiki/_media/en/bf2023_lecture1.pdf",
+    "year": "2023"
+  },
+  "derkiureghian-2009-aleatory-epistemic": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Armen Der Kiureghian; Ove Ditlevsen",
+    "chars": 44180,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://www.ripid.ethz.ch/Paper/DerKiureghian_paper.pdf",
+    "found_by": "exa",
+    "kind": "pdf",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/derkiureghian-2009-aleatory-epistemic.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "eaeffee4b970d0ffdebeb38bf404d663d41dde5e31fd62f8badc6a85dbeb8f3b",
+    "status": 200,
+    "tier": "http",
+    "title": "Aleatory or epistemic? Does it matter?",
+    "url": "https://www.ripid.ethz.ch/Paper/DerKiureghian_paper.pdf",
+    "year": "2009"
+  },
+  "ecmwf-fug-ensemble-products": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "ECMWF",
+    "chars": 14648,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://confluence.ecmwf.int/spaces/FUG/pages/673551037/Section+8.1.1+Basic+ensemble+products",
+    "found_by": "exa",
+    "kind": "html",
+    "note": "",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/ecmwf-fug-ensemble-products.html",
+    "retrieved": "2026-09-23",
+    "sha256": "0f7fcb697de27e06d478764d89a1b8057129358397090b873dffa3c2d54cb17a",
+    "status": 200,
+    "tier": "http",
+    "title": "Forecast User Guide Section 8.1.1: Basic ensemble products",
+    "url": "https://confluence.ecmwf.int/spaces/FUG/pages/673551037/Section+8.1.1+Basic+ensemble+products",
+    "year": "2025"
+  },
+  "ecmwf-fug-ensemble-rationale": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "ECMWF",
+    "chars": 13130,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://confluence.ecmwf.int/spaces/FUG/pages/673550730/Section+5+Forecast+Ensemble+ENS+-+Rationale+and+Construction",
+    "found_by": "exa",
+    "kind": "html",
+    "note": "",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/ecmwf-fug-ensemble-rationale.html",
+    "retrieved": "2026-09-23",
+    "sha256": "e226ae8d9f4fc92c49f673c532905bf4306c07d1ba19430c597d2e0bd024979b",
+    "status": 200,
+    "tier": "http",
+    "title": "Forecast User Guide Section 5: Forecast Ensemble (ENS) Rationale and Construction",
+    "url": "https://confluence.ecmwf.int/spaces/FUG/pages/673550730/Section+5+Forecast+Ensemble+ENS+-+Rationale+and+Construction",
+    "year": "2025"
+  },
+  "ellsberg-1961-dklevine-copy": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Daniel Ellsberg",
+    "chars": 74035,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "http://www.dklevine.com/archive/refs47605.pdf",
+    "found_by": "both",
+    "kind": "pdf",
+    "note": "Alternate copy; UC Irvine copy [S05] has doubled-letter OCR",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/ellsberg-1961-dklevine-copy.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "9f8c4229c27e99dbda5c94a5b5536313854108da49528681ab3782de78118dea",
+    "status": 200,
+    "tier": "http",
+    "title": "Risk, Ambiguity, and the Savage Axioms (alternate copy)",
+    "url": "http://www.dklevine.com/archive/refs47605.pdf",
+    "year": "1961"
+  },
+  "ellsberg-1961-risk-ambiguity": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Daniel Ellsberg",
+    "chars": 84589,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://sites.socsci.uci.edu/~bskyrms/bio/readings/ellsberg.pdf",
+    "found_by": "exa",
+    "kind": "pdf",
+    "note": "QJE 75(4):643-669 (1961); RAND P-2173 copy had no text layer",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/ellsberg-1961-risk-ambiguity.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "229556ce959764dcd3932ef92d50bac8775f2e9d80794baa580a48cb4e6973d9",
+    "status": 200,
+    "tier": "http",
+    "title": "Risk, Ambiguity, and the Savage Axioms",
+    "url": "https://sites.socsci.uci.edu/~bskyrms/bio/readings/ellsberg.pdf",
+    "year": "1961"
+  },
+  "fasb-summary-fin-48": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "cloudflare challenge",
+        "outcome": "challenge",
+        "status": 200,
+        "tier": "http"
+      },
+      {
+        "engine": "playwright",
+        "headless": true,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "browser"
+      }
+    ],
+    "authors": "Financial Accounting Standards Board",
+    "chars": 6345,
+    "engine": "playwright",
+    "escalated": true,
+    "final_url": "https://www.fasb.org/page/PageContent?pageId=/reference-library/superseded-standards/summary-of-interpretation-no-48.html&bcpath=tff",
+    "found_by": "both",
+    "kind": "html",
+    "note": "",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/fasb-summary-fin-48.html",
+    "retrieved": "2026-09-23",
+    "sha256": "2671179bc656913e346e5a73b5b940a7ede308e031aa418283ec74434f86b671",
+    "status": 200,
+    "tier": "browser",
+    "title": "Summary of Interpretation No. 48: Accounting for Uncertainty in Income Taxes",
+    "url": "https://www.fasb.org/page/PageContent?pageId=/reference-library/superseded-standards/summary-of-interpretation-no-48.html&bcpath=tff",
+    "year": "2006"
+  },
+  "fasb-summary-statement-157": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "cloudflare challenge",
+        "outcome": "challenge",
+        "status": 200,
+        "tier": "http"
+      },
+      {
+        "engine": "playwright",
+        "headless": true,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "browser"
+      }
+    ],
+    "authors": "Financial Accounting Standards Board",
+    "chars": 12543,
+    "engine": "playwright",
+    "escalated": true,
+    "final_url": "https://www.fasb.org/page/PageContent?pageId=/reference-library/superseded-standards/summary-of-statement-no-157.html&bcpath=tff",
+    "found_by": "both",
+    "kind": "html",
+    "note": "",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/fasb-summary-statement-157.html",
+    "retrieved": "2026-09-23",
+    "sha256": "45f02cbe03a7c9f9685ecb95cf21ff6720ab260e89aa2125290bc86f25dc3187",
+    "status": 200,
+    "tier": "browser",
+    "title": "Summary of Statement No. 157: Fair Value Measurements",
+    "url": "https://www.fasb.org/page/PageContent?pageId=/reference-library/superseded-standards/summary-of-statement-no-157.html&bcpath=tff",
+    "year": "2006"
+  },
+  "fasb-summary-statement-5": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "cloudflare challenge",
+        "outcome": "challenge",
+        "status": 200,
+        "tier": "http"
+      },
+      {
+        "engine": "playwright",
+        "headless": true,
+        "note": "cloudflare challenge",
+        "outcome": "challenge",
+        "status": 200,
+        "tier": "browser"
+      },
+      {
+        "engine": "pydoll",
+        "headless": false,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "browser"
+      }
+    ],
+    "authors": "Financial Accounting Standards Board",
+    "chars": 770,
+    "engine": "pydoll",
+    "escalated": true,
+    "final_url": "https://fasb.org/page/PageContent?pageId=/reference-library/superseded-standards/summary-of-statement-no-5.html&bcpath=tff",
+    "found_by": "both",
+    "kind": "html",
+    "note": "",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/fasb-summary-statement-5.html",
+    "retrieved": "2026-09-23",
+    "sha256": "9760611f80ea346343a255570cc84310c6c495cb5f64d5d49b928ee97e3fc2bc",
+    "status": 200,
+    "tier": "browser",
+    "title": "Summary of Statement No. 5: Accounting for Contingencies",
+    "url": "https://fasb.org/page/PageContent?pageId=/reference-library/superseded-standards/summary-of-statement-no-5.html&bcpath=tff",
+    "year": "1975"
+  },
+  "friedman-2019-war-and-chance-preview": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Jeffrey A. Friedman",
+    "chars": 47042,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://api.pageplace.de/preview/DT0400.9780190938031_A36867299/preview-9780190938031_A36867299.pdf",
+    "found_by": "exa",
+    "kind": "pdf",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/friedman-2019-war-and-chance-preview.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "867ad899a3f9a24151592dd20de8c2dc684bde51b74109aa14d9f65def7dba98",
+    "status": 200,
+    "tier": "http",
+    "title": "War and Chance: Assessing Uncertainty in International Politics (publisher preview)",
+    "url": "https://api.pageplace.de/preview/DT0400.9780190938031_A36867299/preview-9780190938031_A36867299.pdf",
+    "year": "2019"
+  },
+  "friedman-zeckhauser-2012-assessing-uncertainty-intelligence": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Jeffrey A. Friedman; Richard Zeckhauser",
+    "chars": 78674,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://www.stat.berkeley.edu/~aldous/157/Papers/Assessing%20Uncertainty%20in%20Intelligence.pdf",
+    "found_by": "exa",
+    "kind": "pdf",
+    "note": "Intelligence and National Security 27(6):824-847; Harvard DASH copy blocked by Cloudflare captcha",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/friedman-zeckhauser-2012-assessing-uncertainty-intelligence.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "da3b88eefa8f93161c80f210a684cde722f4391c9046939f6e1e2dc301dfaeb8",
+    "status": 200,
+    "tier": "http",
+    "title": "Assessing Uncertainty in Intelligence",
+    "url": "https://www.stat.berkeley.edu/%7Ealdous/157/Papers/Assessing%20Uncertainty%20in%20Intelligence.pdf",
+    "year": "2012"
+  },
+  "frus-1961-d35-jcs-evaluation": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "U.S. Department of State, Office of the Historian",
+    "chars": 31817,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://history.state.gov/historicaldocuments/frus1961-63v10/d35",
+    "found_by": "exa",
+    "kind": "html",
+    "note": "",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/frus-1961-d35-jcs-evaluation.html",
+    "retrieved": "2026-09-23",
+    "sha256": "77bae282a1f73c62974fa5fcf8c56c73ae000df9f3253e2a8c3c5789a4cb05dc",
+    "status": 200,
+    "tier": "http",
+    "title": "FRUS 1961-63 vol. X doc. 35",
+    "url": "https://history.state.gov/historicaldocuments/frus1961-63v10/d35",
+    "year": "1961"
+  },
+  "frus-1961-d46": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "U.S. Department of State, Office of the Historian",
+    "chars": 21389,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://history.state.gov/historicaldocuments/frus1961-63v10/d46",
+    "found_by": "exa",
+    "kind": "html",
+    "note": "",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/frus-1961-d46.html",
+    "retrieved": "2026-09-23",
+    "sha256": "486eb66c5c77b2fa20e9624d3f04c7d4436b0f86c5badc419bb97a25fcf73c88",
+    "status": 200,
+    "tier": "http",
+    "title": "FRUS 1961-63 vol. X doc. 46",
+    "url": "https://history.state.gov/historicaldocuments/frus1961-63v10/d46",
+    "year": "1961"
+  },
+  "gigerenzer-2005-30-percent-rain": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Gerd Gigerenzer; Ralph Hertwig; Eva van den Broek; Barbara Fasolo; Konstantinos V. Katsikopoulos",
+    "chars": 34937,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://library.mpib-berlin.mpg.de/ft/gg/GG_30_Chance_2005.pdf",
+    "found_by": "exa",
+    "kind": "pdf",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/gigerenzer-2005-30-percent-rain.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "53b9183adc5ee6db21d55d85b615ff8bac2870d68d7bec647ffff3c64b9ee564",
+    "status": 200,
+    "tier": "http",
+    "title": "\"A 30% Chance of Rain Tomorrow\": How Does the Public Understand Probabilistic Weather Forecasts?",
+    "url": "https://library.mpib-berlin.mpg.de/ft/gg/GG_30_Chance_2005.pdf",
+    "year": "2005"
+  },
+  "gigerenzer-hoffrage-1995-frequency-formats": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Gerd Gigerenzer; Ulrich Hoffrage",
+    "chars": 141465,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://library.mpib-berlin.mpg.de/ft/gg/GG_How_1995.pdf",
+    "found_by": "exa",
+    "kind": "pdf",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/gigerenzer-hoffrage-1995-frequency-formats.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "9ea2a661d480d00e023dc2e6ab9dc9803ed1d875ef0cf03a0f4a73951ae397da",
+    "status": 200,
+    "tier": "http",
+    "title": "How to Improve Bayesian Reasoning Without Instruction: Frequency Formats",
+    "url": "https://library.mpib-berlin.mpg.de/ft/gg/GG_How_1995.pdf",
+    "year": "1995"
+  },
+  "guardian-2024-review-art-of-uncertainty": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "The Observer / Guardian",
+    "chars": 5134,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://www.theguardian.com/books/2024/sep/22/the-art-of-uncertainty-by-david-spiegelhalter-review-a-search-for-sense-in-probability-and-chance",
+    "found_by": "serpapi",
+    "kind": "html",
+    "note": "",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/guardian-2024-review-art-of-uncertainty.html",
+    "retrieved": "2026-09-23",
+    "sha256": "36df805e2804086eef93a6957fc1a89d78f1c8279efb60c337e5e5d181f9fa66",
+    "status": 200,
+    "tier": "http",
+    "title": "The Art of Uncertainty by David Spiegelhalter review",
+    "url": "https://www.theguardian.com/books/2024/sep/22/the-art-of-uncertainty-by-david-spiegelhalter-review-a-search-for-sense-in-probability-and-chance",
+    "year": "2024"
+  },
+  "harris-2013-lost-in-translation": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Adam J.L. Harris; Adam Corner; Juemin Xu; Xiufang Du",
+    "chars": 38027,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://discovery.ucl.ac.uk/id/eprint/1408020/1/HarrisEtAl_ClimaticChange_AuthorsFinal.pdf",
+    "found_by": "serpapi",
+    "kind": "pdf",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/harris-2013-lost-in-translation.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "055694f2e5ebbd19983943a78acb0dc5d34be039510594ea48eaf0f7cfab5187",
+    "status": 200,
+    "tier": "http",
+    "title": "Lost in translation? Interpretations of the probability phrases used by the Intergovernmental Panel on Climate Change in China and the UK",
+    "url": "https://discovery.ucl.ac.uk/1408020/1/HarrisEtAl_ClimaticChange_AuthorsFinal.pdf",
+    "year": "2013"
+  },
+  "hoekstra-2014-ci-misinterpretation": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Rink Hoekstra; Richard D. Morey; Jeffrey N. Rouder; Eric-Jan Wagenmakers",
+    "chars": 38352,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://www.ejwagenmakers.com/inpress/HoekstraEtAlPBR.pdf",
+    "found_by": "exa",
+    "kind": "pdf",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/hoekstra-2014-ci-misinterpretation.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "2a42e346e904e66faee0ea00e441c50166ee36d9822b6231cbcdddff017b2e16",
+    "status": 200,
+    "tier": "http",
+    "title": "Robust misinterpretation of confidence intervals",
+    "url": "https://www.ejwagenmakers.com/inpress/HoekstraEtAlPBR.pdf",
+    "year": "2014"
+  },
+  "hume-1748-enquiry": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "David Hume",
+    "chars": 373253,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://www.gutenberg.org/cache/epub/9662/pg9662.txt",
+    "found_by": "exa",
+    "kind": "text",
+    "note": "",
+    "outcome": "ok",
+    "parser": "builtin",
+    "raw_path": "downloads/hume-1748-enquiry.txt",
+    "retrieved": "2026-09-23",
+    "sha256": "647459bc720d0fe09f85ac17b8d7edc2557ff89ba4467151407a4d48228be2cb",
+    "status": 200,
+    "tier": "http",
+    "title": "An Enquiry Concerning Human Understanding",
+    "url": "https://www.gutenberg.org/cache/epub/9662/pg9662.txt",
+    "year": "1748"
+  },
+  "iea-2020-review-radical-uncertainty": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Institute of Economic Affairs",
+    "chars": 6167,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://iea.org.uk/radical-uncertainty-decision-making-for-an-unknowable-future-book-review/",
+    "found_by": "both",
+    "kind": "html",
+    "note": "",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/iea-2020-review-radical-uncertainty.html",
+    "retrieved": "2026-09-23",
+    "sha256": "3f67f804792c15441a36ae9fe064f1229f531df0f088df6c280b0c2c6929d5a1",
+    "status": 200,
+    "tier": "http",
+    "title": "Radical Uncertainty: Decision-making for an unknowable future (book review)",
+    "url": "https://iea.org.uk/radical-uncertainty-decision-making-for-an-unknowable-future-book-review/",
+    "year": "2020"
+  },
+  "ipcc-ar6-wg1-glossary": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "IPCC (Matthews et al., eds.)",
+    "chars": 262668,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_AnnexVII.pdf",
+    "found_by": "both",
+    "kind": "pdf",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/ipcc-ar6-wg1-glossary.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "792ad3375c7211bb1b75b47803c2f4d14385b556b5555a9505c5bf7f6842ecf5",
+    "status": 200,
+    "tier": "http",
+    "title": "Annex VII: Glossary (AR6 WGI)",
+    "url": "https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_AnnexVII.pdf",
+    "year": "2021"
+  },
+  "jaynes-2003-probability-theory": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "E.T. Jaynes",
+    "chars": 269541,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://bayes.wustl.edu/etj/prob/book.pdf",
+    "found_by": "both",
+    "kind": "pdf",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/jaynes-2003-probability-theory.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "23dd1664db7ebc440ec2d0a156cf1e84a8a7cf8c4632cea25df39b77ad9b1b58",
+    "status": 200,
+    "tier": "http",
+    "title": "Probability Theory: The Logic of Science (preprint)",
+    "url": "https://bayes.wustl.edu/etj/prob/book.pdf",
+    "year": "2003"
+  },
+  "kahneman-2016-hbr-noise": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Daniel Kahneman; Andrew M. Rosenfield; Linnea Gandhi; Tom Blaser",
+    "chars": 4321,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://hbr.org/2016/10/noise",
+    "found_by": "both",
+    "kind": "html",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-web",
+    "raw_path": "downloads/kahneman-2016-hbr-noise.html",
+    "retrieved": "2026-09-23",
+    "sha256": "ed93baebc3139a5dafc873ec489c34b31092645aa443b500dc4fa7564ccfe3e6",
+    "status": 200,
+    "tier": "http",
+    "title": "Noise: How to Overcome the High, Hidden Cost of Inconsistent Decision Making",
+    "url": "https://hbr.org/2016/10/noise",
+    "year": "2016"
+  },
+  "kent-1964-words-estimative-probability": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Sherman Kent",
+    "chars": 39550,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://www.cia.gov/resources/csi/static/Words-of-Estimative-Probability.pdf",
+    "found_by": "both",
+    "kind": "pdf",
+    "note": "Studies in Intelligence 8(4), 1964; CIA CSI static PDF (the CSI HTML page is a stub linking this PDF)",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/kent-1964-words-estimative-probability.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "5cc1fd3fc11de7534c9a35ac307d4b28324392d55eefe12fe5d77b3349f5f2c7",
+    "status": 200,
+    "tier": "http",
+    "title": "Words of Estimative Probability",
+    "url": "https://www.cia.gov/resources/csi/static/Words-of-Estimative-Probability.pdf",
+    "year": "1964"
+  },
+  "kesselman-2008-verbal-probability-nie": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Rachel F. Kesselman",
+    "chars": 172912,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://www.files.ethz.ch/isn/55739/kesselman_thesis_final.pdf",
+    "found_by": "bc-research ensemble+triage (see ensemble/)",
+    "kind": "pdf",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/kesselman-2008-verbal-probability-nie.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "7a7f08c4e9be809f093c7551e247feaa5988db0ab7d33ffba7ececa438930b3b",
+    "status": 200,
+    "tier": "http",
+    "title": "Verbal Probability Expressions in National Intelligence Estimates: A Comprehensive Analysis of Trends from the Fifties through Post 9/11",
+    "url": "https://www.files.ethz.ch/isn/55739/kesselman_thesis_final.pdf",
+    "year": "2008"
+  },
+  "keynes-1921-treatise-probability": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "John Maynard Keynes",
+    "chars": 1111663,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://www.gutenberg.org/files/32625/32625-pdf.pdf",
+    "found_by": "both",
+    "kind": "pdf",
+    "note": "Gutenberg ebook 32625",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/keynes-1921-treatise-probability.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "bbbcaeaac8a6bfe9afd8c57227ead87c23699c6993b30ca7f7de0e49d74a912b",
+    "status": 200,
+    "tier": "http",
+    "title": "A Treatise on Probability",
+    "url": "https://www.gutenberg.org/files/32625/32625-pdf.pdf",
+    "year": "1921"
+  },
+  "keynes-1937-general-theory-employment": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "John Maynard Keynes",
+    "chars": 33947,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://www.hetwebsite.net/het/texts/keynes/keynes1937qje.htm",
+    "found_by": "both",
+    "kind": "html",
+    "note": "Quarterly Journal of Economics 51(2):209-223; HET website transcription",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/keynes-1937-general-theory-employment.html",
+    "retrieved": "2026-09-23",
+    "sha256": "0c02a309a32564c6c1ee2c9264e4239b4931cbd66736d502d42e1897276b546a",
+    "status": 200,
+    "tier": "http",
+    "title": "The General Theory of Employment",
+    "url": "https://www.hetwebsite.net/het/texts/keynes/keynes1937qje.htm",
+    "year": "1937"
+  },
+  "knight-1921-econlib-pt1-ch1": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Frank H. Knight",
+    "chars": 55786,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://www.econlib.org/book-chapters/chapter-pt-ich-i/",
+    "found_by": "exa",
+    "kind": "html",
+    "note": "Clean text for Ch. I; the FRASER scan [S02] has a scrambled or missing text layer for these pages",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/knight-1921-econlib-pt1-ch1.html",
+    "retrieved": "2026-09-23",
+    "sha256": "8af41364220670f6b62bd16479f47602af1c4295635dcbd7dd966ca7d6fec902",
+    "status": 200,
+    "tier": "http",
+    "title": "Risk, Uncertainty, and Profit, Part I, Chapter I (Econlib edition)",
+    "url": "https://www.econlib.org/book-chapters/chapter-pt-ich-i/",
+    "year": "1921"
+  },
+  "knight-1921-risk-uncertainty-profit": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Frank H. Knight",
+    "chars": 77519,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://fraser.stlouisfed.org/files/docs/publications/books/risk/riskuncertaintyprofit.pdf",
+    "found_by": "both",
+    "kind": "pdf",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/knight-1921-risk-uncertainty-profit.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "5788ca0fa7430eb18a1ad2008f1a6835c279cef5e2d479b3d6b0ddca2c74e544",
+    "status": 200,
+    "tier": "http",
+    "title": "Risk, Uncertainty, and Profit",
+    "url": "https://fraser.stlouisfed.org/files/docs/publications/books/risk/riskuncertaintyprofit.pdf",
+    "year": "1921"
+  },
+  "laplace-1814-philosophical-essay": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Pierre-Simon Laplace (trans. Truscott and Emory)",
+    "chars": 327013,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://www.gutenberg.org/files/58881/58881-h/58881-h.htm",
+    "found_by": "both",
+    "kind": "html",
+    "note": "1902 English translation, Gutenberg 58881",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/laplace-1814-philosophical-essay.html",
+    "retrieved": "2026-09-23",
+    "sha256": "cbb80d52d6898f399f7947d3adeddf24b54273f77fac9aa5e1d736d89ad007e9",
+    "status": 200,
+    "tier": "http",
+    "title": "A Philosophical Essay on Probabilities",
+    "url": "https://www.gutenberg.org/files/58881/58881-h/58881-h.htm",
+    "year": "1814"
+  },
+  "lempert-2003-shaping-next-100-years": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Robert J. Lempert; Steven W. Popper; Steven C. Bankes",
+    "chars": 425018,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://www.rand.org/content/dam/rand/pubs/monograph_reports/2007/MR1626.pdf",
+    "found_by": "both",
+    "kind": "pdf",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/lempert-2003-shaping-next-100-years.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "285eb56592948cef2b65a9a76bfff53829d71da3cf59bc224c2928f7e838e203",
+    "status": 200,
+    "tier": "http",
+    "title": "Shaping the Next One Hundred Years: New Methods for Quantitative, Long-Term Policy Analysis",
+    "url": "https://www.rand.org/content/dam/rand/pubs/monograph_reports/2007/MR1626.pdf",
+    "year": "2003"
+  },
+  "lempert-2019-rdm-chapter": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Robert J. Lempert",
+    "chars": 94069,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://link.springer.com/content/pdf/10.1007/978-3-030-05252-2_2.pdf",
+    "found_by": "bc-research ensemble+triage (see ensemble/)",
+    "kind": "pdf",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/lempert-2019-rdm-chapter.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "15cf0a681977b4c36f87d33cf9327590a4bec1bc5e943b115f182fc5700da453",
+    "status": 200,
+    "tier": "http",
+    "title": "Robust Decision Making (RDM)",
+    "url": "https://link.springer.com/content/pdf/10.1007/978-3-030-05252-2_2.pdf",
+    "year": "2019"
+  },
+  "lorenz-1963-nonperiodic-flow": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "aws_waf challenge",
+        "outcome": "challenge",
+        "status": 202,
+        "tier": "http"
+      },
+      {
+        "engine": "playwright",
+        "headless": true,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "browser"
+      }
+    ],
+    "authors": "Edward N. Lorenz",
+    "chars": 143068,
+    "engine": "playwright",
+    "escalated": true,
+    "final_url": "https://journals.ametsoc.org/view/journals/atsc/20/2/1520-0469_1963_020_0130_dnf_2_0_co_2.xml",
+    "found_by": "both",
+    "kind": "html",
+    "note": "J. Atmos. Sci. 20:130-141; UVM PDF copy had no text layer",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/lorenz-1963-nonperiodic-flow.html",
+    "retrieved": "2026-09-23",
+    "sha256": "59dd8c4c8891f0dd68ee30847ca1b87fce125ffdf1ad230094527868692d1b23",
+    "status": 200,
+    "tier": "browser",
+    "title": "Deterministic Nonperiodic Flow",
+    "url": "https://journals.ametsoc.org/view/journals/atsc/20/2/1520-0469_1963_020_0130_dnf_2_0_co_2.xml",
+    "year": "1963"
+  },
+  "marchau-2019-dmdu-book": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Vincent A.W.J. Marchau; Warren E. Walker; Pieter J.T.M. Bloemen; Steven W. Popper",
+    "chars": 57762,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://link.springer.com/content/pdf/10.1007/978-3-030-05252-2_1.pdf",
+    "found_by": "exa",
+    "kind": "pdf",
+    "note": "Springer open access; OAPEN full-book copy is behind an Anubis proof-of-work wall",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/marchau-2019-dmdu-book.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "5810b7762d5debbc7c751322b94d967b21f5d6b64ce0ce6eb9d7f6a31daf704e",
+    "status": 200,
+    "tier": "http",
+    "title": "Introduction (ch. 1 of Decision Making under Deep Uncertainty: From Theory to Practice)",
+    "url": "https://link.springer.com/content/pdf/10.1007/978-3-030-05252-2_1.pdf",
+    "year": "2019"
+  },
+  "mastrandrea-2010-ipcc-guidance-note": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Michael D. Mastrandrea; Christopher B. Field; Thomas F. Stocker; et al.",
+    "chars": 22904,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://www.ipcc.ch/site/assets/uploads/2017/08/AR5_Uncertainty_Guidance_Note.pdf",
+    "found_by": "exa",
+    "kind": "pdf",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/mastrandrea-2010-ipcc-guidance-note.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "d5754b11d70c36aed86188bae3427dd1890b1bef0487c8ebcd1682fd7e84a9c2",
+    "status": 200,
+    "tier": "http",
+    "title": "Guidance Note for Lead Authors of the IPCC Fifth Assessment Report on Consistent Treatment of Uncertainties",
+    "url": "https://www.ipcc.ch/site/assets/uploads/2017/08/AR5_Uncertainty_Guidance_Note.pdf",
+    "year": "2010"
+  },
+  "mastrandrea-2011-guidance-note-commentary": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Michael D. Mastrandrea; Katharine J. Mach; et al.",
+    "chars": 58596,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://climatehomes.unibe.ch/~stocker/papers/mastrandrea11cc.pdf",
+    "found_by": "exa",
+    "kind": "pdf",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/mastrandrea-2011-guidance-note-commentary.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "defe05b1833f7e8641f0cbea9a810c6da42ad9b14bfe9f9213ec2f5f943b1f3b",
+    "status": 200,
+    "tier": "http",
+    "title": "The IPCC AR5 guidance note on consistent treatment of uncertainties: a common approach across the working groups",
+    "url": "https://climatehomes.unibe.ch/~stocker/papers/mastrandrea11cc.pdf",
+    "year": "2011"
+  },
+  "mellers-2014-forecasting-tournament": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Barbara Mellers; Lyle Ungar; Jonathan Baron; et al.; Philip E. Tetlock",
+    "chars": 45755,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://faculty.wharton.upenn.edu/wp-content/uploads/2015/07/2014---psychological-strategies-for-winning-a-tournament.pdf",
+    "found_by": "exa",
+    "kind": "pdf",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/mellers-2014-forecasting-tournament.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "f7773ecceb1027ba93721a0750deb8d5c1a478597252d6f4f5ae401c4f6e77b3",
+    "status": 200,
+    "tier": "http",
+    "title": "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+    "url": "https://faculty.wharton.upenn.edu/wp-content/uploads/2015/07/2014---psychological-strategies-for-winning-a-tournament.pdf",
+    "year": "2014"
+  },
+  "nhc-cone-definition": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "NOAA National Hurricane Center",
+    "chars": 6794,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://www.nhc.noaa.gov/aboutcone.shtml",
+    "found_by": "exa",
+    "kind": "html",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-web",
+    "raw_path": "downloads/nhc-cone-definition.html",
+    "retrieved": "2026-09-23",
+    "sha256": "6b139b3a36f97bb4bc0a39a83a5cb14296e5636be031fe0069f0e2e668250248",
+    "status": 200,
+    "tier": "http",
+    "title": "Definition of the NHC Track Forecast Cone",
+    "url": "https://www.nhc.noaa.gov/aboutcone.shtml",
+    "year": "2026"
+  },
+  "nws-pop-definition": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "NOAA National Weather Service, Peachtree City GA",
+    "chars": 4917,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://www.weather.gov/ffc/pop",
+    "found_by": "both",
+    "kind": "html",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-web",
+    "raw_path": "downloads/nws-pop-definition.html",
+    "retrieved": "2026-09-23",
+    "sha256": "5a24cf3cfd9eadefe86086609739f51cc75fbeb2dbc388c023baf5a9d12b3237",
+    "status": 200,
+    "tier": "http",
+    "title": "FAQ: What is the Meaning of PoP",
+    "url": "https://www.weather.gov/ffc/pop",
+    "year": "2026"
+  },
+  "odni-2015-icd-203": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Office of the Director of National Intelligence",
+    "chars": 19763,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://archive.dni.gov/files/documents/ICD/ICD-203.pdf",
+    "found_by": "exa",
+    "kind": "pdf",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/odni-2015-icd-203.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "7025e879b64a2e9a84530cfd4f5781776b0742451dc9ca491c531926a03baa02",
+    "status": 200,
+    "tier": "http",
+    "title": "Intelligence Community Directive 203: Analytic Standards",
+    "url": "https://www.odni.gov/files/documents/ICD/ICD-203.pdf",
+    "year": "2015"
+  },
+  "pcaob-au337b-fas5-excerpts": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "PCAOB (reproducing FASB Statement No. 5)",
+    "chars": 13535,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://pcaobus.org/oversight/standards/archived-standards/pre-reorganized-auditing-standards-interpretations/details/AU337B",
+    "found_by": "both",
+    "kind": "html",
+    "note": "",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/pcaob-au337b-fas5-excerpts.html",
+    "retrieved": "2026-09-23",
+    "sha256": "06181a78658cb705fdaa20aa02a2a069dbf9459e1cbae13425b60246f0fba430",
+    "status": 200,
+    "tier": "http",
+    "title": "AU Section 337B: Exhibit I, Excerpts from Statement of Financial Accounting Standards No. 5",
+    "url": "https://pcaobus.org/oversight/standards/archived-standards/pre-reorganized-auditing-standards-interpretations/details/AU337B",
+    "year": "1975"
+  },
+  "pearl-2019-seven-tools": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Judea Pearl",
+    "chars": 34622,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://ftp.cs.ucla.edu/pub/stat_ser/r481.pdf",
+    "found_by": "exa",
+    "kind": "pdf",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/pearl-2019-seven-tools.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "6b2130729e84c554b8221c5a2bdc15f52fe82d37e5ea04f52cff9bcb83b2b805",
+    "status": 200,
+    "tier": "http",
+    "title": "The Seven Tools of Causal Inference, with Reflections on Machine Learning",
+    "url": "https://ftp.cs.ucla.edu/pub/stat_ser/r481.pdf",
+    "year": "2019"
+  },
+  "plosone-2019-verbal-probabilities": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "see front matter of source",
+    "chars": 71327,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0213522",
+    "found_by": "bc-research ensemble+triage (see ensemble/)",
+    "kind": "html",
+    "note": "",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/plosone-2019-verbal-probabilities.html",
+    "retrieved": "2026-09-23",
+    "sha256": "706b0a1f0a371a6942894a4d50a7ae1e0e273c5bfe1f58fea840fb84128048ea",
+    "status": 200,
+    "tier": "http",
+    "title": "Verbal probabilities: Very likely to be somewhat more confusing than numbers",
+    "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0213522",
+    "year": "2019"
+  },
+  "ramsey-1926-truth-probability": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Frank P. Ramsey",
+    "chars": 113177,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "http://fitelson.org/probability/ramsey.pdf",
+    "found_by": "exa",
+    "kind": "pdf",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/ramsey-1926-truth-probability.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "9faa08c31bf40ff96ee916d069884da629db5f9b4fda32c19223f556186d0f6d",
+    "status": 200,
+    "tier": "http",
+    "title": "Truth and Probability",
+    "url": "http://fitelson.org/probability/ramsey.pdf",
+    "year": "1926"
+  },
+  "rand-2013-rb9701-rdm-brief": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "RAND Corporation",
+    "chars": 29660,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://www.rand.org/content/dam/rand/pubs/research_briefs/RB9700/RB9701/RAND_RB9701.pdf",
+    "found_by": "bc-research ensemble+triage (see ensemble/)",
+    "kind": "pdf",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/rand-2013-rb9701-rdm-brief.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "b20ba61c7457202054621cf0ee5368ccfb24338993f1d0c403fe67f6f13f9c9f",
+    "status": 200,
+    "tier": "http",
+    "title": "Making Good Decisions Without Predictions: Robust Decision Making for Planning Under Deep Uncertainty",
+    "url": "https://www.rand.org/content/dam/rand/pubs/research_briefs/RB9700/RB9701/RAND_RB9701.pdf",
+    "year": "2013"
+  },
+  "rubin-1974-causal-effects": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Donald B. Rubin",
+    "chars": 67705,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "http://pdfs.semanticscholar.org/5451/22e2990590524459ec9b59ccac6ce71e3b6a.pdf",
+    "found_by": "exa",
+    "kind": "pdf",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/rubin-1974-causal-effects.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "0ccf0c0b1b5c8a2da5cb284e15e4fe84e0e846a6feef02c35eba4cdca9781658",
+    "status": 200,
+    "tier": "http",
+    "title": "Estimating Causal Effects of Treatments in Randomized and Nonrandomized Studies",
+    "url": "http://pdfs.semanticscholar.org/5451/22e2990590524459ec9b59ccac6ce71e3b6a.pdf",
+    "year": "1974"
+  },
+  "rumsfeld-2002-dod-briefing": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Donald H. Rumsfeld; Richard Myers",
+    "chars": 41705,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://avalon.law.yale.edu/sept11/dod_brief146.asp",
+    "found_by": "both",
+    "kind": "html",
+    "note": "",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/rumsfeld-2002-dod-briefing.html",
+    "retrieved": "2026-09-23",
+    "sha256": "3226075313afc75b8b9842bb9d3bdf03f2dcd806740c693433d982adfb411ede",
+    "status": 200,
+    "tier": "http",
+    "title": "DoD News Briefing, Feb. 12, 2002",
+    "url": "https://avalon.law.yale.edu/sept11/dod_brief146.asp",
+    "year": "2002"
+  },
+  "sep-abduction": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Igor Douven",
+    "chars": 55967,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://plato.stanford.edu/entries/abduction/",
+    "found_by": "direct",
+    "kind": "html",
+    "note": "Stanford Encyclopedia of Philosophy",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/sep-abduction.html",
+    "retrieved": "2026-09-23",
+    "sha256": "f15cabf1118658053a76f5b7813f0638e8acb88c370a1150b3c13283786ff8e6",
+    "status": 200,
+    "tier": "http",
+    "title": "Abduction",
+    "url": "https://plato.stanford.edu/entries/abduction/",
+    "year": "2021"
+  },
+  "sep-counterfactuals": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "William Starr",
+    "chars": 94413,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://plato.stanford.edu/entries/counterfactuals/",
+    "found_by": "direct",
+    "kind": "html",
+    "note": "Stanford Encyclopedia of Philosophy",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/sep-counterfactuals.html",
+    "retrieved": "2026-09-23",
+    "sha256": "ef79ba4dab514a69d38550227b37be5ffca461fd59fed462bfddfb6b70402da2",
+    "status": 200,
+    "tier": "http",
+    "title": "Counterfactuals",
+    "url": "https://plato.stanford.edu/entries/counterfactuals/",
+    "year": "2022"
+  },
+  "sep-dutch-book": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Susan Vineberg",
+    "chars": 91902,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://plato.stanford.edu/entries/dutch-book/",
+    "found_by": "direct",
+    "kind": "html",
+    "note": "Stanford Encyclopedia of Philosophy",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/sep-dutch-book.html",
+    "retrieved": "2026-09-23",
+    "sha256": "ad7faa2d6a78844d81c8df6cf0b6fa8388a4ed4765ffa194d0537a7e0c92edf4",
+    "status": 200,
+    "tier": "http",
+    "title": "Dutch Book Arguments",
+    "url": "https://plato.stanford.edu/entries/dutch-book/",
+    "year": "2022"
+  },
+  "sep-epistemology": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Matthias Steup; Ram Neta",
+    "chars": 117562,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://plato.stanford.edu/entries/epistemology/",
+    "found_by": "direct",
+    "kind": "html",
+    "note": "Stanford Encyclopedia of Philosophy",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/sep-epistemology.html",
+    "retrieved": "2026-09-23",
+    "sha256": "76dc24f8e44b9950f07f983d12ab5e88576f6a07d6f89ec4ba7d551a09908a3d",
+    "status": 200,
+    "tier": "http",
+    "title": "Epistemology",
+    "url": "https://plato.stanford.edu/entries/epistemology/",
+    "year": "2020"
+  },
+  "sep-formal-epistemology": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Jonathan Weisberg",
+    "chars": 127902,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://plato.stanford.edu/entries/formal-epistemology/",
+    "found_by": "direct",
+    "kind": "html",
+    "note": "Stanford Encyclopedia of Philosophy",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/sep-formal-epistemology.html",
+    "retrieved": "2026-09-23",
+    "sha256": "1da211cd6e8eb41d226c70d5ddde66a9131fc8e564d664803629589985caa42b",
+    "status": 200,
+    "tier": "http",
+    "title": "Formal Epistemology",
+    "url": "https://plato.stanford.edu/entries/formal-epistemology/",
+    "year": "2021"
+  },
+  "sep-imprecise-probabilities": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Seamus Bradley",
+    "chars": 86026,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://plato.stanford.edu/entries/imprecise-probabilities/",
+    "found_by": "direct",
+    "kind": "html",
+    "note": "Stanford Encyclopedia of Philosophy",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/sep-imprecise-probabilities.html",
+    "retrieved": "2026-09-23",
+    "sha256": "ae9016a1bdc7ec3ef2a2023a75a7e3ceaba3b7c2f08e0c0deab1638eb3cc0767",
+    "status": 200,
+    "tier": "http",
+    "title": "Imprecise Probabilities",
+    "url": "https://plato.stanford.edu/entries/imprecise-probabilities/",
+    "year": "2019"
+  },
+  "sep-induction-problem": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Leah Henderson",
+    "chars": 96301,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://plato.stanford.edu/entries/induction-problem/",
+    "found_by": "direct",
+    "kind": "html",
+    "note": "Stanford Encyclopedia of Philosophy",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/sep-induction-problem.html",
+    "retrieved": "2026-09-23",
+    "sha256": "7cbac489f6601704e45a6471958d488187a359e18cff5752e6deef927e02f62c",
+    "status": 200,
+    "tier": "http",
+    "title": "The Problem of Induction",
+    "url": "https://plato.stanford.edu/entries/induction-problem/",
+    "year": "2022"
+  },
+  "sep-logic-nonmonotonic": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Christian Strasser; G. Aldo Antonelli",
+    "chars": 108896,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://plato.stanford.edu/entries/logic-nonmonotonic/",
+    "found_by": "direct",
+    "kind": "html",
+    "note": "Stanford Encyclopedia of Philosophy",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/sep-logic-nonmonotonic.html",
+    "retrieved": "2026-09-23",
+    "sha256": "142f37fe105ead47e441a0efd1df4250d47511de19158a2d3529cbe1afe5c9ad",
+    "status": 200,
+    "tier": "http",
+    "title": "Non-monotonic Logic",
+    "url": "https://plato.stanford.edu/entries/logic-nonmonotonic/",
+    "year": "2019"
+  },
+  "sep-probability-interpret": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Alan Hajek",
+    "chars": 130372,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://plato.stanford.edu/entries/probability-interpret/",
+    "found_by": "direct",
+    "kind": "html",
+    "note": "Stanford Encyclopedia of Philosophy",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/sep-probability-interpret.html",
+    "retrieved": "2026-09-23",
+    "sha256": "3788cf31c8bb8b62689eb4d0cb75961f83be483573863ebfe33b71cbf0d9e313",
+    "status": 200,
+    "tier": "http",
+    "title": "Interpretations of Probability",
+    "url": "https://plato.stanford.edu/entries/probability-interpret/",
+    "year": "2023"
+  },
+  "shafer-1990-dempster-shafer": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Glenn Shafer",
+    "chars": 6411,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://fitelson.org/topics/shafer.pdf",
+    "found_by": "exa",
+    "kind": "pdf",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/shafer-1990-dempster-shafer.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "12b30c5003cb9cd989886165725298beb78e1bce0ab826a645003f2a434c6fb0",
+    "status": 200,
+    "tier": "http",
+    "title": "Dempster-Shafer Theory",
+    "url": "https://fitelson.org/topics/shafer.pdf",
+    "year": "1990"
+  },
+  "shell-2013-40-years-scenarios": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Shell International",
+    "chars": 69408,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://www.shell.com/news-and-insights/scenarios/what-are-shell-scenarios/_jcr_content/root/main/section_509167378/promo/links/item0.stream/1652289755448/a0e75f042fee5322b72780ee36e5ba17c35a4fc6/shell-scenarios-40yearsbook080213.pdf",
+    "found_by": "exa",
+    "kind": "pdf",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/shell-2013-40-years-scenarios.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "703c8a8b176922ae312712b355706ce087652a860980d5ffecac769817903d88",
+    "status": 200,
+    "tier": "http",
+    "title": "40 Years of Shell Scenarios",
+    "url": "https://www.shell.com/news-and-insights/scenarios/what-are-shell-scenarios/_jcr_content/root/main/section_509167378/promo/links/item0.stream/1652289755448/a0e75f042fee5322b72780ee36e5ba17c35a4fc6/shell-scenarios-40yearsbook080213.pdf",
+    "year": "2013"
+  },
+  "silver-2016-final-election-update": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Nate Silver",
+    "chars": 13499,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://web.archive.org/web/20161108161638/http://fivethirtyeight.com/features/final-election-update-theres-a-wide-range-of-outcomes-and-most-of-them-come-up-clinton/",
+    "found_by": "exa",
+    "kind": "html",
+    "note": "",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/silver-2016-final-election-update.html",
+    "retrieved": "2026-09-23",
+    "sha256": "19fc8380a9e93a747c6da44695cb6a68152b8bd12eb172b1c8b74bd71e7d7dc6",
+    "status": 200,
+    "tier": "http",
+    "title": "Final Election Update: There's A Wide Range Of Outcomes, And Most Of Them Come Up Clinton",
+    "url": "https://web.archive.org/web/20161108161638/http://fivethirtyeight.com/features/final-election-update-theres-a-wide-range-of-outcomes-and-most-of-them-come-up-clinton/",
+    "year": "2016"
+  },
+  "silver-2016-why-538-gave-trump-better-chance": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Nate Silver",
+    "chars": 20076,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://web.archive.org/web/20170117232956/http://fivethirtyeight.com/features/why-fivethirtyeight-gave-trump-a-better-chance-than-almost-anyone-else/",
+    "found_by": "exa",
+    "kind": "html",
+    "note": "",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/silver-2016-why-538-gave-trump-better-chance.html",
+    "retrieved": "2026-09-23",
+    "sha256": "656213f447780fb9a86fe45fc92621e30b6363aa276964dd0de19e3e3ac0f9fa",
+    "status": 200,
+    "tier": "http",
+    "title": "Why FiveThirtyEight Gave Trump A Better Chance Than Almost Anyone Else",
+    "url": "https://web.archive.org/web/2016/https://fivethirtyeight.com/features/why-fivethirtyeight-gave-trump-a-better-chance-than-almost-anyone-else/",
+    "year": "2016"
+  },
+  "spiegelhalter-2017-risk-uncertainty-communication": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "David Spiegelhalter",
+    "chars": 113457,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://regulation.org.uk/library/2017-Spiegelhalter-Risk_and_Uncertainty_Communication.pdf",
+    "found_by": "both",
+    "kind": "pdf",
+    "note": "Annual Review of Statistics and Its Application 4:31-60",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/spiegelhalter-2017-risk-uncertainty-communication.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "53d544bbf91d0550e54a12cf363c98140dc66add1d9a3a244d49ba8432957c8b",
+    "status": 200,
+    "tier": "http",
+    "title": "Risk and Uncertainty Communication",
+    "url": "https://regulation.org.uk/library/2017-Spiegelhalter-Risk_and_Uncertainty_Communication.pdf",
+    "year": "2017"
+  },
+  "springer-2024-ellsberg-1961-text-context": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "see source",
+    "chars": 110424,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://link.springer.com/article/10.1007/s10203-024-00437-1",
+    "found_by": "serpapi",
+    "kind": "html",
+    "note": "",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/springer-2024-ellsberg-1961-text-context.html",
+    "retrieved": "2026-09-23",
+    "sha256": "1cea6749011cd2f461a052650f52a622f488437d139e946b932118bdd46505f1",
+    "status": 200,
+    "tier": "http",
+    "title": "Ellsberg 1961: text, context, influence",
+    "url": "https://link.springer.com/article/10.1007/s10203-024-00437-1",
+    "year": "2024"
+  },
+  "taleb-2004-edge-learning-to-expect": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Nassim Nicholas Taleb",
+    "chars": 23497,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://www.edge.org/3rd_culture/taleb04/taleb_index.html",
+    "found_by": "exa",
+    "kind": "html",
+    "note": "",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/taleb-2004-edge-learning-to-expect.html",
+    "retrieved": "2026-09-23",
+    "sha256": "37e1f6cd681635012ed8251308eca1ec6e14cd4a105bca5bc9bdeb759f46a91f",
+    "status": 200,
+    "tier": "http",
+    "title": "Learning to Expect the Unexpected",
+    "url": "https://www.edge.org/3rd_culture/taleb04/taleb_index.html",
+    "year": "2004"
+  },
+  "tversky-kahneman-1974-heuristics": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Amos Tversky; Daniel Kahneman",
+    "chars": 89830,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://sites.socsci.uci.edu/~bskyrms/bio/readings/tversky_k_heuristics_biases.pdf",
+    "found_by": "both",
+    "kind": "pdf",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/tversky-kahneman-1974-heuristics.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "b6306fc4410c65f0f4156ca7d0505e655c29664e7491744479d2a7ea30a81bbc",
+    "status": 200,
+    "tier": "http",
+    "title": "Judgment under Uncertainty: Heuristics and Biases",
+    "url": "https://sites.socsci.uci.edu/~bskyrms/bio/readings/tversky_k_heuristics_biases.pdf",
+    "year": "1974"
+  },
+  "vanderbles-2019-communicating-uncertainty": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Anne Marthe van der Bles; Sander van der Linden; Alexandra L.J. Freeman; James Mitchell; Ana B. Galvao; Lisa Zaval; David J. Spiegelhalter",
+    "chars": 189946,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://royalsocietypublishing.org/rsos/article/6/5/181870/95102/Communicating-uncertainty-about-facts-numbers-and",
+    "found_by": "both",
+    "kind": "html",
+    "note": "",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/vanderbles-2019-communicating-uncertainty.html",
+    "retrieved": "2026-09-23",
+    "sha256": "78b4910466381149f3f7155d61d064af90f6f19031d4bd54f6d2dd3b8a5811f1",
+    "status": 200,
+    "tier": "http",
+    "title": "Communicating uncertainty about facts, numbers and science",
+    "url": "https://royalsocietypublishing.org/doi/10.1098/rsos.181870",
+    "year": "2019"
+  },
+  "vanhorn-2003-cox-theorem": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Kevin S. Van Horn",
+    "chars": 55621,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://cse.sc.edu/~mgv/csce582sp20/links/vanHorn1.pdf",
+    "found_by": "exa",
+    "kind": "pdf",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/vanhorn-2003-cox-theorem.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "8061d068d08f4f5aa2ab836b7df31d89b9339c61cfaee5bffca91aee88b2ce19",
+    "status": 200,
+    "tier": "http",
+    "title": "Constructing a logic of plausible inference: a guide to Cox's theorem",
+    "url": "https://cse.sc.edu/~mgv/csce582sp20/links/vanHorn1.pdf",
+    "year": "2003"
+  },
+  "wack-1985-marshall-foundation": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Pierre Wack",
+    "chars": 1293,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://www.andrewwmarshallfoundation.org/library/scenarios-uncharted-waters-ahead/",
+    "found_by": "both",
+    "kind": "html",
+    "note": "",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/wack-1985-marshall-foundation.html",
+    "retrieved": "2026-09-23",
+    "sha256": "a4fffc4ccf0b0009d140c8a03669e3c45a50c253515b637bc9541faacb9feab8",
+    "status": 200,
+    "tier": "http",
+    "title": "Scenarios: Uncharted Waters Ahead (library entry)",
+    "url": "https://www.andrewwmarshallfoundation.org/library/scenarios-uncharted-waters-ahead/",
+    "year": "1985"
+  },
+  "wack-1985-scenarios-hbr": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Pierre Wack",
+    "chars": 2652,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://hbr.org/1985/09/scenarios-uncharted-waters-ahead",
+    "found_by": "both",
+    "kind": "html",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-web",
+    "raw_path": "downloads/wack-1985-scenarios-hbr.html",
+    "retrieved": "2026-09-23",
+    "sha256": "8fcd5225c0479da14cb19d807a3d738456741a65d9c5706109a6ad5462e9b063",
+    "status": 200,
+    "tier": "http",
+    "title": "Scenarios: Uncharted Waters Ahead",
+    "url": "https://hbr.org/1985/09/scenarios-uncharted-waters-ahead",
+    "year": "1985"
+  },
+  "walker-2003-defining-uncertainty": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "W.E. Walker; P. Harremoes; J. Rotmans; J.P. van der Sluijs; M.B.A. van Asselt; P. Janssen; M.P. Krayer von Krauss",
+    "chars": 65030,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://repository.tudelft.nl/file/File_f19ef7d6-bb60-40ac-9a62-99a47341bf4f",
+    "found_by": "exa",
+    "kind": "pdf",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/walker-2003-defining-uncertainty.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "2405f40975a1e6d4b62efc5a7d7516944a11a650efc78b05e718a36eee06211b",
+    "status": 200,
+    "tier": "http",
+    "title": "Defining Uncertainty: A Conceptual Basis for Uncertainty Management in Model-Based Decision Support",
+    "url": "https://repository.tudelft.nl/file/File_f19ef7d6-bb60-40ac-9a62-99a47341bf4f",
+    "year": "2003"
+  },
+  "wikipedia-unknown-unknowns": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "",
+        "outcome": "ok",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "Wikipedia contributors",
+    "chars": 38788,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://en.wikipedia.org/wiki/There_are_unknown_unknowns",
+    "found_by": "serpapi",
+    "kind": "html",
+    "note": "",
+    "outcome": "ok",
+    "parser": "bc-web-readability",
+    "raw_path": "downloads/wikipedia-unknown-unknowns.html",
+    "retrieved": "2026-09-23",
+    "sha256": "6a0f43f4187a0ef3f9a0551064a25e2e16e64b1e48fc6ff58126566d4666ec6c",
+    "status": 200,
+    "tier": "http",
+    "title": "There are unknown unknowns",
+    "url": "https://en.wikipedia.org/wiki/There_are_unknown_unknowns",
+    "year": "2026"
+  },
+  "zadeh-1965-fuzzy-sets": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "L.A. Zadeh",
+    "chars": 32354,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://people.eecs.berkeley.edu/~pister/publications/FamousPapers/Zadeh65FuzzySets.pdf",
+    "found_by": "exa",
+    "kind": "pdf",
+    "note": "",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/zadeh-1965-fuzzy-sets.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "3aa044e50486c18ca39e1a47b96c7cd1d05c5523e3387424049413ec9add3426",
+    "status": 200,
+    "tier": "http",
+    "title": "Fuzzy Sets",
+    "url": "https://people.eecs.berkeley.edu/~pister/publications/FamousPapers/Zadeh65FuzzySets.pdf",
+    "year": "1965"
+  },
+  "zadeh-1977-possibility": {
+    "attempts": [
+      {
+        "engine": null,
+        "headless": null,
+        "note": "non-HTML body",
+        "outcome": "non_html",
+        "status": 200,
+        "tier": "http"
+      }
+    ],
+    "authors": "L.A. Zadeh",
+    "chars": 51601,
+    "engine": "curl_cffi",
+    "escalated": false,
+    "final_url": "https://www2.eecs.berkeley.edu/Pubs/TechRpts/1977/Archive/ERL-m-77-12.pdf",
+    "found_by": "exa",
+    "kind": "pdf",
+    "note": "UCB/ERL M77/12; published in Fuzzy Sets and Systems 1:3-28 (1978)",
+    "outcome": "ok",
+    "parser": "kaos-pdf",
+    "raw_path": "downloads/zadeh-1977-possibility.pdf",
+    "retrieved": "2026-09-23",
+    "sha256": "33504f49af80cbe8b52861a003224da0c83501d16cc5ddad06ea7bfaa869d4bb",
+    "status": 200,
+    "tier": "http",
+    "title": "Fuzzy Sets as a Basis for a Theory of Possibility",
+    "url": "http://www2.eecs.berkeley.edu/Pubs/TechRpts/1977/Archive/ERL-m-77-12.pdf",
+    "year": "1977"
+  }
+}

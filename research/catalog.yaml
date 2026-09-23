@@ -1,0 +1,491 @@
+- slug: derkiureghian-2009-aleatory-epistemic
+  url: https://www.ripid.ethz.ch/Paper/DerKiureghian_paper.pdf
+  title: Aleatory or epistemic? Does it matter?
+  authors: Armen Der Kiureghian; Ove Ditlevsen
+  year: 2009
+  found_by: exa
+- slug: knight-1921-risk-uncertainty-profit
+  url: https://fraser.stlouisfed.org/files/docs/publications/books/risk/riskuncertaintyprofit.pdf
+  title: Risk, Uncertainty, and Profit
+  authors: Frank H. Knight
+  year: 1921
+  found_by: both
+- slug: keynes-1921-treatise-probability
+  url: https://www.gutenberg.org/files/32625/32625-pdf.pdf
+  title: A Treatise on Probability
+  authors: John Maynard Keynes
+  year: 1921
+  found_by: both
+  note: Gutenberg ebook 32625
+- slug: keynes-1937-general-theory-employment
+  url: https://www.hetwebsite.net/het/texts/keynes/keynes1937qje.htm
+  title: The General Theory of Employment
+  authors: John Maynard Keynes
+  year: 1937
+  found_by: both
+  note: Quarterly Journal of Economics 51(2):209-223; HET website transcription
+- slug: ellsberg-1961-risk-ambiguity
+  url: https://sites.socsci.uci.edu/~bskyrms/bio/readings/ellsberg.pdf
+  title: Risk, Ambiguity, and the Savage Axioms
+  authors: Daniel Ellsberg
+  year: 1961
+  found_by: exa
+  note: QJE 75(4):643-669 (1961); RAND P-2173 copy had no text layer
+- slug: rumsfeld-2002-dod-briefing
+  url: https://avalon.law.yale.edu/sept11/dod_brief146.asp
+  title: DoD News Briefing, Feb. 12, 2002
+  authors: Donald H. Rumsfeld; Richard Myers
+  year: 2002
+  found_by: both
+- slug: wikipedia-unknown-unknowns
+  url: https://en.wikipedia.org/wiki/There_are_unknown_unknowns
+  title: There are unknown unknowns
+  authors: Wikipedia contributors
+  year: 2026
+  found_by: serpapi
+- slug: walker-2003-defining-uncertainty
+  url: https://repository.tudelft.nl/file/File_f19ef7d6-bb60-40ac-9a62-99a47341bf4f
+  title: 'Defining Uncertainty: A Conceptual Basis for Uncertainty Management in Model-Based Decision Support'
+  authors: W.E. Walker; P. Harremoes; J. Rotmans; J.P. van der Sluijs; M.B.A. van Asselt; P. Janssen; M.P. Krayer von Krauss
+  year: 2003
+  found_by: exa
+- slug: marchau-2019-dmdu-book
+  url: https://link.springer.com/content/pdf/10.1007/978-3-030-05252-2_1.pdf
+  title: 'Introduction (ch. 1 of Decision Making under Deep Uncertainty: From Theory to Practice)'
+  authors: Vincent A.W.J. Marchau; Warren E. Walker; Pieter J.T.M. Bloemen; Steven W. Popper
+  year: 2019
+  found_by: exa
+  note: Springer open access; OAPEN full-book copy is behind an Anubis proof-of-work wall
+- slug: lempert-2003-shaping-next-100-years
+  url: https://www.rand.org/content/dam/rand/pubs/monograph_reports/2007/MR1626.pdf
+  title: 'Shaping the Next One Hundred Years: New Methods for Quantitative, Long-Term Policy Analysis'
+  authors: Robert J. Lempert; Steven W. Popper; Steven C. Bankes
+  year: 2003
+  found_by: both
+- slug: taleb-2004-edge-learning-to-expect
+  url: https://www.edge.org/3rd_culture/taleb04/taleb_index.html
+  title: Learning to Expect the Unexpected
+  authors: Nassim Nicholas Taleb
+  year: 2004
+  found_by: exa
+- slug: sep-probability-interpret
+  url: https://plato.stanford.edu/entries/probability-interpret/
+  title: Interpretations of Probability
+  authors: Alan Hajek
+  year: 2023
+  found_by: direct
+  note: Stanford Encyclopedia of Philosophy
+- slug: sep-imprecise-probabilities
+  url: https://plato.stanford.edu/entries/imprecise-probabilities/
+  title: Imprecise Probabilities
+  authors: Seamus Bradley
+  year: 2019
+  found_by: direct
+  note: Stanford Encyclopedia of Philosophy
+- slug: sep-formal-epistemology
+  url: https://plato.stanford.edu/entries/formal-epistemology/
+  title: Formal Epistemology
+  authors: Jonathan Weisberg
+  year: 2021
+  found_by: direct
+  note: Stanford Encyclopedia of Philosophy
+- slug: sep-counterfactuals
+  url: https://plato.stanford.edu/entries/counterfactuals/
+  title: Counterfactuals
+  authors: William Starr
+  year: 2022
+  found_by: direct
+  note: Stanford Encyclopedia of Philosophy
+- slug: sep-epistemology
+  url: https://plato.stanford.edu/entries/epistemology/
+  title: Epistemology
+  authors: Matthias Steup; Ram Neta
+  year: 2020
+  found_by: direct
+  note: Stanford Encyclopedia of Philosophy
+- slug: sep-dutch-book
+  url: https://plato.stanford.edu/entries/dutch-book/
+  title: Dutch Book Arguments
+  authors: Susan Vineberg
+  year: 2022
+  found_by: direct
+  note: Stanford Encyclopedia of Philosophy
+- slug: sep-induction-problem
+  url: https://plato.stanford.edu/entries/induction-problem/
+  title: The Problem of Induction
+  authors: Leah Henderson
+  year: 2022
+  found_by: direct
+  note: Stanford Encyclopedia of Philosophy
+- slug: sep-abduction
+  url: https://plato.stanford.edu/entries/abduction/
+  title: Abduction
+  authors: Igor Douven
+  year: 2021
+  found_by: direct
+  note: Stanford Encyclopedia of Philosophy
+- slug: sep-logic-nonmonotonic
+  url: https://plato.stanford.edu/entries/logic-nonmonotonic/
+  title: Non-monotonic Logic
+  authors: Christian Strasser; G. Aldo Antonelli
+  year: 2019
+  found_by: direct
+  note: Stanford Encyclopedia of Philosophy
+- slug: laplace-1814-philosophical-essay
+  url: https://www.gutenberg.org/files/58881/58881-h/58881-h.htm
+  title: A Philosophical Essay on Probabilities
+  authors: Pierre-Simon Laplace (trans. Truscott and Emory)
+  year: 1814
+  found_by: both
+  note: 1902 English translation, Gutenberg 58881
+- slug: ramsey-1926-truth-probability
+  url: http://fitelson.org/probability/ramsey.pdf
+  title: Truth and Probability
+  authors: Frank P. Ramsey
+  year: 1926
+  found_by: exa
+- slug: jaynes-2003-probability-theory
+  url: https://bayes.wustl.edu/etj/prob/book.pdf
+  title: 'Probability Theory: The Logic of Science (preprint)'
+  authors: E.T. Jaynes
+  year: 2003
+  found_by: both
+- slug: vanhorn-2003-cox-theorem
+  url: https://cse.sc.edu/~mgv/csce582sp20/links/vanHorn1.pdf
+  title: 'Constructing a logic of plausible inference: a guide to Cox''s theorem'
+  authors: Kevin S. Van Horn
+  year: 2003
+  found_by: exa
+- slug: hume-1748-enquiry
+  url: https://www.gutenberg.org/cache/epub/9662/pg9662.txt
+  title: An Enquiry Concerning Human Understanding
+  authors: David Hume
+  year: 1748
+  found_by: exa
+- slug: shafer-1990-dempster-shafer
+  url: https://fitelson.org/topics/shafer.pdf
+  title: Dempster-Shafer Theory
+  authors: Glenn Shafer
+  year: 1990
+  found_by: exa
+- slug: denoeux-2023-belief-functions-lecture
+  url: https://www.hds.utc.fr/~tdenoeux/dokuwiki/_media/en/bf2023_lecture1.pdf
+  title: 'Theory of Belief Functions: Application to machine learning and statistics (lecture 1)'
+  authors: Thierry Denoeux
+  year: 2023
+  found_by: exa
+- slug: zadeh-1965-fuzzy-sets
+  url: https://people.eecs.berkeley.edu/~pister/publications/FamousPapers/Zadeh65FuzzySets.pdf
+  title: Fuzzy Sets
+  authors: L.A. Zadeh
+  year: 1965
+  found_by: exa
+- slug: zadeh-1977-possibility
+  url: http://www2.eecs.berkeley.edu/Pubs/TechRpts/1977/Archive/ERL-m-77-12.pdf
+  title: Fuzzy Sets as a Basis for a Theory of Possibility
+  authors: L.A. Zadeh
+  year: 1977
+  found_by: exa
+  note: UCB/ERL M77/12; published in Fuzzy Sets and Systems 1:3-28 (1978)
+- slug: tversky-kahneman-1974-heuristics
+  url: https://sites.socsci.uci.edu/~bskyrms/bio/readings/tversky_k_heuristics_biases.pdf
+  title: 'Judgment under Uncertainty: Heuristics and Biases'
+  authors: Amos Tversky; Daniel Kahneman
+  year: 1974
+  found_by: both
+- slug: brier-1950-verification
+  url: https://journals.ametsoc.org/view/journals/mwre/78/1/1520-0493_1950_078_0001_vofeit_2_0_co_2.xml
+  title: Verification of Forecasts Expressed in Terms of Probability
+  authors: Glenn W. Brier
+  year: 1950
+  found_by: both
+- slug: mellers-2014-forecasting-tournament
+  url: https://faculty.wharton.upenn.edu/wp-content/uploads/2015/07/2014---psychological-strategies-for-winning-a-tournament.pdf
+  title: Psychological Strategies for Winning a Geopolitical Forecasting Tournament
+  authors: Barbara Mellers; Lyle Ungar; Jonathan Baron; et al.; Philip E. Tetlock
+  year: 2014
+  found_by: exa
+- slug: kahneman-2016-hbr-noise
+  url: https://hbr.org/2016/10/noise
+  title: 'Noise: How to Overcome the High, Hidden Cost of Inconsistent Decision Making'
+  authors: Daniel Kahneman; Andrew M. Rosenfield; Linnea Gandhi; Tom Blaser
+  year: 2016
+  found_by: both
+- slug: hoekstra-2014-ci-misinterpretation
+  url: https://www.ejwagenmakers.com/inpress/HoekstraEtAlPBR.pdf
+  title: Robust misinterpretation of confidence intervals
+  authors: Rink Hoekstra; Richard D. Morey; Jeffrey N. Rouder; Eric-Jan Wagenmakers
+  year: 2014
+  found_by: exa
+- slug: pearl-2019-seven-tools
+  url: https://ftp.cs.ucla.edu/pub/stat_ser/r481.pdf
+  title: The Seven Tools of Causal Inference, with Reflections on Machine Learning
+  authors: Judea Pearl
+  year: 2019
+  found_by: exa
+- slug: rubin-1974-causal-effects
+  url: http://pdfs.semanticscholar.org/5451/22e2990590524459ec9b59ccac6ce71e3b6a.pdf
+  title: Estimating Causal Effects of Treatments in Randomized and Nonrandomized Studies
+  authors: Donald B. Rubin
+  year: 1974
+  found_by: exa
+- slug: wack-1985-scenarios-hbr
+  url: https://hbr.org/1985/09/scenarios-uncharted-waters-ahead
+  title: 'Scenarios: Uncharted Waters Ahead'
+  authors: Pierre Wack
+  year: 1985
+  found_by: both
+- slug: lorenz-1963-nonperiodic-flow
+  url: https://journals.ametsoc.org/view/journals/atsc/20/2/1520-0469_1963_020_0130_dnf_2_0_co_2.xml
+  title: Deterministic Nonperiodic Flow
+  authors: Edward N. Lorenz
+  year: 1963
+  found_by: both
+  note: J. Atmos. Sci. 20:130-141; UVM PDF copy had no text layer
+- slug: ecmwf-fug-ensemble-rationale
+  url: https://confluence.ecmwf.int/spaces/FUG/pages/673550730/Section+5+Forecast+Ensemble+ENS+-+Rationale+and+Construction
+  title: 'Forecast User Guide Section 5: Forecast Ensemble (ENS) Rationale and Construction'
+  authors: ECMWF
+  year: 2025
+  found_by: exa
+- slug: ecmwf-fug-ensemble-products
+  url: https://confluence.ecmwf.int/spaces/FUG/pages/673551037/Section+8.1.1+Basic+ensemble+products
+  title: 'Forecast User Guide Section 8.1.1: Basic ensemble products'
+  authors: ECMWF
+  year: 2025
+  found_by: exa
+- slug: ipcc-ar6-wg1-glossary
+  url: https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_AnnexVII.pdf
+  title: 'Annex VII: Glossary (AR6 WGI)'
+  authors: IPCC (Matthews et al., eds.)
+  year: 2021
+  found_by: both
+- slug: kent-1964-words-estimative-probability
+  url: https://www.cia.gov/resources/csi/static/Words-of-Estimative-Probability.pdf
+  title: Words of Estimative Probability
+  authors: Sherman Kent
+  year: 1964
+  found_by: both
+  note: Studies in Intelligence 8(4), 1964; CIA CSI static PDF (the CSI HTML page is a stub linking this PDF)
+- slug: odni-2015-icd-203
+  url: https://www.odni.gov/files/documents/ICD/ICD-203.pdf
+  title: 'Intelligence Community Directive 203: Analytic Standards'
+  authors: Office of the Director of National Intelligence
+  year: 2015
+  found_by: exa
+- slug: mastrandrea-2010-ipcc-guidance-note
+  url: https://www.ipcc.ch/site/assets/uploads/2017/08/AR5_Uncertainty_Guidance_Note.pdf
+  title: Guidance Note for Lead Authors of the IPCC Fifth Assessment Report on Consistent Treatment of Uncertainties
+  authors: Michael D. Mastrandrea; Christopher B. Field; Thomas F. Stocker; et al.
+  year: 2010
+  found_by: exa
+- slug: mastrandrea-2011-guidance-note-commentary
+  url: https://climatehomes.unibe.ch/~stocker/papers/mastrandrea11cc.pdf
+  title: 'The IPCC AR5 guidance note on consistent treatment of uncertainties: a common approach across the working groups'
+  authors: Michael D. Mastrandrea; Katharine J. Mach; et al.
+  year: 2011
+  found_by: exa
+- slug: vanderbles-2019-communicating-uncertainty
+  url: https://royalsocietypublishing.org/doi/10.1098/rsos.181870
+  title: Communicating uncertainty about facts, numbers and science
+  authors: Anne Marthe van der Bles; Sander van der Linden; Alexandra L.J. Freeman; James Mitchell; Ana B. Galvao; Lisa Zaval; David J. Spiegelhalter
+  year: 2019
+  found_by: both
+- slug: spiegelhalter-2017-risk-uncertainty-communication
+  url: https://regulation.org.uk/library/2017-Spiegelhalter-Risk_and_Uncertainty_Communication.pdf
+  title: Risk and Uncertainty Communication
+  authors: David Spiegelhalter
+  year: 2017
+  found_by: both
+  note: Annual Review of Statistics and Its Application 4:31-60
+- slug: gigerenzer-hoffrage-1995-frequency-formats
+  url: https://library.mpib-berlin.mpg.de/ft/gg/GG_How_1995.pdf
+  title: 'How to Improve Bayesian Reasoning Without Instruction: Frequency Formats'
+  authors: Gerd Gigerenzer; Ulrich Hoffrage
+  year: 1995
+  found_by: exa
+- slug: gigerenzer-2005-30-percent-rain
+  url: https://library.mpib-berlin.mpg.de/ft/gg/GG_30_Chance_2005.pdf
+  title: '"A 30% Chance of Rain Tomorrow": How Does the Public Understand Probabilistic Weather Forecasts?'
+  authors: Gerd Gigerenzer; Ralph Hertwig; Eva van den Broek; Barbara Fasolo; Konstantinos V. Katsikopoulos
+  year: 2005
+  found_by: exa
+- slug: budescu-2012-effective-communication-ipcc
+  url: https://storm.colorado.edu/~whan/ATOC4800_5000/Spring_2018/Materials/Effective_communication_of_unc.pdf
+  title: Effective communication of uncertainty in the IPCC reports
+  authors: David V. Budescu; Han-Hui Por; Stephen B. Broomell
+  year: 2012
+  found_by: serpapi
+- slug: silver-2016-final-election-update
+  url: https://web.archive.org/web/20161108161638/http://fivethirtyeight.com/features/final-election-update-theres-a-wide-range-of-outcomes-and-most-of-them-come-up-clinton/
+  title: 'Final Election Update: There''s A Wide Range Of Outcomes, And Most Of Them Come Up Clinton'
+  authors: Nate Silver
+  year: 2016
+  found_by: exa
+- slug: broad-2007-cone-misinterpretations
+  url: https://journals.ametsoc.org/downloadpdf/view/journals/bams/88/5/bams-88-5-651.pdf
+  title: Misinterpretations of the "Cone of Uncertainty" in Florida during the 2004 Hurricane Season
+  authors: Kenneth Broad; Anthony Leiserowitz; Jessica Weinkle; Marissa Steketee
+  year: 2007
+  found_by: exa
+- slug: nhc-cone-definition
+  url: https://www.nhc.noaa.gov/aboutcone.shtml
+  title: Definition of the NHC Track Forecast Cone
+  authors: NOAA National Hurricane Center
+  year: 2026
+  found_by: exa
+- slug: nws-pop-definition
+  url: https://www.weather.gov/ffc/pop
+  title: 'FAQ: What is the Meaning of PoP'
+  authors: NOAA National Weather Service, Peachtree City GA
+  year: 2026
+  found_by: both
+- slug: friedman-zeckhauser-2012-assessing-uncertainty-intelligence
+  url: https://www.stat.berkeley.edu/%7Ealdous/157/Papers/Assessing%20Uncertainty%20in%20Intelligence.pdf
+  title: Assessing Uncertainty in Intelligence
+  authors: Jeffrey A. Friedman; Richard Zeckhauser
+  year: 2012
+  found_by: exa
+  note: Intelligence and National Security 27(6):824-847; Harvard DASH copy blocked by Cloudflare captcha
+- slug: fasb-summary-statement-5
+  url: https://fasb.org/page/PageContent?pageId=/reference-library/superseded-standards/summary-of-statement-no-5.html&bcpath=tff
+  title: 'Summary of Statement No. 5: Accounting for Contingencies'
+  authors: Financial Accounting Standards Board
+  year: 1975
+  found_by: both
+- slug: fasb-summary-statement-157
+  url: https://www.fasb.org/page/PageContent?pageId=/reference-library/superseded-standards/summary-of-statement-no-157.html&bcpath=tff
+  title: 'Summary of Statement No. 157: Fair Value Measurements'
+  authors: Financial Accounting Standards Board
+  year: 2006
+  found_by: both
+- slug: fasb-summary-fin-48
+  url: https://www.fasb.org/page/PageContent?pageId=/reference-library/superseded-standards/summary-of-interpretation-no-48.html&bcpath=tff
+  title: 'Summary of Interpretation No. 48: Accounting for Uncertainty in Income Taxes'
+  authors: Financial Accounting Standards Board
+  year: 2006
+  found_by: both
+- slug: addington-1979-standard-of-proof
+  url: https://www.law.cornell.edu/supremecourt/text/441/418
+  title: Addington v. Texas, 441 U.S. 418 (1979)
+  authors: U.S. Supreme Court (Burger, C.J.)
+  year: 1979
+  found_by: exa
+- slug: iea-2020-review-radical-uncertainty
+  url: https://iea.org.uk/radical-uncertainty-decision-making-for-an-unknowable-future-book-review/
+  title: 'Radical Uncertainty: Decision-making for an unknowable future (book review)'
+  authors: Institute of Economic Affairs
+  year: 2020
+  found_by: both
+- slug: wack-1985-marshall-foundation
+  url: https://www.andrewwmarshallfoundation.org/library/scenarios-uncharted-waters-ahead/
+  title: 'Scenarios: Uncharted Waters Ahead (library entry)'
+  authors: Pierre Wack
+  year: 1985
+  found_by: both
+- slug: shell-2013-40-years-scenarios
+  url: https://www.shell.com/news-and-insights/scenarios/what-are-shell-scenarios/_jcr_content/root/main/section_509167378/promo/links/item0.stream/1652289755448/a0e75f042fee5322b72780ee36e5ba17c35a4fc6/shell-scenarios-40yearsbook080213.pdf
+  title: 40 Years of Shell Scenarios
+  authors: Shell International
+  year: 2013
+  found_by: exa
+- slug: frus-1961-d35-jcs-evaluation
+  url: https://history.state.gov/historicaldocuments/frus1961-63v10/d35
+  title: FRUS 1961-63 vol. X doc. 35
+  authors: U.S. Department of State, Office of the Historian
+  year: 1961
+  found_by: exa
+- slug: frus-1961-d46
+  url: https://history.state.gov/historicaldocuments/frus1961-63v10/d46
+  title: FRUS 1961-63 vol. X doc. 46
+  authors: U.S. Department of State, Office of the Historian
+  year: 1961
+  found_by: exa
+- slug: friedman-2019-war-and-chance-preview
+  url: https://api.pageplace.de/preview/DT0400.9780190938031_A36867299/preview-9780190938031_A36867299.pdf
+  title: 'War and Chance: Assessing Uncertainty in International Politics (publisher preview)'
+  authors: Jeffrey A. Friedman
+  year: 2019
+  found_by: exa
+- slug: silver-2016-why-538-gave-trump-better-chance
+  url: https://web.archive.org/web/2016/https://fivethirtyeight.com/features/why-fivethirtyeight-gave-trump-a-better-chance-than-almost-anyone-else/
+  title: Why FiveThirtyEight Gave Trump A Better Chance Than Almost Anyone Else
+  authors: Nate Silver
+  year: 2016
+  found_by: exa
+- slug: pcaob-au337b-fas5-excerpts
+  url: https://pcaobus.org/oversight/standards/archived-standards/pre-reorganized-auditing-standards-interpretations/details/AU337B
+  title: 'AU Section 337B: Exhibit I, Excerpts from Statement of Financial Accounting Standards No. 5'
+  authors: PCAOB (reproducing FASB Statement No. 5)
+  year: 1975
+  found_by: both
+- slug: harris-2013-lost-in-translation
+  url: https://discovery.ucl.ac.uk/1408020/1/HarrisEtAl_ClimaticChange_AuthorsFinal.pdf
+  title: Lost in translation? Interpretations of the probability phrases used by the Intergovernmental Panel on Climate Change in China and the UK
+  authors: Adam J.L. Harris; Adam Corner; Juemin Xu; Xiufang Du
+  year: 2013
+  found_by: serpapi
+- slug: guardian-2024-review-art-of-uncertainty
+  url: https://www.theguardian.com/books/2024/sep/22/the-art-of-uncertainty-by-david-spiegelhalter-review-a-search-for-sense-in-probability-and-chance
+  title: The Art of Uncertainty by David Spiegelhalter review
+  authors: The Observer / Guardian
+  year: 2024
+  found_by: serpapi
+- slug: plosone-2019-verbal-probabilities
+  url: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0213522
+  title: 'Verbal probabilities: Very likely to be somewhat more confusing than numbers'
+  authors: Bonnie C. Wintle; Hannah Fraser; Ben C. Wills; Ann E. Nicholson; Fiona Fidler
+  year: 2019
+  found_by: bc-research ensemble+triage (see ensemble/)
+- slug: cia-definition-estimative-expressions
+  url: https://www.cia.gov/resources/csi/static/Def-of-Estimative-Expressions.pdf
+  title: The Definition of Some Estimative Expressions
+  authors: David L. Wark
+  year: n.d.
+  found_by: bc-research ensemble+triage (see ensemble/)
+  note: Studies in Intelligence; the released copy carries no issue date (release stamp 18 Sept 95)
+- slug: kesselman-2008-verbal-probability-nie
+  url: https://www.files.ethz.ch/isn/55739/kesselman_thesis_final.pdf
+  title: 'Verbal Probability Expressions in National Intelligence Estimates: A Comprehensive Analysis of Trends from the Fifties through Post 9/11'
+  authors: Rachel F. Kesselman
+  year: 2008
+  found_by: bc-research ensemble+triage (see ensemble/)
+- slug: rand-2013-rb9701-rdm-brief
+  url: https://www.rand.org/content/dam/rand/pubs/research_briefs/RB9700/RB9701/RAND_RB9701.pdf
+  title: 'Making Good Decisions Without Predictions: Robust Decision Making for Planning Under Deep Uncertainty'
+  authors: RAND Corporation
+  year: 2013
+  found_by: bc-research ensemble+triage (see ensemble/)
+- slug: lempert-2019-rdm-chapter
+  url: https://link.springer.com/content/pdf/10.1007/978-3-030-05252-2_2.pdf
+  title: Robust Decision Making (RDM)
+  authors: Robert J. Lempert
+  year: 2019
+  found_by: bc-research ensemble+triage (see ensemble/)
+- slug: cpajournal-sop-94-6
+  url: http://archives.cpajournal.com/old/16762539.htm
+  title: New rules on disclosure of certain significant risks and uncertainties (on AICPA SOP 94-6, codified as ASC 275)
+  authors: The CPA Journal
+  year: 1995
+  found_by: serpapi
+  note: 'Secondary. Primary SOP 94-6 blocked: eGrove (Cloudflare/AWS WAF captchas at every tier) and fasb.org PDF viewer (Cloudflare challenge at every tier)'
+- slug: knight-1921-econlib-pt1-ch1
+  url: https://www.econlib.org/book-chapters/chapter-pt-ich-i/
+  title: Risk, Uncertainty, and Profit, Part I, Chapter I (Econlib edition)
+  authors: Frank H. Knight
+  year: 1921
+  found_by: exa
+  note: Clean text for Ch. I; the FRASER scan [S02] has a scrambled or missing text layer for these pages
+- slug: ellsberg-1961-dklevine-copy
+  url: http://www.dklevine.com/archive/refs47605.pdf
+  title: Risk, Ambiguity, and the Savage Axioms (alternate copy)
+  authors: Daniel Ellsberg
+  year: 1961
+  found_by: both
+  note: Alternate copy; UC Irvine copy [S05] has doubled-letter OCR
+- slug: springer-2024-ellsberg-1961-text-context
+  url: https://link.springer.com/article/10.1007/s10203-024-00437-1
+  title: 'Ellsberg 1961: text, context, influence'
+  authors: Ivan Moscati
+  year: 2024
+  found_by: serpapi
