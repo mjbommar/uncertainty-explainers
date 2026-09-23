@@ -1,0 +1,41 @@
+{
+ "key": "4e6dc76243bd1a2ac00618093dad1e3882e2b5f2893e5bc97a794ddcc554db08",
+ "provider": "google",
+ "model": "gemini-3.8-flash-tts",
+ "kind": "speech",
+ "params": {
+  "voice": "Charon",
+  "instructions": "A calm, clear adult narrator for a short educational film. Unhurried and even, about 145 words a minute, warm but not theatrical. Plain American English. Give each sentence a natural full stop and let key terms land without stressing them.",
+  "format": "wav",
+  "rate": null,
+  "endpoint": "interactions",
+  "style_field": "speech_metadata.style"
+ },
+ "prompt_sha256": "4b5154ba4db492a3095caf19e12457343a31990d3c4d0acbba9934ee75d26a76",
+ "sha256": "5b1f8731217f5d57d0c1c595b2c67f7ddc7cc75c006697f9e7f2341189f8878e",
+ "suffix": "wav",
+ "response_meta": {
+  "mime_type": "audio/wav",
+  "interaction_id": "v1_ChdSVkcwYXVLZkRhM3dqckVQeEpmWDZBVRIXUlZHMGF1S2ZEYTN3anJFUHhKZlg2QVU",
+  "prompt_tokens": 33,
+  "output_tokens": 369,
+  "duration_s": 11.52
+ },
+ "verifier": "speech",
+ "verified": true,
+ "tolerated": false,
+ "attempts": 1,
+ "failures": [],
+ "cost_usd": 0.0033375,
+ "units": {
+  "characters": 158.0,
+  "seconds": 11.52,
+  "input_tokens": 33.0,
+  "output_tokens": 369.0
+ },
+ "created_at": "2026-09-23T22:23:01.837999Z",
+ "duration_s": 11.52,
+ "width": null,
+ "height": null,
+ "latency_ms": 4856
+}

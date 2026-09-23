@@ -3,6 +3,55 @@
 What was built, what worked, what in `bc-modules` was missing or broken and
 how each was handled, and what it cost. Newest first.
 
+## 2026-09-23: video 3, "Saying it out loud"
+
+`videos/03-saying-it-out-loud`: 49 segments plus end card, 1,415 words, 554.0 s
+(9:14), 16,621 frames. Every machine QA gate passes (`publish/qa.md`): worst
+narration WER 0.091, -16.05 LUFS / -1.48 dBTP muxed, 196 containment renders
+clean, 136 caption cues valid. Generations worth $0.315 by their receipts
+(speech $0.159, images $0.068, music $0.040, SFX $0.016, QA ASR $0.032).
+Human review: pending.
+
+### New scenes
+
+`pipeline/scenes_03_saying_it_out_loud.py` (imported on the last line of
+`scenes.py`): `memo`, `phrase_readings` (many readers, one phrase: pins, a
+band and drifting unnamed readings, tuned for Kent's Board), `point_ladder`
+(Kent's table with give-or-take bands), `unit_grid`, `two_ladders` (ICD 203 and
+IPCC on one axis), `pull_to_middle`, `bar_rows`, `bracket_sentence`,
+`rain_readings`, `charley` (a schematic cone, forecast line and track, marked
+"not to scale"), `action_ladder`, `risk_seesaw`, `checklist`,
+`confidence_grid`, `sentence_builder`, `statement`. Every one takes two extra
+parameters, `keep` (beats already shown, so a segment can add to the previous
+picture across a `cut` without rebuilding it) and `upto` (beats held back for
+the next segment). The module is named with underscores because a slug with
+hyphens is not an importable module name.
+
+### Pipeline bug fixed
+
+- **`pipeline/sheet.py`: contact sheets for long videos crashed.** A
+  49-segment video makes a stills sheet 19,818 px tall and a cut sheet about
+  15,000 px; the caption layer was one bc-viz canvas the height of the sheet,
+  and bc-viz refuses a render over 16,384 px on a side ("tile the render
+  instead"), so the `frames` stage died. The text is now rasterised one
+  caption strip at a time. `tests/test_sheet.py` builds a 240-frame sheet
+  (taller than the limit); it fails on the old code and passes on the new.
+
+### Decisions and cautions
+
+- The ASC 450 definitions are quoted by hand from FAS 5 as the PCAOB reprints
+  it [S71]; no ASC text went to any model.
+- "Three in ten" for "a fair chance" is attributed to the officer who wrote
+  it, as told to Wyden and reported by Friedman [S67]; the primary memo [S68]
+  says only "fair chance".
+- The Board members' individual odds are not in Kent [S47] beyond "the low
+  man ... 20 to 80, the high of 80 to 20. The rest ranged in between." The
+  scene pins only those two and Kent's 65; the dots between them drift and are
+  labelled "the rest ranged in between", not data.
+- The clear-and-convincing tilt of the risk-of-error balance is drawn between
+  the other two with no numbers; Addington gives none.
+- The PoP = C x A formula is not shown or said.
+
 ## 2026-09-23: video 2, "From evidence to forecast"
 
 `videos/02-from-evidence-to-forecast`: 38 segments plus end card, 995 words,

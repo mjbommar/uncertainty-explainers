@@ -1,0 +1,41 @@
+{
+ "key": "8239435afa743705238cf98b8bf00bcb09549177ac740b71412de25531882866",
+ "provider": "google",
+ "model": "gemini-3.8-flash-tts",
+ "kind": "speech",
+ "params": {
+  "voice": "Charon",
+  "instructions": "A calm, clear adult narrator for a short educational film. Unhurried and even, about 145 words a minute, warm but not theatrical. Plain American English. Give each sentence a natural full stop and let key terms land without stressing them. For this line: Say \"ICD 203\" as \"I C D two oh three\".",
+  "format": "wav",
+  "rate": null,
+  "endpoint": "interactions",
+  "style_field": "speech_metadata.style"
+ },
+ "prompt_sha256": "c9fabcf8517e14b3443d1d69284ce49d54c57a9936858d132f2d803f9faf6e59",
+ "sha256": "d9f53cd17e011402de6fc363e3bd5e6a4fe4833a4c8bcd42f648fcb06cb2214f",
+ "suffix": "wav",
+ "response_meta": {
+  "mime_type": "audio/wav",
+  "interaction_id": "v1_ChdRVkcwYXB1NkZlN3gtOFlQd182SXVRURIXUVZHMGFwdTZGZTd4LThZUHdfNkl1UVE",
+  "prompt_tokens": 47,
+  "output_tokens": 465,
+  "duration_s": 14.52
+ },
+ "verifier": "speech",
+ "verified": true,
+ "tolerated": false,
+ "attempts": 1,
+ "failures": [],
+ "cost_usd": 0.0042085000000000004,
+ "units": {
+  "characters": 193.0,
+  "seconds": 14.52,
+  "input_tokens": 47.0,
+  "output_tokens": 465.0
+ },
+ "created_at": "2026-09-23T22:22:58.237005Z",
+ "duration_s": 14.52,
+ "width": null,
+ "height": null,
+ "latency_ms": 6317
+}

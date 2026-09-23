@@ -1,0 +1,41 @@
+{
+ "key": "47e12f3e2722747d25bed85451e011706fedcef75a6a283da1dd04214ebc3b15",
+ "provider": "google",
+ "model": "gemini-3.8-flash-tts",
+ "kind": "speech",
+ "params": {
+  "voice": "Charon",
+  "instructions": "A calm, clear adult narrator for a short educational film. Unhurried and even, about 145 words a minute, warm but not theatrical. Plain American English. Give each sentence a natural full stop and let key terms land without stressing them. For this line: Say \"Punta Gorda\" as \"POON-tah GOR-dah\".",
+  "format": "wav",
+  "rate": null,
+  "endpoint": "interactions",
+  "style_field": "speech_metadata.style"
+ },
+ "prompt_sha256": "87e624a2000fbf2fbad7f87e8073b68caf390157392720d28e9e84bea0185d90",
+ "sha256": "523272691ef47323ba1a1c112e8dc74cad90754ea1dc5a480258e7f31d935e74",
+ "suffix": "wav",
+ "response_meta": {
+  "mime_type": "audio/wav",
+  "interaction_id": "v1_ChdXbEcwYXFta0RKS3BzT0lQOXRDSTRBRRIXV2xHMGFxbWtESktwc09JUDl0Q0k0QUU",
+  "prompt_tokens": 30,
+  "output_tokens": 294,
+  "duration_s": 9.16
+ },
+ "verifier": "speech",
+ "verified": true,
+ "tolerated": false,
+ "attempts": 1,
+ "failures": [],
+ "cost_usd": 0.0026609999999999997,
+ "units": {
+  "characters": 142.0,
+  "seconds": 9.16,
+  "input_tokens": 30.0,
+  "output_tokens": 294.0
+ },
+ "created_at": "2026-09-23T22:23:22.868010Z",
+ "duration_s": 9.16,
+ "width": null,
+ "height": null,
+ "latency_ms": 4131
+}

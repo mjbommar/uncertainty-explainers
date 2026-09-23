@@ -1,0 +1,41 @@
+{
+ "key": "b5a0015b3493ea33e20692d24464259ce350c8b588b876b0a086a736d9b43c7b",
+ "provider": "google",
+ "model": "gemini-3.8-flash-tts",
+ "kind": "speech",
+ "params": {
+  "voice": "Charon",
+  "instructions": "A calm, clear adult narrator for a short educational film. Unhurried and even, about 145 words a minute, warm but not theatrical. Plain American English. Give each sentence a natural full stop and let key terms land without stressing them. For this line: Say \"van der Bles\" as \"fahn der BLESS\".",
+  "format": "wav",
+  "rate": null,
+  "endpoint": "interactions",
+  "style_field": "speech_metadata.style"
+ },
+ "prompt_sha256": "dfe2ebe742bb726f3aad89ce509661d2a2ca84c23d90a7d3c9d06f6438aa89c4",
+ "sha256": "6623730600d58a9cfbc023a2943699ac124848dcec2b9a412b69d670f3a3d3ec",
+ "suffix": "wav",
+ "response_meta": {
+  "mime_type": "audio/wav",
+  "interaction_id": "v1_ChdkVkcwYXVUVkQ1S3BzT0lQOXRDSTRBRRIXZFZHMGF1VFZENUtwc09JUDl0Q0k0QUU",
+  "prompt_tokens": 47,
+  "output_tokens": 406,
+  "duration_s": 12.68
+ },
+ "verifier": "speech",
+ "verified": true,
+ "tolerated": false,
+ "attempts": 1,
+ "failures": [],
+ "cost_usd": 0.0036775,
+ "units": {
+  "characters": 187.0,
+  "seconds": 12.68,
+  "input_tokens": 47.0,
+  "output_tokens": 406.0
+ },
+ "created_at": "2026-09-23T22:23:50.028600Z",
+ "duration_s": 12.68,
+ "width": null,
+ "height": null,
+ "latency_ms": 6246
+}

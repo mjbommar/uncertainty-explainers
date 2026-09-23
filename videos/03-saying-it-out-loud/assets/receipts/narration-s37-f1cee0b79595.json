@@ -1,0 +1,41 @@
+{
+ "key": "f1cee0b79595eabb80e8da800312d4c3894274d6dc354dd7997ef0593cc580d2",
+ "provider": "google",
+ "model": "gemini-3.8-flash-tts",
+ "kind": "speech",
+ "params": {
+  "voice": "Charon",
+  "instructions": "A calm, clear adult narrator for a short educational film. Unhurried and even, about 145 words a minute, warm but not theatrical. Plain American English. Give each sentence a natural full stop and let key terms land without stressing them. For this line: Say \"ASC 450\" as \"A S C four fifty\".",
+  "format": "wav",
+  "rate": null,
+  "endpoint": "interactions",
+  "style_field": "speech_metadata.style"
+ },
+ "prompt_sha256": "4bc3b9274e1c3538088233388dbd54822e70a5ea01a1a43e9ff7bc386abcf20c",
+ "sha256": "698d0fe7dfdc5d3d9bb71bf6715722c959cad90b6518d65455b304fa032bffd8",
+ "suffix": "wav",
+ "response_meta": {
+  "mime_type": "audio/wav",
+  "interaction_id": "v1_ChdrVnUwYW9mQk1LS3dzT0lQdnBIbDRRURIXa1Z1MGFvZkJNS0t3c09JUHZwSGw0UVE",
+  "prompt_tokens": 43,
+  "output_tokens": 463,
+  "duration_s": 14.44
+ },
+ "verifier": "speech",
+ "verified": true,
+ "tolerated": false,
+ "attempts": 1,
+ "failures": [],
+ "cost_usd": 0.0041884999999999995,
+ "units": {
+  "characters": 187.0,
+  "seconds": 14.44,
+  "input_tokens": 43.0,
+  "output_tokens": 463.0
+ },
+ "created_at": "2026-09-23T23:06:58.566871Z",
+ "duration_s": 14.44,
+ "width": null,
+ "height": null,
+ "latency_ms": 6097
+}

@@ -1,0 +1,41 @@
+{
+ "key": "431e89e32038a5bc64b8d890551182bb4ed928fbdacc1afff37b44e8061aadc7",
+ "provider": "google",
+ "model": "gemini-3.8-flash-tts",
+ "kind": "speech",
+ "params": {
+  "voice": "Charon",
+  "instructions": "A calm, clear adult narrator for a short educational film. Unhurried and even, about 145 words a minute, warm but not theatrical. Plain American English. Give each sentence a natural full stop and let key terms land without stressing them. For this line: Say \"FiveThirtyEight\" as \"five thirty-eight\".",
+  "format": "wav",
+  "rate": null,
+  "endpoint": "interactions",
+  "style_field": "speech_metadata.style"
+ },
+ "prompt_sha256": "14f3195f11c12670d5fb0a5efffef930a1297fded85f0f1cbb401b7beecc0d98",
+ "sha256": "811fd94ae9fa58e1ebeec53c2e8b7a65b16cedfd672ef5f1582ed089be1e2430",
+ "suffix": "wav",
+ "response_meta": {
+  "mime_type": "audio/wav",
+  "interaction_id": "v1_ChdYMUcwYXVIcElNT2hqckVQckl1U3VBVRIXWDFHMGF1SHBJTU9oanJFUHJJdVN1QVU",
+  "prompt_tokens": 40,
+  "output_tokens": 350,
+  "duration_s": 10.92
+ },
+ "verifier": "speech",
+ "verified": true,
+ "tolerated": false,
+ "attempts": 1,
+ "failures": [],
+ "cost_usd": 0.00317,
+ "units": {
+  "characters": 173.0,
+  "seconds": 10.92,
+  "input_tokens": 40.0,
+  "output_tokens": 350.0
+ },
+ "created_at": "2026-09-23T22:23:28.347021Z",
+ "duration_s": 10.92,
+ "width": null,
+ "height": null,
+ "latency_ms": 5112
+}
