@@ -1,0 +1,163 @@
+WEBVTT
+
+NOTE Two kinds of not knowing
+
+1
+00:00:00.000 --> 00:00:04.222
+Some of what we do not know is chance. Some is ignorance.
+
+2
+00:00:04.222 --> 00:00:07.333
+A forecast has to say which kind it faces.
+
+3
+00:00:07.933 --> 00:00:09.099
+Roll a fair die.
+
+4
+00:00:09.099 --> 00:00:14.562
+No one can say what comes up next, and more study of the die will not help.
+
+5
+00:00:14.562 --> 00:00:19.733
+Engineers call this aleatory uncertainty, from the Latin word for dice.
+
+6
+00:00:20.133 --> 00:00:22.413
+Now seal a number in an envelope.
+
+7
+00:00:22.413 --> 00:00:25.937
+You do not know it either, but it is already fixed.
+
+8
+00:00:25.937 --> 00:00:28.701
+Open the envelope and the doubt is gone.
+
+9
+00:00:28.701 --> 00:00:34.367
+This is epistemic uncertainty: a gap in what we know, which more data could close.
+
+10
+00:00:34.767 --> 00:00:37.646
+Which kind we face depends on the model.
+
+11
+00:00:37.646 --> 00:00:43.476
+Two engineers put it plainly in 2009: "It is the job of the model builder to make
+
+12
+00:00:43.476 --> 00:00:44.700
+the distinction."
+
+13
+00:00:45.300 --> 00:00:49.197
+A second question is whether a chance can be measured at all.
+
+14
+00:00:49.197 --> 00:00:53.093
+In 1921 the economist Frank Knight pointed to fire insurance.
+
+15
+00:00:53.093 --> 00:00:56.031
+No one can say whether one building will burn.
+
+16
+00:00:56.031 --> 00:01:00.567
+Across many buildings, the loss evens out, and an insurer can carry it.
+
+17
+00:01:00.967 --> 00:01:04.603
+A new business venture has no such group of similar cases.
+
+18
+00:01:04.603 --> 00:01:09.681
+Knight called the measurable kind risk, and the kind that cannot be measured true
+
+19
+00:01:09.681 --> 00:01:10.433
+uncertainty.
+
+20
+00:01:11.033 --> 00:01:15.183
+In 1937, John Maynard Keynes drew a similar line, with examples.
+
+21
+00:01:15.183 --> 00:01:18.425
+Roulette, he wrote, is not uncertain in his sense.
+
+22
+00:01:18.425 --> 00:01:23.676
+The length of a life is only slightly uncertain, and the weather only moderately.
+
+23
+00:01:23.676 --> 00:01:28.733
+A European war is uncertain, and so is the price of copper twenty years ahead.
+
+24
+00:01:29.133 --> 00:01:34.652
+About these matters, he wrote, "there is no scientific basis on which to form any
+
+25
+00:01:34.652 --> 00:01:38.467
+calculable probability whatever. We simply do not know."
+
+26
+00:01:39.267 --> 00:01:42.717
+In 1961 Daniel Ellsberg turned this into a bet.
+
+27
+00:01:42.717 --> 00:01:48.885
+On the left, Urn One holds a hundred red and black balls, in a mix nobody tells you.
+
+28
+00:01:48.885 --> 00:01:52.556
+On the right, Urn Two holds exactly fifty of each.
+
+29
+00:01:52.556 --> 00:01:55.933
+Draw your color and you win a hundred dollars.
+
+30
+00:01:56.333 --> 00:02:01.777
+Most people would rather draw from Urn Two, whether they bet on red or on black.
+
+31
+00:02:01.777 --> 00:02:07.153
+That choice treats red in Urn One as less likely than a half, and black as less
+
+32
+00:02:07.153 --> 00:02:11.100
+likely too. The two chances would add up to less than one.
+
+33
+00:02:11.600 --> 00:02:14.497
+No single probability fits those choices.
+
+34
+00:02:14.497 --> 00:02:20.219
+The name for this is ambiguity: the probabilities themselves are unknown, or only
+
+35
+00:02:20.219 --> 00:02:25.800
+partly known. In Urn One, the chance of red could be anything from zero to one.
+
+36
+00:02:26.300 --> 00:02:31.272
+These kinds lie along one scale, from complete certainty to total ignorance.
+
+37
+00:02:31.272 --> 00:02:34.871
+Choosing a supermarket line sits near the measured end.
+
+38
+00:02:34.871 --> 00:02:40.367
+Keeping an umbrella in the car, for rain you cannot put odds on, sits further along.
+
+39
+00:02:40.767 --> 00:02:46.198
+At the far end is total ignorance, where, in one team's words, "we do not even know
+
+40
+00:02:46.198 --> 00:02:51.433
+that we do not know." A forecast should first say where on this scale it stands.

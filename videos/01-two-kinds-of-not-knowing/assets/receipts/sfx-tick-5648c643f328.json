@@ -1,0 +1,34 @@
+{
+ "key": "5648c643f328a836e3903148e2189dba7cb61e69b4486fdfd2c10b7f527739c7",
+ "provider": "elevenlabs",
+ "model": "eleven_text_to_sound_v2",
+ "kind": "sound",
+ "params": {
+  "seconds": 0.5,
+  "loop": false,
+  "prompt_influence": 0.55,
+  "output_format": "mp3_44100_192"
+ },
+ "prompt_sha256": "341444400b281a26a9494df91ae729ee62598b393018702148429ff2b8786fca",
+ "sha256": "07adc1d27144fcfed7d5dac5f4a2414b48e3d0db647bacc06add7a2375c25a21",
+ "suffix": "mp3",
+ "response_meta": {
+  "content_type": "audio/mpeg",
+  "request_id": "",
+  "requested_seconds": 0.5
+ },
+ "verifier": "sound",
+ "verified": true,
+ "tolerated": false,
+ "attempts": 1,
+ "failures": [],
+ "cost_usd": 0.001,
+ "units": {
+  "seconds": 0.5
+ },
+ "created_at": "2026-09-23T22:04:45.399758Z",
+ "duration_s": null,
+ "width": null,
+ "height": null,
+ "latency_ms": 1539
+}

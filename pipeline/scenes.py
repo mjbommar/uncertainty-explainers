@@ -1082,3 +1082,4 @@ def timeline_strip(f: Frame, box: Box, p: dict[str, Any], c: Clock, ctx: Ctx) ->
             half = f.measure(label, size) / 2
             lx = clamp(x, inner.x + half, inner.right - half)
             f.text(lx, ty + (0 if up else 40), label, size=size, fill=pal.text, anchor="middle")
+from . import scenes_01_two_kinds_of_not_knowing  # noqa: E402,F401  (video 1 scenes)

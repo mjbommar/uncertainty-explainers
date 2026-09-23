@@ -1,0 +1,324 @@
+# Video 1 of the Uncertainty Explainers series.
+# Sources (research/SOURCES.md): S01 Der Kiureghian and Ditlevsen 2009; S56 van der Bles
+# et al. 2019; S02 Knight 1921 (FRASER scan, Ch. VII, checked against the PDF text layer);
+# S76 Knight 1921 Part I Ch. I (Econlib); S04 Keynes 1937; S77 Ellsberg 1961;
+# S23 SEP Imprecise Probabilities; S09 Marchau et al. 2019; S08 Walker et al. 2003.
+slug: 01-two-kinds-of-not-knowing
+title: Two kinds of not knowing
+subtitle: Chance, ignorance, and what can be measured
+target_seconds: 185
+theme: ink
+burn_captions: true
+voice:
+  model: gemini-3.8-flash-tts
+  voice: Charon
+music:
+  prompt: >-
+    Calm, sparse documentary underscore. Warm felt piano with soft sustained pads,
+    slow and reflective, no drums, no melody that competes with a voice.
+  gain_db: -14
+images:
+  - id: die
+    prompt: a single six-sided die, tilted to show three faces with pips
+    provider: openai
+    quality: medium
+  - id: envelope
+    prompt: a closed paper envelope sealed with a round wax seal
+    provider: openai
+    quality: medium
+  - id: house
+    prompt: a small simple house with a pitched roof and one door
+    provider: openai
+    quality: medium
+  - id: venture
+    prompt: a lightbulb with a small gear inside it, a new invention
+    provider: openai
+    quality: medium
+  - id: roulette
+    prompt: a roulette wheel seen from above
+    provider: openai
+    quality: medium
+  - id: copper
+    prompt: a small stack of three copper ingots
+    provider: openai
+    quality: medium
+end_card:
+  seconds: 4.5
+  line: Name the kind of not knowing first.
+  note: "Next: From evidence to forecast"
+segments:
+  - id: s01
+    say: Some of what we do not know is chance. Some is ignorance. A forecast has to say which kind it faces.
+    scene:
+      name: title_card
+      params:
+        label: Uncertainty Explainers
+        title: Two kinds of not knowing
+        subtitle: Chance, ignorance, and what can be measured
+    hold: 0.6
+
+  - id: s02
+    say: Roll a fair die. No one can say what comes up next, and more study of the die will not help. Engineers call this aleatory uncertainty, from the Latin word for dice.
+    sources: [S01]
+    transition: dissolve
+    beats: ["Roll a fair die", "aleatory uncertainty"]
+    sfx:
+      - prompt: A single six-sided plastic die rolled across a wooden table, tumbling and coming to rest. Clean studio recording, no music, no voice.
+        duration: 1.2
+        at: Roll a fair die
+        gain_db: -6
+    scene:
+      name: object_cards
+      params:
+        heading: Two kinds of not knowing
+        slots: 2
+        items:
+          - image: "image:die"
+            term: Aleatory
+            caption: "Chance: more study will not tell the next roll"
+            tone: known
+            ticker: ["3", "6", "1", "4", "2", "5", "5", "1"]
+            ticker_label: next roll
+            at: 0
+            term_at: 1
+    hold: 0.4
+
+  - id: s03
+    say: 'Now seal a number in an envelope. You do not know it either, but it is already fixed. Open the envelope and the doubt is gone. This is epistemic uncertainty: a gap in what we know, which more data could close.'
+    sources: [S01, S56]
+    transition: dissolve
+    beats: ["seal a number", "epistemic uncertainty"]
+    sfx:
+      - cue: paper
+        at: seal a number
+        gain_db: -8
+    scene:
+      name: object_cards
+      params:
+        heading: Two kinds of not knowing
+        slots: 2
+        start: 1
+        items:
+          - image: "image:die"
+            term: Aleatory
+            caption: "Chance: more study will not tell the next roll"
+            tone: known
+            ticker: ["3", "6", "1", "4", "2", "5", "5", "1"]
+            ticker_label: next roll
+          - image: "image:envelope"
+            term: Epistemic
+            caption: "A fixed fact we do not know yet"
+            tone: unknown
+            stamp: "?"
+            at: 0
+            term_at: 1
+    hold: 0.4
+
+  - id: s04
+    say: "Which kind we face depends on the model. Two engineers put it plainly in 2009: \"It is the job of the model builder to make the distinction.\""
+    sources: [S01]
+    transition: glide
+    scene:
+      name: quote_card
+      params:
+        text: It is the job of the model builder to make the distinction.
+        who: Der Kiureghian and Ditlevsen
+        when: "2009"
+    hold: 0.6
+
+  - id: s05
+    say: A second question is whether a chance can be measured at all. In 1921 the economist Frank Knight pointed to fire insurance. No one can say whether one building will burn. Across many buildings, the loss evens out, and an insurer can carry it.
+    sources: [S76, S02]
+    transition: wipe
+    beats: ["A second question", "one building", "many buildings"]
+    scene:
+      name: object_cards
+      params:
+        heading: Knight, 1921
+        slots: 2
+        items:
+          - image: "image:house"
+            count: 24
+            columns: 6
+            marked: [9]
+            term: Risk
+            caption: "Many buildings: the loss evens out"
+            tone: known
+            at: 0
+            term_at: 2
+    hold: 0.4
+
+  - id: s06
+    say: A new business venture has no such group of similar cases. Knight called the measurable kind risk, and the kind that cannot be measured true uncertainty.
+    sources: [S02, S76]
+    transition: dissolve
+    beats: ["new business venture", "measurable kind risk", "true uncertainty"]
+    scene:
+      name: object_cards
+      params:
+        heading: Knight, 1921
+        slots: 2
+        start: 1
+        items:
+          - image: "image:house"
+            count: 24
+            columns: 6
+            marked: [9]
+            term: Risk
+            caption: "Many buildings: the loss evens out"
+            tone: known
+          - image: "image:venture"
+            term: True uncertainty
+            caption: "One new venture: no group of cases"
+            tone: unknown
+            at: 0
+            term_at: 2
+    hold: 0.6
+
+  - id: s07
+    say: In 1937, John Maynard Keynes drew a similar line, with examples. Roulette, he wrote, is not uncertain in his sense. The length of a life is only slightly uncertain, and the weather only moderately. A European war is uncertain, and so is the price of copper twenty years ahead.
+    sources: [S04]
+    transition: push-left
+    direction: Say Keynes so it rhymes with canes.
+    beats: ["Roulette", "length of a life", "the weather", "European war", "price of copper"]
+    sfx:
+      - cue: soft_click
+        at: European war
+        gain_db: -10
+    scene:
+      name: sort_bins
+      params:
+        heading: Keynes, 1937
+        left: Not uncertain
+        right: Uncertain
+        items:
+          - {text: Roulette, side: left, image: "image:roulette"}
+          - {text: Length of a life, side: left, note: only slightly}
+          - {text: The weather, side: left, note: only moderately}
+          - {text: A European war, side: right}
+          - {text: "Copper, 20 years ahead", side: right, image: "image:copper"}
+    hold: 0.4
+
+  - id: s08
+    say: "About these matters, he wrote, \"there is no scientific basis on which to form any calculable probability whatever. We simply do not know.\""
+    sources: [S04]
+    transition: dissolve
+    direction: Slow down and leave a short pause before the last four words.
+    sfx:
+      - cue: low_pad
+        at: 0.0
+        gain_db: -12
+    scene:
+      name: quote_card
+      params:
+        text: There is no scientific basis on which to form any calculable probability whatever. We simply do not know.
+        who: John Maynard Keynes
+        when: "1937"
+    hold: 0.8
+
+  - id: s09
+    say: In 1961 Daniel Ellsberg turned this into a bet. On the left, Urn One holds a hundred red and black balls, in a mix nobody tells you. On the right, Urn Two holds exactly fifty of each. Draw your color and you win a hundred dollars.
+    sources: [S77]
+    transition: wipe
+    beats: ["Ellsberg", "a hundred red", "Urn Two", "fifty of each"]
+    sfx:
+      - cue: marbles
+        at: fifty of each
+        gain_db: -7
+    scene:
+      name: urn
+      params:
+        heading: Ellsberg's two urns
+        left: {label: Urn I, total: 100, caption: "100 balls, mix unknown"}
+        right: {label: Urn II, a: 50, b: 50, caption: "50 red, 50 black"}
+    hold: 0.4
+
+  - id: s10
+    say: Most people would rather draw from Urn Two, whether they bet on red or on black. That choice treats red in Urn One as less likely than a half, and black as less likely too. The two chances would add up to less than one.
+    sources: [S77]
+    transition: glide
+    beats: ["Most people", "red in Urn One", "black as less", "less than one"]
+    scene:
+      name: stacked_bars
+      params:
+        heading: What the choices imply
+        rows:
+          - label: Urn II
+            at: 0
+            parts:
+              - {value: 50, label: "red: ½", tone: warn}
+              - {value: 50, label: "black: ½", tone: dark}
+          - label: Urn I, as the choices treat it
+            at: 1
+            gap_at: 3
+            parts:
+              - {value: 40, label: "red: less than ½", tone: warn, at: 1}
+              - {value: 40, label: "black: less than ½", tone: dark, at: 2}
+            gap_label: adds to less than 1
+    hold: 0.5
+
+  - id: s11
+    say: 'No single probability fits those choices. The name for this is ambiguity: the probabilities themselves are unknown, or only partly known. In Urn One, the chance of red could be anything from zero to one.'
+    sources: [S23, S77]
+    transition: dissolve
+    beats: ["No single probability", "ambiguity"]
+    scene:
+      name: range_bar
+      params:
+        heading: Ambiguity
+        low_label: "0"
+        high_label: "1"
+        rows:
+          - {label: "Urn II: chance of red", value: 50, value_label: "exactly ½", tone: known, at: 0}
+          - {label: "Urn I: chance of red", lo: 0, hi: 100, value_label: "anywhere from 0 to 1", tone: unknown, at: 1}
+    hold: 0.5
+
+  - id: s12
+    say: These kinds lie along one scale, from complete certainty to total ignorance. Choosing a supermarket line sits near the measured end. Keeping an umbrella in the car, for rain you cannot put odds on, sits further along.
+    sources: [S09, S10]
+    transition: push-left
+    beats: ["complete certainty", "supermarket", "umbrella"]
+    sfx:
+      - cue: tick
+        at: supermarket
+        gain_db: -8
+      - cue: tick
+        at: umbrella
+        gain_db: -8
+    scene:
+      name: level_scale
+      params:
+        heading: From certainty to total ignorance
+        levels:
+          - {label: Complete certainty}
+          - {label: Level 1}
+          - {label: Level 2, example: which supermarket line}
+          - {label: Level 3, example: umbrella in the car}
+          - {label: Level 4, example: no agreed model}
+          - {label: Total ignorance}
+        marks: [0, 2, 3]
+    hold: 0.4
+
+  - id: s13
+    say: "At the far end is total ignorance, where, in one team's words, \"we do not even know that we do not know.\" A forecast should first say where on this scale it stands."
+    sources: [S08, S09, S10]
+    transition: dissolve
+    beats: ["At the far end", "total ignorance", "A forecast"]
+    sfx:
+      - cue: chime
+        at: A forecast
+        gain_db: -12
+    scene:
+      name: level_scale
+      params:
+        heading: From certainty to total ignorance
+        levels:
+          - {label: Complete certainty}
+          - {label: Level 1}
+          - {label: Level 2, example: which supermarket line}
+          - {label: Level 3, example: umbrella in the car}
+          - {label: Level 4, example: no agreed model}
+          - {label: Total ignorance, example: "we do not even know that we do not know"}
+        marks: [3, 5]
+        intro: false
+    hold: 0.8

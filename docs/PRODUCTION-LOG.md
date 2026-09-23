@@ -3,6 +3,47 @@
 What was built, what worked, what in `bc-modules` was missing or broken and
 how each was handled, and what it cost. Newest first.
 
+## 2026-09-23: video 1, "Two kinds of not knowing"
+
+`videos/01-two-kinds-of-not-knowing`: 13 segments plus end card, 459 words,
+176.7 s, 5,302 frames. Every machine QA gate passes (`publish/qa.md`): worst
+narration WER 0.000, -16.05 LUFS / -1.57 dBTP muxed, 52 containment renders
+clean, 40 caption cues valid. Human review: pending.
+
+- **New scenes** in `pipeline/scenes_01_two_kinds_of_not_knowing.py`
+  (imported by one line at the end of `scenes.py`): `object_cards`
+  (generated objects on cards, a cycling "next roll" ticker, a grid of
+  insured buildings where a different one is lit each second), `sort_bins`
+  (Keynes's 1937 list into two columns), `stacked_bars` (Ellsberg: two
+  chances that add up to less than one), `range_bar` (a fixed point against a
+  marker that wanders over 0 to 1), `level_scale` (Marchau's scale from
+  complete certainty to total ignorance; `intro: false` keeps the track
+  settled when the next segment continues it). All pass `tests/test_scenes.py`.
+  No other file in `pipeline/` was changed.
+- **Fixed after looking at frames** (four rebuilds, all cached except QA):
+  empty stages under the heading for 4 to 5 s at the start of s05, s09 and
+  s10 (reveals moved to the first beat); `stacked_bars` gap outline arriving
+  before the bars because a fifth beat fell back to the default spacing
+  (beats now explicit per row and part); the ambiguity frame showed "50%"
+  for Urn I (replaced by `range_bar`); s13 re-drew the whole scale from zero
+  at the cut (now `intro: false`); Keynes chips flew across earlier chips on
+  their way into a column (now a short slide into their own slot); gradient
+  seams on the scale track; the gap label colliding with the "1" tick.
+- **Listening.** The master was transcribed again with whisper-1 (independent
+  of QA's gpt-4o-transcribe) and matched the script. Names were cut out and
+  transcribed alone, with no context: whisper-1 heard the isolated "Keynes"
+  as "canes", the correct pronunciation; Ellsberg and Knight were heard as
+  written. No respelling was needed.
+- **Knight citation.** The fire-insurance example and "far too unique" are in
+  Knight's Ch. VII, which is only in [S02] (FRASER scan, checked against the
+  raw PDF text layer, book pp. 213 and 231; `tools.py verify` finds it on PDF
+  page 223 but not in the scrambled markdown). The definitions of risk and
+  "true" uncertainty are cited to [S76]. s05 and s06 therefore cite both.
+- **Cost.** First build $0.087 (13 TTS clips, 7 SFX, 6 images; the music bed
+  was a cache hit from the smoke video's identical prompt), four rebuilds at
+  about $0.010 each (QA transcription), listening transcriptions about $0.02.
+  About $0.15 in all. Generations the video uses are worth $0.202 by receipt.
+
 ## 2026-09-23: pipeline and smoke video
 
 Built `pipeline/` (spec, brand, canvas, scenes, speech, sound, images,

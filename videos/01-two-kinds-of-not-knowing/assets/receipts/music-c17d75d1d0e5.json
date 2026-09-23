@@ -1,0 +1,37 @@
+{
+ "key": "c17d75d1d0e5fa5fe1beabe876f7f2efe44e6c7045ae9eded4f6d42e59e30107",
+ "provider": "google",
+ "model": "lyria-3-clip-preview",
+ "kind": "music",
+ "params": {
+  "minutes": null,
+  "instrumental": true,
+  "kind": "clip",
+  "model": "lyria-3-clip-preview",
+  "wav": false
+ },
+ "prompt_sha256": "ae1096f8162e274842547751b4ff8beb915c180d154288f580a3ff7f3e263f7e",
+ "sha256": "b76e39eb0749fa74910d8b6cde5ae543df7f3cb760a64da3971160994bfb25e5",
+ "suffix": "mp3",
+ "response_meta": {
+  "mime_type": "audio/mpeg",
+  "model": "lyria-3-clip-preview",
+  "text": "Instrumental only, no vocals. Calm, sparse documentary underscore. Warm felt piano with soft sustained pads, slow and reflective, no drums, no melody that competes with a voice.",
+  "duration_s": 30.772167
+ },
+ "verifier": "sound",
+ "verified": true,
+ "tolerated": false,
+ "attempts": 1,
+ "failures": [],
+ "cost_usd": 0.04,
+ "units": {
+  "requests": 1.0,
+  "seconds": 30.772167
+ },
+ "created_at": "2026-09-23T21:47:46.545727Z",
+ "duration_s": 30.772167,
+ "width": null,
+ "height": null,
+ "latency_ms": 109612
+}

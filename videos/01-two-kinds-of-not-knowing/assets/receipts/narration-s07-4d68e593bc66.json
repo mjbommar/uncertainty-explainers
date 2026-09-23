@@ -1,0 +1,41 @@
+{
+ "key": "4d68e593bc66937cf869f1ce4c56ad79c6431ba201c49704749d3ac86982a85e",
+ "provider": "google",
+ "model": "gemini-3.8-flash-tts",
+ "kind": "speech",
+ "params": {
+  "voice": "Charon",
+  "instructions": "A calm, clear adult narrator for a short educational film. Unhurried and even, about 145 words a minute, warm but not theatrical. Plain American English. Give each sentence a natural full stop and let key terms land without stressing them. For this line: Say Keynes so it rhymes with canes.",
+  "format": "wav",
+  "rate": null,
+  "endpoint": "interactions",
+  "style_field": "speech_metadata.style"
+ },
+ "prompt_sha256": "a774e2540421d2d8d0eeb671005eb3807872fe71b35e54e253062959a53d8af3",
+ "sha256": "8e3aa74bd19c0fb95ba2af5101f59216fb4a122b381c7c91ff972ba0ebd9a881",
+ "suffix": "wav",
+ "response_meta": {
+  "mime_type": "audio/wav",
+  "interaction_id": "v1_ChczVXkwYXNQNUN1R0xqckVQOUo2RDZRVRIXM1V5MGFzUDVDdUdManJFUDlKNkQ2UVU",
+  "prompt_tokens": 64,
+  "output_tokens": 588,
+  "duration_s": 18.36
+ },
+ "verifier": "speech",
+ "verified": true,
+ "tolerated": false,
+ "attempts": 1,
+ "failures": [],
+ "cost_usd": 0.005324,
+ "units": {
+  "characters": 276.0,
+  "seconds": 18.36,
+  "input_tokens": 64.0,
+  "output_tokens": 588.0
+ },
+ "created_at": "2026-09-23T22:04:13.942426Z",
+ "duration_s": 18.36,
+ "width": null,
+ "height": null,
+ "latency_ms": 6897
+}
