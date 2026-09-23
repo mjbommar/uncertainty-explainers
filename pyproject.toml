@@ -11,18 +11,18 @@ dependencies = [
 ]
 
 [tool.uv.sources]
-bc-core = { path = "../../bc/bc-modules/bc-core" }
-bc-content = { path = "../../bc/bc-modules/bc-content" }
-bc-web = { path = "../../bc/bc-modules/bc-web" }
-bc-research = { path = "../../bc/bc-modules/bc-research" }
-bc-llm = { path = "../../bc/bc-modules/bc-llm" }
-bc-gen = { path = "../../bc/bc-modules/bc-gen" }
-bc-num = { path = "../../bc/bc-modules/bc-num" }
-bc-viz = { path = "../../bc/bc-modules/bc-viz" }
-bc-signal = { path = "../../bc/bc-modules/bc-signal" }
-bc-image = { path = "../../bc/bc-modules/bc-image" }
-bc-audio = { path = "../../bc/bc-modules/bc-audio" }
-bc-motion = { path = "../../bc/bc-modules/bc-motion" }
+bc-core = { path = "../../bc/bc-modules/bc-core", editable = true }
+bc-content = { path = "../../bc/bc-modules/bc-content", editable = true }
+bc-web = { path = "../../bc/bc-modules/bc-web", editable = true }
+bc-research = { path = "../../bc/bc-modules/bc-research", editable = true }
+bc-llm = { path = "../../bc/bc-modules/bc-llm", editable = true }
+bc-gen = { path = "../../bc/bc-modules/bc-gen", editable = true }
+bc-num = { path = "../../bc/bc-modules/bc-num", editable = true }
+bc-viz = { path = "../../bc/bc-modules/bc-viz", editable = true }
+bc-signal = { path = "../../bc/bc-modules/bc-signal", editable = true }
+bc-image = { path = "../../bc/bc-modules/bc-image", editable = true }
+bc-audio = { path = "../../bc/bc-modules/bc-audio", editable = true }
+bc-motion = { path = "../../bc/bc-modules/bc-motion", editable = true }
 
 [tool.uv]
 package = false
