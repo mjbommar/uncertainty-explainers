@@ -66,7 +66,24 @@ from pathlib import Path
 import inflect
 import simplemma
 import yaml
-from converter.latex_source import blank, extract_prose
+try:
+    # book-template's EPUB converter package (epub/converter/latex_source.py).
+    # It is not on the path outside a book-template-derived repo with a
+    # latex/ tree; projects that check plain narration text (no LaTeX to
+    # strip) fall back to the identity shim below instead of vendoring
+    # TexSoup and the verbatim-environment machinery this needs for real
+    # LaTeX.
+    from converter.latex_source import blank, extract_prose
+except ModuleNotFoundError:
+    def blank(value: str) -> str:
+        """Same-length whitespace, newlines preserved (see book-template's
+        converter.latex_source.blank, which this mirrors for non-LaTeX
+        callers)."""
+        return "".join("\n" if char == "\n" else " " for char in value)
+
+    def extract_prose(raw: str, *, root: Path) -> str:  # noqa: ARG001
+        """Identity: input is already prose, not LaTeX, so nothing to strip."""
+        return raw
 from simplemma.tokenizer import TOKREGEX
 
 ROOT = Path(__file__).resolve().parent.parent

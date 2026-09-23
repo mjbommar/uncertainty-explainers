@@ -160,12 +160,20 @@ def long_sentences(prose: str, limit: int) -> list[tuple[int, int, str]]:
 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("files", nargs="*", type=Path,
+                    help="files to check (default: latex/chapters/*.tex, "
+                         "the book-template layout); pass narration text "
+                         "or script.yaml-extracted files directly in repos "
+                         "without a latex/ tree")
     ap.add_argument("--strict-tells", action="store_true",
                     help="any AI-tell match fails (default: budgeted)")
     args = ap.parse_args()
 
-    if not CHAPTERS:
-        sys.exit("check_style: no chapters found in latex/chapters/")
+    files = args.files or CHAPTERS
+    if not files:
+        sys.exit("check_style: no chapters found in latex/chapters/ and no "
+                 "files given — pass file paths explicitly in repos without "
+                 "a latex/ tree")
 
     banned_words = fenced_block(STYLE_MD, "banned-words")
     banned_phrases = fenced_block(STYLE_MD, "banned-phrases")
@@ -176,7 +184,12 @@ def main() -> None:
               "docs/guides/STYLE.md — banned-word checks skipped",
               file=sys.stderr)
 
-    cfg = yaml.safe_load((ROOT / "book.yaml").read_text())
+    # book.yaml (title/author literals, style.profile) is a book-template
+    # concept. Projects without one (e.g. video-script repos with no
+    # latex/book.yaml) get the base STYLE.md/STYLE-AI-TELLS.md checks with
+    # no profile and no literal-metadata check.
+    book_yaml = ROOT / "book.yaml"
+    cfg = yaml.safe_load(book_yaml.read_text()) if book_yaml.exists() else {}
 
     # Style profile (docs/guides/styles/): register deltas over the base.
     profile_name, profile_path = load_profile(cfg)
@@ -205,9 +218,11 @@ def main() -> None:
     # the author) from this check. ADR 0002's own wording is "literal
     # occurrences … in places that should use macros"; running prose is not one
     # of those places.
-    literals = [cfg["book"]["title"], cfg["book"]["author"]]
-    if (cfg.get("style") or {}).get("title_is_subject"):
-        literals = [cfg["book"]["author"]]
+    literals: list[str] = []
+    if cfg.get("book"):
+        literals = [cfg["book"]["title"], cfg["book"]["author"]]
+        if (cfg.get("style") or {}).get("title_is_subject"):
+            literals = [cfg["book"]["author"]]
 
     word_res = [(w, re.compile(rf"\b{re.escape(w)}\b", re.IGNORECASE))
                 for w in banned_words]
@@ -234,10 +249,13 @@ def main() -> None:
 
     violations = 0
     tell_total = 0
-    for chapter in CHAPTERS:
+    for chapter in files:
         raw = chapter.read_text()
         prose = strip_for_prose(raw)
-        rel = chapter.relative_to(ROOT)
+        try:
+            rel = chapter.relative_to(ROOT)
+        except ValueError:
+            rel = chapter
         tells_here = 0
 
         def report(line_no: int, msg: str, rel: Path = rel) -> None:
@@ -286,7 +304,7 @@ def main() -> None:
     if violations:
         sys.exit(f"check_style: {violations} violation(s)")
     profile_note = f", profile {profile_name!r}" if profile_name else ""
-    print(f"check_style: OK ({len(CHAPTERS)} chapters, "
+    print(f"check_style: OK ({len(files)} file(s), "
           f"{len(banned_words)} banned words, {len(banned_phrases)} banned "
           f"phrases, {len(tell_res)} tell patterns, "
           f"{len(artifact_res)} artifact patterns, "
