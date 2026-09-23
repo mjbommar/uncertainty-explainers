@@ -1,0 +1,104 @@
+# Smoke test: every stage of the pipeline, one short clip each.
+# Source keys resolve in research/SOURCES.md: S05 Ellsberg 1961, S02 Knight 1921,
+# S50 ICD 203 (likely = 55-80%), S44 ECMWF ensemble guide.
+slug: _smoke
+title: Risk and uncertainty
+subtitle: A pipeline smoke test
+target_seconds: 32
+theme: ink
+voice:
+  model: gemini-3.8-flash-tts
+  voice: Charon
+music:
+  prompt: >-
+    Calm, sparse documentary underscore. Warm felt piano with soft sustained pads,
+    slow and reflective, no drums, no melody that competes with a voice.
+  gain_db: -14
+images:
+  - id: storm
+    prompt: a storm cloud with a single small lightning bolt
+    provider: openai
+    quality: medium
+end_card:
+  seconds: 3.5
+  line: Risk has odds. Uncertainty does not.
+  note: Uncertainty Explainers, pipeline smoke test
+segments:
+  - id: s01
+    say: Some unknowns come with odds. Some do not.
+    scene:
+      name: title_card
+      params:
+        label: Uncertainty Explainers
+        title: Risk and uncertainty
+        subtitle: Known odds, and unknown ones
+    hold: 0.5
+
+  - id: s02
+    say: Urn A holds fifty red and fifty black balls. Urn B holds a hundred balls, in a mix nobody tells you.
+    sources: [S05]
+    transition: dissolve
+    beats: ["Urn A", "fifty red", "Urn B", "a hundred"]
+    sfx:
+      - cue: marbles
+        at: fifty red
+        gain_db: -6
+    scene:
+      name: urn
+      params:
+        heading: Two urns
+        left: {label: Urn A, a: 50, b: 50, caption: "50 red, 50 black"}
+        right: {label: Urn B, total: 100, caption: "100 balls, mix unknown"}
+    hold: 0.4
+
+  - id: s03
+    say: From Urn A, the chance of red is one half. That is risk, a gamble with known odds.
+    sources: [S05, S02]
+    transition: glide
+    scene:
+      name: probability_bar
+      params:
+        heading: Urn A, one draw
+        label: chance of red
+        value: 50
+        note: known odds
+    hold: 0.4
+
+  - id: s04
+    say: Without known odds, we use words. U.S. analysts read likely as 55 to 80 percent.
+    sources: [S50]
+    transition: wipe
+    scene:
+      name: word_ladder
+      params:
+        heading: Words for chances
+        scale: ICD 203
+        highlight: likely
+        rungs:
+          - {word: almost no chance, lo: 1, hi: 5}
+          - {word: very unlikely, lo: 5, hi: 20}
+          - {word: unlikely, lo: 20, hi: 45}
+          - {word: roughly even chance, lo: 45, hi: 55}
+          - {word: likely, lo: 55, hi: 80}
+          - {word: very likely, lo: 80, hi: 95}
+          - {word: almost certain, lo: 95, hi: 99}
+    hold: 0.4
+
+  - id: s05
+    say: A weather model runs many times. The spread of its paths shows what it does not know.
+    sources: [S44]
+    transition: push-left
+    sfx:
+      - cue: whoosh
+        at: 0.0
+        gain_db: -8
+    scene:
+      name: spaghetti_plot
+      params:
+        heading: One forecast, many runs
+        paths: 26
+        seed: 5
+        x_label: days ahead
+        start_label: today
+        image: "image:storm"
+    hold: 0.6

@@ -29,3 +29,19 @@ package = false
 
 [dependency-groups]
 dev = ["pytest>=8", "ruff>=0.6"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py313"
+extend-exclude = ["scripts", "research"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+ignore = ["E731", "RUF001", "RUF002", "RUF003"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["pipeline"]
+known-third-party = ["bc_audio", "bc_core", "bc_gen", "bc_image", "bc_motion", "bc_signal", "bc_viz"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
