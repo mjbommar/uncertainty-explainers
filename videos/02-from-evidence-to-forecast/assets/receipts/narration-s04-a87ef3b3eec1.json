@@ -1,0 +1,41 @@
+{
+ "key": "a87ef3b3eec1df777e87511473563fa87e6e4167e3b49b596a2d6a5beac6011e",
+ "provider": "google",
+ "model": "gemini-3.8-flash-tts",
+ "kind": "speech",
+ "params": {
+  "voice": "Charon",
+  "instructions": "A calm, clear adult narrator for a short educational film. Unhurried and even, about 145 words a minute, warm but not theatrical. Plain American English. Give each sentence a natural full stop and let key terms land without stressing them. For this line: Say Laplace as la-PLAHSS.",
+  "format": "wav",
+  "rate": null,
+  "endpoint": "interactions",
+  "style_field": "speech_metadata.style"
+ },
+ "prompt_sha256": "d12c76aeb37555331d72f84ab2ae8a513ee7a697252366c4b8ab4c925e3a389a",
+ "sha256": "1731476eba21eb577ebe0b98e215938fa5b47751cd5a054aa6f4798f4d5a20a8",
+ "suffix": "wav",
+ "response_meta": {
+  "mime_type": "audio/wav",
+  "interaction_id": "v1_ChZaMDYwYXRXNUxkcTZzT0lQZ1lMdEtBEhZaMDYwYXRXNUxkcTZzT0lQZ1lMdEtB",
+  "prompt_tokens": 39,
+  "output_tokens": 373,
+  "duration_s": 11.64
+ },
+ "verifier": "speech",
+ "verified": true,
+ "tolerated": false,
+ "attempts": 1,
+ "failures": [],
+ "cost_usd": 0.0033765,
+ "units": {
+  "characters": 158.0,
+  "seconds": 11.64,
+  "input_tokens": 39.0,
+  "output_tokens": 373.0
+ },
+ "created_at": "2026-09-23T22:10:48.643573Z",
+ "duration_s": 11.64,
+ "width": null,
+ "height": null,
+ "latency_ms": 5587
+}

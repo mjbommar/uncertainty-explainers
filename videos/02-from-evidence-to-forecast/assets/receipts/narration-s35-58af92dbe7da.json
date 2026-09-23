@@ -1,0 +1,41 @@
+{
+ "key": "58af92dbe7da8f32732b41648b3f23718a71da9272819a8beb769261b7eac998",
+ "provider": "google",
+ "model": "gemini-3.8-flash-tts",
+ "kind": "speech",
+ "params": {
+  "voice": "Charon",
+  "instructions": "A calm, clear adult narrator for a short educational film. Unhurried and even, about 145 words a minute, warm but not theatrical. Plain American English. Give each sentence a natural full stop and let key terms land without stressing them. For this line: Brier rhymes with higher.",
+  "format": "wav",
+  "rate": null,
+  "endpoint": "interactions",
+  "style_field": "speech_metadata.style"
+ },
+ "prompt_sha256": "81f741203d6c103232167daf975695f7594f5024be3f0468485bfe23b9cf7cdc",
+ "sha256": "ec6981ec071a1a7c9670839850df606c919ff55b462edb1ab87a9ffa54438dbc",
+ "suffix": "wav",
+ "response_meta": {
+  "mime_type": "audio/wav",
+  "interaction_id": "v1_ChdsVTYwYXVlQkdKeU5qckVQMHNfQXlBVRIXbFU2MGF1ZUJHSnlOanJFUDBzX0F5QVU",
+  "prompt_tokens": 36,
+  "output_tokens": 335,
+  "duration_s": 10.44
+ },
+ "verifier": "speech",
+ "verified": true,
+ "tolerated": false,
+ "attempts": 1,
+ "failures": [],
+ "cost_usd": 0.003033,
+ "units": {
+  "characters": 152.0,
+  "seconds": 10.44,
+  "input_tokens": 36.0,
+  "output_tokens": 335.0
+ },
+ "created_at": "2026-09-23T22:11:34.186228Z",
+ "duration_s": 10.44,
+ "width": null,
+ "height": null,
+ "latency_ms": 4726
+}

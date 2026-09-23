@@ -3,6 +3,52 @@
 What was built, what worked, what in `bc-modules` was missing or broken and
 how each was handled, and what it cost. Newest first.
 
+## 2026-09-23: video 2, "From evidence to forecast"
+
+`videos/02-from-evidence-to-forecast`: 38 segments plus end card, 995 words,
+399.4 s (6:39), 11,981 frames. Every machine QA gate passes (`publish/qa.md`):
+worst narration WER 0.059, -16.05 LUFS / -1.32 dBTP muxed, 152 containment
+renders clean, 101 caption cues valid. Human review: pending.
+
+New scenes in `pipeline/scenes_02_from_evidence_to_forecast.py` (one import
+line added to `scenes.py`): `icon_array` (1,000 people built over three
+segments with a `step` parameter), `cube_three_ways`, `interval_rows` (a dot
+for one probability, a bar for a range, a `then` morph on a beat),
+`big_number`, `card_row` (optional images and a dashed "ghost" card),
+`induction_gap`, `sort_table` (one row per segment via `upto`), `bars`,
+`calibration`, `ellsberg_urn`, `divergence`. A `steady: true` parameter keeps
+the heading from fading in again when a picture continues across segments.
+
+### Pipeline bug fixed
+
+- **`qa.containment` crashed instead of failing.** `ok` was a numpy bool
+  (the bbox coordinates are `np.float64`), so `json.dumps` of the report
+  raised `TypeError` whenever any render spilled outside the stage, and the
+  QA stage died without writing `qa.md`. Fixed with `bool(...)` in
+  `pipeline/qa.py`; `tests/test_qa.py` reproduces it with a scene that spills.
+
+### What looking and listening changed
+
+- The first cut read "8%" where the answer is 7.8% (`probability_bar` rounds
+  its label); the Bayes result and the physicians' 70 to 80 percent moved to
+  `big_number` (with `decimals`, and `count: false` so a probability does not
+  count up from zero) and `interval_rows`.
+- Stages that stayed empty until a late beat (the icon array, the urn, two
+  bar charts, the tournament cards) now start on an earlier phrase or on the
+  reveal.
+- The shared `spaghetti_plot` fans out from the first step, which contradicts
+  "tight at 30 hours"; Lorenz and the 26 May 2017 case use `divergence`.
+- Whisper-1 on the master heard "Alan Hodgik" for Hajek despite a `direction`;
+  the name moved from narration to the on-screen kicker.
+- A 2-card `icon_grid` grew to the full stage height and its entrance slide
+  left the stage (containment caught it); Betty's cards moved to `card_row`.
+
+### Cost
+
+$0.2468 of generations by receipts (38 narration clips, 5 images including
+one unused `oil_barrel` from a cut segment and a redrawn `witness`, 6 effects,
+one music bed), plus QA and verifier transcription.
+
 ## 2026-09-23: video 1, "Two kinds of not knowing"
 
 `videos/01-two-kinds-of-not-knowing`: 13 segments plus end card, 459 words,

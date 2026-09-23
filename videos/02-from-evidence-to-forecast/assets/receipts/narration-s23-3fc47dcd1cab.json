@@ -1,0 +1,41 @@
+{
+ "key": "3fc47dcd1cab00a11e13e802c6a070287a871339e807e1b7644ea5f2fc8ae9d9",
+ "provider": "google",
+ "model": "gemini-3.8-flash-tts",
+ "kind": "speech",
+ "params": {
+  "voice": "Charon",
+  "instructions": "A calm, clear adult narrator for a short educational film. Unhurried and even, about 145 words a minute, warm but not theatrical. Plain American English. Give each sentence a natural full stop and let key terms land without stressing them. For this line: Say van Fraassen as van FRAH-sen.",
+  "format": "wav",
+  "rate": null,
+  "endpoint": "interactions",
+  "style_field": "speech_metadata.style"
+ },
+ "prompt_sha256": "a4f4a8e101a2b5f584e64bbb9a439c2b0090031c29ab24b9585e02f4de7e79cf",
+ "sha256": "9820640a91dea348b9844dc1c6436a700bb72c9e6ed1cc31efebd6ff53f0a60a",
+ "suffix": "wav",
+ "response_meta": {
+  "mime_type": "audio/wav",
+  "interaction_id": "v1_ChdoRTYwYXRmQUhwWEEzOUlQek9qRHlBTRIXaEU2MGF0ZkFIcFhBMzlJUHpPakR5QU0",
+  "prompt_tokens": 33,
+  "output_tokens": 304,
+  "duration_s": 9.48
+ },
+ "verifier": "speech",
+ "verified": true,
+ "tolerated": false,
+ "attempts": 1,
+ "failures": [],
+ "cost_usd": 0.0027525,
+ "units": {
+  "characters": 142.0,
+  "seconds": 9.48,
+  "input_tokens": 33.0,
+  "output_tokens": 304.0
+ },
+ "created_at": "2026-09-23T22:11:17.080115Z",
+ "duration_s": 9.48,
+ "width": null,
+ "height": null,
+ "latency_ms": 4540
+}

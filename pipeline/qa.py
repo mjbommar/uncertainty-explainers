@@ -96,7 +96,7 @@ def containment(video: Video, images: dict[str, np.ndarray]) -> list[dict[str, A
             params = dict(seg.scene.params)
             scenes.draw(f, seg.scene.name, params, brand.STAGE, clock, scenes.Ctx(images=images))
             box = ink_bbox(f.render_rgba())
-            ok = box is None or brand.STAGE.contains(box, slack=2.0)
+            ok = bool(box is None or brand.STAGE.contains(box, slack=2.0))
             rows.append(
                 {
                     "segment": seg.id,

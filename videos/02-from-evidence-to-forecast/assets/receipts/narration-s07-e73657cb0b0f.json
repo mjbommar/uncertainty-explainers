@@ -1,0 +1,41 @@
+{
+ "key": "e73657cb0b0fe452f9ad1f4d7a3672b9c27dd970a4bf587f9d7a8df74646251a",
+ "provider": "google",
+ "model": "gemini-3.8-flash-tts",
+ "kind": "speech",
+ "params": {
+  "voice": "Charon",
+  "instructions": "A calm, clear adult narrator for a short educational film. Unhurried and even, about 145 words a minute, warm but not theatrical. Plain American English. Give each sentence a natural full stop and let key terms land without stressing them. For this line: Bayes rhymes with days.",
+  "format": "wav",
+  "rate": null,
+  "endpoint": "interactions",
+  "style_field": "speech_metadata.style"
+ },
+ "prompt_sha256": "b135390f95d9b0906a1b3a2ea50d53555e280d06fbe7b49116c0cfcf0090d4a4",
+ "sha256": "473c7e456769dd63892c7bb3cf5f1b11f9ef400e6964111e9c1ac95e9c666afa",
+ "suffix": "wav",
+ "response_meta": {
+  "mime_type": "audio/wav",
+  "interaction_id": "v1_ChdiazYwYW9tRURxQy0zOUlQa3EyR29RURIXYms2MGFvbUVEcUMtMzlJUGtxMkdvUVE",
+  "prompt_tokens": 38,
+  "output_tokens": 356,
+  "duration_s": 11.12
+ },
+ "verifier": "speech",
+ "verified": true,
+ "tolerated": false,
+ "attempts": 1,
+ "failures": [],
+ "cost_usd": 0.0032229999999999997,
+ "units": {
+  "characters": 168.0,
+  "seconds": 11.12,
+  "input_tokens": 38.0,
+  "output_tokens": 356.0
+ },
+ "created_at": "2026-09-23T22:10:54.929041Z",
+ "duration_s": 11.12,
+ "width": null,
+ "height": null,
+ "latency_ms": 5126
+}

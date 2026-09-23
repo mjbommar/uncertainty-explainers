@@ -1,0 +1,40 @@
+{
+ "key": "14fb4c9b7792faf8d06ade5dfa1cf793803aa85f1ecc9afc69392dd5428e97f7",
+ "provider": "openai",
+ "model": "gpt-image-2.5-flare",
+ "kind": "image",
+ "params": {
+  "width": 1024,
+  "height": 1024,
+  "aspect": null,
+  "quality": "medium",
+  "size": "1024x1024",
+  "references": []
+ },
+ "prompt_sha256": "5815440e45d4033859eb961049b626ea3816b32c23c6dfc6e17edf0c6a4fb679",
+ "sha256": "4118adf130ae884a3c6efbab47dfb865363b6fafb8aed241bb4e163460d25d28",
+ "suffix": "png",
+ "response_meta": {
+  "request_id": "req_028a02432f554844b35337b8b7294fc0",
+  "input_tokens": 98,
+  "output_tokens": 439,
+  "input_text_tokens": 98,
+  "input_image_tokens": 0,
+  "revised_prompt": ""
+ },
+ "verifier": "image",
+ "verified": true,
+ "tolerated": false,
+ "attempts": 1,
+ "failures": [],
+ "cost_usd": 0.013659999999999999,
+ "units": {
+  "input_tokens": 98.0,
+  "output_tokens": 439.0
+ },
+ "created_at": "2026-09-23T22:13:30.182361Z",
+ "duration_s": null,
+ "width": null,
+ "height": null,
+ "latency_ms": 8275
+}

@@ -1,0 +1,41 @@
+{
+ "key": "05106030c3cb44b34ce9086b1e55c4b45d2c5cd65bff59650403ef7f9a7f8cbc",
+ "provider": "google",
+ "model": "gemini-3.8-flash-tts",
+ "kind": "speech",
+ "params": {
+  "voice": "Charon",
+  "instructions": "A calm, clear adult narrator for a short educational film. Unhurried and even, about 145 words a minute, warm but not theatrical. Plain American English. Give each sentence a natural full stop and let key terms land without stressing them. For this line: Say the name Hajek as HAH-yek.",
+  "format": "wav",
+  "rate": null,
+  "endpoint": "interactions",
+  "style_field": "speech_metadata.style"
+ },
+ "prompt_sha256": "f0ef3bda82ae55daf5df0ef100a626e8600f62ba33a486ca317f62a5394b9fc9",
+ "sha256": "33306a618630bfe2180e91e4a18a96f8b9af0b3e79bf3e298262a88c937e933b",
+ "suffix": "wav",
+ "response_meta": {
+  "mime_type": "audio/wav",
+  "interaction_id": "v1_ChdaMDYwYXZpekxwS1NqckVQaDkzemtRVRIXWjA2MGF2aXpMcEtTanJFUGg5M3prUVU",
+  "prompt_tokens": 45,
+  "output_tokens": 422,
+  "duration_s": 13.16
+ },
+ "verifier": "speech",
+ "verified": true,
+ "tolerated": false,
+ "attempts": 1,
+ "failures": [],
+ "cost_usd": 0.0038205,
+ "units": {
+  "characters": 201.0,
+  "seconds": 13.16,
+  "input_tokens": 45.0,
+  "output_tokens": 422.0
+ },
+ "created_at": "2026-09-23T22:10:48.415565Z",
+ "duration_s": 13.16,
+ "width": null,
+ "height": null,
+ "latency_ms": 5359
+}

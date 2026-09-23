@@ -1,0 +1,591 @@
+# Video 2 of Uncertainty Explainers. Beats from research/SYNTHESIS.md (g), video 2.
+# Every factual segment cites keys in research/SOURCES.md. Numbers marked
+# "(ours)" in storyboard.md are arithmetic on a source's own figures.
+slug: 02-from-evidence-to-forecast
+title: From evidence to forecast
+subtitle: What a probability is, and how to check one
+target_seconds: 390
+theme: ink
+burn_captions: true
+voice:
+  model: gemini-3.8-flash-tts
+  voice: Charon
+music:
+  prompt: >-
+    Calm, sparse documentary underscore. Warm felt piano with soft sustained pads,
+    slow and reflective, no drums, no melody that competes with a voice.
+  gain_db: -14
+images:
+  - id: sunrise
+    prompt: the sun half risen above a flat horizon line, with a few short rays
+  - id: witness
+    prompt: a friendly woman with shoulder-length hair, speaking, with an empty speech bubble beside her head
+  - id: limb_car
+    prompt: a small rounded car with a broken tree branch lying across its roof
+  - id: storm
+    prompt: a heavy storm cloud with slanted rain lines
+end_card:
+  seconds: 3.5
+  line: "Next: Saying it out loud"
+  note: Uncertainty Explainers, video 3
+segments:
+  # ---------------------------------------------------------------- opening
+  - id: s01
+    say: A probability in a forecast is not a fact about the world. It is a summary of evidence.
+    scene:
+      name: title_card
+      params:
+        label: Uncertainty Explainers
+        title: From evidence to forecast
+        subtitle: What a probability is, and how to check one
+    hold: 0.5
+
+  # ---------------------------------------------------------------- what probability means
+  - id: s02
+    say: The word probability covers three ideas. It can mean how strongly evidence supports a claim, or how confident a person is. Or a physical tendency, whatever anyone thinks.
+    sources: [S15]
+    transition: dissolve
+    beats: ["evidence supports", "how confident", "physical tendency"]
+    scene:
+      name: card_row
+      params:
+        kicker: What probability means
+        heading: One word, three ideas
+        cards:
+          - {title: Evidence, line: "How strongly the evidence supports a claim"}
+          - {title: Belief, line: "How confident a person is", tone: unknown}
+          - {title: Tendency, line: "A physical disposition, whatever anyone thinks", tone: cool}
+
+  - id: s03
+    say: Counting cases needs a reference class, the group you count over. One philosopher notes that he is a man, a non-smoker, and a philosophy professor. Each group gives a different chance of living to eighty.
+    sources: [S15]
+    transition: glide
+    beats: ["reference class", "non-smoker", "philosophy professor"]
+    scene:
+      name: card_row
+      params:
+        kicker: "The reference class: Alan Hájek's example"
+        heading: Which group is he in?
+        cards:
+          - {title: Men, line: "One share of this group lives to 80"}
+          - {title: Non-smokers, line: "A different share lives to 80", tone: unknown}
+          - {title: Philosophy professors, line: "A third share lives to 80", tone: cool}
+
+  - id: s04
+    say: In 1814 Pierre-Simon Laplace took recorded history as five thousand years of sunrises. His rule put the odds of one more sunrise at nearly two million to one.
+    sources: [S16]
+    transition: dissolve
+    beats: ["Laplace", "nearly two million"]
+    direction: Say Laplace as la-PLAHSS.
+    scene:
+      name: big_number
+      params:
+        value: 1826214
+        suffix: " to 1"
+        label: Laplace's odds that the sun rises tomorrow
+        sub: from 1,826,213 days of recorded history
+        image: "image:sunrise"
+    hold: 0.4
+
+  - id: s05
+    say: He added that anyone who knows what drives the seasons would put the odds far higher. Same sunrise, more evidence, a different number.
+    sources: [S16]
+    transition: push-left
+    beats: ["He added", "anyone who knows"]
+    scene:
+      name: two_column_compare
+      params:
+        heading: Same sunrise, two bodies of evidence
+        left:
+          title: The tally
+          lines: ["Counts past sunrises", "Odds: 1,826,214 to 1"]
+          tone: known
+        right:
+          title: The astronomer
+          lines: ["Knows what drives days and seasons", "Odds: far higher"]
+          tone: unknown
+
+  - id: s06
+    say: Ignorance does not fix a number either. A factory makes cubes with sides up to one foot. Spread belief evenly over side length, and a side under half a foot gets one half. Over face area, one quarter. Over volume, one eighth. One event, three answers.
+    sources: [S15]
+    transition: dissolve
+    beats: ["cubes with sides", "side length", "face area", "Over volume"]
+    scene:
+      name: cube_three_ways
+      params:
+        heading: One event, three answers
+        event: "side under 1/2 foot"
+        answers:
+          - {measure: "Even over side length", value: "1/2", frac: 0.5}
+          - {measure: "Even over face area", value: "1/4", frac: 0.25}
+          - {measure: "Even over volume", value: "1/8", frac: 0.125}
+    hold: 0.5
+
+  # ---------------------------------------------------------------- Bayes with 1,000 women
+  - id: s07
+    say: Evidence should move a number, and Bayes' rule says how far. It starts from the base rate, how common something is before any test, and then weighs what the test shows.
+    sources: [S21]
+    transition: wipe
+    beats: ["Bayes' rule", "base rate", "weighs"]
+    direction: Bayes rhymes with days.
+    scene:
+      name: card_row
+      params:
+        kicker: Bayes' rule
+        heading: How evidence moves a number
+        cards:
+          - {title: Base rate, line: "How common it is before the evidence", tone: unknown}
+          - {title: The evidence, line: "How much more often it shows up when the claim is true"}
+          - {title: The update, line: "What you should believe after", tone: cool}
+
+  - id: s08
+    say: A 1995 study by Gigerenzer and Hoffrage used a screening test. Take one thousand women aged forty. Ten of them have breast cancer.
+    sources: [S59]
+    transition: dissolve
+    beats: ["one thousand women", "Ten of them"]
+    scene:
+      name: icon_array
+      params:
+        heading: One thousand women, one test
+        step: 0
+
+  - id: s09
+    say: Eight of those ten test positive. Of the nine hundred and ninety women without cancer, ninety-five also test positive.
+    sources: [S59]
+    transition: cut
+    beats: ["Eight of those", "ninety-five"]
+    sfx:
+      - {cue: tick, at: "Eight of those", gain_db: -6}
+    scene:
+      name: icon_array
+      params:
+        heading: One thousand women, one test
+        step: 1
+        steady: true
+
+  - id: s10
+    say: So one hundred and three women test positive, and only eight of them have cancer. That is seven point eight percent.
+    sources: [S59]
+    transition: cut
+    beats: ["one hundred and three", "only eight"]
+    sfx:
+      - {cue: chime, at: "seven point eight", gain_db: -8}
+    scene:
+      name: icon_array
+      params:
+        heading: One thousand women, one test
+        step: 2
+        steady: true
+    hold: 0.5
+
+  - id: s11
+    say: In this reference class the disease is rare, so most positive tests come from healthy women.
+    sources: [S59]
+    transition: dissolve
+    scene:
+      name: big_number
+      params:
+        value: 7.8
+        decimals: 1
+        count: false
+        suffix: "%"
+        label: Chance of cancer after a positive test
+        sub: 8 of 103, women of forty in routine screening
+  - id: s12
+    say: Given as percentages, this problem defeats experts. In a 1982 study by Eddy, ninety-five of a hundred physicians said seventy to eighty percent.
+    sources: [S59]
+    transition: dissolve
+    beats: ["percentages", "seventy to eighty"]
+    scene:
+      name: interval_rows
+      params:
+        heading: What physicians said
+        axis_label: chance of cancer
+        ticks: [{v: 0, label: "0%"}, {v: 0.25, label: "25%"}, {v: 0.5, label: "50%"}, {v: 0.75, label: "75%"}, {v: 1, label: "100%"}]
+        rows:
+          - {label: "The correct answer", lo: 0.078, hi: 0.078, note: "7.8%"}
+          - {label: "95 of 100 physicians said", lo: 0.7, hi: 0.8, note: "70% to 80%", tone: warn}
+  - id: s13
+    say: Counting helps. In the 1995 study, correct answers rose from sixteen percent with percentages to about half with counts of people.
+    sources: [S59]
+    transition: glide
+    beats: ["sixteen percent", "about half", "counts of people"]
+    scene:
+      name: bars
+      params:
+        heading: People who reasoned correctly
+        max: 100
+        unit: "%"
+        items:
+          - {label: "Numbers given as percentages", value: 16, tone: warn}
+          - {label: "Numbers given as counts, standard form", value: 46}
+          - {label: "Numbers given as counts, short form", value: 50}
+    hold: 0.5
+
+  # ---------------------------------------------------------------- one number can lie
+  - id: s14
+    say: One number can hide how much you know. A coin that landed heads in half of a hundred tosses gets one half. So may a coin you have never seen. Its honest summary is a range, zero to one.
+    sources: [S23]
+    transition: dissolve
+    beats: ["A coin that", "never seen", "a range"]
+    scene:
+      name: interval_rows
+      params:
+        kicker: When one number is not enough
+        heading: Same number, different evidence
+        then_beat: 2
+        ticks: [{v: 0, label: "0"}, {v: 0.5, label: "1/2"}, {v: 1, label: "1"}]
+        axis_label: chance of heads
+        rows:
+          - {label: "Coin tossed 100 times", lo: 0.5, hi: 0.5, note: "1/2"}
+          - {label: "Coin never seen", lo: 0.5, hi: 0.5, note: "1/2", then: {lo: 0.0, hi: 1.0}, then_note: "0 to 1"}
+
+  - id: s15
+    say: Daniel Ellsberg's urn, from 1961, makes the same point. It holds thirty red balls, and sixty black and yellow balls in an unknown mix.
+    sources: [S77]
+    transition: dissolve
+    beats: ["urn, from 1961", "sixty black"]
+    sfx:
+      - {cue: marbles, at: "thirty red", gain_db: -6}
+    scene:
+      name: ellsberg_urn
+      params:
+        heading: Ellsberg's urn, 1961
+        red: 30
+        other: 60
+        notes: ["30 red: known", "60 black or yellow: mix unknown"]
+
+  - id: s16
+    say: The chance of red is one third. The chance of black is anywhere from zero to two thirds. People often bet on this urn in a way no single number explains. A range offers one explanation.
+    sources: [S23]
+    transition: glide
+    beats: ["chance of red", "chance of black"]
+    scene:
+      name: interval_rows
+      params:
+        heading: One urn, a dot and a range
+        ticks: [{v: 0, label: "0"}, {v: 0.3333, label: "1/3"}, {v: 0.6667, label: "2/3"}, {v: 1, label: "1"}]
+        axis_label: chance of drawing
+        rows:
+          - {label: Red, lo: 0.3333, hi: 0.3333, note: "1/3", tone: warn}
+          - {label: Black, lo: 0.0, hi: 0.6667, note: "0 to 2/3", tone: unknown}
+
+  - id: s17
+    say: Witness evidence has another shape. In Glenn Shafer's example, you trust your friend Betty nine times in ten. She says a limb fell on your car.
+    sources: [S24]
+    transition: dissolve
+    beats: ["Glenn Shafer", "She says"]
+    scene:
+      name: card_row
+      params:
+        heading: One witness, one report
+        cards:
+          - {title: Betty, line: "Reliable 9 times in 10", image: "image:witness"}
+          - {title: Her report, line: "A limb fell on the car", tone: unknown, image: "image:limb_car"}
+
+  - id: s18
+    say: Her word supports a belief of zero point nine that it fell, and a belief of zero that it did not. That zero means no evidence, not certainty.
+    sources: [S24]
+    transition: glide
+    beats: ["zero point nine", "belief of zero"]
+    scene:
+      name: interval_rows
+      params:
+        heading: Belief, and what is left open
+        ticks: [{v: 0, label: "0"}, {v: 0.5, label: "0.5"}, {v: 1, label: "1"}]
+        axis_label: belief to upper limit
+        image: "image:limb_car"
+        rows:
+          - {label: "A limb fell", lo: 0.9, hi: 1.0, note: "0.9 to 1"}
+          - {label: "No limb fell", lo: 0.0, hi: 0.1, note: "0 to 0.1", tone: unknown}
+
+  - id: s19
+    say: "Dempster-Shafer theory gives each claim two numbers: a belief and an upper limit. If a second friend, equally reliable, independently agrees, belief rises to zero point nine nine."
+    sources: [S24, S25]
+    transition: cut
+    beats: ["zero point nine nine"]
+    sfx:
+      - {cue: soft_click, at: "zero point nine nine", gain_db: -8}
+    scene:
+      name: interval_rows
+      params:
+        heading: Belief, and what is left open
+        steady: true
+        ticks: [{v: 0, label: "0"}, {v: 0.5, label: "0.5"}, {v: 1, label: "1"}]
+        axis_label: belief to upper limit
+        image: "image:limb_car"
+        rows:
+          - {label: "A limb fell", lo: 0.9, hi: 1.0, note: "0.9 to 1", then: {lo: 0.99, hi: 1.0}, then_note: "0.99 to 1", shown: true}
+          - {label: "No limb fell", lo: 0.0, hi: 0.1, note: "0 to 0.1", tone: unknown, then: {lo: 0.0, hi: 0.01}, then_note: "0 to 0.01", then_tone: unknown, shown: true}
+        then_beat: 0
+    hold: 0.5
+
+  # ---------------------------------------------------------------- induction's gap
+  - id: s20
+    say: All these numbers lean on the past. In 1748 David Hume wrote that every conclusion from experience assumes the future will be like the past.
+    sources: [S28]
+    transition: dissolve
+    scene:
+      name: quote_card
+      params:
+        text: "All our experimental conclusions proceed upon the supposition that the future will be conformable to the past."
+        who: David Hume
+        when: "1748"
+
+  - id: s21
+    say: That is the problem of induction. The sun failing to rise tomorrow is no contradiction, and the assumption cannot be proved from experience without arguing in a circle.
+    sources: [S28, S29]
+    transition: dissolve
+    beats: ["The sun failing", "tomorrow", "cannot be proved"]
+    scene:
+      name: induction_gap
+      params:
+        heading: The gap in induction
+        count: 14
+        past_label: every sunrise so far
+        future_label: tomorrow
+        gap_label: "assumed: the future will be like the past"
+
+  - id: s23
+    say: Picking the best explanation adds a further gap. The best of the ones we thought of can be what Bas van Fraassen called the best of a bad lot.
+    sources: [S30]
+    transition: dissolve
+    beats: ["best explanation", "we thought of", "Bas van Fraassen", "bad lot"]
+    direction: Say van Fraassen as van FRAH-sen.
+    scene:
+      name: card_row
+      params:
+        heading: The street is wet. Why?
+        highlight: 0
+        cards:
+          - {title: Rain, line: "Our best explanation, of the ones listed"}
+          - {title: A burst pipe, line: "Also on the list", tone: cool}
+          - {title: A street cleaner, line: "Also on the list", tone: cool}
+        ghost: {title: "Not on the list", line: "The explanation nobody thought of"}
+    hold: 0.5
+
+  # ---------------------------------------------------------------- Lorenz and the ensemble
+  - id: s24
+    say: Weather adds a harder problem. In 1963 Edward Lorenz showed that in a simple model of rising warm air, slightly different starting states can grow into very different states.
+    sources: [S43]
+    transition: dissolve
+    scene:
+      name: divergence
+      params:
+        kicker: Sensitive to the start
+        heading: Two runs, almost the same start
+        paths: 2
+        seed: 4
+        growth: 5
+        spread: 0.9
+        start_label: nearly equal starts
+        x_label: time
+  - id: s25
+    say: So forecasters run the model many times. The European Centre for Medium-Range Weather Forecasts starts fifty runs from slightly altered states, plus one unaltered run. That set is an ensemble.
+    sources: [S44]
+    transition: dissolve
+    beats: ["many times"]
+    sfx:
+      - {cue: whoosh, at: "fifty runs", gain_db: -8}
+    scene:
+      name: spaghetti_plot
+      params:
+        heading: An ensemble of 51 runs
+        paths: 51
+        seed: 5
+        spread: 0.8
+        x_label: days ahead
+        start_label: now
+        image: "image:storm"
+
+  - id: s26
+    say: In one forecast from 26 May 2017, the runs sat close together thirty hours ahead. Six days ahead they had spread apart.
+    sources: [S45]
+    transition: dissolve
+    scene:
+      name: divergence
+      params:
+        heading: "One forecast: tight at 30 hours, spread by 6 days"
+        paths: 51
+        seed: 8
+        growth: 3.5
+        spread: 0.42
+        control: true
+        marks: [{at: 0.21, label: "30 hours"}, {at: 0.98, label: "6 days"}]
+        start_label: 26 May 2017
+  - id: s27
+    say: The spread is information. The centre calls the probability of an event the most consistent way to convey forecast uncertainty.
+    sources: [S45]
+    transition: dissolve
+    scene:
+      name: quote_card
+      params:
+        text: "The most consistent way to convey forecast uncertainty information is by the probability of the occurrence of an event."
+        who: ECMWF Forecast User Guide
+        when: "2025"
+    hold: 0.5
+
+  # ---------------------------------------------------------------- forecast, projection, scenario, counterfactual
+  - id: s28
+    say: Not every claim about the future is a forecast. A forecast starts from the present state and says what will happen, in a form you can check.
+    sources: [S46, S44]
+    transition: wipe
+    sfx:
+      - {cue: paper, at: 0.0, gain_db: -8}
+    scene:
+      name: sort_table
+      params: &sort
+        kicker: Conditional on what?
+        heading: Four kinds of claim about what we cannot see
+        upto: 0
+        rows:
+          - {term: Forecast, basis: "the present state", check: "yes, and scored"}
+          - {term: Projection, basis: "an assumed path", check: "only in part", tone: unknown}
+          - {term: Scenario, basis: "a plausible story", check: "no probability to check", tone: cool}
+          - {term: Counterfactual, basis: "a changed past", check: "never directly", tone: warn}
+
+  - id: s29
+    say: A projection says what would happen if an assumption holds, such as a path of emissions. That assumption may or may not come true.
+    sources: [S46]
+    transition: cut
+    scene:
+      name: sort_table
+      params:
+        <<: *sort
+        upto: 1
+        steady: true
+
+  - id: s30
+    say: A scenario is a plausible story about the future, with no probability attached. The United Nations climate panel says scenarios are neither predictions nor forecasts.
+    sources: [S46]
+    transition: cut
+    scene:
+      name: sort_table
+      params:
+        <<: *sort
+        upto: 2
+        steady: true
+
+  - id: s32
+    say: A counterfactual asks what would have happened had the past been different. As Donald Rubin noted in 1974, we see a person's outcome with a treatment or without it, never both.
+    sources: [S39]
+    transition: dissolve
+    scene:
+      name: sort_table
+      params:
+        <<: *sort
+        upto: 3
+
+  - id: s33
+    say: "Judea Pearl puts these questions on three rungs: seeing, doing, and imagining. Data from a lower rung cannot, alone, answer a question from a higher one."
+    sources: [S38]
+    transition: glide
+    scene:
+      name: ladder
+      params:
+        heading: Pearl's ladder of causation
+        highlight: 2
+        rungs:
+          - {title: Seeing, question: "What goes with what?"}
+          - {title: Doing, question: "What happens if I act?"}
+          - {title: Imagining, question: "What would have happened otherwise?"}
+    hold: 0.5
+
+  # ---------------------------------------------------------------- scoring
+  - id: s34
+    say: A forecast earns trust only when it is scored. The Brier score, from 1950, measures the squared gap between forecast and outcome. Lower is better.
+    sources: [S34, S33]
+    transition: wipe
+    beats: ["scored", "squared gap", "Lower is better"]
+    direction: Brier rhymes with higher.
+    scene:
+      name: card_row
+      params:
+        kicker: Keeping score
+        heading: The Brier score
+        cards:
+          - {title: The forecast, line: "A probability, such as 90%", tone: unknown}
+          - {title: The outcome, line: "It happened, or it did not"}
+          - {title: The score, line: "The squared gap between them. Lower is better.", tone: cool}
+
+  - id: s35
+    say: In one tournament's form of the score, saying ninety percent costs zero point zero two if right, and one point six two if wrong. The worst score is two.
+    sources: [S34]
+    transition: glide
+    beats: ["zero point zero two", "one point six two", "worst score"]
+    direction: Brier rhymes with higher.
+    scene:
+      name: bars
+      params:
+        heading: What a forecast of 90% costs
+        max: 2
+        decimals: 2
+        items:
+          - {label: "Said 90%, and it happened", value: 0.02, tone: known}
+          - {label: "Said 90%, and it did not", value: 1.62, tone: warn}
+          - {label: "The worst possible score", value: 2.0, tone: cool}
+
+  - id: s36
+    say: A forecaster is calibrated when the events they call seventy percent happen about seventy percent of the time.
+    sources: [S34]
+    transition: dissolve
+    scene:
+      name: calibration
+      params:
+        heading: Calibration
+        points:
+          - {x: 70, y: 70, label: "Said 70%, happened 70%: calibrated", tone: known}
+
+  - id: s37
+    say: People often are not. In studies reviewed by Tversky and Kahneman in 1974, ranges given as ninety-eight percent sure missed about thirty percent of the time.
+    sources: [S32]
+    transition: glide
+    beats: ["Tversky", "thirty percent"]
+    scene:
+      name: bars
+      params:
+        heading: Ranges given as 98% sure
+        max: 40
+        unit: "%"
+        items:
+          - {label: "How often they should miss", value: 2, tone: known}
+          - {label: "How often they missed", value: 30, tone: warn}
+
+  - id: s38
+    say: "Forecasting can be trained. The Good Judgment Project found three things that helped: probability training, teamwork, and grouping the top two percent together."
+    sources: [S34]
+    transition: dissolve
+    beats: ["Good Judgment", "teamwork", "top two percent"]
+    scene:
+      name: card_row
+      params:
+        heading: What made forecasts better
+        cards:
+          - {title: Training, line: "Probability lessons, including the use of reference classes"}
+          - {title: Teaming, line: "Forecasters share evidence and reasons", tone: unknown}
+          - {title: Tracking, line: "The top 2% work together in elite teams", tone: cool}
+
+  - id: s39
+    say: Even they were overconfident at the edge. Early forecasts of one hundred percent came true only about seventy percent of the time. Late in a question, about ninety.
+    sources: [S34]
+    transition: glide
+    beats: ["one hundred percent", "Late in a question"]
+    scene:
+      name: calibration
+      params:
+        heading: Certain, and wrong three times in ten
+        points:
+          - {x: 100, y: 70, label: "Early forecasts of 100%: right about 70%", tone: warn}
+          - {x: 100, y: 90, label: "Late forecasts of 100%: right about 90%", tone: unknown}
+    hold: 0.5
+
+  - id: s40
+    say: A scored number still fails if the listener hears a different one. That is the next problem.
+    transition: dissolve
+    scene:
+      name: title_card
+      params:
+        label: Uncertainty Explainers
+        title: Said, and heard
+        subtitle: A number is not shared until the listener holds it
+    hold: 0.8
