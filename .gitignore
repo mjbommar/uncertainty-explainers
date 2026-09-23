@@ -1,0 +1,15 @@
+.venv/
+build/
+__pycache__/
+*.pyc
+videos/*/output/
+videos/*/cache/
+research/downloads/*.pdf
+research/downloads/*.html
+research/downloads/*.bin
+*.mp4
+*.m4a
+*.wav
+*.mp3
+!videos/*/publish/*.mp4
+.cache/
