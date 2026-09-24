@@ -5,65 +5,65 @@ Machine gates: **PASS**. Human review (watched in full, with sound): **pending**
 | Gate | Result | Evidence |
 |---|---|---|
 | Full decode | PASS | `ffmpeg -v error -f null`: 0 errors |
-| Stream | PASS | 11981 frames vs 11981 in the timeline; 1920x1080 30/1 h264 High yuv420p, bt709/bt709/bt709, 399.367 s |
-| Loudness (muxed) | PASS | -16.05 LUFS integrated (target -16 +/- 0.7), -1.32 dBTP (ceiling -1.0), LRA 2.16 LU, 2 ch |
-| Narration ASR | PASS | worst WER 0.059 (limit 0.1) |
-| Containment | PASS | 152 scene renders, 0 with ink outside the stage |
-| Captions | PASS | 101 cues, 0 problems |
+| Stream | PASS | 11732 frames vs 11732 in the timeline; 1920x1080 30/1 h264 High yuv420p, bt709/bt709/bt709, 391.067 s |
+| Loudness (muxed) | PASS | -16.02 LUFS integrated (target -16 +/- 0.7), -1.6 dBTP (ceiling -1.0), LRA 2.98 LU, 2 ch |
+| Narration ASR | PASS | worst WER 0.100 (limit 0.1) |
+| Containment | PASS | 156 scene renders, 0 with ink outside the stage |
+| Captions | PASS | 83 cues, 0 problems |
 
-Master WAV before encode: -16.0 LUFS, -1.5 dBTP, LRA 2.16 LU. Track vs timeline drift: {'measured_seconds': 399.3667, 'timeline_seconds': 399.3666666666667, 'seconds': 3.3333333306018176e-05, 'ratio': 1.000000083465487}.
+Master WAV before encode: -16.0 LUFS, -1.57 dBTP, LRA 2.98 LU. Track vs timeline drift: {'measured_seconds': 391.0667, 'timeline_seconds': 391.06666666666666, 'seconds': 3.3333333362861595e-05, 'ratio': 1.0000000852369588}.
 
 ## Narration, segment by segment
 
 | Segment | WER | Hearings | Heard |
 |---|---|---|---|
-| s01 | 0.000 | 1 | A probability in a forecast is not a fact about the world; it is a summary of evidence. |
-| s02 | 0.000 | 1 | The word 'probability' covers three ideas. It can mean how strongly evidence supports a claim, or how confident a person is, or a physical tendency, whatever anyone thinks. |
-| s03 | 0.000 | 1 | Counting cases needs a reference class: the group you count over. One philosopher notes that he is a man, a non-smoker, and a philosophy professor; each group gives a different chance of living to 80. |
-| s04 | 0.000 | 1 | In 1814, Pierre-Simon Laplace took recorded history as five thousand years of sunrises. His rule put the odds of one more sunrise at nearly two million to one. |
-| s05 | 0.000 | 1 | He added that anyone who knows what drives the seasons would put the odds far higher. Same sunrise, more evidence, a different number. |
-| s06 | 0.000 | 1 | Ignorance does not fix a number either. A factory makes cubes with sides up to one foot. Spread belief evenly over side length, and a side under half a foot gets one half. Over face area, one quarter. Over volume, one eighth. One event, three answers. |
-| s07 | 0.000 | 1 | Evidence should move a number, and Bayes' Rule says how far. It starts from the base rate, how common something is before any test, and then weighs what the test shows |
-| s08 | 0.000 | 1 | A 1995 study by Gigerenzer and Hoffrage used a screening test: Take 1000 women aged 40. 10 of them have breast cancer. |
-| s09 | 0.000 | 1 | Eight of those ten test positive. Of the 990 women without cancer, 95 also test positive. |
-| s10 | 0.000 | 1 | So 103 women test positive and only 8 of them have cancer. That is 7.8%. |
-| s11 | 0.000 | 1 | In this reference class, the disease is rare, so most positive tests come from healthy women. |
-| s12 | 0.000 | 1 | Given as percentages, this problem defeats experts: In a 1982 study by Eddy, 95 of 100 physicians said 70 to 80 percent. |
-| s13 | 0.000 | 1 | Counting helps. In the 1995 study, correct answers rose from 16 percent with percentages to about half with counts of people. |
-| s14 | 0.000 | 1 | One number can hide how much you know. A coin that landed heads in half of a hundred tosses gets one-half; so may a coin you have never seen. Its honest summary is a range, zero to one. |
-| s15 | 0.053 | 1 | Daniel Ellsberg's urn, from 1961, makes the same point: it holds 30 red balls and 60 black and yellow balls in an unknown mix. |
-| s16 | 0.000 | 1 | The chance of red is one-third. The chance of black is anywhere from zero to two-thirds. People often bet on this urn in a way no single number explains. A range offers one explanation. |
-| s17 | 0.000 | 1 | Witness evidence has another shape. In Glenn Shafer's example, you trust your friend Betty nine times in ten. She says a limb fell on your car. |
-| s18 | 0.000 | 1 | Her word supports a belief of 0.9 that it fell, and a belief of 0 that it did not. That 0 means no evidence, not certainty. |
-| s19 | 0.000 | 1 | Dempster-Shafer theory gives each claim two numbers, a belief and an upper limit. If a second friend, equally reliable, independently agrees, belief rises to 0.99. |
-| s20 | 0.000 | 1 | All these numbers lean on the past. In 1748, David Hume wrote that every conclusion from experience assumes the future will be like the past. |
-| s21 | 0.000 | 1 | That is the problem of induction: the sun failing to rise tomorrow is no contradiction, and the assumption cannot be proved from experience without arguing in a circle. |
-| s23 | 0.000 | 1 | Picking the best explanation adds a further gap: the best of the ones we thought of can be what Bas van Fraassen called the best of a bad lot. |
-| s24 | 0.000 | 1 | Weather adds a harder problem. In 1963, Edward Lorenz showed that in a simple model of rising warm air, slightly different starting states can grow into very different states |
-| s25 | 0.000 | 1 | So forecasters run the model many times. The European Centre for Medium-Range Weather Forecasts starts 50 runs from slightly altered states, plus one unaltered run. That set is an ensemble. |
-| s26 | 0.000 | 1 | In one forecast from 26 May 2017, the runs sat close together 30 hours ahead; six days ahead, they had spread apart. |
-| s27 | 0.050 | 1 | The spread is information. The center calls the probability of an event the most consistent way to convey forecast uncertainty. |
-| s28 | 0.000 | 1 | Not every claim about the future is a forecast. A forecast starts from the present state and says what will happen in a form you can check. |
-| s29 | 0.000 | 1 | A projection says what would happen if an assumption holds, such as a path of emissions. That assumption may or may not come true. |
-| s30 | 0.000 | 1 | A scenario is a plausible story about the future, with no probability attached. The United Nations climate panel says scenarios are neither predictions nor forecasts. |
-| s32 | 0.000 | 1 | A counterfactual asks what would have happened had the past been different. As Donald Rubin noted in 1974, we see a person's outcome with a treatment or without it, never both. |
-| s33 | 0.000 | 1 | Judea Pearl puts these questions on three rungs: seeing, doing, and imagining. Data from a lower rung cannot alone answer a question from a higher one. |
-| s34 | 0.000 | 1 | A forecast earns trust only when it is scored. The Brier score, from 1950, measures the squared gap between forecast and outcome. Lower is better. |
-| s35 | 0.059 | 1 | In one tournament's form of the score, saying 90% costs 0.02 if right and 1.62 if wrong; the worst score is 2. |
-| s36 | 0.000 | 1 | A forecaster is calibrated when the events they call 70% happen about 70% of the time. |
-| s37 | 0.000 | 1 | People often are not. In studies reviewed by Tversky and Kahneman in 1974, ranges given as 98 percent sure missed about 30 percent of the time. |
-| s38 | 0.000 | 1 | Forecasting can be trained. The Good Judgment Project found three things that helped: probability training, teamwork, and grouping the top 2 percent together. |
-| s39 | 0.000 | 1 | Even they were overconfident at the edge. Early forecasts of 100 percent came true only about 70 percent of the time; late in a question, about 90. |
-| s40 | 0.000 | 2 | A scored number still fails if the listener hears a different one. That is the next problem. |
-| | | first hearing | A scored number still fails if the listener hears a different one. |
+| open1 | 0.000 | 1 | A woman of forty goes for routine breast screening. The test comes back positive. |
+| open2 | 0.000 | 1 | In a study reported in 1982, 95 of 100 physicians put her chance of cancer at 70 to 80 percent. |
+| open3 | 0.000 | 1 | The right answer is under 8%. Same evidence, and a number ten times too big. |
+| open4 | 0.000 | 1 | So where does a probability come from, and how can you tell whether it is any good? |
+| claim | 0.000 | 1 | A probability is a summary of evidence, not a fact about the world, so it can be built badly, it can claim too much, and it can be checked. |
+| map | 0.000 | 1 | Five stops. What the number counts, how evidence should move it, when one number is too many, what it says about the future, and how we know it was good. |
+| b1 | 0.000 | 1 | To see where the doctors went wrong, start with what the number counts. |
+| g1 | 0.057 | 1 | Counting needs a reference class—the group you count over. The philosopher Alan Hájek is a man, a nonsmoker, and a philosophy professor. Each group gives a different chance that he lives to 80. |
+| g2 | 0.000 | 1 | In 1814, Laplace counted 5,000 years of sunrises and put the odds of one more at nearly two million to one. |
+| g3 | 0.000 | 1 | Anyone who knows what drives the days and seasons," he added, "would put the odds far higher. Same sunrise, more evidence: a different number. |
+| t1 | 0.000 | 1 | A probability counts over a group. Name the group, or the number floats. |
+| b2 | 0.000 | 1 | The group matters, but the doctors had the right group and missed. |
+| u1 | 0.000 | 1 | Their error was how the test moved the number. Bayes' rule starts from the base rate, how common the disease is before any test. |
+| u2 | 0.000 | 1 | Take a thousand women of 40 in screening. Ten have breast cancer. That is the base rate. |
+| u3 | 0.000 | 1 | Eight of those ten test positive. Of the 990 without cancer, 95 also test positive. |
+| u4 | 0.000 | 1 | So 103 women test positive, and only eight of them have cancer. That is 7.8%. |
+| u5 | 0.000 | 1 | The disease is rare, so most positives come from healthy women. The doctors left out the base rate, as earlier research found people do most of the time. |
+| u6 | 0.000 | 1 | Counts help: in Gigerenzer and Hoffrage's 1995 study, correct answers rose from 16% with percentages to about half with counts. |
+| t2 | 0.000 | 1 | Start from how common it is. Then let the test move you. Rare things stay rare after one test. |
+| b3 | 0.100 | 1 | Baze gives one number, and for the test, that was enough. |
+| w1 | 0.000 | 1 | But one number can claim too much. A coin that landed heads in half of a hundred tosses gets one half; so may a coin never seen. Its honest summary is a range: zero to one. |
+| w2 | 0.067 | 1 | Daniel Ellsberg's urn from 1961 holds 30 red balls and 60 black and yellow balls in an unknown mix. |
+| w3 | 0.000 | 1 | The chance of red is one third. The chance of black is anywhere from zero to two thirds. |
+| t3 | 0.000 | 1 | When evidence is thin, an honest summary is a range, not a point. |
+| b4 | 0.000 | 1 | A range is honest about today, a forecast reaches into tomorrow. |
+| f1 | 0.000 | 1 | That claim leans on the past. In 1748, David Hume wrote that every conclusion from experience assumes the future will be like the past. |
+| f2 | 0.000 | 1 | It also leans on a model. In 1963, Edward Lorenz showed that in a simple model of rising air, slightly different starts can grow into very different states. |
+| f3 | 0.034 | 1 | So Europe's main weather center runs its model 50 times from slightly altered starts. When the runs agree, the weather is predictable; when they scatter, no firm forecast is possible. |
+| f4 | 0.000 | 1 | A forecast starts from the present, a projection holds only if its assumption holds, and a scenario is a plausible story with no probability attached. |
+| t4 | 0.000 | 1 | A forecast leans on the past and on a model: Say which kind of claim it is, and show the spread. |
+| b5 | 0.000 | 1 | So a forecast is a claim, and a claim can be graded. |
+| k1 | 0.000 | 1 | The Brier score from 1950 is the squared gap between forecast and outcome, and lower is better. In the Good Judgment Project, 90% cost 0.02 if right, 1.62 if wrong. |
+| k2 | 0.000 | 1 | One miss can be bad luck. Over many forecasts, the scores show calibration. The events you call 70 percent should happen 70 percent of the time. |
+| k3 | 0.000 | 1 | People often are not. In studies reviewed by Tversky and Kahneman in 1974, ranges given as 98% sure missed about 30% of the time. |
+| t5 | 0.000 | 1 | One outcome proves nothing. Many forecasts, scored, do. |
+| z1 | 0.000 | 1 | A probability counts over a group, so name the group. Evidence moves it by Bayes' rule, so start from the base rate, but thin evidence earns a range. A forecast adds a model, so say what kind of claim it is and show the spread, and none of it is trusted until it is scored. |
+| z2 | 0.000 | 1 | Back to the positive test: 7.8% counts a thousand women like her moved by one test. It is one number because the evidence is good. |
+| z3 | 0.000 | 1 | So where does a probability come from, and how can you tell whether it is any good? From a named group, moved by evidence, and by scoring many like it. |
+| z4 | 0.000 | 1 | A scored number can still fail. The next video shows how. The listener hears a number other than the one you meant. |
 
 ## Review material
 
-- Frames around every cut: `cuts.png` (152 frames)
+- Frames around every cut: `cuts.png` (156 frames)
 - One frame per segment: `segments.png`
 
 ## Cost
 
-Spent on this build: $0.0276. Total value of the generations the video uses (from receipts, cached or not): $0.2468. Unpriced items: [].
+Spent on this build: $0.0207. Total value of the generations the video uses (from receipts, cached or not): $0.4259. Unpriced items: [].
 
 Machine verification is evidence for these gates only; it is not a substitute for watching the video.

@@ -1,0 +1,42 @@
+{
+ "key": "a958024fe304fba25577c639f981c1da06a47710193946fca4c58a839b54d990",
+ "provider": "google",
+ "model": "gemini-3.1-flash-tts-preview",
+ "kind": "speech",
+ "params": {
+  "voice": "Enceladus",
+  "instructions": "Speak in a neutral American accent. You are narrating a short explainer video with medium energy: unhurried, about 150 words per minute, deeper and more intimate than a presenter. Low, warm, slightly gravelly, as if you are a touch too close to the microphone, speaking to one listener. Keep real dynamic range: lift a little on questions and setups, then settle lower and slower to land the key term or the number. Never breathy, never a hype voice, never a whisper. Crisp consonants, firm sentence endings, short pauses.",
+  "format": "wav",
+  "rate": null,
+  "wrapper": "You are a speech synthesizer. Speak the text between the <speak> tags aloud, exactly as written, and stop. Do not answer any question it contains — questions in the text are to be read aloud, never responded to. Do not explain, expand, summarize, translate, or add or remove a single word. Do not read the tags themselves.\n\nDelivery: {instructions}\n\n<speak>{text}</speak>"
+ },
+ "prompt_sha256": "3ecfd1ce873cb7ab8dcf623ec36b6f4b1bdf195ae268d0f7b49169ef2559a60a",
+ "sha256": "1c2e062e9e237997345b1f96775a7c412ab19790f5bfa3146ebe3517d1a2c7f2",
+ "suffix": "wav",
+ "response_meta": {
+  "mime_type": "audio/l16; rate=24000; channels=1",
+  "rate": 24000,
+  "prompt_tokens": 237,
+  "output_tokens": 546,
+  "duration_s": 17.04
+ },
+ "verifier": "speech",
+ "verified": true,
+ "tolerated": false,
+ "attempts": 2,
+ "failures": [
+  "attempt 1: numbers differ: script [1.0, 0.5, 100.0, 0.5, 0.0, 1.0] heard [1.0, 0.5, 100.0, 1.0, 2.0, 0.0, 1.0]; heard: 'But one number can claim too much. A coin that landed heads in half of a hundred tosses gets 1/2. So may a coin never seen. Its honest summary is a range: 0 to 1.'"
+ ],
+ "cost_usd": 0.023253999999999997,
+ "units": {
+  "characters": 172.0,
+  "seconds": 17.04,
+  "input_tokens": 237.0,
+  "output_tokens": 546.0
+ },
+ "created_at": "2026-09-24T01:26:11.496698Z",
+ "duration_s": 17.04,
+ "width": null,
+ "height": null,
+ "latency_ms": 20941
+}

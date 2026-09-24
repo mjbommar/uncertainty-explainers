@@ -1,394 +1,423 @@
 # Storyboard: From evidence to forecast
 
-Video 2 of Uncertainty Explainers. Slug `02-from-evidence-to-forecast`. Built running time 399.4 s (6:39), 995 narrated words, 38 segments plus a 3.5 s end card.
+Video 2 of Uncertainty Explainers. Slug `02-from-evidence-to-forecast`. Built running time 391.1 s (6:31), 873 narrated words, 39 segments plus a 3.5 s end card.
 
-Thesis: a probability is a disciplined summary of evidence, not a fact about the world. It must be honest about its reference class and its width, and stated so it can be scored.
+Shape: `docs/STRUCTURE.md`, video 2. Opening question: *where does a probability come from, and how can you tell whether it is any good?* Claim: a probability is a summary of evidence, not a fact about the world. Five stops, each entered by a bridge over the shared `roadmap` scene (travel mode) and closed by a spoken takeaway shown as a `takeaway_line` card. The zoom-out reads the takeaways as one chain over `roadmap` in summary mode, returns to the 1,000 women, and answers the opening question in the same words.
 
-Seconds are the built spans from `output/timeline_summary.json` (narration, hold and transition). Scenes marked (new) live in `pipeline/scenes_02_from_evidence_to_forecast.py`.
+| Stop | Takeaway (spoken and on screen) |
+|---|---|
+| 1. The group | A probability counts over a group. Name the group, or the number floats. |
+| 2. The update | Start from how common it is, then let the test move you. Rare things stay rare after one test. |
+| 3. The width | When evidence is thin, an honest summary is a range, not a point. |
+| 4. The future | A forecast leans on the past and on a model. Say which kind of claim it is, and show the spread. |
+| 5. The score | One outcome proves nothing. Many forecasts, scored, do. |
 
-Illustrations (ours, not reported by a source): the cube factory numbers are the source's own; the 1,000-women counts are the source's natural-frequency version; the dot-and-range pictures of the coins, Ellsberg's urn and Betty's testimony are drawn from the sources' stated values. No other figure on screen is invented, except the random paths in the ensemble and divergence plots, which are schematic and are not ECMWF or Lorenz output.
+Seconds are the built spans from `output/timeline_summary.json` (narration, hold and transition). Scenes marked (v2) live in `pipeline/scenes_02_from_evidence_to_forecast.py`; `roadmap` is shared, in `pipeline/scenes_shared.py`.
 
-## s01  (0.0 to 6.3 s, 6.3 s)
+Illustrations (ours, not reported by a source): the 1,000-women counts are the source's own natural-frequency version; the dot-and-range pictures of the coins and Ellsberg's urn are drawn from the sources' stated values; the paths in the ensemble and divergence plots are schematic, not ECMWF or Lorenz output. Takeaways, bridges, the claim, the map and the zoom-out are reasoning over the cited segments and carry no source of their own.
 
-- **Say:** A probability in a forecast is not a fact about the world. It is a summary of evidence.
-- **Scene:** `title_card`; heading: From evidence to forecast
+## Pose the problem  (0.0 to 29.5 s, 29.5 s)
+
+### open1  (0.0 to 6.3 s, 6.3 s)
+
+- **Say:** A woman of forty goes for routine breast screening. The test comes back positive.
+- **Scene:** `card_row` (v2); Routine screening, a positive test
+- **Beats:** woman of forty, positive
+- **Image:** patient, test_result
+- **Sfx:** none
+- **Sources:** S59
+- **Transition in:** dissolve
+
+### open2  (6.3 to 16.7 s, 10.4 s)
+
+- **Say:** In a study reported in 1982, ninety-five of a hundred physicians put her chance of cancer at seventy to eighty percent.
+- **Scene:** `interval_rows` (v2); Her chance of cancer, after a positive test
+- **Beats:** seventy to eighty
+- **Image:** none
+- **Sfx:** none
+- **Sources:** S59
+- **Transition in:** glide
+
+### open3  (16.7 to 24.2 s, 7.4 s)
+
+- **Say:** The right answer is under eight percent. Same evidence, and a number ten times too big.
+- **Scene:** `interval_rows` (v2); Her chance of cancer, after a positive test
+- **Beats:** right answer, under eight
+- **Image:** none
+- **Sfx:** soft_click at "under eight"
+- **Sources:** S59
+- **Transition in:** cut
+
+### open4  (24.2 to 29.5 s, 5.4 s)
+
+- **Say:** So where does a probability come from, and how can you tell whether it is any good?
+- **Scene:** `title_card`; Where does a probability come from?
 - **Beats:** reveal only
 - **Image:** none
 - **Sfx:** none
-- **Sources:** none (framing line)
+- **Sources:** none (structure: reasoning over cited segments)
 - **Transition in:** dissolve
 
-## s02  (6.3 to 18.6 s, 12.3 s)
+## Claim and map  (29.5 to 52.8 s, 23.3 s)
 
-- **Say:** The word probability covers three ideas. It can mean how strongly evidence supports a claim, or how confident a person is. Or a physical tendency, whatever anyone thinks.
-- **Scene:** `card_row` (new); heading: One word, three ideas
-- **Beats:** evidence supports, how confident, physical tendency
+### claim  (29.5 to 41.1 s, 11.6 s)
+
+- **Say:** A probability is a summary of evidence, not a fact about the world. So it can be built badly, it can claim too much, and it can be checked.
+- **Scene:** `card_row` (v2); What a probability is
+- **Beats:** summary of evidence, built badly, claim too much, checked
 - **Image:** none
 - **Sfx:** none
-- **Sources:** S15
+- **Sources:** none (structure: reasoning over cited segments)
 - **Transition in:** dissolve
 
-## s03  (18.6 to 32.0 s, 13.4 s)
+### map  (41.1 to 52.8 s, 11.7 s)
 
-- **Say:** Counting cases needs a reference class, the group you count over. One philosopher notes that he is a man, a non-smoker, and a philosophy professor. Each group gives a different chance of living to eighty.
-- **Scene:** `card_row` (new); heading: Which group is he in?
+- **Say:** Five stops: what the number counts, how evidence should move it, when one number is too many, what it says about the future, and how we know it was good.
+- **Scene:** `roadmap`; mode overview, current -1
+- **Beats:** reveal only
+- **Image:** none
+- **Sfx:** none
+- **Sources:** none (structure: reasoning over cited segments)
+- **Transition in:** dissolve
+
+## Stop 1: The group. What is the number counting?  (52.8 to 100.1 s, 47.3 s)
+
+### b1  (52.8 to 57.3 s, 4.5 s)
+
+- **Say:** To see where the doctors went wrong, start with what the number counts.
+- **Scene:** `roadmap`; mode travel, current 0
+- **Beats:** reveal only
+- **Image:** none
+- **Sfx:** none
+- **Sources:** none (structure: reasoning over cited segments)
+- **Transition in:** dissolve
+
+### g1  (57.3 to 71.5 s, 14.2 s)
+
+- **Say:** Counting needs a reference class, the group you count over. The philosopher Alan Hájek is a man, a non-smoker and a philosophy professor. Each group gives a different chance that he lives to eighty.
+- **Scene:** `card_row` (v2); Which group is he in?
 - **Beats:** reference class, non-smoker, philosophy professor
 - **Image:** none
 - **Sfx:** none
 - **Sources:** S15
-- **Transition in:** glide
+- **Transition in:** dissolve; direction: Say Hájek as HAH-yek.
 
-## s04  (32.0 to 43.6 s, 11.6 s)
+### g2  (71.5 to 82.3 s, 10.8 s)
 
-- **Say:** In 1814 Pierre-Simon Laplace took recorded history as five thousand years of sunrises. His rule put the odds of one more sunrise at nearly two million to one.
-- **Scene:** `big_number` (new); heading: Laplace's odds that the sun rises tomorrow
-- **Beats:** Laplace, nearly two million
+- **Say:** In 1814 Laplace counted five thousand years of sunrises, and put the odds of one more at nearly two million to one.
+- **Scene:** `big_number` (v2); 
+- **Beats:** five thousand years, nearly two million
 - **Image:** sunrise
 - **Sfx:** none
 - **Sources:** S16
 - **Transition in:** dissolve; direction: Say Laplace as la-PLAHSS.
 
-## s05  (43.6 to 52.7 s, 9.1 s)
+### g3  (82.3 to 93.9 s, 11.5 s)
 
-- **Say:** He added that anyone who knows what drives the seasons would put the odds far higher. Same sunrise, more evidence, a different number.
-- **Scene:** `two_column_compare`; heading: Same sunrise, two bodies of evidence
-- **Beats:** He added, anyone who knows
+- **Say:** Anyone who knows what drives the days and seasons, he added, would put the odds far higher. Same sunrise, more evidence, a different number.
+- **Scene:** `two_column_compare`; Same sunrise, two bodies of evidence
+- **Beats:** he added, far higher
 - **Image:** none
 - **Sfx:** none
 - **Sources:** S16
 - **Transition in:** push-left
 
-## s06  (52.7 to 69.7 s, 16.9 s)
+### t1  (93.9 to 100.1 s, 6.2 s)
 
-- **Say:** Ignorance does not fix a number either. A factory makes cubes with sides up to one foot. Spread belief evenly over side length, and a side under half a foot gets one half. Over face area, one quarter. Over volume, one eighth. One event, three answers.
-- **Scene:** `cube_three_ways` (new); heading: One event, three answers
-- **Beats:** cubes with sides, side length, face area, Over volume
+- **Say:** A probability counts over a group. Name the group, or the number floats.
+- **Scene:** `takeaway_line` (v2); A probability counts over a group. Name the group, or the number floats.
+- **Beats:** reveal only
 - **Image:** none
 - **Sfx:** none
-- **Sources:** S15
+- **Sources:** none (structure: reasoning over cited segments)
 - **Transition in:** dissolve
 
-## s07  (69.7 to 80.8 s, 11.2 s)
+## Stop 2: The update. How should evidence move it?  (100.1 to 171.4 s, 71.3 s)
 
-- **Say:** Evidence should move a number, and Bayes' rule says how far. It starts from the base rate, how common something is before any test, and then weighs what the test shows.
-- **Scene:** `card_row` (new); heading: How evidence moves a number
-- **Beats:** Bayes' rule, base rate, weighs
+### b2  (100.1 to 105.3 s, 5.2 s)
+
+- **Say:** The group matters. But the doctors had the right group, and missed.
+- **Scene:** `roadmap`; mode travel, current 1
+- **Beats:** reveal only
+- **Image:** none
+- **Sfx:** none
+- **Sources:** none (structure: reasoning over cited segments)
+- **Transition in:** dissolve
+
+### u1  (105.3 to 115.4 s, 10.0 s)
+
+- **Say:** Their error was how the test moved the number. Bayes' rule starts from the base rate, how common the disease is before any test.
+- **Scene:** `card_row` (v2); How evidence moves a number
+- **Beats:** Bayes' rule, base rate, before any test
 - **Image:** none
 - **Sfx:** none
 - **Sources:** S21
 - **Transition in:** wipe; direction: Bayes rhymes with days.
 
-## s08  (80.8 to 90.2 s, 9.4 s)
+### u2  (115.4 to 122.4 s, 7.0 s)
 
-- **Say:** A 1995 study by Gigerenzer and Hoffrage used a screening test. Take one thousand women aged forty. Ten of them have breast cancer.
-- **Scene:** `icon_array` (new); heading: One thousand women, one test
-- **Beats:** one thousand women, Ten of them
+- **Say:** Take a thousand women of forty in screening. Ten have breast cancer. That is the base rate.
+- **Scene:** `icon_array` (v2); One thousand women, one test
+- **Beats:** thousand women, Ten have
 - **Image:** none
 - **Sfx:** none
 - **Sources:** S59
 - **Transition in:** dissolve
 
-## s09  (90.2 to 97.8 s, 7.6 s)
+### u3  (122.4 to 130.8 s, 8.5 s)
 
-- **Say:** Eight of those ten test positive. Of the nine hundred and ninety women without cancer, ninety-five also test positive.
-- **Scene:** `icon_array` (new); heading: One thousand women, one test
+- **Say:** Eight of those ten test positive. Of the nine hundred and ninety without cancer, ninety-five also test positive.
+- **Scene:** `icon_array` (v2); One thousand women, one test
 - **Beats:** Eight of those, ninety-five
 - **Image:** none
 - **Sfx:** tick at "Eight of those"
 - **Sources:** S59
 - **Transition in:** cut
 
-## s10  (97.8 to 105.3 s, 7.5 s)
+### u4  (130.8 to 139.5 s, 8.6 s)
 
 - **Say:** So one hundred and three women test positive, and only eight of them have cancer. That is seven point eight percent.
-- **Scene:** `icon_array` (new); heading: One thousand women, one test
+- **Scene:** `icon_array` (v2); One thousand women, one test
 - **Beats:** one hundred and three, only eight
 - **Image:** none
 - **Sfx:** chime at "seven point eight"
 - **Sources:** S59
 - **Transition in:** cut
 
-## s11  (105.3 to 111.5 s, 6.2 s)
+### u5  (139.5 to 151.3 s, 11.8 s)
 
-- **Say:** In this reference class the disease is rare, so most positive tests come from healthy women.
-- **Scene:** `big_number` (new); heading: Chance of cancer after a positive test
+- **Say:** The disease is rare, so most positives come from healthy women. The doctors left out the base rate, as earlier research found people do most of the time.
+- **Scene:** `interval_rows` (v2); Where seventy percent came from
+- **Beats:** disease is rare, left out
+- **Image:** none
+- **Sfx:** none
+- **Sources:** S59
+- **Transition in:** dissolve
+
+### u6  (151.3 to 162.2 s, 10.9 s)
+
+- **Say:** Counts help. In Gigerenzer and Hoffrage's 1995 study, correct answers rose from sixteen percent with percentages to about half with counts.
+- **Scene:** `bars` (v2); People who reasoned correctly
+- **Beats:** sixteen percent, about half, with counts
+- **Image:** none
+- **Sfx:** none
+- **Sources:** S59
+- **Transition in:** glide; direction: Say Gigerenzer as GIG-er-en-tser.
+
+### t2  (162.2 to 171.4 s, 9.2 s)
+
+- **Say:** Start from how common it is, then let the test move you. Rare things stay rare after one test.
+- **Scene:** `takeaway_line` (v2); Start from how common it is, then let the test move you. Rare things stay rare after one test.
 - **Beats:** reveal only
 - **Image:** none
 - **Sfx:** none
-- **Sources:** S59
+- **Sources:** none (structure: reasoning over cited segments)
 - **Transition in:** dissolve
 
-## s12  (111.5 to 122.6 s, 11.1 s)
+## Stop 3: The width. When is one number too many?  (171.4 to 214.8 s, 43.5 s)
 
-- **Say:** Given as percentages, this problem defeats experts. In a 1982 study by Eddy, ninety-five of a hundred physicians said seventy to eighty percent.
-- **Scene:** `interval_rows` (new); heading: What physicians said
-- **Beats:** percentages, seventy to eighty
+### b3  (171.4 to 176.1 s, 4.7 s)
+
+- **Say:** Bayes gives one number, and for the test that was enough.
+- **Scene:** `roadmap`; mode travel, current 2
+- **Beats:** reveal only
 - **Image:** none
 - **Sfx:** none
-- **Sources:** S59
+- **Sources:** none (structure: reasoning over cited segments)
 - **Transition in:** dissolve
 
-## s13  (122.6 to 131.9 s, 9.3 s)
+### w1  (176.1 to 191.5 s, 15.4 s)
 
-- **Say:** Counting helps. In the 1995 study, correct answers rose from sixteen percent with percentages to about half with counts of people.
-- **Scene:** `bars` (new); heading: People who reasoned correctly
-- **Beats:** sixteen percent, about half, counts of people
-- **Image:** none
-- **Sfx:** none
-- **Sources:** S59
-- **Transition in:** glide
-
-## s14  (131.9 to 145.3 s, 13.4 s)
-
-- **Say:** One number can hide how much you know. A coin that landed heads in half of a hundred tosses gets one half. So may a coin you have never seen. Its honest summary is a range, zero to one.
-- **Scene:** `interval_rows` (new); heading: Same number, different evidence
+- **Say:** But one number can claim too much. A coin that landed heads in half of a hundred tosses gets one half. So may a coin never seen. Its honest summary is a range, zero to one.
+- **Scene:** `interval_rows` (v2); Same number, different evidence
 - **Beats:** A coin that, never seen, a range
 - **Image:** none
 - **Sfx:** none
 - **Sources:** S23
 - **Transition in:** dissolve
 
-## s15  (145.3 to 155.2 s, 9.9 s)
+### w2  (191.5 to 200.9 s, 9.4 s)
 
-- **Say:** Daniel Ellsberg's urn, from 1961, makes the same point. It holds thirty red balls, and sixty black and yellow balls in an unknown mix.
-- **Scene:** `ellsberg_urn` (new); heading: Ellsberg's urn, 1961
+- **Say:** Daniel Ellsberg's urn, from 1961, holds thirty red balls, and sixty black and yellow balls in an unknown mix.
+- **Scene:** `ellsberg_urn` (v2); Ellsberg's urn, 1961
 - **Beats:** urn, from 1961, sixty black
 - **Image:** none
 - **Sfx:** marbles at "thirty red"
 - **Sources:** S77
 - **Transition in:** dissolve
 
-## s16  (155.2 to 168.9 s, 13.7 s)
+### w3  (200.9 to 208.6 s, 7.7 s)
 
-- **Say:** The chance of red is one third. The chance of black is anywhere from zero to two thirds. People often bet on this urn in a way no single number explains. A range offers one explanation.
-- **Scene:** `interval_rows` (new); heading: One urn, a dot and a range
+- **Say:** The chance of red is one third. The chance of black is anywhere from zero to two thirds.
+- **Scene:** `interval_rows` (v2); One urn, a dot and a range
 - **Beats:** chance of red, chance of black
 - **Image:** none
 - **Sfx:** none
 - **Sources:** S23
 - **Transition in:** glide
 
-## s17  (168.9 to 178.8 s, 9.8 s)
+### t3  (208.6 to 214.8 s, 6.2 s)
 
-- **Say:** Witness evidence has another shape. In Glenn Shafer's example, you trust your friend Betty nine times in ten. She says a limb fell on your car.
-- **Scene:** `card_row` (new); heading: One witness, one report
-- **Beats:** Glenn Shafer, She says
-- **Image:** limb_car, witness
+- **Say:** When evidence is thin, an honest summary is a range, not a point.
+- **Scene:** `takeaway_line` (v2); When evidence is thin, an honest summary is a range, not a point.
+- **Beats:** reveal only
+- **Image:** none
 - **Sfx:** none
-- **Sources:** S24
+- **Sources:** none (structure: reasoning over cited segments)
 - **Transition in:** dissolve
 
-## s18  (178.8 to 188.7 s, 10.0 s)
+## Stop 4: The future. What can it say about the future?  (214.8 to 277.9 s, 63.0 s)
 
-- **Say:** Her word supports a belief of zero point nine that it fell, and a belief of zero that it did not. That zero means no evidence, not certainty.
-- **Scene:** `interval_rows` (new); heading: Belief, and what is left open
-- **Beats:** zero point nine, belief of zero
-- **Image:** limb_car
-- **Sfx:** none
-- **Sources:** S24
-- **Transition in:** glide
+### b4  (214.8 to 221.0 s, 6.2 s)
 
-## s19  (188.7 to 200.7 s, 12.0 s)
-
-- **Say:** Dempster-Shafer theory gives each claim two numbers: a belief and an upper limit. If a second friend, equally reliable, independently agrees, belief rises to zero point nine nine.
-- **Scene:** `interval_rows` (new); heading: Belief, and what is left open
-- **Beats:** zero point nine nine
-- **Image:** limb_car
-- **Sfx:** soft_click at "zero point nine nine"
-- **Sources:** S24, S25
-- **Transition in:** cut
-
-## s20  (200.7 to 211.3 s, 10.5 s)
-
-- **Say:** All these numbers lean on the past. In 1748 David Hume wrote that every conclusion from experience assumes the future will be like the past.
-- **Scene:** `quote_card`; heading: (none)
+- **Say:** A range is honest about today. A forecast reaches into tomorrow.
+- **Scene:** `roadmap`; mode travel, current 3
 - **Beats:** reveal only
+- **Image:** none
+- **Sfx:** none
+- **Sources:** none (structure: reasoning over cited segments)
+- **Transition in:** dissolve
+
+### f1  (221.0 to 231.6 s, 10.6 s)
+
+- **Say:** That claim leans on the past. In 1748 David Hume wrote that every conclusion from experience assumes the future will be like the past.
+- **Scene:** `induction_gap` (v2); The gap in induction
+- **Beats:** leans on the past, David Hume, like the past
 - **Image:** none
 - **Sfx:** none
 - **Sources:** S28
 - **Transition in:** dissolve
 
-## s21  (211.3 to 222.4 s, 11.1 s)
+### f2  (231.6 to 244.6 s, 12.9 s)
 
-- **Say:** That is the problem of induction. The sun failing to rise tomorrow is no contradiction, and the assumption cannot be proved from experience without arguing in a circle.
-- **Scene:** `induction_gap` (new); heading: The gap in induction
-- **Beats:** The sun failing, tomorrow, cannot be proved
-- **Image:** none
-- **Sfx:** none
-- **Sources:** S28, S29
-- **Transition in:** dissolve
-
-## s23  (222.4 to 231.8 s, 9.5 s)
-
-- **Say:** Picking the best explanation adds a further gap. The best of the ones we thought of can be what Bas van Fraassen called the best of a bad lot.
-- **Scene:** `card_row` (new); heading: The street is wet. Why?
-- **Beats:** best explanation, we thought of, Bas van Fraassen, bad lot
-- **Image:** none
-- **Sfx:** none
-- **Sources:** S30
-- **Transition in:** dissolve; direction: Say van Fraassen as van FRAH-sen.
-
-## s24  (231.8 to 244.4 s, 12.6 s)
-
-- **Say:** Weather adds a harder problem. In 1963 Edward Lorenz showed that in a simple model of rising warm air, slightly different starting states can grow into very different states.
-- **Scene:** `divergence` (new); heading: Two runs, almost the same start
+- **Say:** It also leans on a model. In 1963 Edward Lorenz showed that in a simple model of rising air, slightly different starts can grow into very different states.
+- **Scene:** `divergence` (v2); Two runs, almost the same start
 - **Beats:** reveal only
 - **Image:** none
 - **Sfx:** none
 - **Sources:** S43
 - **Transition in:** dissolve
 
-## s25  (244.4 to 258.1 s, 13.7 s)
+### f3  (244.6 to 257.4 s, 12.9 s)
 
-- **Say:** So forecasters run the model many times. The European Centre for Medium-Range Weather Forecasts starts fifty runs from slightly altered states, plus one unaltered run. That set is an ensemble.
-- **Scene:** `spaghetti_plot`; heading: An ensemble of 51 runs
-- **Beats:** many times
+- **Say:** So Europe's main weather centre runs its model fifty times from slightly altered starts. When the runs agree, the weather is predictable. When they scatter, no firm forecast is possible.
+- **Scene:** `spaghetti_plot`; An ensemble, 50 altered runs and one control
+- **Beats:** fifty times, runs agree, scatter
 - **Image:** storm
-- **Sfx:** whoosh at "fifty runs"
+- **Sfx:** whoosh at "fifty times"
 - **Sources:** S44
 - **Transition in:** dissolve
 
-## s26  (258.1 to 268.2 s, 10.2 s)
+### f4  (257.4 to 269.3 s, 11.9 s)
 
-- **Say:** In one forecast from 26 May 2017, the runs sat close together thirty hours ahead. Six days ahead they had spread apart.
-- **Scene:** `divergence` (new); heading: One forecast: tight at 30 hours, spread by 6 days
-- **Beats:** reveal only
+- **Say:** A forecast starts from the present. A projection holds only if its assumption holds. And a scenario is a plausible story, with no probability attached.
+- **Scene:** `sort_table` (v2); Three kinds of claim about the future
+- **Beats:** A forecast starts, A projection, a scenario
 - **Image:** none
 - **Sfx:** none
-- **Sources:** S45
-- **Transition in:** dissolve
-
-## s27  (268.2 to 276.6 s, 8.4 s)
-
-- **Say:** The spread is information. The centre calls the probability of an event the most consistent way to convey forecast uncertainty.
-- **Scene:** `quote_card`; heading: (none)
-- **Beats:** reveal only
-- **Image:** none
-- **Sfx:** none
-- **Sources:** S45
-- **Transition in:** dissolve
-
-## s28  (276.6 to 285.3 s, 8.7 s)
-
-- **Say:** Not every claim about the future is a forecast. A forecast starts from the present state and says what will happen, in a form you can check.
-- **Scene:** `sort_table` (new); heading: Four kinds of claim about what we cannot see
-- **Beats:** reveal only
-- **Image:** none
-- **Sfx:** paper at "0.0"
-- **Sources:** S46, S44
+- **Sources:** S46
 - **Transition in:** wipe
 
-## s29  (285.3 to 293.5 s, 8.2 s)
+### t4  (269.3 to 277.9 s, 8.5 s)
 
-- **Say:** A projection says what would happen if an assumption holds, such as a path of emissions. That assumption may or may not come true.
-- **Scene:** `sort_table` (new); heading: Four kinds of claim about what we cannot see
+- **Say:** A forecast leans on the past and on a model. Say which kind of claim it is, and show the spread.
+- **Scene:** `takeaway_line` (v2); A forecast leans on the past and on a model. Say which kind of claim it is, and show the spread.
 - **Beats:** reveal only
 - **Image:** none
 - **Sfx:** none
-- **Sources:** S46
-- **Transition in:** cut
-
-## s30  (293.5 to 305.0 s, 11.5 s)
-
-- **Say:** A scenario is a plausible story about the future, with no probability attached. The United Nations climate panel says scenarios are neither predictions nor forecasts.
-- **Scene:** `sort_table` (new); heading: Four kinds of claim about what we cannot see
-- **Beats:** reveal only
-- **Image:** none
-- **Sfx:** none
-- **Sources:** S46
-- **Transition in:** cut
-
-## s32  (305.0 to 317.4 s, 12.4 s)
-
-- **Say:** A counterfactual asks what would have happened had the past been different. As Donald Rubin noted in 1974, we see a person's outcome with a treatment or without it, never both.
-- **Scene:** `sort_table` (new); heading: Four kinds of claim about what we cannot see
-- **Beats:** reveal only
-- **Image:** none
-- **Sfx:** none
-- **Sources:** S39
+- **Sources:** none (structure: reasoning over cited segments)
 - **Transition in:** dissolve
 
-## s33  (317.4 to 328.8 s, 11.4 s)
+## Stop 5: The score. How do we know it was good?  (277.9 to 332.9 s, 55.1 s)
 
-- **Say:** Judea Pearl puts these questions on three rungs: seeing, doing, and imagining. Data from a lower rung cannot, alone, answer a question from a higher one.
-- **Scene:** `ladder`; heading: Pearl's ladder of causation
+### b5  (277.9 to 283.2 s, 5.3 s)
+
+- **Say:** So a forecast is a claim, and a claim can be graded.
+- **Scene:** `roadmap`; mode travel, current 4
 - **Beats:** reveal only
 - **Image:** none
 - **Sfx:** none
-- **Sources:** S38
-- **Transition in:** glide
+- **Sources:** none (structure: reasoning over cited segments)
+- **Transition in:** dissolve
 
-## s34  (328.8 to 339.4 s, 10.6 s)
+### k1  (283.2 to 300.5 s, 17.4 s)
 
-- **Say:** A forecast earns trust only when it is scored. The Brier score, from 1950, measures the squared gap between forecast and outcome. Lower is better.
-- **Scene:** `card_row` (new); heading: The Brier score
-- **Beats:** scored, squared gap, Lower is better
+- **Say:** The Brier score, from 1950, is the squared gap between forecast and outcome, and lower is better. In the Good Judgment Project, ninety percent cost zero point zero two if right, one point six two if wrong.
+- **Scene:** `bars` (v2); What saying 90% costs
+- **Beats:** zero point zero two, one point six two
 - **Image:** none
 - **Sfx:** none
 - **Sources:** S34, S33
 - **Transition in:** wipe; direction: Brier rhymes with higher.
 
-## s35  (339.4 to 349.7 s, 10.3 s)
+### k2  (300.5 to 312.6 s, 12.1 s)
 
-- **Say:** In one tournament's form of the score, saying ninety percent costs zero point zero two if right, and one point six two if wrong. The worst score is two.
-- **Scene:** `bars` (new); heading: What a forecast of 90% costs
-- **Beats:** zero point zero two, one point six two, worst score
-- **Image:** none
-- **Sfx:** none
-- **Sources:** S34
-- **Transition in:** glide; direction: Brier rhymes with higher.
-
-## s36  (349.7 to 356.2 s, 6.5 s)
-
-- **Say:** A forecaster is calibrated when the events they call seventy percent happen about seventy percent of the time.
-- **Scene:** `calibration` (new); heading: Calibration
+- **Say:** One miss can be bad luck. Over many forecasts the scores show calibration: the events you call seventy percent should happen seventy percent of the time.
+- **Scene:** `calibration` (v2); Calibration
 - **Beats:** reveal only
 - **Image:** none
 - **Sfx:** none
 - **Sources:** S34
 - **Transition in:** dissolve
 
-## s37  (356.2 to 367.4 s, 11.2 s)
+### k3  (312.6 to 326.3 s, 13.7 s)
 
 - **Say:** People often are not. In studies reviewed by Tversky and Kahneman in 1974, ranges given as ninety-eight percent sure missed about thirty percent of the time.
-- **Scene:** `bars` (new); heading: Ranges given as 98% sure
+- **Scene:** `bars` (v2); Ranges given as 98% sure
 - **Beats:** Tversky, thirty percent
 - **Image:** none
 - **Sfx:** none
 - **Sources:** S32
 - **Transition in:** glide
 
-## s38  (367.4 to 378.0 s, 10.6 s)
+### t5  (326.3 to 332.9 s, 6.6 s)
 
-- **Say:** Forecasting can be trained. The Good Judgment Project found three things that helped: probability training, teamwork, and grouping the top two percent together.
-- **Scene:** `card_row` (new); heading: What made forecasts better
-- **Beats:** Good Judgment, teamwork, top two percent
-- **Image:** none
-- **Sfx:** none
-- **Sources:** S34
-- **Transition in:** dissolve
-
-## s39  (378.0 to 389.2 s, 11.2 s)
-
-- **Say:** Even they were overconfident at the edge. Early forecasts of one hundred percent came true only about seventy percent of the time. Late in a question, about ninety.
-- **Scene:** `calibration` (new); heading: Certain, and wrong three times in ten
-- **Beats:** one hundred percent, Late in a question
-- **Image:** none
-- **Sfx:** none
-- **Sources:** S34
-- **Transition in:** glide
-
-## s40  (389.2 to 395.9 s, 6.6 s)
-
-- **Say:** A scored number still fails if the listener hears a different one. That is the next problem.
-- **Scene:** `title_card`; heading: Said, and heard
+- **Say:** One outcome proves nothing. Many forecasts, scored, do.
+- **Scene:** `takeaway_line` (v2); One outcome proves nothing. Many forecasts, scored, do.
 - **Beats:** reveal only
 - **Image:** none
 - **Sfx:** none
-- **Sources:** none (framing line)
+- **Sources:** none (structure: reasoning over cited segments)
 - **Transition in:** dissolve
 
-## End card  (395.9 to 399.4 s)
+## Zoom out  (332.9 to 387.6 s, 54.6 s)
 
-- **Line:** Next: Saying it out loud
-- **Note:** Uncertainty Explainers, video 3
+### z1  (332.9 to 354.9 s, 21.9 s)
+
+- **Say:** A probability counts over a group, so name the group. Evidence moves it by Bayes' rule, so start from the base rate. But thin evidence earns a range. A forecast adds a model, so say what kind of claim it is, and show the spread. And none of it is trusted until it is scored.
+- **Scene:** `roadmap`; mode summary, current 5
+- **Beats:** reveal only
+- **Image:** none
+- **Sfx:** none
+- **Sources:** none (structure: reasoning over cited segments)
+- **Transition in:** dissolve; direction: Bayes rhymes with days.
+
+### z2  (354.9 to 366.6 s, 11.7 s)
+
+- **Say:** Back to the positive test. Seven point eight percent counts a thousand women like her, moved by one test. It is one number because the evidence is good.
+- **Scene:** `icon_array` (v2); One thousand women, one test
+- **Beats:** reveal only
+- **Image:** none
+- **Sfx:** none
+- **Sources:** S59
+- **Transition in:** dissolve
+
+### z3  (366.6 to 379.1 s, 12.5 s)
+
+- **Say:** So where does a probability come from, and how can you tell whether it is any good? From a named group, moved by evidence. And by scoring many like it.
+- **Scene:** `title_card`; A named group, moved by evidence
+- **Beats:** reveal only
+- **Image:** none
+- **Sfx:** none
+- **Sources:** none (structure: reasoning over cited segments)
+- **Transition in:** dissolve
+
+### z4  (379.1 to 387.6 s, 8.5 s)
+
+- **Say:** A scored number can still fail. The next video shows how: the listener hears a number other than the one you meant.
+- **Scene:** `title_card`; Said, and heard
+- **Beats:** reveal only
+- **Image:** none
+- **Sfx:** none
+- **Sources:** none (structure: reasoning over cited segments)
+- **Transition in:** dissolve

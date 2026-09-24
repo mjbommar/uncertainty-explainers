@@ -21,7 +21,7 @@ import numpy as np
 
 from .brand import DISPLAY, MONO, Box
 from .canvas import Frame, at, clamp, ease, hexa, lerp, mix_hex, pulse
-from .scenes import Clock, Ctx, _pack, _urn_path, ball, header_block, rng, role, scene
+from .scenes import Clock, Ctx, _pack, _urn_path, ball, header_block, rng, role, scene, tracked
 
 __all__: list[str] = []
 
@@ -487,7 +487,7 @@ def induction_gap(f: Frame, box: Box, p: dict[str, Any], c: Clock, ctx: Ctx) -> 
 @scene(
     "sort_table",
     required=("rows",),
-    optional=("upto", "columns", "steady"),
+    optional=("upto", "columns", "steady", "by_beats"),
     demo={
         "heading": "Four kinds of claim",
         "rows": [
@@ -516,10 +516,20 @@ def sort_table(f: Frame, box: Box, p: dict[str, Any], c: Clock, ctx: Ctx) -> Non
     for i, row in enumerate(rows):
         if i > upto:
             break
-        k = 1.0 if i < upto else c.beat(0, dur=0.9, spacing=1.0)
+        if p.get("by_beats"):
+            # Every row up to ``upto`` arrives on its own beat within one segment.
+            k = c.beat(i, dur=0.9, spacing=1.2)
+            if k <= 0:
+                continue
+        else:
+            k = 1.0 if i < upto else c.beat(0, dur=0.9, spacing=1.0)
         y = hy + 40 + rowh * i
         rb = Box(inner.x + 4, y, inner.w - 8, rowh - 14)
         cur = i == upto
+        if p.get("by_beats"):
+            # The newest row that has arrived carries the glow.
+            arrived = [j for j in range(upto + 1) if c.beat(j, dur=0.9, spacing=1.2) > 0]
+            cur = i == (arrived[-1] if arrived else 0)
         tone = role(pal, row.get("tone"), "known")
         with f.group(opacity=k * (1.0 if cur else 0.62), dy=(1 - k) * 30):
             f.rect(rb, fill=pal.surface if cur else hexa(pal.surface, 0.55), r=16)
@@ -788,3 +798,83 @@ def divergence(f: Frame, box: Box, p: dict[str, Any], c: Clock, ctx: Ctx) -> Non
     xl = p.get("x_label")
     if xl:
         f.text(plot.right, plot.bottom + 64, str(xl), size=28, fill=pal.text_faint, anchor="end", alpha=k0)
+
+
+# ------------------------------------------------------------------ takeaway_line
+
+
+@scene(
+    "takeaway_line",
+    required=("text",),
+    optional=("stop", "of", "label"),
+    demo={"text": "A probability counts over a group. Name the group, or the number floats.", "stop": 0, "of": 5,
+          "label": "The group"},
+)
+def takeaway_line(f: Frame, box: Box, p: dict[str, Any], c: Clock, ctx: Ctx) -> None:
+    """A stop's answer as one line of display type, with the stop's place among the others above it."""
+    pal = f.pal
+    text = str(p["text"])
+    n = int(p.get("of", 0))
+    cur = int(p.get("stop", -1))
+    live = not c.settled
+    inner = box.inset(120, 20)
+    size = 72.0
+    while size > 44:
+        lines = f.wrap(text, size, inner.w, DISPLAY)
+        if len(lines) <= 3:
+            break
+        size -= 2
+    # Avoid a one-word last line: narrow the measure until the last line holds two words or more.
+    width = inner.w
+    lines = f.wrap(text, size, width, DISPLAY)
+    while len(lines) > 1 and len(lines[-1].split()) < 2 and width > inner.w * 0.6:
+        width -= 40
+        trial = f.wrap(text, size, width, DISPLAY)
+        if len(trial) > 3:
+            break
+        lines = trial
+    lines = lines[:3]
+    lead = size * 1.24
+    block = lead * len(lines)
+    top = inner.cy - block / 2 + 10
+    # Where this stop sits: a short row of dots, the finished ones teal, this one amber and pulsing.
+    k0 = at(c.t, 0.0, 0.25) if live else 1.0
+    head_y = top - 120
+    if n > 0:
+        gap = 44
+        x0 = inner.cx - gap * (n - 1) / 2
+        for i in range(n):
+            x = x0 + gap * i
+            if i < cur:
+                f.circle(x, head_y, 9, fill=pal.known, opacity=k0)
+            elif i == cur:
+                g = pulse(c.seconds, 2.4)
+                f.circle(x, head_y, 17 + 5 * g, fill=pal.unknown, opacity=(0.12 + 0.1 * g) * k0)
+                f.circle(x, head_y, 11, fill=pal.unknown, opacity=k0)
+            else:
+                f.circle(x, head_y, 8, stroke=pal.line, width=2, opacity=k0)
+    label = p.get("label")
+    kick = "TAKEAWAY" + (f"  ·  {str(label).upper()}" if label else "")
+    tracked(f, inner.cx, head_y + 58, kick, size=22, fill=pal.unknown, anchor="middle", alpha=k0)
+    # The words arrive in reading order.
+    words_total = sum(len(ln.split()) for ln in lines)
+    speed = at(c.t, 0.04, 0.42, "linear") if live else 1.0
+    wi = 0
+    for li, line in enumerate(lines):
+        w = f.measure(line, size, DISPLAY)
+        x = inner.cx - w / 2
+        y = top + size * 0.9 + li * lead
+        for word in line.split():
+            kw = clamp((speed * (words_total + 3) - wi) / 3.0) if live else 1.0
+            f.text(x, y + (1 - kw) * 10, word, size=size, fill=pal.text, family=DISPLAY, alpha=kw)
+            x += f.measure(word + " ", size, DISPLAY)
+            wi += 1
+    # A teal rule under the line draws out, with a soft glint running along it.
+    kr = at(c.t, 0.4, 0.8, "ease-in-out-cubic") if live else 1.0
+    ry = top + block + 36
+    half = 220 * kr
+    f.line(inner.cx - half, ry, inner.cx + half, ry, stroke=pal.known, width=3, opacity=kr)
+    if kr > 0.5:
+        g = (c.seconds / 4.0) % 1.0
+        gx = inner.cx - half + 2 * half * g
+        f.circle(gx, ry, 5, fill=pal.text, opacity=0.5 * math.sin(math.pi * g) * kr)

@@ -265,3 +265,23 @@ of the unchanged script costs $0.0019 (QA transcription only).
   `two_column_compare`) are only gallery- and test-verified, not seen in motion.
 - No chapter markers, no YouTube description writer, no upload.
 - 4K has been rendered frame by frame, not assembled end to end.
+
+## Video 2 rebuilt to the red-thread structure (2026-09-23)
+
+`02-from-evidence-to-forecast` rewritten to `docs/STRUCTURE.md`: opening
+question (95 of 100 physicians at 70 to 80 percent against 7.8 [S59]), claim,
+`roadmap` overview, five stops each entered over `roadmap` (travel) and closed
+by a spoken takeaway on a new `takeaway_line` card, zoom-out over `roadmap`
+(summary) that returns to the 1,000 women and answers the opening question in
+the same words. 875 words, 39 segments, 391.1 s. Cut: the three meanings of
+probability, the cube factory, Betty and Dempster-Shafer, van Fraassen's bad
+lot, the 26 May 2017 ensemble and the ECMWF quote, counterfactuals and Pearl's
+ladder, Good Judgment training and the 100 percent edge.
+
+- `takeaway_line` is named to avoid video 1's `takeaway` (the registry
+  silently overwrites on a name clash; last import wins).
+- `sort_table` gained `by_beats` (every row arrives on its own beat in one
+  segment).
+- QA's transcriber dropped a short trailing sentence ("That is the next
+  video.") from z4's muxed span on every hearing, though the clip itself
+  transcribes whole. Reworded the hand-off so it does not end on a short tail.

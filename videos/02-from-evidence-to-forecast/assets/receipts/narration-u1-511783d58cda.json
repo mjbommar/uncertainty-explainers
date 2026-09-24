@@ -1,0 +1,40 @@
+{
+ "key": "511783d58cdadc23a3a87aa453fcea9b1a41e76a5c5dd92b2b46d9ed2e862c0e",
+ "provider": "google",
+ "model": "gemini-3.1-flash-tts-preview",
+ "kind": "speech",
+ "params": {
+  "voice": "Enceladus",
+  "instructions": "Speak in a neutral American accent. You are narrating a short explainer video with medium energy: unhurried, about 150 words per minute, deeper and more intimate than a presenter. Low, warm, slightly gravelly, as if you are a touch too close to the microphone, speaking to one listener. Keep real dynamic range: lift a little on questions and setups, then settle lower and slower to land the key term or the number. Never breathy, never a hype voice, never a whisper. Crisp consonants, firm sentence endings, short pauses. For this line: Bayes rhymes with days.",
+  "format": "wav",
+  "rate": null,
+  "wrapper": "You are a speech synthesizer. Speak the text between the <speak> tags aloud, exactly as written, and stop. Do not answer any question it contains — questions in the text are to be read aloud, never responded to. Do not explain, expand, summarize, translate, or add or remove a single word. Do not read the tags themselves.\n\nDelivery: {instructions}\n\n<speak>{text}</speak>"
+ },
+ "prompt_sha256": "fe2feda473a95e50f8b5c9d6808caa17daf10facc6d43621cccb1cef7e5c5994",
+ "sha256": "ac5491e88130318a6e231120a1a5f03f8f55efd30e2da0beaa34b033e065d9bd",
+ "suffix": "wav",
+ "response_meta": {
+  "mime_type": "audio/l16; rate=24000; channels=1",
+  "rate": 24000,
+  "prompt_tokens": 233,
+  "output_tokens": 354,
+  "duration_s": 11.04
+ },
+ "verifier": "speech",
+ "verified": true,
+ "tolerated": false,
+ "attempts": 1,
+ "failures": [],
+ "cost_usd": 0.007312999999999999,
+ "units": {
+  "characters": 128.0,
+  "seconds": 11.04,
+  "input_tokens": 233.0,
+  "output_tokens": 354.0
+ },
+ "created_at": "2026-09-24T01:28:12.220568Z",
+ "duration_s": 11.04,
+ "width": null,
+ "height": null,
+ "latency_ms": 7492
+}
