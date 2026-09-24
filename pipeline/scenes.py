@@ -1085,3 +1085,4 @@ def timeline_strip(f: Frame, box: Box, p: dict[str, Any], c: Clock, ctx: Ctx) ->
 from . import scenes_01_two_kinds_of_not_knowing  # noqa: E402,F401  (video 1 scenes)
 from . import scenes_02_from_evidence_to_forecast  # noqa: E402,F401  (video 2 scenes)
 from . import scenes_03_saying_it_out_loud  # noqa: E402,F401  (video 3 scenes)
+from . import scenes_shared  # noqa: E402,F401  (shared scenes: roadmap)
