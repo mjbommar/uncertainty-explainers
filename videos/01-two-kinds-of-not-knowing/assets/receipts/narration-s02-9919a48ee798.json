@@ -1,0 +1,40 @@
+{
+ "key": "9919a48ee798cf615392f93d9410d41c7f8b83c5bb1aef9b0c70d8440539acc5",
+ "provider": "google",
+ "model": "gemini-3.1-flash-tts-preview",
+ "kind": "speech",
+ "params": {
+  "voice": "Enceladus",
+  "instructions": "Speak in a neutral American accent. You are narrating a short explainer video with medium energy: unhurried, about 150 words per minute, deeper and more intimate than a presenter. Low, warm, slightly gravelly, as if you are a touch too close to the microphone, speaking to one listener. Keep real dynamic range: lift a little on questions and setups, then settle lower and slower to land the key term or the number. Never breathy, never a hype voice, never a whisper. Crisp consonants, firm sentence endings, short pauses.",
+  "format": "wav",
+  "rate": null,
+  "wrapper": "You are a speech synthesizer. Speak the text between the <speak> tags aloud, exactly as written, and stop. Do not answer any question it contains — questions in the text are to be read aloud, never responded to. Do not explain, expand, summarize, translate, or add or remove a single word. Do not read the tags themselves.\n\nDelivery: {instructions}\n\n<speak>{text}</speak>"
+ },
+ "prompt_sha256": "6474e6a2b74d7cfa87431d607c0f3eb13623fc804e1790c441ac1f12944c5928",
+ "sha256": "2600cb32c43405b4f479a19e9a609c0b7456725b8a553a366b64f7a4a089f1d3",
+ "suffix": "wav",
+ "response_meta": {
+  "mime_type": "audio/l16; rate=24000; channels=1",
+  "rate": 24000,
+  "prompt_tokens": 219,
+  "output_tokens": 296,
+  "duration_s": 9.24
+ },
+ "verifier": "speech",
+ "verified": true,
+ "tolerated": false,
+ "attempts": 1,
+ "failures": [],
+ "cost_usd": 0.006139,
+ "units": {
+  "characters": 104.0,
+  "seconds": 9.24,
+  "input_tokens": 219.0,
+  "output_tokens": 296.0
+ },
+ "created_at": "2026-09-24T01:24:08.118405Z",
+ "duration_s": 9.24,
+ "width": null,
+ "height": null,
+ "latency_ms": 5924
+}

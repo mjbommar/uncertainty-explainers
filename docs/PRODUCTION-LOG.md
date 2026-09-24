@@ -3,6 +3,53 @@
 What was built, what worked, what in `bc-modules` was missing or broken and
 how each was handled, and what it cost. Newest first.
 
+## 2026-09-23: video 1 rebuilt to the red-thread structure
+
+`videos/01-two-kinds-of-not-knowing` rewritten to `docs/STRUCTURE.md`: opening
+scene and question, claim, map, four stops (bridge on the shared `roadmap` in
+`travel` mode, vignette, takeaway card), and a zoom-out on `roadmap` in
+`summary` mode that returns to the opening scene and answers its question in
+the same words. 25 segments plus end card, 453 words, 215.8 s (3:36), 6,473
+frames, Enceladus on `gemini-3.1-flash-tts-preview`, paced. Every machine QA
+gate passes: worst narration WER 0.000, -16.03 LUFS / -1.49 dBTP muxed, 100
+containment renders clean, 43 caption cues valid. Human review: pending.
+
+- **New scenes** in `pipeline/scenes_01_two_kinds_of_not_knowing.py`:
+  `three_unknowns` (three people, one speech bubble each, their objects, an
+  optional question line and a per-person verdict for the return at the end;
+  the picture size is fitted to what the text leaves) and `takeaway` (a stop's
+  answer as a display line under a row of stop markers). `statement` is reused
+  from video 3's scene file.
+- **Cut from the first build**: the title card, "the job of the model
+  builder" quote, the supermarket and umbrella examples, the stacked-bars
+  Ellsberg frame, Keynes's "life" and "weather" examples. Kept: die, envelope,
+  Knight's buildings and venture, Keynes's sort and quote, Ellsberg's urns and
+  the ambiguity range, the scale to total ignorance.
+- **Length.** The measured delivered pace is about 126 words a minute once
+  holds and transitions are counted. The first draft of the new shape was 698
+  words (about 5.5 min); six trimming passes brought it to 453. STRUCTURE.md's
+  own minimums (opening 20 s, claim and map 15 s, four stops at 40 s, zoom-out
+  40 s) add to 235 s, so 2.5 to 3.5 minutes and the four-stop shape cannot
+  both be met in full; the build lands at 3:36 with stops of 26 to 50 s.
+- **Fixed after looking**: `three_unknowns` spilled below the stage while its
+  cards slid in (containment failed; cards now sized to content with a margin
+  for the slide); the stop-2 takeaway line appeared only in its last second
+  (a late beat); empty stages at the start of s01, s03, s10, s12, s16, s17 and
+  s27 (first beats moved to the first words); a verdict that wrapped as
+  "1 in / 6"; overview questions that repeated the stop labels word for word;
+  bridges now `dip` in, because a dissolve from a takeaway card laid its line
+  over the roadmap's labels.
+- **Listening.** Master transcribed with whisper-1 and read against the
+  script: matches. Isolated names: "Keynes" heard as "canes", "Ellsberg" as
+  Ellsberg, "Knight" as "night"; "aleatory" and "epistemic" heard as written.
+  The session matcher reports s08, s09 and s19 about 10 dB off the session
+  tone curve; not audible in the transcript, worth a human ear.
+- **Cost.** About $0.55 for the rebuild: roughly 69 narration draws across the
+  trimming passes (about $0.45; the 25 used are worth $0.163 by receipt),
+  verifier and QA transcription, and whisper-1 listening. Images, effects and
+  music were cache hits. Generations the published video uses: $0.316 by
+  receipt. Receipts for unused narration drafts were removed from `assets/`.
+
 ## 2026-09-23: video 3, "Saying it out loud"
 
 `videos/03-saying-it-out-loud`: 49 segments plus end card, 1,415 words, 554.0 s

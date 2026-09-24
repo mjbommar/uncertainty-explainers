@@ -1,0 +1,40 @@
+{
+ "key": "5bb50ce4cb368671249a3fb93782f6fd5a365f13b74a0fe62c1d096b0fb25029",
+ "provider": "google",
+ "model": "gemini-3.1-flash-tts-preview",
+ "kind": "speech",
+ "params": {
+  "voice": "Enceladus",
+  "instructions": "Speak in a neutral American accent. You are narrating a short explainer video with medium energy: unhurried, about 150 words per minute, deeper and more intimate than a presenter. Low, warm, slightly gravelly, as if you are a touch too close to the microphone, speaking to one listener. Keep real dynamic range: lift a little on questions and setups, then settle lower and slower to land the key term or the number. Never breathy, never a hype voice, never a whisper. Crisp consonants, firm sentence endings, short pauses. For this line: Say Keynes so it rhymes with canes.",
+  "format": "wav",
+  "rate": null,
+  "wrapper": "You are a speech synthesizer. Speak the text between the <speak> tags aloud, exactly as written, and stop. Do not answer any question it contains — questions in the text are to be read aloud, never responded to. Do not explain, expand, summarize, translate, or add or remove a single word. Do not read the tags themselves.\n\nDelivery: {instructions}\n\n<speak>{text}</speak>"
+ },
+ "prompt_sha256": "60b5213d8386685667fdda460ec745173aeb7306acd1bb456e9ccf591c50daeb",
+ "sha256": "ed037b76e9a8cd63b035f5b66854fa5c34863e33d8e77c1afc964b172ae2eeaa",
+ "suffix": "wav",
+ "response_meta": {
+  "mime_type": "audio/l16; rate=24000; channels=1",
+  "rate": 24000,
+  "prompt_tokens": 232,
+  "output_tokens": 333,
+  "duration_s": 10.4
+ },
+ "verifier": "speech",
+ "verified": true,
+ "tolerated": false,
+ "attempts": 1,
+ "failures": [],
+ "cost_usd": 0.0068920000000000006,
+ "units": {
+  "characters": 102.0,
+  "seconds": 10.4,
+  "input_tokens": 232.0,
+  "output_tokens": 333.0
+ },
+ "created_at": "2026-09-24T01:27:03.173542Z",
+ "duration_s": 10.4,
+ "width": null,
+ "height": null,
+ "latency_ms": 5759
+}

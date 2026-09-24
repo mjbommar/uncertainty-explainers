@@ -1,4 +1,14 @@
-# Video 1 of the Uncertainty Explainers series.
+# Video 1 of the Uncertainty Explainers series. Shape: docs/STRUCTURE.md, "Video 1".
+# Opening question (asked in s02, answered in the same words in s26):
+#   "When someone says they do not know, what exactly is it they do not know,
+#    and does the difference matter?"
+# Takeaways, the spine (spoken and shown at the end of each stop):
+#   1. Chance stays. Ignorance can be closed with data.                        (s08)
+#   2. A number needs a group of similar cases. Without one, there is no number. (s14)
+#   3. Where the odds are unknown, one number claims too much. People treat
+#      that case differently, and so should a forecast.                       (s19)
+#   4. Every forecast should first say where on the scale it stands.          (s22)
+# Bridges: s05, s09, s15, s20 (roadmap, travel). Zoom-out: s23 to s27.
 # Sources (research/SOURCES.md): S01 Der Kiureghian and Ditlevsen 2009; S56 van der Bles
 # et al. 2019; S02 Knight 1921 (FRASER scan, Ch. VII, checked against the PDF text layer);
 # S76 Knight 1921 Part I Ch. I (Econlib); S04 Keynes 1937; S77 Ellsberg 1961;
@@ -6,7 +16,7 @@
 slug: 01-two-kinds-of-not-knowing
 title: Two kinds of not knowing
 subtitle: Chance, ignorance, and what can be measured
-target_seconds: 185
+target_seconds: 200
 theme: ink
 burn_captions: true
 voice:
@@ -43,34 +53,88 @@ images:
     provider: openai
     quality: medium
 end_card:
-  seconds: 4.5
+  seconds: 3.2
   line: Name the kind of not knowing first.
   note: "Next: From evidence to forecast"
 segments:
+  # ---------------------------------------------------------------- pose the problem
   - id: s01
-    say: Some of what we do not know is chance. Some is ignorance. A forecast has to say which kind it faces.
+    say: 'Three people say, I do not know. One holds a die, one a sealed envelope. One is asked the price of copper in twenty years.'
+    transition: dissolve
+    beats: ["Three people", "sealed envelope", "price of copper"]
     scene:
-      name: title_card
+      name: three_unknowns
       params:
-        label: Uncertainty Explainers
-        title: Two kinds of not knowing
-        subtitle: Chance, ignorance, and what can be measured
-    hold: 0.6
+        items: &people
+          - {image: "image:die", caption: "A die, about to be rolled", tone: known}
+          - {image: "image:envelope", caption: "A number, sealed inside", tone: cool, tag: "?"}
+          - {image: "image:copper", caption: "Copper, twenty years out", tone: unknown}
+    hold: 0.2
 
   - id: s02
-    say: Roll a fair die. No one can say what comes up next, and more study of the die will not help. Engineers call this aleatory uncertainty, from the Latin word for dice.
+    say: When someone says they do not know, what exactly is it they do not know, and does the difference matter?
+    transition: cut
+    beats: ["what exactly"]
+    scene:
+      name: three_unknowns
+      params:
+        items: *people
+        start: 3
+        question: What exactly do they not know, and does it matter?
+        question_at: 0
+    hold: 0.35
+
+  # ---------------------------------------------------------------- claim and map
+  - id: s03
+    say: 'Uncertainty is not one thing. Two questions tell its kinds apart: chance or ignorance, and measurable or not.'
+    sources: [S01, S76]
+    transition: dissolve
+    beats: ["Uncertainty", "chance or ignorance", "measurable or not"]
+    scene:
+      name: statement
+      params:
+        lines: ["Uncertainty is not one thing.", "Chance or ignorance?", "Measurable or not?"]
+        highlight: ["Chance or ignorance?", "Measurable or not?"]
+    hold: 0.2
+
+  - id: s04
+    say: 'Four stops: chance or ignorance, measurable or not, unknown odds, and where a case sits.'
+    transition: glide
+    scene:
+      name: roadmap
+      params:
+        mode: overview
+        current: -1
+        stops: &stops
+          - {label: Chance or ignorance, question: "Is it chance, or a gap in what we know?", takeaway: "Chance stays. Ignorance can be closed with data."}
+          - {label: Can it be measured, question: "Is there a group of cases to count?", takeaway: "A number needs a group of similar cases."}
+          - {label: Unknown odds, question: "What if the odds themselves are unknown?", takeaway: "Where odds are unknown, one number claims too much."}
+          - {label: Where mine sits, question: "Where on the scale does a case sit?", takeaway: "Say first where on the scale you stand."}
+    hold: 0.2
+
+  # ---------------------------------------------------------------- stop 1: chance or ignorance?
+  - id: s05
+    say: 'Start with the die and the envelope, which fail for different reasons.'
+    transition: dip
+    scene:
+      name: roadmap
+      params: {mode: travel, current: 0, stops: *stops}
+    hold: 0.2
+
+  - id: s06
+    say: 'More study of a die will not tell you the next roll. That is aleatory uncertainty.'
     sources: [S01]
     transition: dissolve
-    beats: ["Roll a fair die", "aleatory uncertainty"]
+    beats: ["study of a die", "aleatory uncertainty"]
     sfx:
       - prompt: A single six-sided plastic die rolled across a wooden table, tumbling and coming to rest. Clean studio recording, no music, no voice.
         duration: 1.2
-        at: Roll a fair die
+        at: study of a die
         gain_db: -6
     scene:
       name: object_cards
       params:
-        heading: Two kinds of not knowing
+        heading: Chance or ignorance?
         slots: 2
         items:
           - image: "image:die"
@@ -81,21 +145,21 @@ segments:
             ticker_label: next roll
             at: 0
             term_at: 1
-    hold: 0.4
+    hold: 0.2
 
-  - id: s03
-    say: 'Now seal a number in an envelope. You do not know it either, but it is already fixed. Open the envelope and the doubt is gone. This is epistemic uncertainty: a gap in what we know, which more data could close.'
+  - id: s07
+    say: 'The number in the envelope is already fixed. Open it and the doubt is gone. That is epistemic uncertainty.'
     sources: [S01, S56]
     transition: dissolve
-    beats: ["seal a number", "epistemic uncertainty"]
+    beats: ["already fixed", "epistemic uncertainty"]
     sfx:
       - cue: paper
-        at: seal a number
+        at: Open it
         gain_db: -8
     scene:
       name: object_cards
       params:
-        heading: Two kinds of not knowing
+        heading: Chance or ignorance?
         slots: 2
         start: 1
         items:
@@ -112,25 +176,35 @@ segments:
             stamp: "?"
             at: 0
             term_at: 1
-    hold: 0.4
+    hold: 0.2
 
-  - id: s04
-    say: "Which kind we face depends on the model. Two engineers put it plainly in 2009: \"It is the job of the model builder to make the distinction.\""
+  - id: s08
+    say: Chance stays. Ignorance can be closed with data.
     sources: [S01]
     transition: glide
     scene:
-      name: quote_card
+      name: takeaway
       params:
-        text: It is the job of the model builder to make the distinction.
-        who: Der Kiureghian and Ditlevsen
-        when: "2009"
-    hold: 0.6
+        stop: Chance or ignorance?
+        index: 0
+        total: 4
+        line: ["Chance stays.", "Ignorance can be closed with data."]
+    hold: 0.35
 
-  - id: s05
-    say: A second question is whether a chance can be measured at all. In 1921 the economist Frank Knight pointed to fire insurance. No one can say whether one building will burn. Across many buildings, the loss evens out, and an insurer can carry it.
+  # ---------------------------------------------------------------- stop 2: can it be measured?
+  - id: s09
+    say: So ignorance can shrink and chance cannot. But even chance needs something to count.
+    transition: dip
+    scene:
+      name: roadmap
+      params: {mode: travel, current: 1, stops: *stops}
+    hold: 0.2
+
+  - id: s10
+    say: 'In 1921 Frank Knight pointed to fire insurance. Across many buildings, the loss evens out.'
     sources: [S76, S02]
     transition: wipe
-    beats: ["A second question", "one building", "many buildings"]
+    beats: ["Frank Knight", "many buildings"]
     scene:
       name: object_cards
       params:
@@ -145,14 +219,14 @@ segments:
             caption: "Many buildings: the loss evens out"
             tone: known
             at: 0
-            term_at: 2
-    hold: 0.4
+            term_at: 1
+    hold: 0.2
 
-  - id: s06
-    say: A new business venture has no such group of similar cases. Knight called the measurable kind risk, and the kind that cannot be measured true uncertainty.
+  - id: s11
+    say: 'A new venture has no such group. Knight called the first kind risk, and the second true uncertainty.'
     sources: [S02, S76]
     transition: dissolve
-    beats: ["new business venture", "measurable kind risk", "true uncertainty"]
+    beats: ["new venture", "first kind risk", "true uncertainty"]
     scene:
       name: object_cards
       params:
@@ -173,14 +247,14 @@ segments:
             tone: unknown
             at: 0
             term_at: 2
-    hold: 0.6
+    hold: 0.2
 
-  - id: s07
-    say: In 1937, John Maynard Keynes drew a similar line, with examples. Roulette, he wrote, is not uncertain in his sense. The length of a life is only slightly uncertain, and the weather only moderately. A European war is uncertain, and so is the price of copper twenty years ahead.
+  - id: s12
+    say: 'In 1937 John Maynard Keynes set roulette apart from a European war, or copper prices twenty years out.'
     sources: [S04]
     transition: push-left
     direction: Say Keynes so it rhymes with canes.
-    beats: ["Roulette", "length of a life", "the weather", "European war", "price of copper"]
+    beats: ["Keynes", "European war", "copper prices"]
     sfx:
       - cue: soft_click
         at: European war
@@ -193,17 +267,15 @@ segments:
         right: Uncertain
         items:
           - {text: Roulette, side: left, image: "image:roulette"}
-          - {text: Length of a life, side: left, note: only slightly}
-          - {text: The weather, side: left, note: only moderately}
           - {text: A European war, side: right}
-          - {text: "Copper, 20 years ahead", side: right, image: "image:copper"}
-    hold: 0.4
+          - {text: "Copper, 20 years out", side: right, image: "image:copper"}
+    hold: 0.2
 
-  - id: s08
-    say: "About these matters, he wrote, \"there is no scientific basis on which to form any calculable probability whatever. We simply do not know.\""
+  - id: s13
+    say: 'About these, he wrote, "there is no scientific basis on which to form any calculable probability whatever. We simply do not know."'
     sources: [S04]
     transition: dissolve
-    direction: Slow down and leave a short pause before the last four words.
+    direction: Leave a short pause before the last four words.
     sfx:
       - cue: low_pad
         at: 0.0
@@ -214,13 +286,35 @@ segments:
         text: There is no scientific basis on which to form any calculable probability whatever. We simply do not know.
         who: John Maynard Keynes
         when: "1937"
-    hold: 0.8
+    hold: 0.35
 
-  - id: s09
-    say: In 1961 Daniel Ellsberg turned this into a bet. On the left, Urn One holds a hundred red and black balls, in a mix nobody tells you. On the right, Urn Two holds exactly fifty of each. Draw your color and you win a hundred dollars.
+  - id: s14
+    say: 'A number needs a group of similar cases. Without one, there is none.'
+    sources: [S02, S76]
+    transition: glide
+    scene:
+      name: takeaway
+      params:
+        stop: Can it be measured?
+        index: 1
+        total: 4
+        line: ["A number needs a group of similar cases.", "Without one, there is none."]
+    hold: 0.35
+
+  # ---------------------------------------------------------------- stop 3: what if the odds are unknown?
+  - id: s15
+    say: 'Knight and Keynes drew a hard line. Ellsberg tested the ground between.'
+    transition: dip
+    scene:
+      name: roadmap
+      params: {mode: travel, current: 2, stops: *stops}
+    hold: 0.2
+
+  - id: s16
+    say: 'In 1961 Daniel Ellsberg offered two urns: a hundred red and black balls, mix unknown, or fifty of each.'
     sources: [S77]
     transition: wipe
-    beats: ["Ellsberg", "a hundred red", "Urn Two", "fifty of each"]
+    beats: ["Ellsberg", "a hundred red", "fifty of each"]
     sfx:
       - cue: marbles
         at: fifty of each
@@ -231,37 +325,13 @@ segments:
         heading: Ellsberg's two urns
         left: {label: Urn I, total: 100, caption: "100 balls, mix unknown"}
         right: {label: Urn II, a: 50, b: 50, caption: "50 red, 50 black"}
-    hold: 0.4
+    hold: 0.2
 
-  - id: s10
-    say: Most people would rather draw from Urn Two, whether they bet on red or on black. That choice treats red in Urn One as less likely than a half, and black as less likely too. The two chances would add up to less than one.
-    sources: [S77]
-    transition: glide
-    beats: ["Most people", "red in Urn One", "black as less", "less than one"]
-    scene:
-      name: stacked_bars
-      params:
-        heading: What the choices imply
-        rows:
-          - label: Urn II
-            at: 0
-            parts:
-              - {value: 50, label: "red: ½", tone: warn}
-              - {value: 50, label: "black: ½", tone: dark}
-          - label: Urn I, as the choices treat it
-            at: 1
-            gap_at: 3
-            parts:
-              - {value: 40, label: "red: less than ½", tone: warn, at: 1}
-              - {value: 40, label: "black: less than ½", tone: dark, at: 2}
-            gap_label: adds to less than 1
-    hold: 0.5
-
-  - id: s11
-    say: 'No single probability fits those choices. The name for this is ambiguity: the probabilities themselves are unknown, or only partly known. In Urn One, the chance of red could be anything from zero to one.'
-    sources: [S23, S77]
+  - id: s17
+    say: 'Whichever color they bet on, most people pick fifty of each. No single chance of red fits that. This is ambiguity: outcomes known, odds not.'
+    sources: [S77, S23]
     transition: dissolve
-    beats: ["No single probability", "ambiguity"]
+    beats: ["Whichever", "No single chance", "ambiguity"]
     scene:
       name: range_bar
       params:
@@ -269,21 +339,42 @@ segments:
         low_label: "0"
         high_label: "1"
         rows:
-          - {label: "Urn II: chance of red", value: 50, value_label: "exactly ½", tone: known, at: 0}
-          - {label: "Urn I: chance of red", lo: 0, hi: 100, value_label: "anywhere from 0 to 1", tone: unknown, at: 1}
-    hold: 0.5
+          - {label: "Fifty of each: chance of red", value: 50, value_label: "exactly ½", tone: known, at: 0}
+          - {label: "Mix unknown: chance of red", lo: 0, hi: 100, value_label: "no single number fits", tone: unknown, at: 1}
+    hold: 0.2
 
-  - id: s12
-    say: These kinds lie along one scale, from complete certainty to total ignorance. Choosing a supermarket line sits near the measured end. Keeping an umbrella in the car, for rain you cannot put odds on, sits further along.
-    sources: [S09, S10]
+  - id: s19
+    say: 'Where the odds are unknown, one number claims too much. People treat that differently, and so should a forecast.'
+    sources: [S77, S23]
+    transition: glide
+    beats: ["Where the odds", "People treat"]
+    scene:
+      name: takeaway
+      params:
+        stop: What if the odds are unknown?
+        index: 2
+        total: 4
+        line: ["Where the odds are unknown,", "one number claims too much."]
+        note: People treat that differently, and so should a forecast.
+    hold: 0.35
+
+  # ---------------------------------------------------------------- stop 4: where does mine sit?
+  - id: s20
+    say: 'Chance, ignorance, no group, unknown odds: these are points on one scale.'
+    transition: dip
+    scene:
+      name: roadmap
+      params: {mode: travel, current: 3, stops: *stops}
+    hold: 0.2
+
+  - id: s21
+    say: 'At the far end of that scale, in one team''s words, "we do not even know that we do not know."'
+    sources: [S09, S08]
     transition: push-left
-    beats: ["complete certainty", "supermarket", "umbrella"]
+    beats: ["far end", "we do not even"]
     sfx:
       - cue: tick
-        at: supermarket
-        gain_db: -8
-      - cue: tick
-        at: umbrella
+        at: far end
         gain_db: -8
     scene:
       name: level_scale
@@ -292,33 +383,75 @@ segments:
         levels:
           - {label: Complete certainty}
           - {label: Level 1}
-          - {label: Level 2, example: which supermarket line}
-          - {label: Level 3, example: umbrella in the car}
-          - {label: Level 4, example: no agreed model}
-          - {label: Total ignorance}
-        marks: [0, 2, 3]
-    hold: 0.4
+          - {label: Level 2}
+          - {label: Level 3}
+          - {label: Level 4}
+          - {label: Total ignorance, example: "we do not even know that we do not know"}
+        marks: [0, 5]
+    hold: 0.3
 
-  - id: s13
-    say: "At the far end is total ignorance, where, in one team's words, \"we do not even know that we do not know.\" A forecast should first say where on this scale it stands."
-    sources: [S08, S09, S10]
-    transition: dissolve
-    beats: ["At the far end", "total ignorance", "A forecast"]
+  - id: s22
+    say: So every forecast should first say where on the scale it stands.
+    sources: [S09, S08]
+    transition: glide
     sfx:
       - cue: chime
-        at: A forecast
+        at: every forecast
         gain_db: -12
     scene:
-      name: level_scale
+      name: takeaway
       params:
-        heading: From certainty to total ignorance
-        levels:
-          - {label: Complete certainty}
-          - {label: Level 1}
-          - {label: Level 2, example: which supermarket line}
-          - {label: Level 3, example: umbrella in the car}
-          - {label: Level 4, example: no agreed model}
-          - {label: Total ignorance, example: "we do not even know that we do not know"}
-        marks: [3, 5]
-        intro: false
-    hold: 0.8
+        stop: Where does mine sit?
+        index: 3
+        total: 4
+        line: ["Every forecast should first say", "where on the scale it stands."]
+    hold: 0.35
+
+  # ---------------------------------------------------------------- zoom out
+  - id: s23
+    say: 'Chance stays and ignorance can be closed, so say which. But a number needs a group of cases, and where odds are unknown, one number claims too much. So say where on the scale you stand.'
+    transition: dip
+    scene:
+      name: roadmap
+      params: {mode: summary, current: 4, stops: *stops}
+    hold: 0.2
+
+  - id: s25
+    say: 'The die is chance, with a number. The envelope is ignorance, with a number waiting. Copper has no honest number.'
+    sources: [S04]
+    transition: dissolve
+    beats: ["The die is chance", "The envelope is ignorance", "Copper has"]
+    scene:
+      name: three_unknowns
+      params:
+        items: &verdicts
+          - {image: "image:die", caption: "A die, about to be rolled", tone: known, verdict: "Chance: 1 in 6"}
+          - {image: "image:envelope", caption: "A number, sealed inside", tone: cool, tag: "?", verdict: "Ignorance: a number waiting"}
+          - {image: "image:copper", caption: "Copper, twenty years out", tone: unknown, verdict: "Far end: no honest number"}
+        start: 3
+        verdict_at: 0
+    hold: 0.2
+
+  - id: s26
+    say: 'When someone says they do not know, what exactly they do not know is a chance, a fact, or something no one can count. The difference matters: it decides what a number can mean.'
+    transition: cut
+    beats: ["the difference matters"]
+    scene:
+      name: three_unknowns
+      params:
+        items: *verdicts
+        start: 3
+        verdict_at: -1
+        question: The kind decides what any number can mean.
+        question_at: 0
+    hold: 0.35
+
+  - id: s27
+    say: 'The next question is what a number can honestly say.'
+    transition: dissolve
+    scene:
+      name: statement
+      params:
+        lines: ["What can a number", "honestly say?"]
+        note: "Next: From evidence to forecast"
+    hold: 0.3

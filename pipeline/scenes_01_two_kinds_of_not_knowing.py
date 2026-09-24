@@ -6,6 +6,9 @@ insured buildings), each with the name of the kind of uncertainty it stands for.
 (Keynes's 1937 list). ``stacked_bars``: rows of parts that should add to one,
 with any shortfall outlined (Ellsberg's two urns). ``level_scale``: the
 scale from complete certainty to total ignorance, a marker walking along it.
+``three_unknowns``: three people who each say "I do not know", each with a
+different object (the opening, and the return to it at the end, with a
+verdict under each). ``takeaway``: one stop's answer as a line of text.
 
 Imported by one line at the end of ``pipeline/scenes.py``.
 """
@@ -19,7 +22,7 @@ from .brand import DISPLAY, MONO, TEXT, Box
 from .canvas import Frame, at, clamp, ease, hexa, lerp, mix_hex, pulse
 from .scenes import Clock, Ctx, header_block, role, scene, tracked
 
-__all__ = ["level_scale", "object_cards", "range_bar", "sort_bins", "stacked_bars"]
+__all__ = ["level_scale", "object_cards", "range_bar", "sort_bins", "stacked_bars", "takeaway", "three_unknowns"]
 
 
 def _placeholder(f: Frame, b: Box, tone: str, opacity: float) -> None:
@@ -454,3 +457,191 @@ def level_scale(f: Frame, box: Box, p: dict[str, Any], c: Clock, ctx: Ctx) -> No
         f.text(x0, inner.bottom - 20, str(ll), size=28, fill=pal.known, alpha=kb)
     if rl:
         f.text(x1, inner.bottom - 20, str(rl), size=28, fill=pal.unknown, anchor="end", alpha=kb)
+
+
+# ------------------------------------------------------------------ three_unknowns
+
+
+def _person(f: Frame, x: float, y: float, s: float, tone: str, opacity: float, sway: float) -> None:
+    """A plain figure: head and shoulders, ``(x, y)`` the top of the head, ``s`` its scale."""
+    pal = f.pal
+    head_r = 34 * s
+    f.circle(x + sway, y + head_r, head_r, fill=pal.text_soft, opacity=opacity)
+    body = Box(x - 64 * s, y + head_r * 2 + 10 * s, 128 * s, 120 * s)
+    f.rect(body, fill=pal.text_soft, r=58 * s, opacity=opacity * 0.9)
+    f.rect(Box(body.x - 2, body.y + body.h * 0.62, body.w + 4, body.h * 0.38 + 3), fill=pal.surface, opacity=opacity)
+    f.line(body.x + 16 * s, body.y + body.h * 0.62, body.right - 16 * s, body.y + body.h * 0.62,
+           stroke=tone, width=3, opacity=opacity * 0.8)
+
+
+@scene(
+    "three_unknowns",
+    required=("items",),
+    optional=("say", "question", "question_at", "verdict_at", "start"),
+    demo={
+        "say": "I do not know.",
+        "items": [
+            {"image": "image:icon", "caption": "A die, about to be rolled", "verdict": "Chance, with a number", "tone": "known"},
+            {"image": "image:icon", "caption": "A number sealed inside", "verdict": "Ignorance, a number waiting", "tone": "cool"},
+            {"image": "image:icon", "caption": "Copper, twenty years from now", "verdict": "No honest number", "tone": "unknown"},
+        ],
+        "question": "What exactly do they not know, and does it matter?",
+        "question_at": 3,
+        "verdict_at": 4,
+    },
+)
+def three_unknowns(f: Frame, box: Box, p: dict[str, Any], c: Clock, ctx: Ctx) -> None:
+    """Three people, one sentence each; objects arrive on beats, then a question or a verdict per person."""
+    pal = f.pal
+    inner = header_block(f, box, p, c)
+    items = list(p["items"])[:3]
+    n = max(1, len(items))
+    start = int(p.get("start", 0))
+    question = p.get("question")
+    q_h = 110 if question else 0
+    gap = 48
+    cw = (inner.w - gap * (n - 1)) / n
+    has_verdict = any(it.get("verdict") for it in items)
+    # Bubble, figure and object, caption, verdict: the picture takes what the text leaves.
+    room = inner.h - q_h - 40
+    fixed = 36 + 76 + 40 + 10 + 64 + 40 + (100 if has_verdict else 0)
+    side = clamp(room - fixed, 120.0, min(cw * 0.5, 250.0))
+    card_h = min(room, fixed + side)
+    y0 = inner.y + max(0.0, (inner.h - q_h - 40 - card_h) / 2)
+    say = str(p.get("say", "I do not know."))
+    v_at = p.get("verdict_at")
+    for i, it in enumerate(items):
+        tone = role(pal, it.get("tone"), ("known", "cool", "unknown")[i % 3])
+        before = i < start
+        k = 1.0 if before or c.settled else _k(c, int(it.get("at", i - start)), dur=0.8)
+        if k <= 0.002:
+            continue
+        card = Box(inner.x + i * (cw + gap), y0, cw, card_h)
+        dy = (1 - k) * 28
+        with f.group(opacity=k, dy=dy):
+            f.rect(card, fill=pal.surface, r=24)
+            f.rect(Box(card.x, card.y, card.w, 6), fill=tone, r=3)
+        # Speech bubble: the same three words over every head.
+        bub_k = 1.0 if before or c.settled else clamp(k * 1.4 - 0.4)
+        bsize = 36
+        bw = f.measure(say, bsize, DISPLAY) + 60
+        bub = Box(card.x + 40, card.y + 36, min(bw, card.w - 80), 76)
+        breathe = 1.5 * math.sin(c.seconds * 1.4 + i * 2.1)
+        with f.group(opacity=bub_k, dy=dy + breathe):
+            f.rect(bub, fill=pal.surface_2, stroke=hexa(tone, 0.8), width=2, r=38)
+            tipx = bub.x + 70
+            f.polygon([(tipx - 14, bub.bottom - 1), (tipx + 14, bub.bottom - 1), (tipx - 4, bub.bottom + 22)],
+                      fill=pal.surface_2)
+            f.text(bub.cx, bub.cy + bsize * 0.34, say, size=bsize, fill=pal.text, family=DISPLAY, anchor="middle")
+        # Person on the left of the card, the object on the right.
+        sway = 2.0 * math.sin(c.seconds * 0.9 + i)
+        px = card.x + 40 + 64 * side / 200.0 + 10
+        py = bub.bottom + 40
+        ps = side / 200.0
+        _person(f, px, py + dy + 20 * ps, ps, tone, k, sway)
+        bob = 5 * math.sin(c.seconds * 1.2 + i * 1.9)
+        ob = Box(card.right - 40 - side, py + 10 + bob + dy, side, side)
+        _picture(f, ctx, it.get("image"), ob, tone, k)
+        tag = it.get("tag")
+        if tag:
+            g = 0.6 + 0.4 * pulse(c.seconds + i, 2.6)
+            f.text(ob.right, ob.y + 4, str(tag), size=56, fill=tone, family=DISPLAY, anchor="end", alpha=k * g)
+        # Caption, then (at the verdict beat) what kind of not knowing it was.
+        cap_y = py + 10 + side + 64
+        cap = str(it.get("caption", ""))
+        csz = f.fit(cap, card.w - 60, 32, 24)
+        lines = [cap]
+        f.text_lines(card.cx, cap_y + dy, lines, size=csz, fill=pal.text_soft, anchor="middle", alpha=k, leading=1.3)
+        verdict = it.get("verdict")
+        if verdict and v_at is not None:
+            kv = 1.0 if c.settled or int(v_at) < 0 else _k(c, int(v_at) + i, dur=0.8)
+            if kv > 0.002:
+                vy = cap_y + 58
+                vl = f.wrap(str(verdict), 34, card.w - 60)[:2]
+                with f.group(opacity=kv, dy=(1 - kv) * 12):
+                    f.text_lines(card.cx, vy, vl, size=34, fill=tone, anchor="middle", weight=600, leading=1.25)
+    if question:
+        kq = 1.0 if c.settled else _k(c, int(p.get("question_at", n)), dur=1.0)
+        if kq > 0.002:
+            size = f.fit(str(question), inner.w - 40, 50, 34, DISPLAY)
+            qy = inner.bottom - 36
+            g = 0.55 + 0.45 * pulse(c.seconds, 3.0)
+            with f.group(opacity=kq, dy=(1 - kq) * 16):
+                f.text(inner.cx, qy, str(question), size=size, fill=pal.unknown, family=DISPLAY, anchor="middle")
+                w = f.measure(str(question), size, DISPLAY)
+                f.line(inner.cx - w / 2 * ease(kq), qy + 20, inner.cx + w / 2 * ease(kq), qy + 20,
+                       stroke=hexa(pal.unknown, g), width=3)
+
+
+# ------------------------------------------------------------------ takeaway
+
+
+@scene(
+    "takeaway",
+    required=("line",),
+    optional=("stop", "index", "total", "note"),
+    demo={
+        "stop": "Chance or ignorance?",
+        "index": 0,
+        "total": 4,
+        "line": ["Chance stays.", "Ignorance can be closed with data."],
+    },
+)
+def takeaway(f: Frame, box: Box, p: dict[str, Any], c: Clock, ctx: Ctx) -> None:
+    """One stop's answer, as a large line of text under a small row of stop markers."""
+    pal = f.pal
+    inner = header_block(f, box, p, c)
+    total = int(p.get("total", 0))
+    idx = int(p.get("index", -1))
+    k0 = 1.0 if c.settled else at(c.t, 0.0, 0.25)
+    top = inner.y + 40
+    if total > 0:
+        gap = 64
+        x0 = inner.cx - gap * (total - 1) / 2
+        with f.group(opacity=k0):
+            f.line(x0, top, x0 + gap * (total - 1), top, stroke=pal.surface_2, width=4)
+            if idx > 0:
+                f.line(x0, top, x0 + gap * min(idx, total - 1), top, stroke=pal.known, width=4)
+            for i in range(total):
+                x = x0 + gap * i
+                if i == idx:
+                    g = pulse(c.seconds, 2.2)
+                    f.circle(x, top, 18 + 4 * g, fill=pal.known, opacity=0.25)
+                    f.circle(x, top, 12, fill=pal.known)
+                elif i < idx:
+                    f.circle(x, top, 9, fill=pal.known)
+                else:
+                    f.circle(x, top, 8, fill=pal.surface_2)
+    stop = p.get("stop")
+    if stop:
+        with f.group(opacity=k0):
+            tracked(f, inner.cx, top + 74, f"STOP {idx + 1}  \u00b7  {str(stop).upper()}" if idx >= 0 else str(stop).upper(),
+                    size=22, fill=pal.text_faint, anchor="middle")
+    raw = p["line"]
+    size = 72.0
+    if isinstance(raw, list | tuple):
+        # Line breaks chosen by the writer: shrink until the longest fits.
+        lines = [str(x) for x in raw]
+        while size > 46 and max(f.measure(ln, size, DISPLAY) for ln in lines) > inner.w - 160:
+            size -= 2
+    else:
+        lines = f.wrap(str(raw), size, inner.w - 160, DISPLAY)
+        while len(lines) > 3 and size > 46:
+            size -= 4
+            lines = f.wrap(str(raw), size, inner.w - 160, DISPLAY)
+    lead = size * 1.28
+    block = lead * len(lines)
+    y = inner.cy + 40 - block / 2 + size * 0.8
+    kl = 1.0 if c.settled else _k(c, 0, dur=1.0)
+    with f.group(opacity=kl, dy=(1 - kl) * 20):
+        for j, ln in enumerate(lines):
+            f.text(inner.cx, y + j * lead, ln, size=size, fill=pal.text, family=DISPLAY, anchor="middle")
+    uy = y + (len(lines) - 1) * lead + 34
+    w = max(f.measure(ln, size, DISPLAY) for ln in lines)
+    g = 0.5 + 0.5 * pulse(c.seconds, 2.8)
+    ku = ease(kl)
+    f.line(inner.cx - w / 2 * ku, uy, inner.cx + w / 2 * ku, uy, stroke=hexa(pal.known, 0.5 + 0.5 * g), width=4)
+    note = p.get("note")
+    if note:
+        kn = 1.0 if c.settled else _k(c, 1, dur=0.8)
+        f.text(inner.cx, uy + 70, str(note), size=32, fill=pal.text_soft, anchor="middle", alpha=kn)

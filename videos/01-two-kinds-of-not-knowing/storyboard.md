@@ -1,128 +1,253 @@
 # Storyboard: Two kinds of not knowing
 
-Slug `01-two-kinds-of-not-knowing`. Running time 176.7 s (5302 frames at 30 fps). Seconds are from the built timeline (`output/timeline_summary.json`); scenes live in `pipeline/scenes.py` and, for `object_cards`, `sort_bins`, `stacked_bars`, `range_bar` and `level_scale`, in `pipeline/scenes_01_two_kinds_of_not_knowing.py`.
+Slug `01-two-kinds-of-not-knowing`. Running time 215.8 s (6473 frames at 30 fps). Shape from `docs/STRUCTURE.md` (Video 1): opening scene and question, claim, map, four stops (bridge, vignette, takeaway), zoom-out. Seconds are from the built timeline (`output/timeline_summary.json`). `roadmap` is the shared scene in `pipeline/scenes_shared.py`; `three_unknowns`, `takeaway`, `object_cards`, `sort_bins`, `range_bar` and `level_scale` are in `pipeline/scenes_01_two_kinds_of_not_knowing.py`; `statement` is from `pipeline/scenes_03_saying_it_out_loud.py`; `quote_card` and `urn` from `pipeline/scenes.py`.
 
-## s01  (0.0 to 7.9 s, 7.9 s)
+**Opening question** (s02, answered in the same words in s26): "When someone says they do not know, what exactly is it they do not know, and does the difference matter?"
 
-- **Say:** Some of what we do not know is chance. Some is ignorance. A forecast has to say which kind it faces.
-- **Scene:** `title_card`
+**Takeaways** (spoken and on screen): 1. Chance stays. Ignorance can be closed with data. 2. A number needs a group of similar cases. Without one, there is none. 3. Where the odds are unknown, one number claims too much. People treat that differently, and so should a forecast. 4. So every forecast should first say where on the scale it stands.
+
+## Pose the problem
+
+### s01  (0.0 to 10.2 s, 10.2 s), vignette
+
+- **Say:** Three people say, I do not know. One holds a die, one a sealed envelope. One is asked the price of copper in twenty years.
+- **Scene:** `three_unknowns`; transition in: dissolve
+- **Beats:** 'Three people', 'sealed envelope', 'price of copper'
+- **Image:** `copper` (a small stack of three copper ingots), `die` (a single six-sided die, tilted to show three faces with pips), `envelope` (a closed paper envelope sealed with a round wax seal)
+- **SFX:** none
+- **Sources:** none (structure line, no new factual claim)
+
+### s02  (10.2 to 18.2 s, 7.9 s), opening question
+
+- **Say:** When someone says they do not know, what exactly is it they do not know, and does the difference matter?
+- **Scene:** `three_unknowns`; transition in: cut
+- **Beats:** 'what exactly'
+- **Image:** `copper` (a small stack of three copper ingots), `die` (a single six-sided die, tilted to show three faces with pips), `envelope` (a closed paper envelope sealed with a round wax seal)
+- **SFX:** none
+- **Sources:** none (structure line, no new factual claim)
+
+## Claim and map
+
+### s03  (18.2 to 27.8 s, 9.6 s), claim
+
+- **Say:** Uncertainty is not one thing. Two questions tell its kinds apart: chance or ignorance, and measurable or not.
+- **Scene:** `statement`, lines "Uncertainty is not one thing. / Chance or ignorance? / Measurable or not?"; transition in: dissolve
+- **Beats:** 'Uncertainty', 'chance or ignorance', 'measurable or not'
+- **Image:** none
+- **SFX:** none
+- **Sources:** S01, S76
+
+### s04  (27.8 to 36.6 s, 8.8 s), map
+
+- **Say:** Four stops: chance or ignorance, measurable or not, unknown odds, and where a case sits.
+- **Scene:** `roadmap`, mode `overview`, current -1; transition in: glide
 - **Beats:** none (even spacing)
 - **Image:** none
 - **SFX:** none
-- **Sources:** none (framing line, no factual claim)
+- **Sources:** none (structure line, no new factual claim)
 
-## s02  (7.9 to 20.1 s, 12.2 s)
+## Stop 1: Chance or ignorance?
 
-- **Say:** Roll a fair die. No one can say what comes up next, and more study of the die will not help. Engineers call this aleatory uncertainty, from the Latin word for dice.
-- **Scene:** `object_cards`, heading "Two kinds of not knowing"; transition in: dissolve
-- **Beats:** 'Roll a fair die', 'aleatory uncertainty'
+### s05  (36.6 to 41.3 s, 4.8 s), bridge
+
+- **Say:** Start with the die and the envelope, which fail for different reasons.
+- **Scene:** `roadmap`, mode `travel`, current 0; transition in: dip
+- **Beats:** none (even spacing)
+- **Image:** none
+- **SFX:** none
+- **Sources:** none (structure line, no new factual claim)
+
+### s06  (41.3 to 48.2 s, 6.9 s), vignette
+
+- **Say:** More study of a die will not tell you the next roll. That is aleatory uncertainty.
+- **Scene:** `object_cards`, heading "Chance or ignorance?"; transition in: dissolve
+- **Beats:** 'study of a die', 'aleatory uncertainty'
 - **Image:** `die` (a single six-sided die, tilted to show three faces with pips)
-- **SFX:** custom: A single six-sided plastic die rolled across a wooden table,... at "Roll a fair die"
+- **SFX:** custom: A single six-sided plastic die rolled across a woo... at "study of a die"
 - **Sources:** S01
 
-## s03  (20.1 to 34.8 s, 14.6 s)
+### s07  (48.2 to 57.6 s, 9.4 s), vignette
 
-- **Say:** Now seal a number in an envelope. You do not know it either, but it is already fixed. Open the envelope and the doubt is gone. This is epistemic uncertainty: a gap in what we know, which more data could close.
-- **Scene:** `object_cards`, heading "Two kinds of not knowing"; transition in: dissolve
-- **Beats:** 'seal a number', 'epistemic uncertainty'
+- **Say:** The number in the envelope is already fixed. Open it and the doubt is gone. That is epistemic uncertainty.
+- **Scene:** `object_cards`, heading "Chance or ignorance?"; transition in: dissolve
+- **Beats:** 'already fixed', 'epistemic uncertainty'
 - **Image:** `die` (a single six-sided die, tilted to show three faces with pips), `envelope` (a closed paper envelope sealed with a round wax seal)
-- **SFX:** paper at "seal a number"
+- **SFX:** paper at "Open it"
 - **Sources:** S01, S56
 
-## s04  (34.8 to 45.3 s, 10.5 s)
+### s08  (57.6 to 62.6 s, 5.0 s), takeaway
 
-- **Say:** Which kind we face depends on the model. Two engineers put it plainly in 2009: "It is the job of the model builder to make the distinction."
-- **Scene:** `quote_card`; transition in: glide
+- **Say:** Chance stays. Ignorance can be closed with data.
+- **Scene:** `takeaway`, line "Chance stays. Ignorance can be closed with data."; transition in: glide
 - **Beats:** none (even spacing)
 - **Image:** none
 - **SFX:** none
 - **Sources:** S01
 
-## s05  (45.3 to 61.0 s, 15.7 s)
+## Stop 2: Can it be measured?
 
-- **Say:** A second question is whether a chance can be measured at all. In 1921 the economist Frank Knight pointed to fire insurance. No one can say whether one building will burn. Across many buildings, the loss evens out, and an insurer can carry it.
+### s09  (62.6 to 70.3 s, 7.6 s), bridge
+
+- **Say:** So ignorance can shrink and chance cannot. But even chance needs something to count.
+- **Scene:** `roadmap`, mode `travel`, current 1; transition in: dip
+- **Beats:** none (even spacing)
+- **Image:** none
+- **SFX:** none
+- **Sources:** none (structure line, no new factual claim)
+
+### s10  (70.3 to 78.5 s, 8.2 s), vignette
+
+- **Say:** In 1921 Frank Knight pointed to fire insurance. Across many buildings, the loss evens out.
 - **Scene:** `object_cards`, heading "Knight, 1921"; transition in: wipe
-- **Beats:** 'A second question', 'one building', 'many buildings'
+- **Beats:** 'Frank Knight', 'many buildings'
 - **Image:** `house` (a small simple house with a pitched roof and one door)
 - **SFX:** none
 - **Sources:** S76, S02
 
-## s06  (61.0 to 71.0 s, 10.1 s)
+### s11  (78.5 to 86.8 s, 8.3 s), vignette
 
-- **Say:** A new business venture has no such group of similar cases. Knight called the measurable kind risk, and the kind that cannot be measured true uncertainty.
+- **Say:** A new venture has no such group. Knight called the first kind risk, and the second true uncertainty.
 - **Scene:** `object_cards`, heading "Knight, 1921"; transition in: dissolve
-- **Beats:** 'new business venture', 'measurable kind risk', 'true uncertainty'
+- **Beats:** 'new venture', 'first kind risk', 'true uncertainty'
 - **Image:** `house` (a small simple house with a pitched roof and one door), `venture` (a lightbulb with a small gear inside it, a new invention)
 - **SFX:** none
 - **Sources:** S02, S76
 
-## s07  (71.0 to 89.1 s, 18.1 s)
+### s12  (86.8 to 96.0 s, 9.2 s), vignette
 
-- **Say:** In 1937, John Maynard Keynes drew a similar line, with examples. Roulette, he wrote, is not uncertain in his sense. The length of a life is only slightly uncertain, and the weather only moderately. A European war is uncertain, and so is the price of copper twenty years ahead.
+- **Say:** In 1937 John Maynard Keynes set roulette apart from a European war, or copper prices twenty years out.
 - **Scene:** `sort_bins`, heading "Keynes, 1937"; transition in: push-left
-- **Beats:** 'Roulette', 'length of a life', 'the weather', 'European war', 'price of copper'
+- **Beats:** 'Keynes', 'European war', 'copper prices'
 - **Image:** `copper` (a small stack of three copper ingots), `roulette` (a roulette wheel seen from above)
 - **SFX:** soft_click at "European war"
 - **Sources:** S04
 - **Direction:** Say Keynes so it rhymes with canes.
 
-## s08  (89.1 to 99.3 s, 10.1 s)
+### s13  (96.0 to 106.8 s, 10.8 s), vignette
 
-- **Say:** About these matters, he wrote, "there is no scientific basis on which to form any calculable probability whatever. We simply do not know."
+- **Say:** About these, he wrote, "there is no scientific basis on which to form any calculable probability whatever. We simply do not know."
 - **Scene:** `quote_card`; transition in: dissolve
 - **Beats:** none (even spacing)
 - **Image:** none
 - **SFX:** low_pad at "0.0"
 - **Sources:** S04
-- **Direction:** Slow down and leave a short pause before the last four words.
+- **Direction:** Leave a short pause before the last four words.
 
-## s09  (99.3 to 116.3 s, 17.1 s)
+### s14  (106.8 to 112.8 s, 6.1 s), takeaway
 
-- **Say:** In 1961 Daniel Ellsberg turned this into a bet. On the left, Urn One holds a hundred red and black balls, in a mix nobody tells you. On the right, Urn Two holds exactly fifty of each. Draw your color and you win a hundred dollars.
+- **Say:** A number needs a group of similar cases. Without one, there is none.
+- **Scene:** `takeaway`, line "A number needs a group of similar cases. Without one, there is none."; transition in: glide
+- **Beats:** none (even spacing)
+- **Image:** none
+- **SFX:** none
+- **Sources:** S02, S76
+
+## Stop 3: What if the odds are unknown?
+
+### s15  (112.8 to 119.4 s, 6.5 s), bridge
+
+- **Say:** Knight and Keynes drew a hard line. Ellsberg tested the ground between.
+- **Scene:** `roadmap`, mode `travel`, current 2; transition in: dip
+- **Beats:** none (even spacing)
+- **Image:** none
+- **SFX:** none
+- **Sources:** none (structure line, no new factual claim)
+
+### s16  (119.4 to 130.0 s, 10.6 s), vignette
+
+- **Say:** In 1961 Daniel Ellsberg offered two urns: a hundred red and black balls, mix unknown, or fifty of each.
 - **Scene:** `urn`, heading "Ellsberg's two urns"; transition in: wipe
-- **Beats:** 'Ellsberg', 'a hundred red', 'Urn Two', 'fifty of each'
+- **Beats:** 'Ellsberg', 'a hundred red', 'fifty of each'
 - **Image:** none
 - **SFX:** marbles at "fifty of each"
 - **Sources:** S77
 
-## s10  (116.3 to 131.6 s, 15.3 s)
+### s17  (130.0 to 142.6 s, 12.6 s), vignette
 
-- **Say:** Most people would rather draw from Urn Two, whether they bet on red or on black. That choice treats red in Urn One as less likely than a half, and black as less likely too. The two chances would add up to less than one.
-- **Scene:** `stacked_bars`, heading "What the choices imply"; transition in: glide
-- **Beats:** 'Most people', 'red in Urn One', 'black as less', 'less than one'
-- **Image:** none
-- **SFX:** none
-- **Sources:** S77
-
-## s11  (131.6 to 146.3 s, 14.7 s)
-
-- **Say:** No single probability fits those choices. The name for this is ambiguity: the probabilities themselves are unknown, or only partly known. In Urn One, the chance of red could be anything from zero to one.
+- **Say:** Whichever color they bet on, most people pick fifty of each. No single chance of red fits that. This is ambiguity: outcomes known, odds not.
 - **Scene:** `range_bar`, heading "Ambiguity"; transition in: dissolve
-- **Beats:** 'No single probability', 'ambiguity'
+- **Beats:** 'Whichever', 'No single chance', 'ambiguity'
 - **Image:** none
 - **SFX:** none
-- **Sources:** S23, S77
+- **Sources:** S77, S23
 
-## s12  (146.3 to 160.8 s, 14.5 s)
+### s19  (142.6 to 150.4 s, 7.8 s), takeaway
 
-- **Say:** These kinds lie along one scale, from complete certainty to total ignorance. Choosing a supermarket line sits near the measured end. Keeping an umbrella in the car, for rain you cannot put odds on, sits further along.
+- **Say:** Where the odds are unknown, one number claims too much. People treat that differently, and so should a forecast.
+- **Scene:** `takeaway`, line "Where the odds are unknown, one number claims too much."; transition in: glide
+- **Beats:** 'Where the odds', 'People treat'
+- **Image:** none
+- **SFX:** none
+- **Sources:** S77, S23
+
+## Stop 4: Where does mine sit?
+
+### s20  (150.4 to 157.9 s, 7.5 s), bridge
+
+- **Say:** Chance, ignorance, no group, unknown odds: these are points on one scale.
+- **Scene:** `roadmap`, mode `travel`, current 3; transition in: dip
+- **Beats:** none (even spacing)
+- **Image:** none
+- **SFX:** none
+- **Sources:** none (structure line, no new factual claim)
+
+### s21  (157.9 to 164.7 s, 6.8 s), vignette
+
+- **Say:** At the far end of that scale, in one team's words, "we do not even know that we do not know."
 - **Scene:** `level_scale`, heading "From certainty to total ignorance"; transition in: push-left
-- **Beats:** 'complete certainty', 'supermarket', 'umbrella'
+- **Beats:** 'far end', 'we do not even'
 - **Image:** none
-- **SFX:** tick at "supermarket", tick at "umbrella"
-- **Sources:** S09, S10
+- **SFX:** tick at "far end"
+- **Sources:** S09, S08
 
-## s13  (160.8 to 172.2 s, 11.5 s)
+### s22  (164.7 to 169.7 s, 5.0 s), takeaway
 
-- **Say:** At the far end is total ignorance, where, in one team's words, "we do not even know that we do not know." A forecast should first say where on this scale it stands.
-- **Scene:** `level_scale`, heading "From certainty to total ignorance"; transition in: dissolve
-- **Beats:** 'At the far end', 'total ignorance', 'A forecast'
+- **Say:** So every forecast should first say where on the scale it stands.
+- **Scene:** `takeaway`, line "Every forecast should first say where on the scale it stands."; transition in: glide
+- **Beats:** none (even spacing)
 - **Image:** none
-- **SFX:** chime at "A forecast"
-- **Sources:** S08, S09, S10
+- **SFX:** chime at "every forecast"
+- **Sources:** S09, S08
 
-## End card  (172.2 to 176.7 s)
+## Zoom out
+
+### s23  (169.7 to 185.1 s, 15.3 s), chain of takeaways
+
+- **Say:** Chance stays and ignorance can be closed, so say which. But a number needs a group of cases, and where odds are unknown, one number claims too much. So say where on the scale you stand.
+- **Scene:** `roadmap`, mode `summary`, current 4; transition in: dip
+- **Beats:** none (even spacing)
+- **Image:** none
+- **SFX:** none
+- **Sources:** none (structure line, no new factual claim)
+
+### s25  (185.1 to 194.7 s, 9.7 s), return to the opening
+
+- **Say:** The die is chance, with a number. The envelope is ignorance, with a number waiting. Copper has no honest number.
+- **Scene:** `three_unknowns`; transition in: dissolve
+- **Beats:** 'The die is chance', 'The envelope is ignorance', 'Copper has'
+- **Image:** `copper` (a small stack of three copper ingots), `die` (a single six-sided die, tilted to show three faces with pips), `envelope` (a closed paper envelope sealed with a round wax seal)
+- **SFX:** none
+- **Sources:** S04
+
+### s26  (194.7 to 207.9 s, 13.1 s), answer to the opening question
+
+- **Say:** When someone says they do not know, what exactly they do not know is a chance, a fact, or something no one can count. The difference matters: it decides what a number can mean.
+- **Scene:** `three_unknowns`; transition in: cut
+- **Beats:** 'the difference matters'
+- **Image:** `copper` (a small stack of three copper ingots), `die` (a single six-sided die, tilted to show three faces with pips), `envelope` (a closed paper envelope sealed with a round wax seal)
+- **SFX:** none
+- **Sources:** none (structure line, no new factual claim)
+
+### s27  (207.9 to 212.6 s, 4.7 s), hand-off
+
+- **Say:** The next question is what a number can honestly say.
+- **Scene:** `statement`, lines "What can a number / honestly say?"; transition in: dissolve
+- **Beats:** none (even spacing)
+- **Image:** none
+- **SFX:** none
+- **Sources:** none (structure line, no new factual claim)
+
+## End card  (212.6 to 215.8 s)
 
 - **Line:** Name the kind of not knowing first.
 - **Note:** Next: From evidence to forecast
-
