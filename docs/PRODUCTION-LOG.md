@@ -50,6 +50,53 @@ containment renders clean, 43 caption cues valid. Human review: pending.
   music were cache hits. Generations the published video uses: $0.316 by
   receipt. Receipts for unused narration drafts were removed from `assets/`.
 
+## 2026-09-23: video 3 rebuilt to the red-thread structure
+
+The first build was rejected for structure (49 segments of "here is another
+case", no map, no bridges, no zoom-out). `videos/03-saying-it-out-loud` is
+rewritten to `docs/STRUCTURE.md`: opening question, claim, `roadmap` overview,
+six stops (bridge on `roadmap` in travel mode, vignette, takeaway spoken and
+shown on `statement`), zoom-out on `roadmap` in summary mode, the memo line
+rewritten in full form, and the officer fifteen years later.
+
+53 segments plus end card, 1,236 words, 556.2 s (9:16), 16,685 frames, voice
+Enceladus on `gemini-3.1-flash-tts-preview` with post-gate pacing. Every
+machine gate passes (`publish/qa.md`): worst narration WER 0.086, -16.02 LUFS /
+-1.51 dBTP muxed, 212 containment renders clean, 119 caption cues valid.
+Generations the video uses are worth $0.562 by their receipts. Human review:
+pending.
+
+### What was cut (1,415 words to 1,236)
+
+The 2012 count of estimates (16 of 379), the tax exception (FIN 48), Kent's
+table as a segment of its own (now half a sentence), the ladder-overlap
+detail, the tooltip bar chart, the second and third rain readings as separate
+segments, the hundredth-of-an-inch definition, the Charley evacuation bars,
+"the cone does not show the storm's size", most of the 2016 model list, Nate
+Silver's quote, the "many forecasts, scored" line, the Marine commandant, the
+C-grade simile and the ICD 203 same-sentence rule.
+
+### What looking and listening changed
+
+- The memo scene's margin note shows at most three lines; two four-line notes
+  lost their last line and were rewritten as three.
+- `confidence_grid` with `separate: true` prints "never in the same sentence"
+  (ICD 203). The zoom-out's full-form line joins a likelihood and a confidence
+  level in one sentence, as STRUCTURE.md specifies, so the flag is off and the
+  rule is not said. A human should decide whether the rewrite should be two
+  sentences instead.
+- ASR heard "Accountants are, one, under...", "Annemarth I. van der Bles",
+  "Read in order. The stops..." and 'Start with the word "ten years before the
+  Bay of Pigs"'. Each line was rephrased; the first name moved to the
+  on-screen heading only.
+- Bridges over `roadmap` ran 7 to 9 s; second sentences moved into the next
+  vignette. They now run 4.6 to 6.9 s.
+- A lost apostrophe ("Kents fix") from a scripted edit was caught before the
+  first render and fixed.
+
+No pipeline code was changed. `pipeline/sheet.py` handled the 16,233 px cut
+sheet without trouble.
+
 ## 2026-09-23: video 3, "Saying it out loud"
 
 `videos/03-saying-it-out-loud`: 49 segments plus end card, 1,415 words, 554.0 s

@@ -2,58 +2,107 @@
 
 Thesis: uncertainty is not communicated until the listener holds the number the speaker meant. Pair every word with a number, a reference class, and a statement of confidence.
 
-Seconds are the built segment lengths (narration plus hold) from `output/timeline.json`.
+Shape: `docs/STRUCTURE.md`, video 3. An opening question, the claim and the map, six stops (bridge over `roadmap` in travel mode, vignette, takeaway on `statement`), and a zoom-out over `roadmap` in summary mode that rewrites the memo in full form.
+
+Seconds are the built segment lengths (narration plus hold) from `output/timeline_summary.json`.
+
+
+## Opening: "a fair chance", 1961
 
 | # | Start | Seconds | Say | Scene | Image | SFX | Sources |
 |---|---|---|---|---|---|---|---|
-| s01 | 0.0 | 10.5 | In February 1961, the Joint Chiefs of Staff reviewed a CIA plan to invade Cuba at the Bay of Pigs. Their report came down to one phrase. | title_card ({"label": "Uncertainty Explainers · 3", "title": "Saying it out loud"}) |  |  | S67, S68 |
-| s02 | 10.5 | 8.8 | The report listed the plan's weak points and then closed with a judgment. The plan, it said, "has a fair chance of ultimate success." | memo ({"highlight": "a fair chance"}) | folder | paper @ 0.0 | S68 |
-| s03 | 19.2 | 11.4 | The officer who drafted that line later said the Chiefs put the odds at roughly three in ten. He meant "fair" as a warning, the way a C on a school test means fair work. | memo ({"highlight": "a fair chance"}) | folder |  | S67 |
-| s04 | 30.7 | 10.6 | Other readers heard approval. The commandant of the Marine Corps said the plan should have accomplished the mission. The CIA quoted the phrase in a paper that argued for the invasion. | two_column_compare ({"heading": "One phrase, two readings"}) |  |  | S67, S69 |
-| s05 | 41.3 | 9.1 | President Kennedy came to believe that the Joint Chiefs had endorsed the plan. After the invasion collapsed, he wondered why no one had warned him. | probability_bar ({"heading": "What the President heard", "label": "“a fair chance,” as its writer meant it"}) |  |  | S67 |
-| s06 | 50.4 | 10.0 | The words were true to the writer, and they failed at the other end. Uncertainty is not communicated until the listener holds the number the speaker meant. | statement ({"highlight": ["the number the speaker meant."]}) |  |  |  |
-| s07 | 60.4 | 16.4 | Ten years earlier, the same fault had shown up at the CIA. In March 1951, a National Intelligence Estimate, a formal forecast agreed by the intelligence agencies, said a Soviet attack on Yugoslavia "should be considered a serious possibility." | quote_card |  |  | S47 |
-| s08 | 76.8 | 12.7 | A few days later, the head of the State Department's planning staff asked Sherman Kent what odds that meant. Kent said about sixty-five to thirty-five in favor of an attack. The planner had read it as much lower. | phrase_readings ({"phrase": "serious possibility"}) |  | tick @ sixty-five | S47 |
-| s09 | 89.5 | 11.1 | Kent then asked the members of the Board that had approved the wording, and each had meant different odds. The lowest had meant about twenty in a hundred, and the highest about eighty. | phrase_readings ({"phrase": "serious possibility"}) |  |  | S47 |
-| s10 | 100.5 | 7.9 | They had agreed on a phrase without agreeing on a number. Kent wrote that this shook him more than the failure with the reader. | statement ({"highlight": ["without agreeing on a number."]}) |  |  | S47 |
-| s11 | 108.4 | 13.0 | Kent's answer was a table, in which each word got a number and a margin. Probable meant seventy-five percent, give or take about twelve. Chances about even meant fifty, give or take ten. | point_ladder ({"heading": "Kent's table", "highlight": ["Probable", "Chances about even"]}) |  |  | S47 |
-| s12 | 121.4 | 11.1 | Numbers stayed rare. A 2012 study read three hundred seventy-nine declassified estimates and found that only sixteen gave any number for a probability. | unit_grid ({"heading": "Declassified estimates, 1950s to 2000s", "label": "16 of 379"}) |  |  | S66 |
-| s13 | 132.5 | 14.7 | Since 2015, a directive called ICD 203 has told United States intelligence analysts to use one of two fixed ladders, seven words each, tied to ranges. Likely means fifty-five to eighty percent. | word_ladder ({"heading": "US intelligence, ICD 203", "highlight": "likely"}) |  |  | S50 |
-| s14 | 147.2 | 11.0 | Climate scientists built their own ladder for the Intergovernmental Panel on Climate Change, the IPCC. On that ladder, likely means sixty-six to one hundred percent. | two_ladders ({"highlight": "likely"}) |  |  | S51 |
-| s15 | 158.2 | 11.1 | So one word carries two meanings. A sixty percent chance is likely to an intelligence analyst, but on the climate ladder it is only about as likely as not. | two_ladders ({"highlight": "likely"}) |  |  | S50, S51 |
-| s16 | 169.3 | 11.8 | The climate ranges also overlap, so anything very likely is also likely. The intelligence ranges sit end to end, and none of them reaches zero or one hundred. | two_ladders ({"highlight": "very likely"}) |  |  | S50, S51 |
-| s17 | 181.1 | 10.6 | Readers bend the words as well. In a 2012 study, Americans read sentences from IPCC reports and gave the number they thought each word stood for. | pull_to_middle ({"heading": "What readers took the IPCC words to mean"}) |  |  | S53 |
-| s18 | 191.7 | 15.0 | Very likely is meant as ninety percent or more, and on average readers put it at sixty-two. Very unlikely is meant as ten percent or less, and readers put it at forty-one. Both ends were pulled toward the middle. | pull_to_middle ({"heading": "What readers took the IPCC words to mean"}) |  |  | S53, S51 |
-| s19 | 206.6 | 13.2 | A 2019 study tested fixes for the intelligence ladder with nine hundred twenty-four people. A table of meanings, one click away, barely helped, because only about half the readers ever opened it. | bar_rows ({"heading": "Three ways to show the numbers"}) |  |  | S55 |
-| s20 | 219.9 | 13.6 | What worked was the number in brackets, inside the sentence. With the word alone, readers' ranges overlapped the official range by about a third. With the bracket beside the word, the overlap was about two thirds. | bracket_sentence |  | soft_click @ in brackets | S55 |
-| s21 | 233.4 | 11.1 | Numbers alone are not safe either. A forecast says thirty percent chance of rain tomorrow, and in 2005 researchers asked people in five cities what that means. | rain_readings | raincloud |  | S60 |
-| s22 | 244.5 | 6.6 | Many said it would rain thirty percent of the time. Others said it would rain over thirty percent of the area. | rain_readings | raincloud |  | S60 |
-| s23 | 251.1 | 11.4 | The weather service means something else: a thirty percent chance that your spot gets at least a hundredth of an inch. Put another way, it rains on about three of every ten days like tomorrow. | rain_readings | raincloud | chime @ three of every ten days | S65, S60 |
-| s24 | 262.5 | 10.3 | In New York, about two thirds of the people asked chose that meaning. In Amsterdam, Berlin, Milan and Athens, only one third to one fifth did. | bar_rows ({"heading": "Who chose \"3 of 10 days like this\""}) |  |  | S60 |
-| s25 | 272.8 | 14.2 | The missing piece has a name, the reference class. It is the set of cases that a percentage counts over, such as days, hours, or square miles. Until that is said, the number is only half a message. | statement ({"highlight": ["30% of what?"]}) |  |  | S60, S57 |
-| s26 | 287.0 | 9.4 | Pictures carry the same risk. The National Hurricane Center draws a cone around a storm's forecast track to show where the center of the storm will probably go. | charley ({"layers": ["line", "cone"]}) |  | whoosh @ draws a cone | S64 |
-| s27 | 296.4 | 14.4 | The cone is built from circles, each sized so that two thirds of past forecast errors fall inside it. So about one time in three, the center leaves the cone. The cone does not show the storm's size. | charley ({"layers": ["line", "cone", "circles", "misses"]}) |  |  | S64, S63 |
-| s28 | 310.8 | 10.4 | In August 2004, the forecast line for Hurricane Charley ran close to Tampa. Charley struck Punta Gorda instead, about seventy miles to the south. | charley ({"layers": ["line", "cone", "actual"]}) | hurricane |  | S63 |
-| s29 | 321.2 | 9.2 | Charlotte County, around Punta Gorda, had been inside the cone for four days. Much of the television coverage had pointed viewers at the line. | charley ({"layers": ["line", "cone", "actual", "county"]}) | hurricane |  | S63 |
-| s30 | 330.5 | 12.4 | In the most exposed evacuation zones around Tampa Bay, fifty-three percent of people left. In the same kind of zone in southwest Florida, including Charlotte County, thirty-one percent did. | bar_rows ({"heading": "Evacuated for Charley, most exposed zones"}) |  |  | S63 |
-| s31 | 342.9 | 9.1 | The director of the hurricane center, Max Mayfield, later joked about the words for his tombstone: "Don't focus on the skinny black line." | quote_card |  |  | S63 |
-| s32 | 352.0 | 11.0 | A probability can be right and still feel wrong. In its final forecast of the 2016 election, FiveThirtyEight gave Donald Trump about a twenty-nine percent chance of winning. | bar_rows ({"heading": "Trump's chance, final forecasts, 8 November 2016"}) |  |  | S62 |
-| s33 | 363.0 | 10.7 | Other models gave him fifteen percent, eight, two, and less than one. FiveThirtyEight's line was seventy-one for Hillary Clinton against twenty-nine for Trump. | bar_rows ({"heading": "Trump's chance, final forecasts, 8 November 2016"}) |  |  | S62, S61 |
-| s34 | 373.7 | 8.1 | Twenty-nine in a hundred is not small. It is more than one chance in four, and events with those odds happen all the time. | unit_grid ({"heading": "29 in 100", "label": "29 of 100"}) |  | tick @ happen all the time | S62 |
-| s35 | 381.8 | 9.1 | Three days after the vote, Nate Silver wrote that "people mistake having a large volume of polling data for eliminating uncertainty." | quote_card |  |  | S62 |
-| s36 | 391.0 | 8.3 | A single result cannot prove a probability right or wrong. Many forecasts, scored against what happened, can. | statement ({"highlight": ["Many forecasts, scored, can."]}) |  |  | S33, S34 |
-| s37 | 399.2 | 14.0 | Accountants and courts face the same problem, and they answer with words too. Under the accounting rule for losses, now called ASC 450, a loss is probable, reasonably possible, or remote. | action_ladder | ledger | paper @ ASC 450 | S71, S70 |
-| s38 | 413.3 | 13.4 | The rule defines each word only with other words. Probable means likely to occur, and remote means slight. Reasonably possible sits between: more than remote, but less than likely. | action_ladder | ledger |  | S71 |
-| s39 | 426.7 | 12.0 | Each word sets an action. A probable loss that can be estimated goes into the accounts, and a reasonably possible loss gets a note to readers. A remote loss needs neither. | action_ladder | ledger |  | S71, S70 |
-| s40 | 438.7 | 10.3 | The tax rule is the exception. A company books the largest tax benefit that is greater than fifty percent likely to be realized, a number stated outright. | probability_bar ({"heading": "The tax rule, FIN 48 (now ASC 740)", "label": "“greater than 50 percent likely”"}) |  |  | S73 |
-| s41 | 448.9 | 12.2 | Courts have a ladder too. In Addington against Texas, in 1979, the Supreme Court described three standards of proof. A standard of proof says how sure the fact finder must be. | risk_seesaw ({"heading": "Addington v. Texas, 1979"}) | gavel |  | S75 |
-| s42 | 461.1 | 8.7 | In a money dispute, the standard is a preponderance of the evidence, and the two sides share the risk of a wrong decision in roughly equal fashion. | risk_seesaw ({"heading": "Addington v. Texas, 1979"}) | gavel |  | S75 |
-| s43 | 469.8 | 12.2 | In a criminal case, the proof must be beyond a reasonable doubt, and society takes almost the entire risk of error upon itself. Clear and convincing evidence sits between the two. | risk_seesaw ({"heading": "Addington v. Texas, 1979"}) | gavel |  | S75 |
-| s44 | 482.0 | 8.2 | The Court put no numbers on these phrases. It said that the truth about how they shape decisions "may well be unknowable." | quote_card |  |  | S75 |
-| s45 | 490.2 | 12.8 | In 2019, Anne Marthe van der Bles and her colleagues set out what a statement of uncertainty should contain. Start with what you are unsure about: a fact, a number, or a scientific claim. | checklist ({"heading": "What to say, after van der Bles and colleagues, 2019"}) |  |  | S56 |
-| s46 | 502.9 | 14.1 | Then pick a form, such as a range, a probability, or a word. Then say how good the evidence is. The IPCC calls this confidence, rated by how much evidence there is and how closely findings agree. | checklist ({"heading": "What to say, after van der Bles and colleagues, 2019"}) |  |  | S56, S51 |
-| s47 | 517.0 | 10.2 | Confidence is not a probability, and the intelligence directive keeps the two apart. A likelihood and a confidence level may not appear in the same sentence. | confidence_grid ({"heading": "Confidence is a separate scale"}) |  |  | S51, S50 |
-| s48 | 527.2 | 11.8 | Put together, a full statement reads like this. Rain tomorrow is likely, fifty-five to eighty percent, counted over days like tomorrow at this spot. Our confidence in that range is medium. | sentence_builder ({"label": "An example"}) |  |  |  |
-| s49 | 539.1 | 10.0 | Fifteen years after the Bay of Pigs, the officer who wrote "a fair chance" was still troubled. He had not insisted that the numbers be used. | memo ({"highlight": "a fair chance"}) | folder | low_pad @ 0.0 | S67 |
+| s01 | 0.0 | 8.7 | In February 1961, the Joint Chiefs of Staff reviewed a CIA plan to invade Cuba at the Bay of Pigs. | title_card ({"label": "Uncertainty Explainers · 3"}) |  |  | S67, S68 |
+| s02 | 8.7 | 9.7 | Their report listed the plan's weak points, then closed with a judgment. The plan, it said, "has a fair chance of ultimate success." | memo ({"highlight": "a fair chance"}) | folder | paper @ 0.0 | S68 |
+| s03 | 18.4 | 9.2 | The officer who drafted that line later said the Chiefs put the odds at roughly three in ten. He meant "fair" as a warning. | memo ({"highlight": "a fair chance"}) | folder |  | S67 |
+| s04 | 27.6 | 6.9 | Other readers heard approval. The CIA quoted the phrase in a paper that argued for the invasion. | two_column_compare ({"heading": "One phrase, two readings"}) |  |  | S67, S69 |
+| s05 | 34.6 | 9.1 | President Kennedy came to believe that the Joint Chiefs had endorsed the plan. After the invasion collapsed, he wondered why no one had warned him. | probability_bar ({"heading": "What the President heard", "label": "“a fair chance,” as its writer meant it"}) |  |  | S67 |
+| s06 | 43.7 | 11.7 | Three in ten meant seven chances in ten of failure. Where, between the writer and the reader, did seven in ten disappear, and how do you stop it? | statement ({"highlight": ["Where did the other 7 in 10 go?"]}) |  |  |  |
 
-End card: "Say the word. Then say the number." / Uncertainty Explainers · 1 Two kinds of not knowing · 2 From evidence to forecast (5.0 s).
+## The claim and the map
+
+| # | Start | Seconds | Say | Scene | Image | SFX | Sources |
+|---|---|---|---|---|---|---|---|
+| s07 | 55.4 | 12.8 | Uncertainty is not communicated until the listener holds the number the speaker meant. A message about uncertainty has parts, and each part can fail. | statement ({"highlight": ["the number the speaker meant."]}) |  |  |  |
+| s08 | 68.2 | 17.1 | The message has six stops: the word, the group a number counts over, the picture, and the single result. Then words used on purpose, and the whole statement, with its missing part: how good the evidence is. | roadmap ({"mode": "overview", "current": -1, "heading": "Where the number can go missing", "kicker": "Six stops"}) |  |  |  |
+
+## Stop 1. The word
+
+| # | Start | Seconds | Say | Scene | Image | SFX | Sources |
+|---|---|---|---|---|---|---|---|
+| s09 | 85.3 | 5.8 | First, the word. The trouble began ten years before the Bay of Pigs. | roadmap ({"mode": "travel", "current": 0}) |  |  | S47 |
+| s10 | 91.1 | 10.3 | In March 1951, a formal intelligence forecast said a Soviet attack on Yugoslavia "should be considered a serious possibility." | quote_card |  |  | S47 |
+| s11 | 101.4 | 8.9 | Sherman Kent, on the board that approved it, meant about sixty-five in a hundred. A State Department planner had read it as much lower. | phrase_readings |  | tick @ sixty-five | S47 |
+| s12 | 110.3 | 9.6 | The other board members had meant anything from twenty in a hundred to eighty. They had agreed on a phrase without agreeing on a number. | phrase_readings |  |  | S47 |
+| s13 | 119.9 | 18.6 | Kent's fix was to give each word a number, and such ladders are now official. For United States intelligence, likely means fifty-five to eighty percent. For the Intergovernmental Panel on Climate Change, the IPCC, it means sixty-six to one hundred. | two_ladders ({"highlight": "likely"}) |  |  | S50, S51 |
+| s14 | 138.5 | 9.2 | So a sixty percent chance is likely to an intelligence analyst, but only about as likely as not to a climate scientist. | two_ladders ({"highlight": "likely"}) |  |  | S50, S51 |
+| s15 | 147.7 | 14.4 | Readers bend the words too. In a 2012 study, Americans put very likely, meant as ninety percent or more, at sixty-two. Very unlikely came out at forty-one. | pull_to_middle ({"heading": "What readers took the IPCC words to mean"}) |  |  | S53, S51 |
+| s16 | 162.1 | 15.6 | A 2019 study found a fix that works, the number in brackets inside the sentence. With the word alone, readers' ranges overlapped the official range by about a third. With the bracket, by about two thirds. | bracket_sentence |  | soft_click @ in brackets | S55 |
+| s17 | 177.8 | 4.9 | A word carries a number only if the number is beside it. | statement ({"kicker": "Stop 1 · The word", "highlight": ["only if the number is beside it."]}) |  |  | S55 |
+
+## Stop 2. The number's group
+
+| # | Start | Seconds | Say | Scene | Image | SFX | Sources |
+|---|---|---|---|---|---|---|---|
+| s18 | 182.7 | 5.9 | A number beside the word fixes the word. But a number can fail too. | roadmap ({"mode": "travel", "current": 1}) |  |  |  |
+| s19 | 188.6 | 14.3 | Take a thirty percent chance of rain tomorrow. In 2005, researchers asked people in five cities what that means. Many said rain thirty percent of the time, or over thirty percent of the area. | rain_readings | raincloud |  | S60 |
+| s20 | 202.9 | 7.0 | The weather service means something else. It rains on about three of every ten days like tomorrow. | rain_readings | raincloud | chime @ three of every ten days | S65, S60 |
+| s21 | 209.9 | 8.6 | In New York, about two thirds chose that meaning. In four European cities, only one third to one fifth did. | bar_rows ({"heading": "Who chose \"3 of 10 days like this\""}) |  |  | S60 |
+| s22 | 218.5 | 11.4 | The missing piece is the reference class, the set of cases a number counts over. A number needs its reference class, or the listener supplies their own. | statement ({"kicker": "Stop 2 · The number's group", "highlight": ["or the listener supplies their own."]}) |  |  | S60, S57 |
+
+## Stop 3. The picture
+
+| # | Start | Seconds | Say | Scene | Image | SFX | Sources |
+|---|---|---|---|---|---|---|---|
+| s23 | 229.9 | 6.0 | Words and numbers fail in the ear. Pictures fail in the eye. | roadmap ({"mode": "travel", "current": 2}) |  |  |  |
+| s24 | 235.9 | 11.0 | The clearest case is a hurricane. The National Hurricane Center draws a cone around a storm's forecast track, to show where its center will probably go. | charley ({"layers": ["line", "cone"]}) |  | whoosh @ draws a cone | S64 |
+| s25 | 246.9 | 10.3 | Each circle is sized so that two thirds of past forecast errors fall inside. So about one time in three, the center leaves the cone. | charley ({"layers": ["line", "cone", "circles", "misses"]}) |  |  | S64, S63 |
+| s26 | 257.2 | 11.9 | In August 2004, the forecast line for Hurricane Charley ran close to Tampa. Charley struck Punta Gorda instead, about seventy miles to the south. | charley ({"layers": ["line", "cone", "actual"]}) | hurricane |  | S63 |
+| s27 | 269.1 | 10.7 | Charlotte County, around Punta Gorda, had been inside the cone for four days. But much of the television coverage had pointed viewers at the line. | charley ({"layers": ["line", "cone", "actual", "county"]}) | hurricane |  | S63 |
+| s28 | 279.8 | 8.9 | The hurricane center's director, Max Mayfield, later joked about his tombstone: "Don't focus on the skinny black line." | quote_card |  |  | S63 |
+| s29 | 288.7 | 8.0 | A picture of uncertainty is read as a picture of certainty, unless it says what it leaves out. | statement ({"kicker": "Stop 3 · The picture", "highlight": ["unless it says what it leaves out."]}) |  |  |  |
+
+## Stop 4. The single result
+
+| # | Start | Seconds | Say | Scene | Image | SFX | Sources |
+|---|---|---|---|---|---|---|---|
+| s30 | 296.7 | 6.5 | Suppose the word, the number, the group and the picture are all right. | roadmap ({"mode": "travel", "current": 3}) |  |  |  |
+| s31 | 303.2 | 11.3 | The listener still judges by one outcome. In its final 2016 forecast, FiveThirtyEight gave Donald Trump about a twenty-nine percent chance of winning. | bar_rows ({"heading": "Trump's chance, final forecasts, 8 November 2016"}) |  |  | S62 |
+| s32 | 314.6 | 5.6 | Other models gave him fifteen percent, and some gave him less than one. | bar_rows ({"heading": "Trump's chance, final forecasts, 8 November 2016"}) |  |  | S62 |
+| s33 | 320.1 | 9.1 | Trump won. But twenty-nine in a hundred is more than one chance in four, and events with those odds happen all the time. | unit_grid ({"heading": "29 in 100", "label": "29 of 100"}) |  | tick @ happen all the time | S62 |
+| s34 | 329.2 | 7.9 | One outcome cannot judge a probability. Say so before the outcome arrives. | statement ({"kicker": "Stop 4 · The single result", "highlight": ["Say so before the outcome arrives."]}) |  |  |  |
+
+## Stop 5. Words on purpose
+
+| # | Start | Seconds | Say | Scene | Image | SFX | Sources |
+|---|---|---|---|---|---|---|---|
+| s35 | 337.1 | 4.6 | If words fail so often, why not always use numbers? | roadmap ({"mode": "travel", "current": 4}) |  |  |  |
+| s36 | 341.7 | 15.3 | Some institutions refuse them on purpose. Take accounting. Under its rule for losses, now called ASC 450, a loss is probable, reasonably possible, or remote. | action_ladder | ledger | paper @ ASC 450 | S71, S70 |
+| s37 | 357.1 | 10.0 | The rule defines each word only with other words. Probable means likely to occur, and remote means slight. | action_ladder | ledger |  | S71 |
+| s38 | 367.1 | 11.9 | Each word sets an action. A probable loss that can be estimated goes into the accounts. A reasonably possible one gets a note, and a remote one gets neither. | action_ladder | ledger |  | S71, S70 |
+| s39 | 379.0 | 13.1 | Courts have a ladder too. In Addington against Texas, in 1979, the Supreme Court described three standards of proof: how sure the judge or jury must be. | risk_seesaw ({"heading": "Addington v. Texas, 1979"}) | gavel |  | S75 |
+| s40 | 392.2 | 13.5 | In a money dispute, the two sides share the risk of error about equally. In a criminal case, society takes almost all of it. Clear and convincing evidence sits between. | risk_seesaw ({"heading": "Addington v. Texas, 1979"}) | gavel |  | S75 |
+| s41 | 405.7 | 7.6 | The Court put no numbers on these phrases. It said that how they shape decisions "may well be unknowable." | quote_card |  |  | S75 |
+| s42 | 413.3 | 7.8 | Some ladders are words on purpose, tied to actions. Know which ladder you are on. | statement ({"kicker": "Stop 5 · Words on purpose", "highlight": ["Know which ladder you are on."]}) |  |  | S71, S75 |
+
+## Stop 6. The whole statement
+
+| # | Start | Seconds | Say | Scene | Image | SFX | Sources |
+|---|---|---|---|---|---|---|---|
+| s43 | 421.1 | 6.9 | Word, number, group, picture, one result, and the ladder you are on. | roadmap ({"mode": "travel", "current": 5}) |  |  |  |
+| s44 | 428.1 | 15.0 | One piece is still missing. In 2019, van der Bles and colleagues set out what a statement of uncertainty should contain. It says what you are unsure about, and in what form, such as a range or a word. | checklist ({"heading": "What to say, after van der Bles and colleagues, 2019"}) |  |  | S56 |
+| s45 | 443.1 | 10.1 | Then it says how good the evidence is. The IPCC calls this confidence, rated by the amount of evidence and how closely findings agree. | checklist ({"heading": "What to say, after van der Bles and colleagues, 2019"}) |  |  | S56, S51 |
+| s46 | 453.2 | 8.0 | Confidence is a separate scale, not a probability. It tells the listener how far to trust the number. | confidence_grid ({"heading": "Confidence is a separate scale"}) |  |  | S51 |
+| s47 | 461.2 | 14.1 | Put together, a full statement reads like this. Rain tomorrow is likely, fifty-five to eighty percent, counted over days like tomorrow at this spot. Our confidence in that range is medium. | sentence_builder ({"label": "An example"}) |  |  |  |
+| s48 | 475.3 | 7.0 | Say the word, the number, the group, and how good the evidence is. | statement ({"kicker": "Stop 6 · The whole statement", "highlight": ["and how good the evidence is."]}) |  |  |  |
+
+## Zoom out: the memo in full form
+
+| # | Start | Seconds | Say | Scene | Image | SFX | Sources |
+|---|---|---|---|---|---|---|---|
+| s49 | 482.2 | 12.1 | Taken in order, the stops make one argument. A word needs a number beside it. But a number needs its group, and a picture must say what it leaves out. | roadmap ({"mode": "summary", "current": 6, "heading": "Six stops, one argument", "kicker": "The whole message"}) |  |  |  |
+| s50 | 494.4 | 16.0 | Even then, one outcome cannot judge the forecast, so say that first. Some ladders are words on purpose, so know which one you are on. And every message needs a statement of how good the evidence is. | roadmap ({"mode": "summary", "current": 6, "heading": "Six stops, one argument", "kicker": "The whole message"}) |  |  |  |
+| s51 | 510.4 | 14.1 | Where, between the writer and the reader, did seven in ten disappear, and how do you stop it? It disappeared beside the word, where no number, no group and no confidence was written. | memo ({"highlight": "a fair chance"}) | folder |  |  |
+| s52 | 524.5 | 12.2 | Written in full, the line would read like this. The plan has a fair chance, about three in ten, judged against operations of this kind, and our confidence in that number is low. | memo ({"highlight": "about 3 in 10,"}) |  | soft_click @ about three in ten |  |
+| s53 | 536.7 | 14.5 | Fifteen years after the Bay of Pigs, the officer who wrote "a fair chance" was still troubled. He had not insisted that the numbers be used. Say the word. Then say the number. | memo ({"highlight": "a fair chance"}) | folder | low_pad @ 0.0 | S67 |
+
+End card: 5.0 s, "Say the word. Then say the number.". Total 556.2 s (9:16), 16685 frames.

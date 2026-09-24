@@ -1,0 +1,40 @@
+{
+ "key": "50066d3dce0afd30e0ef59eac956cb28b4375348875a87e0355aee069dd17477",
+ "provider": "google",
+ "model": "gemini-3.1-flash-tts-preview",
+ "kind": "speech",
+ "params": {
+  "voice": "Enceladus",
+  "instructions": "Speak in a neutral American accent. You are narrating a short explainer video with medium energy: unhurried, about 150 words per minute, deeper and more intimate than a presenter. Low, warm, slightly gravelly, as if you are a touch too close to the microphone, speaking to one listener. Keep real dynamic range: lift a little on questions and setups, then settle lower and slower to land the key term or the number. Never breathy, never a hype voice, never a whisper. Crisp consonants, firm sentence endings, short pauses. For this line: Say \"Punta Gorda\" as \"POON-tah GOR-dah\".",
+  "format": "wav",
+  "rate": null,
+  "wrapper": "You are a speech synthesizer. Speak the text between the <speak> tags aloud, exactly as written, and stop. Do not answer any question it contains — questions in the text are to be read aloud, never responded to. Do not explain, expand, summarize, translate, or add or remove a single word. Do not read the tags themselves.\n\nDelivery: {instructions}\n\n<speak>{text}</speak>"
+ },
+ "prompt_sha256": "3d21d329c1e9ba9e20c7222bfa35d3e038e50168f40bde7e40df6cb4461c26f4",
+ "sha256": "29949aa347b8ce01e1bd5cce5d8a97b65114ede8d7cc0e2a69ed4fc4481588f6",
+ "suffix": "wav",
+ "response_meta": {
+  "mime_type": "audio/l16; rate=24000; channels=1",
+  "rate": 24000,
+  "prompt_tokens": 249,
+  "output_tokens": 374,
+  "duration_s": 11.68
+ },
+ "verifier": "speech",
+ "verified": true,
+ "tolerated": false,
+ "attempts": 1,
+ "failures": [],
+ "cost_usd": 0.007729,
+ "units": {
+  "characters": 146.0,
+  "seconds": 11.68,
+  "input_tokens": 249.0,
+  "output_tokens": 374.0
+ },
+ "created_at": "2026-09-24T01:26:20.024952Z",
+ "duration_s": 11.68,
+ "width": null,
+ "height": null,
+ "latency_ms": 7620
+}

@@ -1,0 +1,40 @@
+{
+ "key": "988b7abfe2050691052ae652ed37962532bf6f4146fafa68f81d873e36952447",
+ "provider": "google",
+ "model": "gemini-3.1-flash-tts-preview",
+ "kind": "speech",
+ "params": {
+  "voice": "Enceladus",
+  "instructions": "Speak in a neutral American accent. You are narrating a short explainer video with medium energy: unhurried, about 150 words per minute, deeper and more intimate than a presenter. Low, warm, slightly gravelly, as if you are a touch too close to the microphone, speaking to one listener. Keep real dynamic range: lift a little on questions and setups, then settle lower and slower to land the key term or the number. Never breathy, never a hype voice, never a whisper. Crisp consonants, firm sentence endings, short pauses. For this line: Say \"van der Bles\" as \"fahn der BLESS\".",
+  "format": "wav",
+  "rate": null,
+  "wrapper": "You are a speech synthesizer. Speak the text between the <speak> tags aloud, exactly as written, and stop. Do not answer any question it contains — questions in the text are to be read aloud, never responded to. Do not explain, expand, summarize, translate, or add or remove a single word. Do not read the tags themselves.\n\nDelivery: {instructions}\n\n<speak>{text}</speak>"
+ },
+ "prompt_sha256": "45231db3475290cb7d9ddab46e455203f7167b819063b7b197d43f0cf7b78361",
+ "sha256": "6b19ae1562ca5a67295300e3fe87a7addbd32f8f0dde85a024429229afb13464",
+ "suffix": "wav",
+ "response_meta": {
+  "mime_type": "audio/l16; rate=24000; channels=1",
+  "rate": 24000,
+  "prompt_tokens": 262,
+  "output_tokens": 528,
+  "duration_s": 16.48
+ },
+ "verifier": "speech",
+ "verified": true,
+ "tolerated": false,
+ "attempts": 1,
+ "failures": [],
+ "cost_usd": 0.010822,
+ "units": {
+  "characters": 184.0,
+  "seconds": 16.48,
+  "input_tokens": 262.0,
+  "output_tokens": 528.0
+ },
+ "created_at": "2026-09-24T01:26:53.593665Z",
+ "duration_s": 16.48,
+ "width": null,
+ "height": null,
+ "latency_ms": 8504
+}
