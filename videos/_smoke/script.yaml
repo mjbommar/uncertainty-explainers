@@ -7,8 +7,8 @@ subtitle: A pipeline smoke test
 target_seconds: 32
 theme: ink
 voice:
-  model: gemini-3.8-flash-tts
-  voice: Charon
+  model: gemini-3.1-flash-tts-preview
+  voice: Enceladus
 music:
   prompt: >-
     Calm, sparse documentary underscore. Warm felt piano with soft sustained pads,

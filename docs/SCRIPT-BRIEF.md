@@ -9,6 +9,12 @@ files for your video and `research/SOURCES.md` for the keys. Look at
 `videos/_smoke/script.yaml` and `videos/_smoke/publish/poster.png` and
 `videos/_smoke/output/qa/cuts.png` to see what the pipeline already produces.
 
+## Structure comes first
+
+Read `docs/STRUCTURE.md` before anything else. It gives each video its
+opening question, claim, map, stops, takeaways, bridges and zoom-out. Write
+the takeaways and bridges into the script before touching a vignette.
+
 ## The series
 
 | # | Slug | Title | Target | Thesis |
@@ -23,10 +29,11 @@ Keynes "we simply do not know", Ellsberg's urn, one closing line on the ladder
 to total ignorance). Each video stands alone. The end card of 1 names 2, the
 end card of 2 names 3, the end card of 3 names the series.
 
-Shared settings: `theme: ink`, voice `gemini-3.8-flash-tts` / `Charon`, series
+Shared settings: `theme: ink`, voice `gemini-3.1-flash-tts-preview` / `Enceladus`
+(the default in `pipeline/spec.py`; paced after verification), series
 label "Uncertainty Explainers", music bed on, burned captions on. Narration
-pace plan: 140 words a minute delivered, so a 3 minute video is about 420
-words and a 10 minute video about 1,400.
+pace plan: about 125 words a minute delivered after pacing, so a 3 minute
+video is about 375 words and a 10 minute video about 1,250.
 
 ## Writing rules that matter most
 

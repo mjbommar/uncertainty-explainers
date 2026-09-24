@@ -44,10 +44,21 @@ __all__ = [
 WPM = 150.0
 #: The narrator's sustained delivery, sent as Gemini 3.8 ``speech_metadata.style``.
 HOUSE_STYLE = (
-    "A calm, clear adult narrator for a short educational film. Unhurried and even, "
-    "about 145 words a minute, warm but not theatrical. Plain American English. "
-    "Give each sentence a natural full stop and let key terms land without stressing them."
+    "Speak in a neutral American accent. You are narrating a short explainer video with "
+    "medium energy: unhurried, about 150 words per minute, deeper and more intimate than a "
+    "presenter. Low, warm, slightly gravelly, as if you are a touch too close to the "
+    "microphone, speaking to one listener. Keep real dynamic range: lift a little on "
+    "questions and setups, then settle lower and slower to land the key term or the number. "
+    "Never breathy, never a hype voice, never a whisper. Crisp consonants, firm sentence "
+    "endings, short pauses."
 )
+#: understanding-accounting's post-gate pacing (media/shorts/pace.py): pauses longer than
+#: PACE_MAX_PAUSE_S are trimmed to PACE_PAUSE_S at PACE_THRESHOLD_DB, then a pitch-preserving
+#: stretch by PACE_TEMPO. Applied to a verified clip only; the receipt scores the engine's read.
+PACE_MAX_PAUSE_S = 0.35
+PACE_PAUSE_S = 0.24
+PACE_THRESHOLD_DB = -38.0
+PACE_TEMPO = 1.10
 _SOURCE_KEY = re.compile(r"^S\d{2,3}$")
 _SOURCE_DEF = re.compile(r"\[?(S\d{2,3})\]?")
 
@@ -64,9 +75,10 @@ class VoiceSpec(_Model):
     """Who reads the narration. ``gemini-3.8-*`` goes through the styled backend."""
 
     provider: Literal["gemini"] = "gemini"
-    model: str = "gemini-3.8-flash-tts"
-    voice: str = "Charon"
+    model: str = "gemini-3.1-flash-tts-preview"
+    voice: str = "Enceladus"
     style: str = HOUSE_STYLE
+    pace: bool = True
 
 
 class SfxSpec(_Model):

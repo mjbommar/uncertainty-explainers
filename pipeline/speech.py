@@ -204,6 +204,32 @@ def _copy_receipt(cache: GenCache, key: str, dest_dir: Path, label: str) -> Path
     return dest
 
 
+def paced(src: Path, out_dir: Path) -> Path:
+    """A verified clip, with long pauses shortened and a mild tempo lift (spec.PACE_*).
+
+    Deterministic transform of the verified file, keyed by its name and the
+    parameters, so a changed setting can never serve a stale file. The engine's
+    own read is what the receipt scored; this runs after that gate, as
+    understanding-accounting's ``media/shorts/pace.py`` does.
+    """
+    from bc_audio import ffmpeg as ff
+
+    from .spec import PACE_MAX_PAUSE_S, PACE_PAUSE_S, PACE_TEMPO, PACE_THRESHOLD_DB
+
+    tag = f"{PACE_MAX_PAUSE_S}-{PACE_PAUSE_S}-{PACE_THRESHOLD_DB}-{PACE_TEMPO}"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    dest = out_dir / f"{src.stem}-paced-{tag}.wav"
+    if dest.exists():
+        return dest
+    keep = PACE_PAUSE_S
+    filt = (
+        f"silenceremove=stop_periods=-1:stop_duration={PACE_MAX_PAUSE_S}:stop_threshold={PACE_THRESHOLD_DB}dB"
+        f":stop_silence={keep},atempo={PACE_TEMPO}"
+    )
+    ff._run([ff.binary(), "-v", "error", "-y", "-i", str(src), "-af", filt, "-ar", "48000", "-ac", "1", str(dest)])
+    return dest
+
+
 async def _one(
     backend: ProviderBackend, seg: Segment, voice: VoiceSpec, cache: GenCache, receipts: Path, rerolls: int
 ) -> tuple[ClipResult, MeteredTranscriber]:
@@ -217,13 +243,14 @@ async def _one(
     except VerificationFailed as exc:
         raise VerificationFailed(exc.key, [f"segment {seg.id}", *exc.failures], attempts=exc.attempts) from exc
     wer = verifier.score(request.text, ear.heard[-1]).score if ear.heard else None
-    seconds = result.receipt.duration_s or audio_duration(result.path) or 0.0
+    path = paced(result.path, receipts.parent / "paced") if voice.pace else result.path
+    seconds = audio_duration(path) if path is not result.path else (result.receipt.duration_s or audio_duration(path))
     receipt = _copy_receipt(cache, result.key, receipts, f"narration-{seg.id}")
     return (
         ClipResult(
             segment=seg.id,
-            path=result.path,
-            seconds=float(seconds),
+            path=path,
+            seconds=float(seconds or 0.0),
             cost_usd=result.cost_usd,
             cached=result.cached,
             attempts=result.receipt.attempts,
