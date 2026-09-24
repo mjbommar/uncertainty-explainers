@@ -1,335 +1,375 @@
 WEBVTT
 
-NOTE From evidence to forecast
+NOTE How evidence becomes a forecast
 
 1
-00:00:00.000 --> 00:00:05.833
-A woman of forty goes for routine breast screening. The test comes back positive.
+00:00:04.200 --> 00:00:08.241
+A forty-year-old woman gets a routine breast cancer screening.
 
 2
-00:00:06.300 --> 00:00:13.226
-In a study reported in 1982, ninety-five of a hundred physicians put her chance of
+00:00:08.241 --> 00:00:10.067
+Her test result is positive.
 
 3
-00:00:13.226 --> 00:00:16.267
-cancer at seventy to eighty percent.
+00:00:10.533 --> 00:00:16.541
+In a 1982 study, ninety-five out of one hundred doctors said her chance of cancer
 
 4
-00:00:16.733 --> 00:00:20.051
-The right answer is under eight percent.
+00:00:16.541 --> 00:00:19.433
+was between seventy and eighty percent.
 
 5
-00:00:20.051 --> 00:00:23.867
-Same evidence, and a number ten times too big.
+00:00:19.900 --> 00:00:23.299
+The correct answer was about eight percent.
 
 6
-00:00:24.167 --> 00:00:28.933
-So where does a probability come from, and how can you tell whether it is any good?
+00:00:23.299 --> 00:00:27.567
+Most doctors gave an answer almost ten times too high.
 
 7
-00:00:29.533 --> 00:00:34.858
-A probability is a summary of evidence, not a fact about the world.
+00:00:27.867 --> 00:00:31.495
+How can the same test lead to such different numbers?
 
 8
-00:00:34.858 --> 00:00:40.500
-So it can be built badly, it can claim too much, and it can be checked.
+00:00:31.495 --> 00:00:35.533
+Where does a probability come from, and how can we test it?
 
 9
-00:00:41.100 --> 00:00:47.289
-Five stops: what the number counts, how evidence should move it, when one number is
+00:00:36.133 --> 00:00:42.701
+A probability sums up evidence. It is not a hidden fact waiting inside the world.
 
 10
-00:00:47.289 --> 00:00:52.433
-too many, what it says about the future, and how we know it was good.
+00:00:42.701 --> 00:00:48.133
+We must choose the evidence, judge its limits, and test the result.
 
 11
-00:00:52.833 --> 00:00:56.833
-To see where the doctors went wrong, start with what the number counts.
+00:00:48.733 --> 00:00:55.975
+We will make five stops: the group being counted, the update after new evidence, the
 
 12
-00:00:57.300 --> 00:01:01.434
-Counting needs a reference class, the group you count over.
+00:00:55.975 --> 00:01:01.233
+width of the answer, the kind of future claim, and the score.
 
 13
-00:01:01.434 --> 00:01:06.829
-The philosopher Alan Hájek is a man, a non-smoker and a philosophy professor.
+00:01:01.633 --> 00:01:03.910
+First ask what the number counts.
 
 14
-00:01:06.829 --> 00:01:11.033
-Each group gives a different chance that he lives to eighty.
+00:01:03.910 --> 00:01:07.567
+That question will show where the doctors went wrong.
 
 15
-00:01:11.500 --> 00:01:18.775
-In 1814 Laplace counted five thousand years of sunrises, and put the odds of one
+00:01:08.033 --> 00:01:11.581
+A reference class is the group used for a count.
 
 16
-00:01:18.775 --> 00:01:21.867
-more at nearly two million to one.
+00:01:11.581 --> 00:01:17.641
+Philosopher Alan Hájek belongs to several groups: men, non-smokers, and philosophy
 
 17
-00:01:22.333 --> 00:01:28.941
-Anyone who knows what drives the days and seasons, he added, would put the odds far
+00:01:17.641 --> 00:01:22.667
+professors. Each group gives him different odds of living to eighty.
 
 18
-00:01:28.941 --> 00:01:33.400
-higher. Same sunrise, more evidence, a different number.
+00:01:23.133 --> 00:01:29.543
+In 1814, Pierre-Simon Laplace counted about five thousand years of recorded
 
 19
-00:01:33.867 --> 00:01:39.500
-A probability counts over a group. Name the group, or the number floats.
+00:01:29.543 --> 00:01:35.867
+sunrises. His count gave odds near two million to one for another sunrise.
 
 20
-00:01:40.100 --> 00:01:44.867
-The group matters. But the doctors had the right group, and missed.
+00:01:36.333 --> 00:01:40.730
+Laplace added that an astronomer would give much higher odds.
 
 21
-00:01:45.333 --> 00:01:48.798
-Their error was how the test moved the number.
+00:01:40.730 --> 00:01:44.118
+The astronomer knew why days and seasons occur.
 
 22
-00:01:48.798 --> 00:01:54.900
-Bayes' rule starts from the base rate, how common the disease is before any test.
+00:01:44.118 --> 00:01:47.867
+The event stayed the same, but the evidence changed.
 
 23
-00:01:55.367 --> 00:02:00.303
-Take a thousand women of forty in screening. Ten have breast cancer.
+00:01:48.333 --> 00:01:54.333
+Every probability uses a group. Name that group, or the number has no clear meaning.
 
 24
-00:02:00.303 --> 00:02:01.900
-That is the base rate.
+00:01:54.933 --> 00:01:57.589
+The group gives the number a base.
 
 25
-00:02:02.367 --> 00:02:04.745
-Eight of those ten test positive.
+00:01:57.589 --> 00:02:02.667
+The doctors still missed because they used the test result badly.
 
 26
-00:02:04.745 --> 00:02:10.367
-Of the nine hundred and ninety without cancer, ninety-five also test positive.
+00:02:03.133 --> 00:02:08.115
+Bayes' rule shows how new evidence should change a probability.
 
 27
-00:02:10.833 --> 00:02:16.632
-So one hundred and three women test positive, and only eight of them have cancer.
+00:02:08.115 --> 00:02:14.600
+It begins with the base rate, which is how common the disease was before the test.
 
 28
-00:02:16.632 --> 00:02:19.067
-That is seven point eight percent.
+00:02:15.067 --> 00:02:19.541
+Picture one thousand forty-year-old women at routine screening.
 
 29
-00:02:19.467 --> 00:02:24.209
-The disease is rare, so most positives come from healthy women.
+00:02:19.541 --> 00:02:24.867
+Ten have breast cancer. That count gives the base rate: one in one hundred.
 
 30
-00:02:24.209 --> 00:02:30.457
-The doctors left out the base rate, as earlier research found people do most of the
+00:02:25.333 --> 00:02:28.736
+Eight of the ten women with cancer test positive.
 
 31
-00:02:30.457 --> 00:02:30.833
-time.
+00:02:28.736 --> 00:02:34.500
+Ninety-five of the nine hundred and ninety women without cancer also test positive.
 
 32
-00:02:31.300 --> 00:02:32.214
-Counts help.
+00:02:34.967 --> 00:02:40.775
+In all, one hundred and three women get a positive result. Only eight have cancer.
 
 33
-00:02:32.214 --> 00:02:38.459
-In Gigerenzer and Hoffrage's 1995 study, correct answers rose from sixteen percent
+00:02:40.775 --> 00:02:45.733
+Eight out of one hundred and three is about seven point eight percent.
 
 34
-00:02:38.459 --> 00:02:41.733
-with percentages to about half with counts.
+00:02:46.133 --> 00:02:52.079
+Cancer is rare in this group, so most positive results come from women without
 
 35
-00:02:42.200 --> 00:02:47.358
-Start from how common it is, then let the test move you.
+00:02:52.079 --> 00:02:57.567
+cancer. The doctors focused on the test and lost sight of the base rate.
 
 36
-00:02:47.358 --> 00:02:50.767
-Rare things stay rare after one test.
+00:02:58.033 --> 00:03:01.412
+Whole-number counts made the problem easier.
 
 37
-00:02:51.367 --> 00:02:55.633
-Bayes gives one number, and for the test that was enough.
+00:03:01.412 --> 00:03:07.861
+In a 1995 study, correct answers rose from sixteen percent with percentages to about
 
 38
-00:02:56.100 --> 00:02:59.087
-But one number can claim too much.
+00:03:07.861 --> 00:03:09.167
+half with counts.
 
 39
-00:02:59.087 --> 00:03:04.972
-A coin that landed heads in half of a hundred tosses gets one half.
+00:03:09.633 --> 00:03:15.571
+Start with how common the event is. Then use the new evidence to update it.
 
 40
-00:03:04.972 --> 00:03:11.033
-So may a coin never seen. Its honest summary is a range, zero to one.
+00:03:15.571 --> 00:03:19.767
+One test rarely turns a rare event into a common one.
 
 41
-00:03:11.500 --> 00:03:18.448
-Daniel Ellsberg's urn, from 1961, holds thirty red balls, and sixty black and yellow
+00:03:20.367 --> 00:03:26.967
+Here, the group and test supported one useful number. We are not always that lucky.
 
 42
-00:03:18.448 --> 00:03:20.433
-balls in an unknown mix.
+00:03:27.433 --> 00:03:33.884
+A coin that lands heads fifty times in one hundred tosses supports odds near one
 
 43
-00:03:20.900 --> 00:03:23.477
-The chance of red is one third.
+00:03:33.884 --> 00:03:34.287
+half.
 
 44
-00:03:23.477 --> 00:03:28.133
-The chance of black is anywhere from zero to two thirds.
+00:03:34.287 --> 00:03:40.738
+An unseen coin might also be assigned one half, but no toss supports that point.
 
 45
-00:03:28.600 --> 00:03:34.233
-When evidence is thin, an honest summary is a range, not a point.
+00:03:40.738 --> 00:03:44.367
+A range from zero to one shows our ignorance.
 
 46
-00:03:34.833 --> 00:03:40.567
-A range is honest about today. A forecast reaches into tomorrow.
+00:03:44.833 --> 00:03:51.463
+Daniel Ellsberg gave another example in 1961. An urn holds thirty red balls.
 
 47
-00:03:41.033 --> 00:03:43.260
-That claim leans on the past.
+00:03:51.463 --> 00:03:57.133
+The other sixty are black or yellow, but no one tells us the mix.
 
 48
-00:03:43.260 --> 00:03:49.478
-In 1748 David Hume wrote that every conclusion from experience assumes the future
+00:03:57.600 --> 00:04:01.380
+The chance of drawing red is exactly one third.
 
 49
-00:03:49.478 --> 00:03:51.167
-will be like the past.
+00:04:01.380 --> 00:04:06.367
+The chance of black could be anywhere from zero to two thirds.
 
 50
-00:03:51.633 --> 00:03:53.670
-It also leans on a model.
+00:04:06.367 --> 00:04:10.067
+A dot fits one answer; a range fits the other.
 
 51
-00:03:53.670 --> 00:03:59.781
-In 1963 Edward Lorenz showed that in a simple model of rising air, slightly
+00:04:10.533 --> 00:04:17.567
+Thin evidence calls for a range. One exact point would hide how little we know.
 
 52
-00:03:59.781 --> 00:04:04.100
-different starts can grow into very different states.
+00:04:18.167 --> 00:04:21.672
+A range shows the limits of today's evidence.
 
 53
-00:04:04.567 --> 00:04:09.958
-So Europe's main weather centre runs its model fifty times from slightly altered
+00:04:21.672 --> 00:04:26.033
+A forecast adds a harder step: a claim about the future.
 
 54
-00:04:09.958 --> 00:04:13.732
-starts. When the runs agree, the weather is predictable.
+00:04:26.500 --> 00:04:29.728
+Forecasts use patterns from the past.
 
 55
-00:04:13.732 --> 00:04:16.967
-When they scatter, no firm forecast is possible.
+00:04:29.728 --> 00:04:36.534
+In 1748, David Hume pointed out the hidden assumption: we expect the future to
 
 56
-00:04:17.433 --> 00:04:23.836
-A forecast starts from the present. A projection holds only if its assumption holds.
+00:04:36.534 --> 00:04:38.367
+behave like the past.
 
 57
-00:04:23.836 --> 00:04:28.867
-And a scenario is a plausible story, with no probability attached.
+00:04:38.833 --> 00:04:45.858
+A forecast also uses a model, which is a simplified account of how something works.
 
 58
-00:04:29.333 --> 00:04:33.008
-A forecast leans on the past and on a model.
+00:04:45.858 --> 00:04:52.543
+In 1963, Edward Lorenz showed that tiny changes at the start could lead to very
 
 59
-00:04:33.008 --> 00:04:37.267
-Say which kind of claim it is, and show the spread.
+00:04:52.543 --> 00:04:54.067
+different results.
 
 60
-00:04:37.867 --> 00:04:42.700
-So a forecast is a claim, and a claim can be graded.
+00:04:54.533 --> 00:05:00.207
+Europe's main weather center therefore runs its model fifty times with slightly
 
 61
-00:04:43.167 --> 00:04:49.860
-The Brier score, from 1950, is the squared gap between forecast and outcome, and
+00:05:00.207 --> 00:05:05.666
+different starting values. A tight group of runs supports a firmer forecast.
 
 62
-00:04:49.860 --> 00:04:51.198
-lower is better.
+00:05:05.666 --> 00:05:08.467
+A wide spread signals more uncertainty.
 
 63
-00:04:51.198 --> 00:04:58.142
-In the Good Judgment Project, ninety percent cost zero point zero two if right, one
+00:05:08.933 --> 00:05:15.735
+Different future claims do different jobs. Forecasts start with current conditions.
 
 64
-00:04:58.142 --> 00:05:00.067
-point six two if wrong.
+00:05:15.735 --> 00:05:19.095
+Projections depend on stated assumptions.
 
 65
-00:05:00.533 --> 00:05:02.459
-One miss can be bad luck.
+00:05:19.095 --> 00:05:23.767
+Scenarios describe possible paths without assigning odds.
 
 66
-00:05:02.459 --> 00:05:08.931
-Over many forecasts the scores show calibration: the events you call seventy percent
+00:05:24.233 --> 00:05:27.543
+Forecasting joins past evidence to a model.
 
 67
-00:05:08.931 --> 00:05:12.167
-should happen seventy percent of the time.
+00:05:27.543 --> 00:05:33.392
+Name the kind of future claim, state its assumptions, and show the spread of
 
 68
-00:05:12.633 --> 00:05:14.422
-People often are not.
+00:05:33.392 --> 00:05:34.700
+possible results.
 
 69
-00:05:14.422 --> 00:05:21.320
-In studies reviewed by Tversky and Kahneman in 1974, ranges given as ninety-eight
+00:05:35.300 --> 00:05:39.214
+We now have a future claim with clear limits.
 
 70
-00:05:21.320 --> 00:05:25.833
-percent sure missed about thirty percent of the time.
+00:05:39.214 --> 00:05:42.867
+The last step is to test many such claims.
 
 71
-00:05:26.300 --> 00:05:32.333
-One outcome proves nothing. Many forecasts, scored, do.
+00:05:43.333 --> 00:05:48.320
+The Brier score measures the gap between a forecast and what happened.
 
 72
-00:05:32.933 --> 00:05:37.141
-A probability counts over a group, so name the group.
+00:05:48.320 --> 00:05:50.030
+Lower scores are better.
 
 73
-00:05:37.141 --> 00:05:42.062
-Evidence moves it by Bayes' rule, so start from the base rate.
+00:05:50.030 --> 00:05:55.800
+A ninety-percent forecast earns a low cost when right and a high cost when wrong.
 
 74
-00:05:42.062 --> 00:05:44.603
-But thin evidence earns a range.
+00:05:56.267 --> 00:06:00.780
+One result may be luck. Many results reveal calibration.
 
 75
-00:05:44.603 --> 00:05:50.794
-A forecast adds a model, so say what kind of claim it is, and show the spread.
+00:06:00.780 --> 00:06:07.308
+A calibrated set of seventy-percent forecasts comes true about seventy percent of
 
 76
-00:05:50.794 --> 00:05:54.367
-And none of it is trusted until it is scored.
+00:06:07.308 --> 00:06:08.033
+the time.
 
 77
-00:05:54.867 --> 00:05:56.820
-Back to the positive test.
+00:06:08.500 --> 00:06:10.563
+People are often too sure.
 
 78
-00:05:56.820 --> 00:06:02.678
-Seven point eight percent counts a thousand women like her, moved by one test.
+00:06:10.563 --> 00:06:16.752
+In studies reviewed in 1974, ranges that people said were ninety-eight percent
 
 79
-00:06:02.678 --> 00:06:06.133
-It is one number because the evidence is good.
+00:06:16.752 --> 00:06:21.433
+certain missed the answer about thirty percent of the time.
 
 80
-00:06:06.600 --> 00:06:13.222
-So where does a probability come from, and how can you tell whether it is any good?
+00:06:21.900 --> 00:06:29.633
+One outcome cannot test a forecast. A long record of scored forecasts can.
 
 81
-00:06:13.222 --> 00:06:18.567
-From a named group, moved by evidence. And by scoring many like it.
+00:06:30.233 --> 00:06:33.407
+Name the group before giving a probability.
 
 82
-00:06:19.067 --> 00:06:21.161
-A scored number can still fail.
+00:06:33.407 --> 00:06:37.762
+Start with the base rate, then update it with new evidence.
 
 83
-00:06:21.161 --> 00:06:26.767
-The next video shows how: the listener hears a number other than the one you meant.
+00:06:37.762 --> 00:06:40.271
+Use a range when evidence is thin.
+
+84
+00:06:40.271 --> 00:06:44.036
+For a future claim, name the model and assumptions.
+
+85
+00:06:44.036 --> 00:06:46.767
+Test your work across many forecasts.
+
+86
+00:06:47.267 --> 00:06:49.284
+Return to the positive test.
+
+87
+00:06:49.284 --> 00:06:54.974
+The answer begins with one thousand similar women, then uses the test result to
+
+88
+00:06:54.974 --> 00:06:59.800
+update the base rate. That path leads to seven point eight percent.
+
+89
+00:07:00.267 --> 00:07:02.781
+Where does a probability come from?
+
+90
+00:07:02.781 --> 00:07:07.595
+It comes from a named group and evidence that changes what we know.
+
+91
+00:07:07.595 --> 00:07:11.833
+How do we test it? We score many forecasts, not one result.
+
+92
+00:07:12.333 --> 00:07:15.732
+Even a well-built number can fail after we say it.
+
+93
+00:07:15.732 --> 00:07:21.033
+The final video asks whether the listener heard the same probability we meant.

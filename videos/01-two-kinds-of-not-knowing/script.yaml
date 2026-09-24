@@ -14,8 +14,8 @@
 # S76 Knight 1921 Part I Ch. I (Econlib); S04 Keynes 1937; S77 Ellsberg 1961;
 # S23 SEP Imprecise Probabilities; S09 Marchau et al. 2019; S08 Walker et al. 2003.
 slug: 01-two-kinds-of-not-knowing
-title: Two kinds of not knowing
-subtitle: Chance, ignorance, and what can be measured
+title: Not knowing comes in different forms
+subtitle: Chance, missing facts, and honest numbers
 target_seconds: 200
 theme: ink
 burn_captions: true
@@ -54,51 +54,51 @@ images:
     quality: medium
 end_card:
   seconds: 3.2
-  line: Name the kind of not knowing first.
+  line: Name what you do not know before you name the odds.
   note: "Next: From evidence to forecast"
 segments:
   # ---------------------------------------------------------------- pose the problem
   - id: s01
-    say: 'Three people say, I do not know. One holds a die, one a sealed envelope. One is asked the price of copper in twenty years.'
+    say: 'Three people give the same answer: I do not know. One will roll a die. One holds a sealed envelope. One must guess the price of copper twenty years from now.'
     transition: dissolve
     beats: ["Three people", "sealed envelope", "price of copper"]
     scene:
       name: three_unknowns
       params:
         items: &people
-          - {image: "image:die", caption: "A die, about to be rolled", tone: known}
-          - {image: "image:envelope", caption: "A number, sealed inside", tone: cool, tag: "?"}
-          - {image: "image:copper", caption: "Copper, twenty years out", tone: unknown}
+          - {image: "image:die", caption: "The next roll of a die", tone: known}
+          - {image: "image:envelope", caption: "A hidden number", tone: cool, tag: "?"}
+          - {image: "image:copper", caption: "Copper's price in 20 years", tone: unknown}
     hold: 0.2
 
   - id: s02
-    say: When someone says they do not know, what exactly is it they do not know, and does the difference matter?
+    say: These people lack different things. What does each person not know? Why does that difference matter?
     transition: cut
-    beats: ["what exactly"]
+    beats: ["What does each person"]
     scene:
       name: three_unknowns
       params:
         items: *people
         start: 3
-        question: What exactly do they not know, and does it matter?
+        question: What does each person not know?
         question_at: 0
     hold: 0.35
 
   # ---------------------------------------------------------------- claim and map
   - id: s03
-    say: 'Uncertainty is not one thing. Two questions tell its kinds apart: chance or ignorance, and measurable or not.'
+    say: 'Uncertainty means that we do not know something. Two questions help us sort it. Does chance create the gap, or are facts missing? Can evidence support a number?'
     sources: [S01, S76]
     transition: dissolve
-    beats: ["Uncertainty", "chance or ignorance", "measurable or not"]
+    beats: ["Uncertainty means", "Does chance", "Can evidence"]
     scene:
       name: statement
       params:
-        lines: ["Uncertainty is not one thing.", "Chance or ignorance?", "Measurable or not?"]
-        highlight: ["Chance or ignorance?", "Measurable or not?"]
+        lines: ["What creates the gap?", "Chance or missing facts?", "Can evidence support a number?"]
+        highlight: ["Chance or missing facts?", "Can evidence support a number?"]
     hold: 0.2
 
   - id: s04
-    say: 'Four stops: chance or ignorance, measurable or not, unknown odds, and where a case sits.'
+    say: 'We will make four stops. First, chance or missing facts. Then, what we can measure. Next, unknown odds. Last, the range between certainty and total ignorance.'
     transition: glide
     scene:
       name: roadmap
@@ -106,15 +106,15 @@ segments:
         mode: overview
         current: -1
         stops: &stops
-          - {label: Chance or ignorance, question: "Is it chance, or a gap in what we know?", takeaway: "Chance stays. Ignorance can be closed with data."}
-          - {label: Can it be measured, question: "Is there a group of cases to count?", takeaway: "A number needs a group of similar cases."}
-          - {label: Unknown odds, question: "What if the odds themselves are unknown?", takeaway: "Where odds are unknown, one number claims too much."}
-          - {label: Where mine sits, question: "Where on the scale does a case sit?", takeaway: "Say first where on the scale you stand."}
+          - {label: Source of doubt, question: "Chance or missing facts?", takeaway: "Chance remains. Missing facts can be found."}
+          - {label: A fair measure, question: "What can we count?", takeaway: "Odds need many similar cases."}
+          - {label: Unknown odds, question: "What if the odds are unknown?", takeaway: "Unknown odds need a range."}
+          - {label: The full scale, question: "How much can we know?", takeaway: "Place the forecast on the scale."}
     hold: 0.2
 
   # ---------------------------------------------------------------- stop 1: chance or ignorance?
   - id: s05
-    say: 'Start with the die and the envelope, which fail for different reasons.'
+    say: 'Start with the die and the envelope. Both hide an answer, but they hide it in different ways.'
     transition: dip
     scene:
       name: roadmap
@@ -122,24 +122,24 @@ segments:
     hold: 0.2
 
   - id: s06
-    say: 'More study of a die will not tell you the next roll. That is aleatory uncertainty.'
+    say: 'No amount of study can reveal the next roll. Chance creates this uncertainty. Researchers call it aleatory uncertainty.'
     sources: [S01]
     transition: dissolve
-    beats: ["study of a die", "aleatory uncertainty"]
+    beats: ["No amount of study", "aleatory uncertainty"]
     sfx:
       - prompt: A single six-sided plastic die rolled across a wooden table, tumbling and coming to rest. Clean studio recording, no music, no voice.
         duration: 1.2
-        at: study of a die
+        at: No amount of study
         gain_db: -6
     scene:
       name: object_cards
       params:
-        heading: Chance or ignorance?
+        heading: Chance creates the gap
         slots: 2
         items:
           - image: "image:die"
-            term: Aleatory
-            caption: "Chance: more study will not tell the next roll"
+            term: Aleatory uncertainty
+            caption: Chance remains after more study
             tone: known
             ticker: ["3", "6", "1", "4", "2", "5", "5", "1"]
             ticker_label: next roll
@@ -148,30 +148,30 @@ segments:
     hold: 0.2
 
   - id: s07
-    say: 'The number in the envelope is already fixed. Open it and the doubt is gone. That is epistemic uncertainty.'
+    say: 'The number in the envelope is already fixed. Opening it gives us the missing fact. Researchers call this epistemic uncertainty.'
     sources: [S01, S56]
     transition: dissolve
     beats: ["already fixed", "epistemic uncertainty"]
     sfx:
       - cue: paper
-        at: Open it
+        at: Opening it
         gain_db: -8
     scene:
       name: object_cards
       params:
-        heading: Chance or ignorance?
+        heading: A missing fact creates the gap
         slots: 2
         start: 1
         items:
           - image: "image:die"
-            term: Aleatory
-            caption: "Chance: more study will not tell the next roll"
+            term: Aleatory uncertainty
+            caption: Chance remains after more study
             tone: known
             ticker: ["3", "6", "1", "4", "2", "5", "5", "1"]
             ticker_label: next roll
           - image: "image:envelope"
-            term: Epistemic
-            caption: "A fixed fact we do not know yet"
+            term: Epistemic uncertainty
+            caption: A fixed fact that we can learn
             tone: unknown
             stamp: "?"
             at: 0
@@ -179,21 +179,21 @@ segments:
     hold: 0.2
 
   - id: s08
-    say: Chance stays. Ignorance can be closed with data.
+    say: Chance remains. Missing facts can be found.
     sources: [S01]
     transition: glide
     scene:
       name: takeaway
       params:
-        stop: Chance or ignorance?
+        stop: What creates the gap?
         index: 0
         total: 4
-        line: ["Chance stays.", "Ignorance can be closed with data."]
+        line: ["Chance remains.", "Missing facts can be found."]
     hold: 0.35
 
   # ---------------------------------------------------------------- stop 2: can it be measured?
   - id: s09
-    say: So ignorance can shrink and chance cannot. But even chance needs something to count.
+    say: We can find a missing fact, but we cannot remove chance. To give chance a number, we need many similar cases to count.
     transition: dip
     scene:
       name: roadmap
@@ -201,14 +201,14 @@ segments:
     hold: 0.2
 
   - id: s10
-    say: 'In 1921 Frank Knight pointed to fire insurance. Across many buildings, the loss evens out.'
+    say: 'In 1921, Frank Knight used fire insurance as an example. One building may burn. Across many buildings, the insurer can measure how often fires occur.'
     sources: [S76, S02]
     transition: wipe
-    beats: ["Frank Knight", "many buildings"]
+    beats: ["Frank Knight", "Across many buildings"]
     scene:
       name: object_cards
       params:
-        heading: Knight, 1921
+        heading: Fire insurance, Frank Knight, 1921
         slots: 2
         items:
           - image: "image:house"
@@ -216,21 +216,21 @@ segments:
             columns: 6
             marked: [9]
             term: Risk
-            caption: "Many buildings: the loss evens out"
+            caption: Many buildings give us cases to count
             tone: known
             at: 0
             term_at: 1
     hold: 0.2
 
   - id: s11
-    say: 'A new venture has no such group. Knight called the first kind risk, and the second true uncertainty.'
+    say: 'A new business has no long record of close matches. Knight called the first case risk. He called this second case true uncertainty.'
     sources: [S02, S76]
     transition: dissolve
-    beats: ["new venture", "first kind risk", "true uncertainty"]
+    beats: ["new business", "risk", "true uncertainty"]
     scene:
       name: object_cards
       params:
-        heading: Knight, 1921
+        heading: Fire insurance, Frank Knight, 1921
         slots: 2
         start: 1
         items:
@@ -239,32 +239,32 @@ segments:
             columns: 6
             marked: [9]
             term: Risk
-            caption: "Many buildings: the loss evens out"
+            caption: Many buildings give us cases to count
             tone: known
           - image: "image:venture"
             term: True uncertainty
-            caption: "One new venture: no group of cases"
+            caption: One new business has no close group
             tone: unknown
             at: 0
             term_at: 2
     hold: 0.2
 
   - id: s12
-    say: 'In 1937 John Maynard Keynes set roulette apart from a European war, or copper prices twenty years out.'
+    say: 'In 1937, John Maynard Keynes made the same split. Roulette has known odds. A future war or the price of copper twenty years later does not.'
     sources: [S04]
     transition: push-left
     direction: Say Keynes so it rhymes with canes.
-    beats: ["Keynes", "European war", "copper prices"]
+    beats: ["Keynes", "future war", "price of copper"]
     sfx:
       - cue: soft_click
-        at: European war
+        at: future war
         gain_db: -10
     scene:
       name: sort_bins
       params:
-        heading: Keynes, 1937
-        left: Not uncertain
-        right: Uncertain
+        heading: Known odds and no sound odds, Keynes, 1937
+        left: Known odds
+        right: No sound odds
         items:
           - {text: Roulette, side: left, image: "image:roulette"}
           - {text: A European war, side: right}
@@ -272,7 +272,7 @@ segments:
     hold: 0.2
 
   - id: s13
-    say: 'About these, he wrote, "there is no scientific basis on which to form any calculable probability whatever. We simply do not know."'
+    say: 'For those long-range questions, Keynes wrote that no scientific basis supported a calculation. His last sentence was plain. "We simply do not know."'
     sources: [S04]
     transition: dissolve
     direction: Leave a short pause before the last four words.
@@ -289,21 +289,21 @@ segments:
     hold: 0.35
 
   - id: s14
-    say: 'A number needs a group of similar cases. Without one, there is none.'
+    say: 'Honest odds need many similar cases. Without them, no sound number exists.'
     sources: [S02, S76]
     transition: glide
     scene:
       name: takeaway
       params:
-        stop: Can it be measured?
+        stop: What can we measure?
         index: 1
         total: 4
-        line: ["A number needs a group of similar cases.", "Without one, there is none."]
+        line: ["Honest odds need many similar cases.", "Without them, no sound number exists."]
     hold: 0.35
 
   # ---------------------------------------------------------------- stop 3: what if the odds are unknown?
   - id: s15
-    say: 'Knight and Keynes drew a hard line. Ellsberg tested the ground between.'
+    say: 'Knight and Keynes drew a sharp line between measurable risk and uncertainty. Daniel Ellsberg studied a case between those ends.'
     transition: dip
     scene:
       name: roadmap
@@ -311,56 +311,56 @@ segments:
     hold: 0.2
 
   - id: s16
-    say: 'In 1961 Daniel Ellsberg offered two urns: a hundred red and black balls, mix unknown, or fifty of each.'
+    say: 'In 1961, Ellsberg described two urns. One holds fifty red and fifty black balls. The other holds one hundred balls in an unknown mix.'
     sources: [S77]
     transition: wipe
-    beats: ["Ellsberg", "a hundred red", "fifty of each"]
+    beats: ["Ellsberg", "fifty red", "one hundred balls"]
     sfx:
       - cue: marbles
-        at: fifty of each
+        at: fifty red
         gain_db: -7
     scene:
       name: urn
       params:
-        heading: Ellsberg's two urns
+        heading: Two urns, Daniel Ellsberg, 1961
         left: {label: Urn I, total: 100, caption: "100 balls, mix unknown"}
         right: {label: Urn II, a: 50, b: 50, caption: "50 red, 50 black"}
     hold: 0.2
 
   - id: s17
-    say: 'Whichever color they bet on, most people pick fifty of each. No single chance of red fits that. This is ambiguity: outcomes known, odds not.'
+    say: 'Most people prefer the urn with the known mix, whichever color wins the bet. This case is called ambiguity. We know the possible results, but not their odds.'
     sources: [S77, S23]
     transition: dissolve
-    beats: ["Whichever", "No single chance", "ambiguity"]
+    beats: ["Most people", "ambiguity", "possible results"]
     scene:
       name: range_bar
       params:
-        heading: Ambiguity
+        heading: Ambiguity means unknown odds
         low_label: "0"
         high_label: "1"
         rows:
-          - {label: "Fifty of each: chance of red", value: 50, value_label: "exactly ½", tone: known, at: 0}
-          - {label: "Mix unknown: chance of red", lo: 0, hi: 100, value_label: "no single number fits", tone: unknown, at: 1}
+          - {label: "Known mix: chance of red", value: 50, value_label: "exactly ½", tone: known, at: 0}
+          - {label: "Unknown mix: chance of red", lo: 0, hi: 100, value_label: "a range, not one number", tone: unknown, at: 1}
     hold: 0.2
 
   - id: s19
-    say: 'Where the odds are unknown, one number claims too much. People treat that differently, and so should a forecast.'
+    say: 'Unknown odds call for a range. One exact number would claim more than the evidence supports.'
     sources: [S77, S23]
     transition: glide
-    beats: ["Where the odds", "People treat"]
+    beats: ["Unknown odds", "One exact number"]
     scene:
       name: takeaway
       params:
         stop: What if the odds are unknown?
         index: 2
         total: 4
-        line: ["Where the odds are unknown,", "one number claims too much."]
-        note: People treat that differently, and so should a forecast.
+        line: ["Unknown odds call for a range.", "One exact number claims too much."]
+        note: Match the answer to the strength of the evidence.
     hold: 0.35
 
   # ---------------------------------------------------------------- stop 4: where does mine sit?
   - id: s20
-    say: 'Chance, ignorance, no group, unknown odds: these are points on one scale.'
+    say: 'Chance, missing facts, weak groups, and unknown odds do not fit into four separate boxes. They lie along a scale of what we can know.'
     transition: dip
     scene:
       name: roadmap
@@ -368,48 +368,48 @@ segments:
     hold: 0.2
 
   - id: s21
-    say: 'At the far end of that scale, in one team''s words, "we do not even know that we do not know."'
+    say: 'One end holds complete certainty. At the other end, we may not even know which questions we have missed.'
     sources: [S09, S08]
     transition: push-left
-    beats: ["far end", "we do not even"]
+    beats: ["One end", "other end"]
     sfx:
       - cue: tick
-        at: far end
+        at: other end
         gain_db: -8
     scene:
       name: level_scale
       params:
-        heading: From certainty to total ignorance
+        heading: How much can we know?
         levels:
           - {label: Complete certainty}
           - {label: Level 1}
           - {label: Level 2}
           - {label: Level 3}
           - {label: Level 4}
-          - {label: Total ignorance, example: "we do not even know that we do not know"}
+          - {label: Total ignorance, example: "unknown questions and unknown answers"}
         marks: [0, 5]
     hold: 0.3
 
   - id: s22
-    say: So every forecast should first say where on the scale it stands.
+    say: Before giving odds, place the forecast on this scale. Tell the audience what the evidence can support.
     sources: [S09, S08]
     transition: glide
     sfx:
       - cue: chime
-        at: every forecast
+        at: place the forecast
         gain_db: -12
     scene:
       name: takeaway
       params:
-        stop: Where does mine sit?
+        stop: How much can we know?
         index: 3
         total: 4
-        line: ["Every forecast should first say", "where on the scale it stands."]
+        line: ["Place the forecast on the scale.", "Say what the evidence can support."]
     hold: 0.35
 
   # ---------------------------------------------------------------- zoom out
   - id: s23
-    say: 'Chance stays and ignorance can be closed, so say which. But a number needs a group of cases, and where odds are unknown, one number claims too much. So say where on the scale you stand.'
+    say: 'Chance remains, while missing facts can be found. Honest odds need similar cases. When the odds are unknown, use a range. First place the forecast on the scale, then choose the number.'
     transition: dip
     scene:
       name: roadmap
@@ -417,41 +417,41 @@ segments:
     hold: 0.2
 
   - id: s25
-    say: 'The die is chance, with a number. The envelope is ignorance, with a number waiting. Copper has no honest number.'
+    say: 'Now return to the three people. The die has known odds but an unknown result. The envelope holds a fixed fact we can learn. Copper''s distant price has no sound odds.'
     sources: [S04]
     transition: dissolve
-    beats: ["The die is chance", "The envelope is ignorance", "Copper has"]
+    beats: ["The die has", "The envelope holds", "Copper's distant"]
     scene:
       name: three_unknowns
       params:
         items: &verdicts
-          - {image: "image:die", caption: "A die, about to be rolled", tone: known, verdict: "Chance: 1 in 6"}
-          - {image: "image:envelope", caption: "A number, sealed inside", tone: cool, tag: "?", verdict: "Ignorance: a number waiting"}
-          - {image: "image:copper", caption: "Copper, twenty years out", tone: unknown, verdict: "Far end: no honest number"}
+          - {image: "image:die", caption: "The next roll of a die", tone: known, verdict: "Known odds, unknown result"}
+          - {image: "image:envelope", caption: "A hidden number", tone: cool, tag: "?", verdict: "A fixed fact we can learn"}
+          - {image: "image:copper", caption: "Copper's price in 20 years", tone: unknown, verdict: "No sound odds"}
         start: 3
         verdict_at: 0
     hold: 0.2
 
   - id: s26
-    say: 'When someone says they do not know, what exactly they do not know is a chance, a fact, or something no one can count. The difference matters: it decides what a number can mean.'
+    say: 'What does each person not know? One lacks a future result. One lacks a fact. One lacks sound odds. The difference decides whether a number can help or mislead.'
     transition: cut
-    beats: ["the difference matters"]
+    beats: ["The difference decides"]
     scene:
       name: three_unknowns
       params:
         items: *verdicts
         start: 3
         verdict_at: -1
-        question: The kind decides what any number can mean.
+        question: Name what is unknown before you name the odds.
         question_at: 0
     hold: 0.35
 
   - id: s27
-    say: 'The next question is what a number can honestly say.'
+    say: 'Once we know the kind of uncertainty, we can ask what a number can honestly say.'
     transition: dissolve
     scene:
       name: statement
       params:
-        lines: ["What can a number", "honestly say?"]
+        lines: ["Next question:", "What can a number honestly say?"]
         note: "Next: From evidence to forecast"
     hold: 0.3

@@ -12,8 +12,8 @@
 # labelled so on screen. ICD 203 forbids a likelihood and a confidence level in one
 # sentence [S50]; that rule is not said, because the rewrite (as specified) joins them.
 slug: 03-saying-it-out-loud
-title: Saying it out loud
-subtitle: Words, numbers, and the listener
+title: Say what the odds mean
+subtitle: Help the listener hear the number you intend
 target_seconds: 570
 theme: ink
 burn_captions: true
@@ -48,24 +48,24 @@ images:
     quality: medium
 end_card:
   seconds: 5.0
-  line: Say the word. Then say the number.
-  note: "Uncertainty Explainers · 1 Two kinds of not knowing · 2 From evidence to forecast · 3 Saying it out loud"
+  line: Give the word, the number, the group, and the strength of the evidence.
+  note: Uncertainty Explainers, video 3 of 3
 
 segments:
   # ================================================================ opening: a fair chance, 1961
   - id: s01
-    say: In February 1961, the Joint Chiefs of Staff reviewed a CIA plan to invade Cuba at the Bay of Pigs.
+    say: In February 1961, the Joint Chiefs of Staff reviewed a United States plan to invade Cuba at the Bay of Pigs.
     sources: [S67, S68]
     scene:
       name: title_card
       params:
         label: Uncertainty Explainers · 3
-        title: Saying it out loud
-        subtitle: Words, numbers, and the listener
+        title: Say what the odds mean
+        subtitle: Help the listener hear the number you intend
     hold: 0.5
 
   - id: s02
-    say: 'Their report listed the plan''s weak points, then closed with a judgment. The plan, it said, "has a fair chance of ultimate success."'
+    say: 'Their report listed serious problems. Yet its final judgment said the plan "has a fair chance of ultimate success."'
     sources: [S68]
     transition: dissolve
     beats: [0.0, "fair chance"]
@@ -80,15 +80,15 @@ segments:
         text: &memo_text Despite the shortcomings pointed out in the assessment, the Joint Chiefs of Staff consider that timely execution of this plan has a fair chance of ultimate success.
         highlight: a fair chance
         image: "image:folder"
-        note: ["What the writer meant:", "about 3 in 10,", "a warning"]
+        note: ["The writer meant:", "about 3 chances in 10", "a warning, not support"]
         upto: 2
     hold: 0.4
 
   - id: s03
-    say: 'The officer who drafted that line later said the Chiefs put the odds at roughly three in ten. He meant "fair" as a warning.'
+    say: 'The officer who wrote that sentence later explained the intended odds: about three chances in ten. He meant "fair" as a warning.'
     sources: [S67]
     transition: cut
-    beats: [0.0, 0.0, "roughly three in ten"]
+    beats: [0.0, 0.0, "about three chances"]
     scene:
       name: memo
       params:
@@ -96,101 +96,101 @@ segments:
         text: *memo_text
         highlight: a fair chance
         image: "image:folder"
-        note: ["What the writer meant:", "about 3 in 10,", "a warning"]
+        note: ["The writer meant:", "about 3 chances in 10", "a warning, not support"]
         keep: 2
     hold: 0.4
 
   - id: s04
-    say: 'Other readers heard approval. The CIA quoted the phrase in a paper that argued for the invasion.'
+    say: 'Other readers heard support for the plan. The Central Intelligence Agency quoted the phrase while arguing that the invasion should proceed.'
     sources: [S67, S69]
     transition: glide
-    beats: [0.0, "heard approval"]
+    beats: [0.0, "heard support"]
     scene:
       name: two_column_compare
       params:
-        heading: One phrase, two readings
+        heading: The same phrase carried two messages
         left:
-          title: The writer
+          title: Intended meaning
           tone: warn
-          lines: ["About 3 chances in 10", "“Fair” meant as a warning"]
+          lines: ["About 3 chances in 10", "A warning about likely failure"]
         right:
-          title: The readers
+          title: Meaning heard
           tone: unknown
-          lines: ["Quoted by the CIA to argue for the plan"]
+          lines: ["Support for moving ahead with the plan"]
     hold: 0.4
 
   - id: s05
-    say: President Kennedy came to believe that the Joint Chiefs had endorsed the plan. After the invasion collapsed, he wondered why no one had warned him.
+    say: President John F. Kennedy believed the military leaders had supported the plan. After the invasion failed, he asked why they had not warned him.
     sources: [S67]
     transition: dissolve
-    beats: [0.0, "wondered why"]
+    beats: [0.0, "asked why"]
     scene:
       name: probability_bar
       params:
-        heading: What the President heard
-        label: "“a fair chance,” as its writer meant it"
+        heading: The odds hidden inside the phrase
+        label: "Success, as the writer meant “a fair chance”"
         value: 30
         tone: warn
-        note: heard as an endorsement
+        note: Readers heard support for the plan
     hold: 0.5
 
   - id: s06
-    say: Three in ten meant seven chances in ten of failure. Where, between the writer and the reader, did seven in ten disappear, and how do you stop it?
+    say: Three chances in ten of success also meant seven chances in ten of failure. Where did those seven chances disappear between writer and reader? How can we keep that from happening?
     transition: dip
-    beats: [0.0, "seven chances in ten", "between the writer"]
+    beats: [0.0, "seven chances in ten", "between writer and reader"]
     scene:
       name: statement
       params:
-        lines: ["Written: about 3 in 10.", "Heard: an endorsement.", "Where did the other 7 in 10 go?"]
-        highlight: ["Where did the other 7 in 10 go?"]
+        lines: ["Meant: 3 chances in 10 of success", "Heard: support for the plan", "Where did 7 chances in 10 go?"]
+        highlight: ["Where did 7 chances in 10 go?"]
     hold: 0.8
 
   # ================================================================ claim and map
   - id: s07
-    say: Uncertainty is not communicated until the listener holds the number the speaker meant. A message about uncertainty has parts, and each part can fail.
+    say: Communication succeeds only when the listener understands the odds the speaker meant. Words, numbers, groups, and pictures can each change the message.
     transition: dissolve
-    beats: [0.0, "until the listener", "the number the speaker"]
+    beats: [0.0, "when the listener", "odds the speaker"]
     scene:
       name: statement
       params:
-        lines: ["Uncertainty is not communicated", "until the listener holds", "the number the speaker meant."]
-        highlight: ["the number the speaker meant."]
+        lines: ["Communication succeeds only when", "the listener understands", "the odds the speaker meant."]
+        highlight: ["the odds the speaker meant."]
     hold: 0.5
 
   - id: s08
-    say: 'The message has six stops: the word, the group a number counts over, the picture, and the single result. Then words used on purpose, and the whole statement, with its missing part: how good the evidence is.'
+    say: 'We will follow six points where meaning can change: the word, the number''s group, the picture, one result, words tied to actions, and the complete statement.'
     transition: dissolve
     scene:
       name: roadmap
       params:
-        kicker: Six stops
-        heading: Where the number can go missing
+        kicker: Six checks
+        heading: Where meaning can change
         stops: &stops
           - label: The word
             question: Does the word carry a number?
             takeaway: Put the number beside the word.
           - label: "The number's group"
             question: What does the number count over?
-            takeaway: Name the group, or the listener picks one.
+            takeaway: Name the group behind the number.
           - label: The picture
             question: What does the picture leave out?
-            takeaway: Say what the picture leaves out.
+            takeaway: Explain what the picture leaves out.
           - label: The single result
             question: Can one outcome judge a forecast?
-            takeaway: One outcome cannot judge a probability.
+            takeaway: One result cannot test a probability.
           - label: Words on purpose
             question: Why do some refuse numbers?
-            takeaway: Know which ladder you are on.
+            takeaway: Ask what the word scale does.
           - label: The whole statement
             question: What does a full statement say?
-            takeaway: Word, number, group, and how good the evidence is.
+            takeaway: State the strength of the evidence.
         current: -1
         mode: overview
     hold: 0.6
 
   # ================================================================ stop 1: the word
   - id: s09
-    say: 'First, the word. The trouble began ten years before the Bay of Pigs.'
+    say: 'Begin with the word. Ten years before the Bay of Pigs, Sherman Kent found the same problem in another intelligence report.'
     sources: [S47]
     transition: dissolve
     scene:
@@ -202,7 +202,7 @@ segments:
     hold: 0.3
 
   - id: s10
-    say: 'In March 1951, a formal intelligence forecast said a Soviet attack on Yugoslavia "should be considered a serious possibility."'
+    say: 'In March 1951, an official forecast said a Soviet attack on Yugoslavia "should be considered a serious possibility."'
     sources: [S47]
     transition: dissolve
     scene:
@@ -214,7 +214,7 @@ segments:
     hold: 0.4
 
   - id: s11
-    say: 'Sherman Kent, on the board that approved it, meant about sixty-five in a hundred. A State Department planner had read it as much lower.'
+    say: 'Kent helped approve that phrase. He thought it meant about sixty-five chances in one hundred. A State Department planner read it as much less likely.'
     sources: [S47]
     transition: glide
     beats: ["sixty-five", "State Department planner"]
@@ -232,10 +232,10 @@ segments:
     hold: 0.4
 
   - id: s12
-    say: 'The other board members had meant anything from twenty in a hundred to eighty. They had agreed on a phrase without agreeing on a number.'
+    say: 'Other board members gave meanings from twenty to eighty chances in one hundred. Everyone had approved the same words, but they had not shared the same odds.'
     sources: [S47]
     transition: dissolve
-    beats: [0.0, "anything from", "twenty in a hundred", "to eighty"]
+    beats: [0.0, "from twenty", "twenty to eighty", "eighty chances"]
     scene:
       name: phrase_readings
       params:
@@ -250,10 +250,10 @@ segments:
     hold: 0.5
 
   - id: s13
-    say: 'Kent''s fix was to give each word a number, and such ladders are now official. For United States intelligence, likely means fifty-five to eighty percent. For the Intergovernmental Panel on Climate Change, the IPCC, it means sixty-six to one hundred.'
+    say: 'Kent proposed linking each word to a number range. Agencies now use such scales. United States intelligence uses likely for fifty-five to eighty percent. The Intergovernmental Panel on Climate Change uses likely for sixty-six to one hundred percent.'
     sources: [S50, S51]
     transition: dissolve
-    beats: [0.0, "For the Intergovernmental", "sixty-six to one hundred"]
+    beats: [0.0, "The Intergovernmental", "sixty-six to one hundred"]
     scene: &ladders
       name: two_ladders
       params:
@@ -281,10 +281,10 @@ segments:
     hold: 0.4
 
   - id: s14
-    say: So a sixty percent chance is likely to an intelligence analyst, but only about as likely as not to a climate scientist.
+    say: A sixty-percent chance is therefore likely on the intelligence scale. On the climate scale, the same number is only about as likely as not.
     sources: [S50, S51]
     transition: cut
-    beats: [0.0, 0.0, 0.0, "sixty percent"]
+    beats: [0.0, 0.0, 0.0, "sixty-percent"]
     scene:
       name: two_ladders
       params:
@@ -296,10 +296,10 @@ segments:
     hold: 0.5
 
   - id: s15
-    say: 'Readers bend the words too. In a 2012 study, Americans put very likely, meant as ninety percent or more, at sixty-two. Very unlikely came out at forty-one.'
+    say: 'Readers also pull strong words toward the middle. In a 2012 study, people read very likely, meant as at least ninety percent, as sixty-two percent. They read very unlikely as forty-one percent.'
     sources: [S53, S51]
     transition: push-left
-    beats: [0.0, "at sixty-two"]
+    beats: [0.0, "as sixty-two"]
     scene:
       name: pull_to_middle
       params:
@@ -314,10 +314,10 @@ segments:
     hold: 0.5
 
   - id: s16
-    say: A 2019 study found a fix that works, the number in brackets inside the sentence. With the word alone, readers' ranges overlapped the official range by about a third. With the bracket, by about two thirds.
+    say: 'A 2019 study tested a simple fix: put the number in brackets beside the word. Readers matched the official range about twice as well when they saw both.'
     sources: [S55]
     transition: glide
-    beats: ["in brackets", "about a third", "about two thirds"]
+    beats: ["in brackets", "about twice", "saw both"]
     sfx:
       - cue: soft_click
         at: in brackets
@@ -335,21 +335,21 @@ segments:
     hold: 0.5
 
   - id: s17
-    say: A word carries a number only if the number is beside it.
+    say: A word does not carry fixed odds by itself. Put the number beside it.
     sources: [S55]
     transition: dip
-    beats: [0.0, "only if"]
+    beats: [0.0, "beside it"]
     scene:
       name: statement
       params:
-        kicker: Stop 1 · The word
-        lines: ["A word carries a number", "only if the number is beside it."]
-        highlight: ["only if the number is beside it."]
+        kicker: Check 1 · The word
+        lines: ["A word has no fixed odds by itself.", "Put the number beside it."]
+        highlight: ["Put the number beside it."]
     hold: 1.0
 
   # ================================================================ stop 2: the number's group
   - id: s18
-    say: A number beside the word fixes the word. But a number can fail too.
+    say: The number makes the word clearer. Next ask what that number counts.
     transition: dissolve
     scene:
       name: roadmap
@@ -360,10 +360,10 @@ segments:
     hold: 0.3
 
   - id: s19
-    say: Take a thirty percent chance of rain tomorrow. In 2005, researchers asked people in five cities what that means. Many said rain thirty percent of the time, or over thirty percent of the area.
+    say: Suppose tomorrow has a thirty-percent chance of rain. In a 2005 study, respondents often thought that meant rain for thirty percent of the day or across thirty percent of the area.
     sources: [S60]
     transition: dissolve
-    beats: ["thirty percent of the time", "thirty percent of the area"]
+    beats: ["thirty percent of the day", "thirty percent of the area"]
     scene:
       name: rain_readings
       params:
@@ -374,13 +374,13 @@ segments:
     hold: 0.4
 
   - id: s20
-    say: The weather service means something else. It rains on about three of every ten days like tomorrow.
+    say: The weather forecast means something else. Rain occurs on about three out of ten days with conditions like tomorrow's at that location.
     sources: [S65, S60]
     transition: cut
-    beats: [0.0, 0.0, "something else", "three of every ten days"]
+    beats: [0.0, 0.0, "something else", "three out of ten days"]
     sfx:
       - cue: chime
-        at: three of every ten days
+        at: three out of ten days
         gain_db: -10
     scene:
       name: rain_readings
@@ -393,36 +393,36 @@ segments:
     hold: 0.4
 
   - id: s21
-    say: 'In New York, about two thirds chose that meaning. In four European cities, only one third to one fifth did.'
+    say: 'About two out of three New Yorkers chose that meaning. In four European cities, only one out of five to one out of three people did.'
     sources: [S60]
     transition: dissolve
     beats: [0.0, "In four European"]
     scene:
       name: bar_rows
       params:
-        heading: Who chose "3 of 10 days like this"
+        heading: Who understood the forecast group?
         rows:
           - {label: New York, value: 67, text: about 2 in 3, tone: known}
           - {label: "Amsterdam, Berlin, Milan, Athens", lo: 20, hi: 33, text: 1 in 5 to 1 in 3, tone: unknown}
     hold: 0.4
 
   - id: s22
-    say: The missing piece is the reference class, the set of cases a number counts over. A number needs its reference class, or the listener supplies their own.
+    say: The missing piece is the reference class, meaning the group of cases being counted. Name that group. Otherwise, listeners will invent one.
     sources: [S60, S57]
     transition: dip
-    beats: ["the set of cases", "A number needs", "or the listener"]
+    beats: ["the group of cases", "Name that group", "listeners will"]
     scene:
       name: statement
       params:
-        kicker: Stop 2 · The number's group
-        lines: ["30% of what?", "A number needs its reference class,", "or the listener supplies their own."]
-        highlight: ["or the listener supplies their own."]
-        note: "reference class: the set of cases a number counts over"
+        kicker: Check 2 · The number's group
+        lines: ["30% of which cases?", "Name the group behind the number.", "Otherwise, listeners invent one."]
+        highlight: ["Otherwise, listeners invent one."]
+        note: "reference class: the group used for the count"
     hold: 1.0
 
   # ================================================================ stop 3: the picture
   - id: s23
-    say: Words and numbers fail in the ear. Pictures fail in the eye.
+    say: Clear words and numbers still need a clear picture. A picture can hide uncertainty even while trying to show it.
     transition: dissolve
     scene:
       name: roadmap
@@ -433,7 +433,7 @@ segments:
     hold: 0.3
 
   - id: s24
-    say: The clearest case is a hurricane. The National Hurricane Center draws a cone around a storm's forecast track, to show where its center will probably go.
+    say: Consider a hurricane forecast. The National Hurricane Center draws a cone around the predicted track to show a likely area for the storm's center.
     sources: [S64]
     transition: dissolve
     beats: [0.0, "draws a cone"]
@@ -449,10 +449,10 @@ segments:
     hold: 0.4
 
   - id: s25
-    say: 'Each circle is sized so that two thirds of past forecast errors fall inside. So about one time in three, the center leaves the cone.'
+    say: 'The cone is based on past forecast errors. About two thirds of storm centers stay inside it, which means about one third travel outside it.'
     sources: [S64, S63]
     transition: cut
-    beats: [0.0, 0.0, "Each circle", "one time in three"]
+    beats: [0.0, 0.0, "based on past", "one third"]
     scene:
       name: charley
       params:
@@ -462,7 +462,7 @@ segments:
     hold: 0.4
 
   - id: s26
-    say: In August 2004, the forecast line for Hurricane Charley ran close to Tampa. Charley struck Punta Gorda instead, about seventy miles to the south.
+    say: In August 2004, Hurricane Charley's forecast line ran near Tampa. The storm struck Punta Gorda instead, about seventy miles south.
     sources: [S63]
     transition: dissolve
     beats: [0.0, 0.0, "struck Punta Gorda"]
@@ -477,10 +477,10 @@ segments:
     hold: 0.4
 
   - id: s27
-    say: Charlotte County, around Punta Gorda, had been inside the cone for four days. But much of the television coverage had pointed viewers at the line.
+    say: Punta Gorda and the surrounding county had remained inside the cone for four days. Much television coverage still drew attention to the center line.
     sources: [S63]
     transition: cut
-    beats: [0.0, 0.0, 0.0, "Charlotte County"]
+    beats: [0.0, 0.0, 0.0, "surrounding county"]
     direction: Say "Punta Gorda" as "POON-tah GOR-dah".
     scene:
       name: charley
@@ -492,7 +492,7 @@ segments:
     hold: 0.4
 
   - id: s28
-    say: 'The hurricane center''s director, Max Mayfield, later joked about his tombstone: "Don''t focus on the skinny black line."'
+    say: 'National Hurricane Center director Max Mayfield later joked that his tombstone should say, "Don''t focus on the skinny black line."'
     sources: [S63]
     transition: dissolve
     scene:
@@ -504,20 +504,20 @@ segments:
     hold: 0.5
 
   - id: s29
-    say: A picture of uncertainty is read as a picture of certainty, unless it says what it leaves out.
+    say: Viewers may treat a forecast line as a promised path. Every uncertainty picture must explain what it includes and what it leaves out.
     transition: dip
-    beats: [0.0, "read as a picture", "unless it says"]
+    beats: [0.0, "promised path", "includes and what it leaves out"]
     scene:
       name: statement
       params:
-        kicker: Stop 3 · The picture
-        lines: ["A picture of uncertainty", "is read as a picture of certainty,", "unless it says what it leaves out."]
-        highlight: ["unless it says what it leaves out."]
+        kicker: Check 3 · The picture
+        lines: ["A forecast line can look like a promise.", "Explain what the picture includes", "and what it leaves out."]
+        highlight: ["and what it leaves out."]
     hold: 1.0
 
   # ================================================================ stop 4: the single result
   - id: s30
-    say: Suppose the word, the number, the group and the picture are all right.
+    say: 'Now suppose the word, number, group, and picture are clear. One more trap remains: judging the forecast by one result.'
     transition: dissolve
     scene:
       name: roadmap
@@ -528,7 +528,7 @@ segments:
     hold: 0.3
 
   - id: s31
-    say: 'The listener still judges by one outcome. In its final 2016 forecast, FiveThirtyEight gave Donald Trump about a twenty-nine percent chance of winning.'
+    say: 'In its final 2016 forecast, FiveThirtyEight gave Donald Trump a twenty-nine-percent chance of winning the presidential election.'
     sources: [S62]
     transition: dissolve
     beats: ["FiveThirtyEight gave"]
@@ -547,10 +547,10 @@ segments:
     hold: 0.4
 
   - id: s32
-    say: Other models gave him fifteen percent, and some gave him less than one.
+    say: Other models gave him fifteen percent. Some placed his chance below one percent.
     sources: [S62]
     transition: cut
-    beats: [0.0, "fifteen percent", "less than one"]
+    beats: [0.0, "fifteen percent", "below one"]
     scene:
       name: bar_rows
       params:
@@ -560,13 +560,13 @@ segments:
     hold: 0.4
 
   - id: s33
-    say: 'Trump won. But twenty-nine in a hundred is more than one chance in four, and events with those odds happen all the time.'
+    say: 'Trump won. That result did not prove the twenty-nine-percent forecast wrong. Events with a twenty-nine-percent chance should occur about twenty-nine times out of one hundred.'
     sources: [S62]
     transition: dissolve
-    beats: [0.0, "more than one chance"]
+    beats: [0.0, "twenty-nine times"]
     sfx:
       - cue: tick
-        at: happen all the time
+        at: twenty-nine times
         gain_db: -6
     scene:
       name: unit_grid
@@ -576,25 +576,25 @@ segments:
         k: 29
         columns: 10
         label: 29 of 100
-        caption: each square one draw of a 29% chance; the outline is this draw
+        caption: 29 marked squares show 29 chances in 100; the outline marks this result
         pick: true
     hold: 0.5
 
   - id: s34
-    say: One outcome cannot judge a probability. Say so before the outcome arrives.
+    say: One result cannot test a probability. Explain that before anyone knows the result.
     transition: dip
-    beats: [0.0, "Say so before"]
+    beats: [0.0, "Explain that before"]
     scene:
       name: statement
       params:
-        kicker: Stop 4 · The single result
-        lines: ["One outcome cannot judge a probability.", "Say so before the outcome arrives."]
-        highlight: ["Say so before the outcome arrives."]
+        kicker: Check 4 · One result
+        lines: ["One result cannot test a probability.", "Explain that before the result is known."]
+        highlight: ["Explain that before the result is known."]
     hold: 1.0
 
   # ================================================================ stop 5: words on purpose
   - id: s35
-    say: 'If words fail so often, why not always use numbers?'
+    say: 'If words can confuse people, should every field replace them with numbers? No. Some words set rules for action.'
     transition: dissolve
     scene:
       name: roadmap
@@ -605,14 +605,14 @@ segments:
     hold: 0.3
 
   - id: s36
-    say: 'Some institutions refuse them on purpose. Take accounting. Under its rule for losses, now called ASC 450, a loss is probable, reasonably possible, or remote.'
+    say: 'Accounting provides one example. A rule called Accounting Standards Codification 450 sorts possible losses into three groups: probable, reasonably possible, and remote.'
     sources: [S71, S70]
     transition: push-up
-    beats: ["Under its rule"]
+    beats: ["Accounting Standards Codification 450"]
     direction: Say "ASC 450" as "A S C four fifty".
     sfx:
       - cue: paper
-        at: ASC 450
+        at: Accounting Standards Codification 450
         gain_db: -10
     scene:
       name: action_ladder
@@ -620,14 +620,14 @@ segments:
         scale: ASC 450 (FAS 5), losses
         image: "image:ledger"
         rungs: &asc
-          - {word: Probable, gloss: "“likely to occur”", action: book it}
-          - {word: Reasonably possible, gloss: "“more than remote but less than likely”", action: tell readers}
-          - {word: Remote, gloss: "“slight”", action: nothing}
+          - {word: Probable, gloss: "“likely to occur”", action: record the loss}
+          - {word: Reasonably possible, gloss: "“more than remote but less than likely”", action: explain in a note}
+          - {word: Remote, gloss: "“slight”", action: usually no entry or note}
         upto: 1
     hold: 0.4
 
   - id: s37
-    say: The rule defines each word only with other words. Probable means likely to occur, and remote means slight.
+    say: The rule defines these terms with words, not fixed percentages. Probable means likely to occur. Remote means the chance is slight.
     sources: [S71]
     transition: cut
     beats: [0.0, "Probable means"]
@@ -642,7 +642,7 @@ segments:
     hold: 0.4
 
   - id: s38
-    say: 'Each word sets an action. A probable loss that can be estimated goes into the accounts. A reasonably possible one gets a note, and a remote one gets neither.'
+    say: 'Each term leads to an accounting action. A probable loss that can be estimated enters the accounts. A reasonably possible loss gets a note. A remote loss usually gets neither.'
     sources: [S71, S70]
     transition: cut
     beats: [0.0, 0.0, "A probable loss"]
@@ -656,7 +656,7 @@ segments:
     hold: 0.4
 
   - id: s39
-    say: 'Courts have a ladder too. In Addington against Texas, in 1979, the Supreme Court described three standards of proof: how sure the judge or jury must be.'
+    say: 'Courts also use word-based levels. In the 1979 case Addington against Texas, the Supreme Court discussed three standards of proof. A standard tells a judge or jury how sure they must be.'
     sources: [S75]
     transition: push-left
     beats: [0.0]
@@ -675,10 +675,10 @@ segments:
     hold: 0.4
 
   - id: s40
-    say: 'In a money dispute, the two sides share the risk of error about equally. In a criminal case, society takes almost all of it. Clear and convincing evidence sits between.'
+    say: 'In most civil disputes, the two sides bear the risk of error more evenly. In criminal cases, the government bears much more of that risk. Clear and convincing evidence lies between those levels.'
     sources: [S75]
     transition: cut
-    beats: [0.0, "In a criminal case", "Clear and convincing"]
+    beats: [0.0, "In criminal cases", "Clear and convincing"]
     scene:
       name: risk_seesaw
       params:
@@ -691,7 +691,7 @@ segments:
     hold: 0.4
 
   - id: s41
-    say: 'The Court put no numbers on these phrases. It said that how they shape decisions "may well be unknowable."'
+    say: 'The Court did not attach percentages to these standards. It said their exact effect on decisions "may well be unknowable."'
     sources: [S75]
     transition: dissolve
     scene:
@@ -703,21 +703,21 @@ segments:
     hold: 0.5
 
   - id: s42
-    say: Some ladders are words on purpose, tied to actions. Know which ladder you are on.
+    say: Some word scales exist to guide action, not to report exact odds. Before adding a number, ask what the scale is meant to do.
     sources: [S71, S75]
     transition: dip
-    beats: [0.0, "tied to actions", "Know which"]
+    beats: [0.0, "guide action", "ask what"]
     scene:
       name: statement
       params:
-        kicker: Stop 5 · Words on purpose
-        lines: ["Some ladders are words on purpose,", "tied to actions.", "Know which ladder you are on."]
-        highlight: ["Know which ladder you are on."]
+        kicker: Check 5 · Words tied to action
+        lines: ["Some word scales guide action.", "They do not report exact odds.", "Ask what the scale is meant to do."]
+        highlight: ["Ask what the scale is meant to do."]
     hold: 1.0
 
   # ================================================================ stop 6: the whole statement
   - id: s43
-    say: 'Word, number, group, picture, one result, and the ladder you are on.'
+    say: 'We have checked the word, number, group, picture, result, and kind of scale. One final part is still missing.'
     transition: dissolve
     scene:
       name: roadmap
@@ -728,55 +728,55 @@ segments:
     hold: 0.3
 
   - id: s44
-    say: 'One piece is still missing. In 2019, van der Bles and colleagues set out what a statement of uncertainty should contain. It says what you are unsure about, and in what form, such as a range or a word.'
+    say: 'In 2019, van der Bles and other researchers described the parts of a useful uncertainty statement. State what is uncertain. Then show its form, such as a probability, range, or word.'
     sources: [S56]
     transition: push-up
-    beats: ["In 2019", "in what form"]
+    beats: ["In 2019", "show its form"]
     direction: Say "van der Bles" as "fahn der BLESS".
     scene:
       name: checklist
       params:
-        heading: What to say, after van der Bles and colleagues, 2019
+        heading: Parts of a clear uncertainty statement
         items:
-          - {title: What you are unsure about, detail: "a fact, a number, or a scientific claim"}
-          - {title: In what form, detail: "a range, a probability, or a word"}
-          - {title: How good the evidence is, detail: "the confidence behind it"}
+          - {title: What is uncertain, detail: "a fact, measurement, or claim"}
+          - {title: How it is expressed, detail: "a probability, range, or word"}
+          - {title: Strength of the evidence, detail: "how well the evidence supports it"}
         upto: 2
     hold: 0.4
 
   - id: s45
-    say: 'Then it says how good the evidence is. The IPCC calls this confidence, rated by the amount of evidence and how closely findings agree.'
+    say: 'The statement should also describe the strength of the evidence. The climate panel calls this confidence. It depends on how much evidence exists and how well the findings agree.'
     sources: [S56, S51]
     transition: cut
     beats: [0.0]
     scene:
       name: checklist
       params:
-        heading: What to say, after van der Bles and colleagues, 2019
+        heading: Parts of a clear uncertainty statement
         done: 2
         items:
-          - {title: What you are unsure about, detail: "a fact, a number, or a scientific claim"}
-          - {title: In what form, detail: "a range, a probability, or a word"}
-          - {title: How good the evidence is, detail: "the confidence behind it"}
+          - {title: What is uncertain, detail: "a fact, measurement, or claim"}
+          - {title: How it is expressed, detail: "a probability, range, or word"}
+          - {title: Strength of the evidence, detail: "how well the evidence supports it"}
     hold: 0.4
 
   - id: s46
-    say: Confidence is a separate scale, not a probability. It tells the listener how far to trust the number.
+    say: Confidence and probability answer different questions. Probability gives the odds of an event. Confidence tells us how strongly the evidence supports those odds.
     sources: [S51]
     transition: dissolve
-    beats: [0.0, "separate scale", "not a probability"]
+    beats: [0.0, "different questions", "Probability gives"]
     scene:
       name: confidence_grid
       params:
-        heading: Confidence is a separate scale
+        heading: Probability and confidence answer different questions
         mark: [1, 1]
         likelihood: likely (55–80%)
     hold: 0.4
 
   - id: s47
-    say: Put together, a full statement reads like this. Rain tomorrow is likely, fifty-five to eighty percent, counted over days like tomorrow at this spot. Our confidence in that range is medium.
+    say: Here is a complete example. Rain tomorrow is likely, with a chance between fifty-five and eighty percent. That range refers to days with similar conditions at this location. Confidence in the range is medium.
     transition: dissolve
-    beats: ["Rain tomorrow", "fifty-five to eighty", "counted over days", "Our confidence"]
+    beats: ["Rain tomorrow", "fifty-five and eighty", "similar conditions", "Confidence in"]
     scene:
       name: sentence_builder
       params:
@@ -784,46 +784,46 @@ segments:
         parts:
           - {text: Rain tomorrow is likely, tag: the word}
           - {text: "(55–80%),", tag: the number, mono: true}
-          - {text: counted over days like tomorrow at this spot., tag: the reference class}
-          - {text: "Confidence in that range: medium.", tag: the evidence, newline: true}
+          - {text: for days with similar conditions at this location., tag: the group}
+          - {text: "Strength of evidence: medium.", tag: the evidence, newline: true}
     hold: 0.5
 
   - id: s48
-    say: Say the word, the number, the group, and how good the evidence is.
+    say: Give the word, the number, the group being counted, and the strength of the evidence.
     transition: dip
-    beats: [0.0, "the number", "the group", "how good"]
+    beats: [0.0, "the number", "the group", "strength of the evidence"]
     scene:
       name: statement
       params:
-        kicker: Stop 6 · The whole statement
-        lines: ["Say the word,", "the number,", "the group,", "and how good the evidence is."]
-        highlight: ["and how good the evidence is."]
+        kicker: Check 6 · The full statement
+        lines: ["Give the word,", "the number and its group,", "and the strength of the evidence."]
+        highlight: ["and the strength of the evidence."]
     hold: 1.0
 
   # ================================================================ zoom out
   - id: s49
-    say: 'Taken in order, the stops make one argument. A word needs a number beside it. But a number needs its group, and a picture must say what it leaves out.'
+    say: 'The full message now comes together. Put the number beside the word. Name the group behind the number. Explain what the picture includes and leaves out.'
     transition: dissolve
     scene: &summary
       name: roadmap
       params:
-        kicker: The whole message
-        heading: Six stops, one argument
+        kicker: The complete message
+        heading: Six checks for clear odds
         stops: *stops
         current: 6
         mode: summary
     hold: 0.3
 
   - id: s50
-    say: 'Even then, one outcome cannot judge the forecast, so say that first. Some ladders are words on purpose, so know which one you are on. And every message needs a statement of how good the evidence is.'
+    say: 'Warn that one result cannot test the forecast. Keep word scales when they guide action. Then state how strongly the evidence supports the claim.'
     transition: cut
     scene: *summary
     hold: 0.6
 
   - id: s51
-    say: Where, between the writer and the reader, did seven in ten disappear, and how do you stop it? It disappeared beside the word, where no number, no group and no confidence was written.
+    say: Where did seven chances in ten disappear? They vanished inside the phrase fair chance. The report gave no number, no comparison group, and no account of the evidence's strength.
     transition: dip
-    beats: [0.0, 0.0, "It disappeared"]
+    beats: [0.0, 0.0, "vanished inside"]
     scene:
       name: memo
       params:
@@ -831,36 +831,36 @@ segments:
         text: *memo_text
         highlight: a fair chance
         image: "image:folder"
-        note: ["Not written:", "the number, the group,", "the confidence"]
+        note: ["Missing from the report:", "the number and comparison group", "the strength of the evidence"]
         note_tone: warn
     hold: 0.5
 
   - id: s52
-    say: Written in full, the line would read like this. The plan has a fair chance, about three in ten, judged against operations of this kind, and our confidence in that number is low.
+    say: A clearer sentence might have said this. The plan has about three chances in ten of success, compared with similar operations. Our confidence in that estimate is low.
     transition: dissolve
-    beats: [0.0, "about three in ten"]
+    beats: [0.0, "about three chances in ten"]
     sfx:
       - cue: soft_click
-        at: about three in ten
+        at: about three chances in ten
         gain_db: -8
     scene:
       name: memo
       params:
-        stamp: The same line, rewritten in full form
-        text: "The Joint Chiefs of Staff consider that this plan has a fair chance: about 3 in 10, judged against operations of this kind, and our confidence in that number is low."
-        highlight: about 3 in 10,
-        note: ["the word, the number,", "the group,", "the evidence"]
+        stamp: A clearer version, written today
+        text: "The plan has about 3 chances in 10 of success, compared with similar operations. Our confidence in this estimate is low."
+        highlight: about 3 chances in 10
+        note: ["the number", "the comparison group", "the strength of evidence"]
     hold: 0.6
 
   - id: s53
-    say: 'Fifteen years after the Bay of Pigs, the officer who wrote "a fair chance" was still troubled. He had not insisted that the numbers be used. Say the word. Then say the number.'
+    say: 'Fifteen years later, the officer who wrote "a fair chance" still regretted that he had not insisted on numbers. Give the word, number, group, and strength of evidence. Make the odds hard to miss.'
     sources: [S67]
     transition: dip
     sfx:
       - cue: low_pad
         at: 0.0
         gain_db: -12
-    beats: [0.0, 0.0, "He had not insisted"]
+    beats: [0.0, 0.0, "had not insisted"]
     scene:
       name: memo
       params:
@@ -868,5 +868,5 @@ segments:
         text: *memo_text
         highlight: a fair chance
         image: "image:folder"
-        note: ["The number he meant,", "never written:", "about 3 in 10"]
+        note: ["The report never stated", "the odds its writer meant:", "about 3 chances in 10"]
     hold: 1.0

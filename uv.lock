@@ -484,13 +484,14 @@ requires-dist = [
     { name = "bc-content", marker = "extra == 'dedupe'", editable = "../../bc/bc-modules/bc-content" },
     { name = "bc-content", marker = "extra == 'semantic'", editable = "../../bc/bc-modules/bc-content" },
     { name = "bc-core", editable = "../../bc/bc-modules/bc-core" },
-    { name = "bc-store", extras = ["parquet", "dedupe", "semantic"], marker = "extra == 'all'", editable = "../../bc/bc-modules/bc-store" },
+    { name = "bc-store", extras = ["parquet", "dedupe", "semantic", "s3"], marker = "extra == 'all'", editable = "../../bc/bc-modules/bc-store" },
+    { name = "boto3", marker = "extra == 's3'", specifier = ">=1.35" },
     { name = "kaos-nlp-transformers", marker = "extra == 'semantic'", specifier = ">=0.1.0rc1,<0.2" },
     { name = "numpy", marker = "extra == 'semantic'", specifier = ">=1.26" },
     { name = "pyarrow", marker = "extra == 'parquet'", specifier = ">=17" },
     { name = "pydantic", specifier = ">=2.11" },
 ]
-provides-extras = ["parquet", "dedupe", "semantic", "all"]
+provides-extras = ["parquet", "dedupe", "semantic", "s3", "all"]
 
 [[package]]
 name = "bc-viz"
@@ -518,6 +519,8 @@ source = { editable = "../../bc/bc-modules/bc-web" }
 dependencies = [
     { name = "bc-core" },
     { name = "bc-store" },
+    { name = "certifi" },
+    { name = "cryptography" },
     { name = "httpx", extra = ["http2"] },
     { name = "pydantic" },
     { name = "pydantic-settings" },
@@ -538,6 +541,8 @@ requires-dist = [
     { name = "bc-core", editable = "../../bc/bc-modules/bc-core" },
     { name = "bc-store", editable = "../../bc/bc-modules/bc-store" },
     { name = "bc-web", extras = ["playwright", "pydoll", "rustwright", "impersonate", "dedupe"], marker = "extra == 'all'", editable = "../../bc/bc-modules/bc-web" },
+    { name = "certifi", specifier = ">=2024.2" },
+    { name = "cryptography", specifier = ">=43" },
     { name = "curl-cffi", marker = "extra == 'impersonate'", specifier = ">=0.16" },
     { name = "httpx", extras = ["http2"], specifier = ">=0.28" },
     { name = "playwright", marker = "extra == 'playwright'", specifier = ">=1.63" },

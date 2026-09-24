@@ -7,6 +7,8 @@ How a `videos/<slug>/script.yaml` becomes a checked 1920x1080 MP4. The code is
 uv run python -m pipeline.build videos/<slug>/script.yaml --stage check
 uv run python -m pipeline.build videos/<slug>/script.yaml            # every stage, in order
 uv run python -m pipeline.build videos/<slug>/script.yaml --stage assemble --4k
+uv run python -m pipeline.youtube videos/<slug>/script.yaml         # the upload sheet, publish/youtube.txt
+uv run python -m pipeline.thumbnail videos/<slug>/script.yaml       # publish/thumbnail.png, 1280x720
 uv run python -m pipeline.gallery [--theme paper]                    # every scene, four reveal points
 uv run python -m pipeline.audition                                   # narrator candidates, measured
 uv run python -m pytest -q                                           # no network
@@ -22,6 +24,7 @@ uv run python -m pytest -q                                           # no networ
 | `frames` | Generates images, renders three stills per segment for review | images | `frames/stills.png` and PNGs |
 | `assemble` | Renders every frame in worker processes, streams them to `bc_motion.encode.assemble` (H.264 High, CRF 14, BT.709, AAC 192k), writes the poster and thumbnail | nothing | `<slug>.mp4` (or `-4k.mp4`), `poster.png`, `thumbnail.png` |
 | `qa` | Checks the MP4 itself (below) and copies `qa.md` and `poster.png` to `publish/` | QA transcription | `qa.json`, `qa.md`, `qa/cuts.png`, `qa/segments.png` |
+| `package` | Refuses unless `qa` passed; joins the Da Vinci Math intro, the programme, a 0.5 s dissolve and the outro in one re-encode; checks the result (below); copies the MP4 and shifted VTT to `publish/` and appends a "Brand bookends" section to `qa.md` | QA transcription | `<slug>-packaged.mp4`, `package.json`, `qa/package-joins.png` |
 
 Each stage reads what the stage before it wrote, so any one can be rerun
 alone. Every generation is cached, so a rerun of an unchanged script pays only
@@ -107,6 +110,43 @@ settled, not re-revealed. Transitions are live: both scenes keep moving while
    two identical settled frames a second apart.
 4. `uv run python -m pipeline.gallery --scene my_scene` and look at
    `build/gallery/ink/my_scene.png` at full size.
+
+## Brand bookends and the upload sheet
+
+The programme is built and checked on its own timeline; `package` then adds
+the Da Vinci Math idents from `assets/brand/davinci-math/` (MP4s in Git LFS,
+with `manifest.json`: digests, lengths, the ground colour they join, and the
+source, `../davinci-math/brand/idents`). The intro (4.2 s) ends on the ink
+ground the programme opens on, so that join is a cut between matching frames.
+The outro (7.0 s) opens on 0.5 s of the same ground held in silence, and the
+end card dissolves into exactly that, so no type crosses the logo. A digest
+or ground mismatch is refused. The packaged file is held to the same gates as
+the programme: full decode, stream (frame count = intro + programme + outro -
+dissolve), loudness, every narration segment transcribed again at its time
+shifted by the intro (a join that slipped sound against picture fails here),
+and the captions shifted and revalidated. Frames around both joins go to
+`qa/package-joins.png`.
+
+To change the idents, rebuild them in `../davinci-math/brand/idents` (see its
+README) with `--export` pointed at `assets/brand/davinci-math`, then rerun
+`package` for every video.
+
+`pipeline/thumbnail.py` draws `publish/thumbnail.png` (1280x720, under 2 MB) from
+the `thumbnail:` block of `youtube.yaml`: gpt-image-2.5 hero art (cached, with
+a receipt; the prompt keeps the left half dark), an amber "PART n of 3"
+badge so the order reads at a glance, a hook of two or three rows sized to
+fit (`*word*` in amber), and the Da Vinci Math mark and series name. The
+bottom right stays clear for YouTube's duration stamp. Every hook number is
+one the narration states.
+
+`pipeline/youtube.py` renders `publish/youtube.yaml` (title, description,
+chapters by segment id, credits, tags) into `publish/youtube.txt`, the
+paste-ready upload sheet in understanding-accounting's layout: one line per
+paragraph, URLs on their own lines, each field headed with its length against
+YouTube's limit, and the files to upload. Chapter times are the segment's
+start plus the intro, floored to the second; sources are every key the script
+cites. It refuses a field over its limit, a chapter under 10 s, or an unknown
+segment.
 
 ## Brand
 

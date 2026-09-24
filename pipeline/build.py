@@ -6,9 +6,12 @@
     uv run python -m pipeline.build videos/<slug>/script.yaml --stage frames
     uv run python -m pipeline.build videos/<slug>/script.yaml --stage assemble [--4k]
     uv run python -m pipeline.build videos/<slug>/script.yaml --stage qa
+    uv run python -m pipeline.build videos/<slug>/script.yaml --stage package
     uv run python -m pipeline.build videos/<slug>/script.yaml            # all of them
 
 ``check`` is free: validation, the length estimate, the voice checkers.
+``package`` (after a passing ``qa``) adds the Da Vinci Math intro and outro,
+checks the joined file and copies it and its captions to ``publish/``.
 ``timeline`` synthesises and verifies narration, runs the per-clip chain, and
 lays out the timeline and captions. ``audio`` generates effects and the bed,
 mixes, masters and asserts drift. ``frames`` generates images and writes
@@ -31,7 +34,7 @@ from typing import Any
 from . import ROOT
 from .spec import SpecError, Video, estimate, load, validate
 
-STAGES = ("check", "timeline", "audio", "frames", "assemble", "qa")
+STAGES = ("check", "timeline", "audio", "frames", "assemble", "qa", "package")
 
 
 class Paths:
@@ -308,6 +311,32 @@ def stage_qa(video: Video, paths: Paths) -> dict[str, Any]:
     return report
 
 
+def stage_package(video: Video, paths: Paths) -> dict[str, Any]:
+    from . import timeline
+    from .package import package
+
+    plan = timeline.load_plan(video, paths.out)
+    report = package(video, plan, paths.out, paths.publish)
+    _record(
+        paths,
+        "package",
+        [
+            {
+                "kind": "asr",
+                "item": "package transcription",
+                "spent_usd": report["narration"]["asr_usd"],
+                "receipt_usd": report["narration"]["asr_usd"],
+            }
+        ],
+    )
+    s = report["stream"]
+    _log(
+        f"package: {'PASS' if report['pass'] else 'FAIL'} {s['frames']} frames, {float(s['duration']):.2f}s "
+        f"-> {paths.publish / (video.slug + '.mp4') if report['pass'] else paths.out / 'package.json'}"
+    )
+    return report
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("script", type=Path)
@@ -337,6 +366,8 @@ def main(argv: list[str] | None = None) -> int:
             report = stage_qa(video, paths)
             if not report["pass"]:
                 return 1
+        elif stage == "package" and not stage_package(video, paths)["pass"]:
+            return 1
     return 0
 
 

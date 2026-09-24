@@ -13,13 +13,20 @@ English (`docs/guides/`).
 
 | # | Title | Length | Thesis |
 |---|---|---|---|
-| 1 | [Two kinds of not knowing](videos/01-two-kinds-of-not-knowing/) | 3:36 | Some uncertainty is chance and some is ignorance; some can be measured and some cannot. A forecast should first say which kind it faces. |
-| 2 | [From evidence to forecast](videos/02-from-evidence-to-forecast/) | 6:31 | A probability is a disciplined summary of evidence, not a fact about the world. It must be honest about its reference class and its width, and stated so it can be scored. |
-| 3 | [Saying it out loud](videos/03-saying-it-out-loud/) | 9:16 | Uncertainty is not communicated until the listener holds the number the speaker meant. Pair every word with a number, a reference class, and a statement of confidence. |
+| 1 | [Not knowing comes in different forms](videos/01-two-kinds-of-not-knowing/) | 4:32 | Some uncertainty is chance and some is missing facts; some can be measured and some cannot. Name what you do not know before you name the odds. |
+| 2 | [How evidence becomes a forecast](videos/02-from-evidence-to-forecast/) | 7:32 | A probability sums up evidence; it is not a hidden fact in the world. Name its group, update from the base rate, use a range when evidence is thin, and score forecasts over many cases. |
+| 3 | [Say what the odds mean](videos/03-saying-it-out-loud/) | 9:56 | Uncertainty is not communicated until the listener holds the number the speaker meant. Give the word, the number, the group, and the strength of the evidence. |
+
+The series is published by [Da Vinci Math](https://math.davincilearner.com/)
+([@DaVinciMath](https://www.youtube.com/@DaVinciMath)). Each published MP4
+opens with the Da Vinci Math intro (4.2 s) and closes with its outro (7.0 s);
+running times above include both.
 
 Each video directory holds `script.yaml` (narration, scenes, sources, sound),
 `storyboard.md`, generated assets with their receipts, and `publish/` with the
-MP4 (Git LFS), WebVTT captions, poster, `qa.md` and `youtube.md`.
+MP4 (Git LFS), WebVTT captions, poster, `qa.md`, and the YouTube fields:
+`youtube.yaml` (the source), `youtube.txt` (the paste-ready upload sheet) and
+`youtube.md`.
 
 The argument they rest on is `research/SYNTHESIS.md`, built from 78 sources
 registered in `research/SOURCES.md`. Every narrated claim carries a source key.
@@ -45,6 +52,7 @@ git lfs install && git lfs pull   # the published MP4s
 uv sync                              # needs ../../bc/bc-modules checked out
 uv run python -m pipeline.build videos/<slug>/script.yaml --stage check
 uv run python -m pipeline.build videos/<slug>/script.yaml
+uv run python -m pipeline.youtube videos/<slug>/script.yaml   # publish/youtube.txt
 ```
 
 See `AGENTS.md` for the layout and `docs/PIPELINE.md` for the stages.

@@ -1,1 +1,2 @@
 videos/*/publish/*.mp4 filter=lfs diff=lfs merge=lfs -text
+assets/brand/*/*.mp4 filter=lfs diff=lfs merge=lfs -text

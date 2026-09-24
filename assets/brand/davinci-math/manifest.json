@@ -1,0 +1,40 @@
+{
+ "brand": "Da Vinci Math",
+ "handle": "@DaVinciMath",
+ "site": "https://math.davincilearner.com/",
+ "source": "davinci-math/brand/idents (music.py, sfx.py, render.py); rebuild there and re-export",
+ "join": "#11141b",
+ "note": "The intro dissolves into, and the outro's held lead is, the joined programme's ground colour.",
+ "outro_lead_seconds": 0.5,
+ "cues": {
+  "intro": {
+   "seconds": 4.2,
+   "frames": 126,
+   "fps": 30,
+   "audio": {
+    "lufs": -18.0,
+    "lra": 2.0,
+    "peak": -5.6
+   },
+   "file": "intro.mp4",
+   "sha256": "644e6779cd5fd0468bf52497d7c3cf5a6291792ed572945283c49def5c0ab126"
+  },
+  "outro": {
+   "seconds": 7.0,
+   "frames": 210,
+   "fps": 30,
+   "audio": {
+    "lufs": -18.0,
+    "lra": 5.7,
+    "peak": -5.4
+   },
+   "file": "outro.mp4",
+   "sha256": "743de8051905bc36ebaa0ca606eb611ea0c36d38efaa1dd04fe37835c30e42d1"
+  }
+ },
+ "mark": "mark.png",
+ "fonts": {
+  "display": "fonts/SpaceGrotesk-Variable.ttf",
+  "serif": "fonts/SourceSerif4-Variable.ttf"
+ }
+}

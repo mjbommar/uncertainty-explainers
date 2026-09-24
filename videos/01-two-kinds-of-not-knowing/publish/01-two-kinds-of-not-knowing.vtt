@@ -1,175 +1,203 @@
 WEBVTT
 
-NOTE Two kinds of not knowing
+NOTE Not knowing comes in different forms
 
 1
-00:00:00.000 --> 00:00:05.970
-Three people say, I do not know. One holds a die, one a sealed envelope.
+00:00:04.200 --> 00:00:10.191
+Three people give the same answer: I do not know. One will roll a die.
 
 2
-00:00:05.970 --> 00:00:10.033
-One is asked the price of copper in twenty years.
+00:00:10.191 --> 00:00:12.588
+One holds a sealed envelope.
 
 3
-00:00:10.233 --> 00:00:16.210
-When someone says they do not know, what exactly is it they do not know, and does
+00:00:12.588 --> 00:00:17.467
+One must guess the price of copper twenty years from now.
 
 4
-00:00:16.210 --> 00:00:17.833
-the difference matter?
+00:00:17.667 --> 00:00:22.472
+These people lack different things. What does each person not know?
 
 5
-00:00:18.167 --> 00:00:20.691
-Uncertainty is not one thing.
+00:00:22.472 --> 00:00:24.767
+Why does that difference matter?
 
 6
-00:00:20.691 --> 00:00:27.567
-Two questions tell its kinds apart: chance or ignorance, and measurable or not.
+00:00:25.100 --> 00:00:30.565
+Uncertainty means that we do not know something. Two questions help us sort it.
 
 7
-00:00:27.767 --> 00:00:35.872
-Four stops: chance or ignorance, measurable or not, unknown odds, and where a case
+00:00:30.565 --> 00:00:36.100
+Does chance create the gap, or are facts missing? Can evidence support a number?
 
 8
-00:00:35.872 --> 00:00:36.367
-sits.
+00:00:36.300 --> 00:00:45.093
+We will make four stops. First, chance or missing facts. Then, what we can measure.
 
 9
-00:00:36.567 --> 00:00:41.133
-Start with the die and the envelope, which fail for different reasons.
+00:00:45.093 --> 00:00:52.933
+Next, unknown odds. Last, the range between certainty and total ignorance.
 
 10
-00:00:41.333 --> 00:00:48.000
-More study of a die will not tell you the next roll. That is aleatory uncertainty.
+00:00:53.133 --> 00:00:55.781
+Start with the die and the envelope.
 
 11
-00:00:48.200 --> 00:00:54.771
-The number in the envelope is already fixed. Open it and the doubt is gone.
+00:00:55.781 --> 00:00:59.900
+Both hide an answer, but they hide it in different ways.
 
 12
-00:00:54.771 --> 00:00:57.400
-That is epistemic uncertainty.
+00:01:00.100 --> 00:01:06.517
+No amount of study can reveal the next roll. Chance creates this uncertainty.
 
 13
-00:00:57.600 --> 00:01:02.300
-Chance stays. Ignorance can be closed with data.
+00:01:06.517 --> 00:01:09.933
+Researchers call it aleatory uncertainty.
 
 14
-00:01:02.633 --> 00:01:10.067
-So ignorance can shrink and chance cannot. But even chance needs something to count.
+00:01:10.133 --> 00:01:16.099
+The number in the envelope is already fixed. Opening it gives us the missing fact.
 
 15
-00:01:10.267 --> 00:01:14.509
-In 1921 Frank Knight pointed to fire insurance.
+00:01:16.099 --> 00:01:19.300
+Researchers call this epistemic uncertainty.
 
 16
-00:01:14.509 --> 00:01:18.300
-Across many buildings, the loss evens out.
+00:01:19.500 --> 00:01:23.300
+Chance remains. Missing facts can be found.
 
 17
-00:01:18.500 --> 00:01:21.107
-A new venture has no such group.
+00:01:23.633 --> 00:01:28.260
+We can find a missing fact, but we cannot remove chance.
 
 18
-00:01:21.107 --> 00:01:26.567
-Knight called the first kind risk, and the second true uncertainty.
+00:01:28.260 --> 00:01:33.300
+To give chance a number, we need many similar cases to count.
 
 19
-00:01:26.767 --> 00:01:34.280
-In 1937 John Maynard Keynes set roulette apart from a European war, or copper prices
+00:01:33.500 --> 00:01:39.692
+In 1921, Frank Knight used fire insurance as an example. One building may burn.
 
 20
-00:01:34.280 --> 00:01:35.800
-twenty years out.
+00:01:39.692 --> 00:01:45.100
+Across many buildings, the insurer can measure how often fires occur.
 
 21
-00:01:36.000 --> 00:01:42.794
-About these, he wrote, "there is no scientific basis on which to form any calculable
+00:01:45.300 --> 00:01:49.589
+A new business has no long record of close matches.
 
 22
-00:01:42.794 --> 00:01:46.433
-probability whatever. We simply do not know."
+00:01:49.589 --> 00:01:56.233
+Knight called the first case risk. He called this second case true uncertainty.
 
 23
-00:01:46.767 --> 00:01:52.500
-A number needs a group of similar cases. Without one, there is none.
+00:01:56.433 --> 00:02:02.797
+In 1937, John Maynard Keynes made the same split. Roulette has known odds.
 
 24
-00:01:52.833 --> 00:01:59.167
-Knight and Keynes drew a hard line. Ellsberg tested the ground between.
+00:02:02.797 --> 00:02:08.300
+A future war or the price of copper twenty years later does not.
 
 25
-00:01:59.367 --> 00:02:07.141
-In 1961 Daniel Ellsberg offered two urns: a hundred red and black balls, mix
+00:02:08.500 --> 00:02:15.020
+For those long-range questions, Keynes wrote that no scientific basis supported a
 
 26
-00:02:07.141 --> 00:02:09.800
-unknown, or fifty of each.
+00:02:15.020 --> 00:02:20.333
+calculation. His last sentence was plain. "We simply do not know."
 
 27
-00:02:10.000 --> 00:02:15.367
-Whichever color they bet on, most people pick fifty of each.
+00:02:20.667 --> 00:02:27.067
+Honest odds need many similar cases. Without them, no sound number exists.
 
 28
-00:02:15.367 --> 00:02:22.433
-No single chance of red fits that. This is ambiguity: outcomes known, odds not.
+00:02:27.400 --> 00:02:33.070
+Knight and Keynes drew a sharp line between measurable risk and uncertainty.
 
 29
-00:02:22.633 --> 00:02:26.317
-Where the odds are unknown, one number claims too much.
+00:02:33.070 --> 00:02:36.800
+Daniel Ellsberg studied a case between those ends.
 
 30
-00:02:26.317 --> 00:02:30.067
-People treat that differently, and so should a forecast.
+00:02:37.000 --> 00:02:43.707
+In 1961, Ellsberg described two urns. One holds fifty red and fifty black balls.
 
 31
-00:02:30.400 --> 00:02:37.733
-Chance, ignorance, no group, unknown odds: these are points on one scale.
+00:02:43.707 --> 00:02:48.067
+The other holds one hundred balls in an unknown mix.
 
 32
-00:02:37.933 --> 00:02:43.697
-At the far end of that scale, in one team's words, "we do not even know that we do
+00:02:48.267 --> 00:02:54.145
+Most people prefer the urn with the known mix, whichever color wins the bet.
 
 33
-00:02:43.697 --> 00:02:44.400
-not know."
+00:02:54.145 --> 00:03:00.333
+This case is called ambiguity. We know the possible results, but not their odds.
 
 34
-00:02:44.700 --> 00:02:49.400
-So every forecast should first say where on the scale it stands.
+00:03:00.533 --> 00:03:02.786
+Unknown odds call for a range.
 
 35
-00:02:49.733 --> 00:02:54.282
-Chance stays and ignorance can be closed, so say which.
+00:03:02.786 --> 00:03:07.367
+One exact number would claim more than the evidence supports.
 
 36
-00:02:54.282 --> 00:03:01.063
-But a number needs a group of cases, and where odds are unknown, one number claims
+00:03:07.700 --> 00:03:15.217
+Chance, missing facts, weak groups, and unknown odds do not fit into four separate
 
 37
-00:03:01.063 --> 00:03:04.867
-too much. So say where on the scale you stand.
+00:03:15.217 --> 00:03:19.800
+boxes. They lie along a scale of what we can know.
 
 38
-00:03:05.067 --> 00:03:12.145
-The die is chance, with a number. The envelope is ignorance, with a number waiting.
+00:03:20.000 --> 00:03:22.253
+One end holds complete certainty.
 
 39
-00:03:12.145 --> 00:03:14.533
-Copper has no honest number.
+00:03:22.253 --> 00:03:27.033
+At the other end, we may not even know which questions we have missed.
 
 40
-00:03:14.733 --> 00:03:20.618
-When someone says they do not know, what exactly they do not know is a chance, a
+00:03:27.333 --> 00:03:31.182
+Before giving odds, place the forecast on this scale.
 
 41
-00:03:20.618 --> 00:03:23.267
-fact, or something no one can count.
+00:03:31.182 --> 00:03:34.667
+Tell the audience what the evidence can support.
 
 42
-00:03:23.267 --> 00:03:27.533
-The difference matters: it decides what a number can mean.
+00:03:35.000 --> 00:03:41.379
+Chance remains, while missing facts can be found. Honest odds need similar cases.
 
 43
-00:03:27.867 --> 00:03:32.267
-The next question is what a number can honestly say.
+00:03:41.379 --> 00:03:44.451
+When the odds are unknown, use a range.
+
+44
+00:03:44.451 --> 00:03:49.333
+First place the forecast on the scale, then choose the number.
+
+45
+00:03:49.533 --> 00:03:55.863
+Now return to the three people. The die has known odds but an unknown result.
+
+46
+00:03:55.863 --> 00:03:59.563
+The envelope holds a fixed fact we can learn.
+
+47
+00:03:59.563 --> 00:04:02.933
+Copper's distant price has no sound odds.
+
+48
+00:04:03.133 --> 00:04:09.162
+What does each person not know? One lacks a future result. One lacks a fact.
+
+49
+00:04:09.162 --> 00:04:15.667
+One lacks sound odds. The difference decides whether a number can help or mislead.
+
+50
+00:04:16.000 --> 00:04:22.000
+Once we know the kind of uncertainty, we can ask what a number can honestly say.

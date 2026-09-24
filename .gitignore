@@ -12,6 +12,7 @@ research/downloads/*.bin
 *.wav
 *.mp3
 !videos/*/publish/*.mp4
+!assets/brand/*/*.mp4
 .cache/
 research/downloads/*.txt
 research/.search-cache/

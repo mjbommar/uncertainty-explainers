@@ -1,0 +1,40 @@
+# Paste-ready YouTube fields are rendered from this file:
+#   uv run python -m pipeline.youtube videos/01-two-kinds-of-not-knowing/script.yaml
+# Chapters name a segment id; their times come from the timeline plus the intro.
+status: ready for upload
+title: Not knowing comes in different forms | Uncertainty Explainers 1
+description: |
+  Three people give the same answer: "I do not know." One will roll a die. One holds a sealed
+  envelope. One must guess the price of copper twenty years from now. They lack different things,
+  and the difference decides whether a number can help or mislead.
+
+  Two questions sort uncertainty. Does chance create the gap, or are facts missing? Can evidence
+  support a number? Four stops answer them: the die and the envelope (aleatory and epistemic
+  uncertainty), Frank Knight's fire insurance and John Maynard Keynes's "We simply do not know"
+  (risk and true uncertainty), Daniel Ellsberg's two urns (ambiguity, or unknown odds), and a scale
+  from complete certainty to not knowing which questions we have missed.
+
+  Next in the series: How evidence becomes a forecast.
+chapters:
+  - {segment: s01, title: Three people who do not know}
+  - {segment: s03, title: Two questions and four stops}
+  - {segment: s05, title: "Stop 1: Chance or missing facts?"}
+  - {segment: s09, title: "Stop 2: What can we measure?"}
+  - {segment: s15, title: "Stop 3: Unknown odds"}
+  - {segment: s20, title: "Stop 4: A scale of what we can know"}
+  - {segment: s23, title: Putting it together}
+  - {segment: s25, title: Back to the three people}
+credits: "Narration: Gemini 3.1 Flash TTS (voice Enceladus). Icons: gpt-image-2.5. Music bed: Lyria. Sound effects: ElevenLabs."
+tags: [uncertainty, probability, risk, aleatory uncertainty, epistemic uncertainty, Frank Knight,
+       Keynes, Ellsberg paradox, ambiguity, forecasting, decision making, statistics,
+       Uncertainty Explainers, Da Vinci Math]
+thumbnail:
+  part: 1
+  # One line per row; *word* is set in amber.
+  hook: ["Not all", "*unknowns*", "are equal"]
+  art: >-
+    Cinematic still life on a dark wooden desk: a single white die frozen in mid-tumble in the air,
+    a sealed envelope with a deep red wax seal, and a gleaming copper ingot, each caught in a warm
+    amber spotlight with a cool teal rim light, deep blue-black background, shallow depth of field,
+    photographic, dramatic. The three objects sit in the right half of the frame; the left half is
+    dark, empty shadow.

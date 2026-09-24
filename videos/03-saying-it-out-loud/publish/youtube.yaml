@@ -1,0 +1,42 @@
+# Paste-ready YouTube fields are rendered from this file:
+#   uv run python -m pipeline.youtube videos/03-saying-it-out-loud/script.yaml
+# Chapters name a segment id; their times come from the timeline plus the intro.
+status: ready for upload
+title: Say what the odds mean | Uncertainty Explainers 3
+description: |
+  In February 1961, the Joint Chiefs of Staff said the Bay of Pigs plan had "a fair chance" of
+  success. The officer who wrote that phrase meant about three chances in ten. Other readers heard
+  support for the plan. Where did the seven chances in ten of failure disappear?
+
+  Communication succeeds only when the listener understands the odds the speaker meant. This video
+  follows six points where meaning can change: the word (Sherman Kent's "serious possibility" and
+  the intelligence and climate scales), the number's group (a 30 percent chance of rain), the
+  picture (the hurricane cone and Hurricane Charley), one result (the 2016 election forecasts),
+  words tied to action (accounting's probable and remote, and the courts' standards of proof), and
+  the full statement: the word, the number, the group, and the strength of the evidence.
+
+  Third of three. 1: Not knowing comes in different forms. 2: How evidence becomes a forecast.
+chapters:
+  - {segment: s01, title: "\"A fair chance\", 1961"}
+  - {segment: s07, title: Where meaning can change}
+  - {segment: s09, title: "1. The word"}
+  - {segment: s18, title: "2. The number's group"}
+  - {segment: s23, title: "3. The picture"}
+  - {segment: s30, title: "4. One result"}
+  - {segment: s35, title: "5. Words tied to action"}
+  - {segment: s43, title: "6. The full statement"}
+  - {segment: s49, title: Putting it together}
+  - {segment: s51, title: Back to the memo}
+credits: "Narration: Gemini 3.1 Flash TTS (voice Enceladus). Icons: gpt-image-2.5. Music bed: Lyria. Sound effects: ElevenLabs."
+tags: [uncertainty, probability, risk communication, words of estimative probability, Sherman Kent,
+       Bay of Pigs, IPCC likelihood scale, hurricane cone, 2016 election forecast, calibration,
+       standard of proof, Uncertainty Explainers, Da Vinci Math]
+thumbnail:
+  part: 3
+  hook: ["“A fair chance”", "meant *30%*"]
+  art: >-
+    Film-noir still life, 1961: an old typewritten government memorandum on a dark desk under the
+    cone of a brass desk lamp, its lines of type blurred and unreadable, a faded paper map of Cuba
+    and the Caribbean beside it, cigarette smoke curling through the light, warm amber lamplight and
+    cool teal shadows, deep blue-black background, photographic, dramatic. The desk and papers sit
+    in the right half of the frame; the left half is dark, empty shadow.

@@ -18,7 +18,8 @@ predictions about future or counterfactual states.
 | `docs/guides/` | Voice: `SIMPLIFIED-ENGLISH.md`, `STYLE.md`, `STYLE-CRAFT.md`, `STYLE-AI-TELLS.md` (copied from `../book-template`). Every spoken and on-screen word obeys them. |
 | `docs/` | `PIPELINE.md` (how a script becomes an MP4), `LOCAL-RESOURCES.md` (what was reused from sibling repos), `PRODUCTION-LOG.md`. |
 | `pipeline/` | The production code: script schema, scenes drawn per frame, speech, sound, images, mastering, assembly, QA. Composes `bc-modules`; does not re-implement it. |
-| `videos/<slug>/` | One video. `script.yaml` (narration, scenes, timing), `storyboard.md`, `assets/` (generated images, SFX, receipts), `output/` (build product, not committed), `publish/` (the final MP4 and VTT, committed). |
+| `videos/<slug>/` | One video. `script.yaml` (narration, scenes, timing), `storyboard.md`, `assets/` (generated images, SFX, receipts), `output/` (build product, not committed), `publish/` (the final MP4 and VTT, committed, plus `youtube.yaml` and the rendered upload sheet `youtube.txt`). |
+| `assets/brand/davinci-math/` | The Da Vinci Math intro and outro MP4s (Git LFS) and their manifest; built in `../davinci-math/brand/idents`, joined by the `package` stage. |
 | `scripts/` | Voice checkers copied from the book template: `check_simplified.py`, `check_style.py`, `check_prose.py`. |
 
 ## Tools
@@ -44,7 +45,7 @@ dependencies in `pyproject.toml`; `uv sync` builds the Rust extensions):
 2. Every factual claim in a script traces to an entry in `research/SOURCES.md`.
 3. Every generated asset has a receipt beside it (bc-gen writes them). Never
    hand-edit a receipt.
-4. Never commit `output/` or `.venv/`. `publish/` holds the final MP4 and VTT only.
+4. Never commit `output/` or `.venv/`. `publish/` holds the final MP4 and VTT, `qa.md`, the poster, the thumbnail, and the YouTube fields.
 5. A build is not done until the MP4 has been fully decoded, frames around
    every cut inspected, the audio loudness measured, and the narration
    transcribed back and compared with the script.

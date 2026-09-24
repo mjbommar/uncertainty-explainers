@@ -1,0 +1,40 @@
+# Paste-ready YouTube fields are rendered from this file:
+#   uv run python -m pipeline.youtube videos/02-from-evidence-to-forecast/script.yaml
+# Chapters name a segment id; their times come from the timeline plus the intro.
+status: ready for upload
+title: How evidence becomes a forecast | Uncertainty Explainers 2
+description: |
+  A forty-year-old woman gets a routine breast cancer screening, and the result is positive. In a
+  1982 study, 95 of 100 doctors put her chance of cancer between 70 and 80 percent. The correct
+  answer was about 8 percent. Where does a probability come from, and how can we test one?
+
+  A probability sums up evidence. It is not a hidden fact waiting inside the world. Five stops show
+  how to build one honestly: name the group being counted (the reference class, with Laplace's
+  sunrise), update from the base rate with Bayes' rule (one thousand women, one test), use a range
+  when evidence is thin (Ellsberg's urn), say what kind of claim about the future you are making
+  (Hume, Lorenz, and a 50-run weather ensemble), and score many forecasts to check them (the Brier
+  score and calibration).
+
+  Second of three. Next: Say what the odds mean.
+chapters:
+  - {segment: open1, title: A positive test}
+  - {segment: claim, title: Where a probability comes from}
+  - {segment: b1, title: "1. What does the number count?"}
+  - {segment: b2, title: "2. How should evidence change it?"}
+  - {segment: b3, title: "3. When is one number too many?"}
+  - {segment: b4, title: "4. What can it say about the future?"}
+  - {segment: b5, title: "5. How do we test a forecast?"}
+  - {segment: z1, title: Putting it together}
+  - {segment: z4, title: "Next: Say what the odds mean"}
+credits: "Narration: Gemini 3.1 Flash TTS (voice Enceladus). Music bed: Lyria. Sound effects: ElevenLabs."
+tags: [probability, Bayes rule, base rate, reference class, forecasting, calibration,
+       Brier score, Laplace, Ellsberg, Lorenz, ensemble forecast, medical testing, statistics,
+       Uncertainty Explainers, Da Vinci Math]
+thumbnail:
+  part: 2
+  hook: ["Doctors said", "*70–80%*", "It was *8%*"]
+  art: >-
+    A vast grid of about one thousand small glowing human figures seen from slightly above, most of
+    them dim cool teal, and a small handful glowing bright warm amber, receding into a deep
+    blue-black darkness, cinematic lighting, sense of scale, crisp and luminous. The grid fills the
+    right half of the frame; the left half fades into dark, empty shadow.

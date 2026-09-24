@@ -12,8 +12,8 @@
 #   4 The future   What can it say about the future?  A forecast leans on the past and on a model. Say which kind of claim it is, and show the spread.
 #   5 The score    How do we know it was good?        One outcome proves nothing. Many forecasts, scored, do.
 slug: 02-from-evidence-to-forecast
-title: From evidence to forecast
-subtitle: What a probability is, and how to check one
+title: How evidence becomes a forecast
+subtitle: Build a probability, state its limits, and test it
 target_seconds: 400
 theme: ink
 burn_captions: true
@@ -36,112 +36,112 @@ images:
     prompt: a heavy storm cloud with slanted rain lines
 end_card:
   seconds: 3.5
-  line: "Next: Saying it out loud"
+  line: "Next: Say what the odds mean"
   note: Uncertainty Explainers, video 3
 segments:
   # ================================================================ pose the problem
   - id: open1
-    say: A woman of forty goes for routine breast screening. The test comes back positive.
+    say: A forty-year-old woman gets a routine breast cancer screening. Her test result is positive.
     sources: [S59]
     transition: dissolve
-    beats: ["woman of forty", "positive"]
+    beats: ["forty-year-old woman", "positive"]
     scene:
       name: card_row
       params:
-        kicker: One test result
-        heading: Routine screening, a positive test
+        kicker: Start with one patient
+        heading: A positive result after routine screening
         cards:
-          - {title: The patient, line: "A woman of forty", image: "image:patient"}
-          - {title: The result, line: "Positive", tone: warn, image: "image:test_result"}
+          - {title: The patient, line: "Age 40, routine screening", image: "image:patient"}
+          - {title: The test, line: "Positive result", tone: warn, image: "image:test_result"}
 
   - id: open2
-    say: In a study reported in 1982, ninety-five of a hundred physicians put her chance of cancer at seventy to eighty percent.
+    say: In a 1982 study, ninety-five out of one hundred doctors said her chance of cancer was between seventy and eighty percent.
     sources: [S59]
     transition: glide
-    beats: ["seventy to eighty"]
+    beats: ["seventy and eighty"]
     scene:
       name: interval_rows
       params: &doctors
-        heading: Her chance of cancer, after a positive test
+        heading: Chance of cancer after a positive result
         axis_label: chance of cancer
         ticks: [{v: 0, label: "0%"}, {v: 0.25, label: "25%"}, {v: 0.5, label: "50%"}, {v: 0.75, label: "75%"}, {v: 1, label: "100%"}]
         rows:
-          - {label: "95 of 100 physicians said", lo: 0.7, hi: 0.8, note: "70% to 80%", tone: warn}
+          - {label: "Answer from 95 of 100 doctors", lo: 0.7, hi: 0.8, note: "70% to 80%", tone: warn}
 
   - id: open3
-    say: The right answer is under eight percent. Same evidence, and a number ten times too big.
+    say: The correct answer was about eight percent. Most doctors gave an answer almost ten times too high.
     sources: [S59]
     transition: cut
-    beats: ["right answer", "under eight"]
+    beats: ["correct answer", "about eight"]
     sfx:
-      - {cue: soft_click, at: "under eight", gain_db: -8}
+      - {cue: soft_click, at: "about eight", gain_db: -8}
     scene:
       name: interval_rows
       params: &doctors_both
-        heading: Her chance of cancer, after a positive test
+        heading: Chance of cancer after a positive result
         axis_label: chance of cancer
         steady: true
         ticks: [{v: 0, label: "0%"}, {v: 0.25, label: "25%"}, {v: 0.5, label: "50%"}, {v: 0.75, label: "75%"}, {v: 1, label: "100%"}]
         rows:
-          - {label: "95 of 100 physicians said", lo: 0.7, hi: 0.8, note: "70% to 80%", tone: warn, shown: true}
-          - {label: "The correct answer", lo: 0.078, hi: 0.078, note: "7.8%"}
+          - {label: "Answer from 95 of 100 doctors", lo: 0.7, hi: 0.8, note: "70% to 80%", tone: warn, shown: true}
+          - {label: "Answer from the full count", lo: 0.078, hi: 0.078, note: "7.8%"}
     hold: 0.3
 
   - id: open4
-    say: So where does a probability come from, and how can you tell whether it is any good?
+    say: How can the same test lead to such different numbers? Where does a probability come from, and how can we test it?
     transition: dissolve
     scene:
       name: title_card
       params:
-        label: From evidence to forecast
+        label: The problem
         title: Where does a probability come from?
-        subtitle: And how can you tell whether it is any good?
+        subtitle: How can we test whether it is sound?
     hold: 0.6
 
   # ================================================================ claim and map
   - id: claim
-    say: A probability is a summary of evidence, not a fact about the world. So it can be built badly, it can claim too much, and it can be checked.
+    say: A probability sums up evidence. It is not a hidden fact waiting inside the world. We must choose the evidence, judge its limits, and test the result.
     transition: dissolve
-    beats: ["summary of evidence", "built badly", "claim too much", "checked"]
+    beats: ["sums up evidence", "choose the evidence", "judge its limits", "test the result"]
     scene:
       name: card_row
       params:
-        kicker: The claim
-        heading: What a probability is
+        kicker: Main idea
+        heading: A probability sums up evidence
         cards:
-          - {title: A summary, line: "Of evidence, not a fact about the world", tone: unknown}
-          - {title: Built, line: "Well or badly, from a group and a test"}
-          - {title: Stretched, line: "It can claim more than the evidence holds", tone: unknown}
-          - {title: Checked, line: "It can be scored against what happened", tone: cool}
+          - {title: Evidence, line: "The number begins with observations", tone: unknown}
+          - {title: Limits, line: "Weak evidence supports a wider answer"}
+          - {title: Future, line: "A model connects evidence to what may happen", tone: unknown}
+          - {title: Test, line: "Many results show whether it works", tone: cool}
     hold: 0.6
 
   - id: map
-    say: "Five stops: what the number counts, how evidence should move it, when one number is too many, what it says about the future, and how we know it was good."
+    say: "We will make five stops: the group being counted, the update after new evidence, the width of the answer, the kind of future claim, and the score."
     transition: dissolve
     scene:
       name: roadmap
       params:
-        kicker: The route
+        kicker: Five questions
         mode: overview
         current: -1
         stops: &stops
-          - {label: The group, question: "What is the number counting?", takeaway: "Name the group, or the number floats."}
-          - {label: The update, question: "How should evidence move it?", takeaway: "Start from the base rate; let evidence move it."}
-          - {label: The width, question: "When is one number too many?", takeaway: "Thin evidence earns a range, not a point."}
-          - {label: The future, question: "What can it say about the future?", takeaway: "Say what kind of claim; show the spread."}
-          - {label: The score, question: "How do we know it was good?", takeaway: "One outcome proves nothing. Many, scored, do."}
+          - {label: The group, question: "Who or what are we counting?", takeaway: "Name the group behind the number."}
+          - {label: The update, question: "What does new evidence change?", takeaway: "Start with the base rate."}
+          - {label: The range, question: "How exact can we be?", takeaway: "Thin evidence needs a range."}
+          - {label: The future, question: "What kind of claim is this?", takeaway: "Name the model and assumptions."}
+          - {label: The test, question: "Did the forecasts work?", takeaway: "Score many forecasts, not one."}
     hold: 0.4
 
   # ================================================================ stop 1: the group
   - id: b1
-    say: To see where the doctors went wrong, start with what the number counts.
+    say: First ask what the number counts. That question will show where the doctors went wrong.
     transition: dissolve
     scene:
       name: roadmap
       params: {kicker: "Stop 1 of 5", mode: travel, current: 0, stops: *stops}
 
   - id: g1
-    say: Counting needs a reference class, the group you count over. The philosopher Alan Hájek is a man, a non-smoker and a philosophy professor. Each group gives a different chance that he lives to eighty.
+    say: 'A reference class is the group used for a count. Philosopher Alan Hájek belongs to several groups: men, non-smokers, and philosophy professors. Each group gives him different odds of living to eighty.'
     sources: [S15]
     transition: dissolve
     beats: ["reference class", "non-smoker", "philosophy professor"]
@@ -149,83 +149,83 @@ segments:
     scene:
       name: card_row
       params:
-        kicker: "The reference class: Alan Hájek's example"
-        heading: Which group is he in?
+        kicker: A reference class is a group used for a count
+        heading: Which group should set the odds?
         cards:
-          - {title: Men, line: "One share of this group lives to 80"}
-          - {title: Non-smokers, line: "A different share lives to 80", tone: unknown}
-          - {title: Philosophy professors, line: "A third share lives to 80", tone: cool}
+          - {title: Men, line: "One group gives one set of odds"}
+          - {title: Non-smokers, line: "A narrower group gives different odds", tone: unknown}
+          - {title: Philosophy professors, line: "Another group changes them again", tone: cool}
 
   - id: g2
-    say: In 1814 Laplace counted five thousand years of sunrises, and put the odds of one more at nearly two million to one.
+    say: In 1814, Pierre-Simon Laplace counted about five thousand years of recorded sunrises. His count gave odds near two million to one for another sunrise.
     sources: [S16]
     transition: dissolve
-    beats: ["five thousand years", "nearly two million"]
+    beats: ["five thousand years", "near two million"]
     direction: Say Laplace as la-PLAHSS.
     scene:
       name: big_number
       params:
         value: 1826214
         suffix: " to 1"
-        label: Laplace's odds that the sun rises tomorrow
-        sub: counted over 1,826,213 days of recorded history
+        label: Odds from Laplace's sunrise count
+        sub: 1,826,213 recorded days formed the group
         image: "image:sunrise"
 
   - id: g3
-    say: Anyone who knows what drives the days and seasons, he added, would put the odds far higher. Same sunrise, more evidence, a different number.
+    say: Laplace added that an astronomer would give much higher odds. The astronomer knew why days and seasons occur. The event stayed the same, but the evidence changed.
     sources: [S16]
     transition: push-left
-    beats: ["he added", "far higher"]
+    beats: ["Laplace added", "much higher"]
     scene:
       name: two_column_compare
       params:
-        heading: Same sunrise, two bodies of evidence
+        heading: The event stays the same; the evidence changes
         left:
-          title: The tally
-          lines: ["Counts past sunrises", "Odds: 1,826,214 to 1"]
+          title: Count alone
+          lines: ["Uses past sunrises", "Odds: 1,826,214 to 1"]
           tone: known
         right:
-          title: The astronomer
-          lines: ["Knows what drives days and seasons", "Odds: far higher"]
+          title: Count plus a model
+          lines: ["Explains days and seasons", "Odds: much higher"]
           tone: unknown
 
   - id: t1
-    say: A probability counts over a group. Name the group, or the number floats.
+    say: Every probability uses a group. Name that group, or the number has no clear meaning.
     transition: dissolve
     scene:
       name: takeaway_line
-      params: {text: "A probability counts over a group. Name the group, or the number floats.", stop: 0, of: 5, label: The group}
+      params: {text: "Every probability uses a group. Name the group behind the number.", stop: 0, of: 5, label: The group}
     hold: 0.6
 
   # ================================================================ stop 2: the update
   - id: b2
-    say: The group matters. But the doctors had the right group, and missed.
+    say: The group gives the number a base. The doctors still missed because they used the test result badly.
     transition: dissolve
     scene:
       name: roadmap
       params: {kicker: "Stop 2 of 5", mode: travel, current: 1, stops: *stops}
 
   - id: u1
-    say: Their error was how the test moved the number. Bayes' rule starts from the base rate, how common the disease is before any test.
+    say: Bayes' rule shows how new evidence should change a probability. It begins with the base rate, which is how common the disease was before the test.
     sources: [S21]
     transition: wipe
-    beats: ["Bayes' rule", "base rate", "before any test"]
+    beats: ["Bayes' rule", "base rate", "before the test"]
     direction: Bayes rhymes with days.
     scene:
       name: card_row
       params:
-        kicker: Bayes' rule
-        heading: How evidence moves a number
+        kicker: Bayes' rule updates a probability
+        heading: Begin before the new evidence
         cards:
-          - {title: Base rate, line: "How common it is before the evidence", tone: unknown}
-          - {title: The evidence, line: "How much more often it shows up when the claim is true"}
-          - {title: The update, line: "What you should believe after", tone: cool}
+          - {title: Base rate, line: "How common it was before the test", tone: unknown}
+          - {title: Test result, line: "How the result differs with and without disease"}
+          - {title: Updated odds, line: "What both pieces support together", tone: cool}
 
   - id: u2
-    say: Take a thousand women of forty in screening. Ten have breast cancer. That is the base rate.
+    say: 'Picture one thousand forty-year-old women at routine screening. Ten have breast cancer. That count gives the base rate: one in one hundred.'
     sources: [S59]
     transition: dissolve
-    beats: ["thousand women", "Ten have"]
+    beats: ["one thousand", "Ten have"]
     scene:
       name: icon_array
       params:
@@ -233,12 +233,12 @@ segments:
         step: 0
 
   - id: u3
-    say: Eight of those ten test positive. Of the nine hundred and ninety without cancer, ninety-five also test positive.
+    say: Eight of the ten women with cancer test positive. Ninety-five of the nine hundred and ninety women without cancer also test positive.
     sources: [S59]
     transition: cut
-    beats: ["Eight of those", "ninety-five"]
+    beats: ["Eight of the ten", "Ninety-five"]
     sfx:
-      - {cue: tick, at: "Eight of those", gain_db: -6}
+      - {cue: tick, at: "Eight of the ten", gain_db: -6}
     scene:
       name: icon_array
       params:
@@ -247,7 +247,7 @@ segments:
         steady: true
 
   - id: u4
-    say: So one hundred and three women test positive, and only eight of them have cancer. That is seven point eight percent.
+    say: In all, one hundred and three women get a positive result. Only eight have cancer. Eight out of one hundred and three is about seven point eight percent.
     sources: [S59]
     transition: cut
     beats: ["one hundred and three", "only eight"]
@@ -262,22 +262,22 @@ segments:
     hold: 0.4
 
   - id: u5
-    say: The disease is rare, so most positives come from healthy women. The doctors left out the base rate, as earlier research found people do most of the time.
+    say: Cancer is rare in this group, so most positive results come from women without cancer. The doctors focused on the test and lost sight of the base rate.
     sources: [S59]
     transition: dissolve
-    beats: ["disease is rare", "left out"]
+    beats: ["Cancer is rare", "lost sight"]
     scene:
       name: interval_rows
       params:
-        heading: Where seventy percent came from
+        heading: What happens when the base rate is missing
         axis_label: chance of cancer
         ticks: [{v: 0, label: "0%"}, {v: 0.25, label: "25%"}, {v: 0.5, label: "50%"}, {v: 0.75, label: "75%"}, {v: 1, label: "100%"}]
         rows:
-          - {label: "Counted with the base rate", lo: 0.078, hi: 0.078, note: "7.8%"}
-          - {label: "Base rate left out", lo: 0.7, hi: 0.8, note: "70% to 80%", tone: warn}
+          - {label: "Full count, including the base rate", lo: 0.078, hi: 0.078, note: "7.8%"}
+          - {label: "Answer with the base rate missed", lo: 0.7, hi: 0.8, note: "70% to 80%", tone: warn}
 
   - id: u6
-    say: Counts help. In Gigerenzer and Hoffrage's 1995 study, correct answers rose from sixteen percent with percentages to about half with counts.
+    say: Whole-number counts made the problem easier. In a 1995 study, correct answers rose from sixteen percent with percentages to about half with counts.
     sources: [S59]
     transition: glide
     beats: ["sixteen percent", "about half", "with counts"]
@@ -285,7 +285,7 @@ segments:
     scene:
       name: bars
       params:
-        heading: People who reasoned correctly
+        heading: Correct answers rose when people saw counts
         max: 100
         unit: "%"
         items:
@@ -294,42 +294,42 @@ segments:
           - {label: "Numbers given as counts, short form", value: 50}
 
   - id: t2
-    say: Start from how common it is, then let the test move you. Rare things stay rare after one test.
+    say: Start with how common the event is. Then use the new evidence to update it. One test rarely turns a rare event into a common one.
     transition: dissolve
     scene:
       name: takeaway_line
-      params: {text: "Start from how common it is, then let the test move you. Rare things stay rare after one test.", stop: 1, of: 5, label: The update}
+      params: {text: "Start with the base rate. Then update it with the new evidence.", stop: 1, of: 5, label: The update}
     hold: 0.6
 
   # ================================================================ stop 3: the width
   - id: b3
-    say: Bayes gives one number, and for the test that was enough.
+    say: Here, the group and test supported one useful number. We are not always that lucky.
     transition: dissolve
     scene:
       name: roadmap
       params: {kicker: "Stop 3 of 5", mode: travel, current: 2, stops: *stops}
 
   - id: w1
-    say: But one number can claim too much. A coin that landed heads in half of a hundred tosses gets one half. So may a coin never seen. Its honest summary is a range, zero to one.
+    say: A coin that lands heads fifty times in one hundred tosses supports odds near one half. An unseen coin might also be assigned one half, but no toss supports that point. A range from zero to one shows our ignorance.
     sources: [S23]
     transition: dissolve
-    beats: ["A coin that", "never seen", "a range"]
+    beats: ["A coin that", "unseen coin", "A range"]
     scene:
       name: interval_rows
       params:
-        heading: Same number, different evidence
+        heading: Same point, different evidence
         then_beat: 2
         ticks: [{v: 0, label: "0"}, {v: 0.5, label: "1/2"}, {v: 1, label: "1"}]
         axis_label: chance of heads
         rows:
-          - {label: "Coin tossed 100 times", lo: 0.5, hi: 0.5, note: "1/2"}
-          - {label: "Coin never seen", lo: 0.5, hi: 0.5, note: "1/2", then: {lo: 0.0, hi: 1.0}, then_note: "0 to 1"}
+          - {label: "100 tosses, 50 heads", lo: 0.5, hi: 0.5, note: "point near 1/2"}
+          - {label: "Unseen coin", lo: 0.5, hi: 0.5, note: "guess: 1/2", then: {lo: 0.0, hi: 1.0}, then_note: "0 to 1"}
 
   - id: w2
-    say: Daniel Ellsberg's urn, from 1961, holds thirty red balls, and sixty black and yellow balls in an unknown mix.
+    say: Daniel Ellsberg gave another example in 1961. An urn holds thirty red balls. The other sixty are black or yellow, but no one tells us the mix.
     sources: [S77]
     transition: dissolve
-    beats: ["urn, from 1961", "sixty black"]
+    beats: ["in 1961", "other sixty"]
     sfx:
       - {cue: marbles, at: "thirty red", gain_db: -6}
     scene:
@@ -341,14 +341,14 @@ segments:
         notes: ["30 red: known", "60 black or yellow: mix unknown"]
 
   - id: w3
-    say: The chance of red is one third. The chance of black is anywhere from zero to two thirds.
+    say: The chance of drawing red is exactly one third. The chance of black could be anywhere from zero to two thirds. A dot fits one answer; a range fits the other.
     sources: [S23]
     transition: glide
-    beats: ["chance of red", "chance of black"]
+    beats: ["chance of drawing red", "chance of black"]
     scene:
       name: interval_rows
       params:
-        heading: One urn, a dot and a range
+        heading: "Known count: a point. Unknown mix: a range."
         ticks: [{v: 0, label: "0"}, {v: 0.3333, label: "1/3"}, {v: 0.6667, label: "2/3"}, {v: 1, label: "1"}]
         axis_label: chance of drawing
         rows:
@@ -356,62 +356,62 @@ segments:
           - {label: Black, lo: 0.0, hi: 0.6667, note: "0 to 2/3", tone: unknown}
 
   - id: t3
-    say: When evidence is thin, an honest summary is a range, not a point.
+    say: Thin evidence calls for a range. One exact point would hide how little we know.
     transition: dissolve
     scene:
       name: takeaway_line
-      params: {text: "When evidence is thin, an honest summary is a range, not a point.", stop: 2, of: 5, label: The width}
+      params: {text: "Thin evidence needs a range. One exact point hides what we do not know.", stop: 2, of: 5, label: The range}
     hold: 0.6
 
   # ================================================================ stop 4: the future
   - id: b4
-    say: A range is honest about today. A forecast reaches into tomorrow.
+    say: 'A range shows the limits of today''s evidence. A forecast adds a harder step: a claim about the future.'
     transition: dissolve
     scene:
       name: roadmap
       params: {kicker: "Stop 4 of 5", mode: travel, current: 3, stops: *stops}
 
   - id: f1
-    say: That claim leans on the past. In 1748 David Hume wrote that every conclusion from experience assumes the future will be like the past.
+    say: 'Forecasts use patterns from the past. In 1748, David Hume pointed out the hidden assumption: we expect the future to behave like the past.'
     sources: [S28]
     transition: dissolve
-    beats: ["leans on the past", "David Hume", "like the past"]
+    beats: ["patterns from the past", "David Hume", "like the past"]
     scene:
       name: induction_gap
       params:
-        heading: The gap in induction
+        heading: From past to future
         count: 14
-        past_label: every sunrise so far
+        past_label: every recorded sunrise
         future_label: tomorrow
-        gap_label: "assumed: the future will be like the past"
+        gap_label: "assumption: the pattern continues"
 
   - id: f2
-    say: It also leans on a model. In 1963 Edward Lorenz showed that in a simple model of rising air, slightly different starts can grow into very different states.
+    say: A forecast also uses a model, which is a simplified account of how something works. In 1963, Edward Lorenz showed that tiny changes at the start could lead to very different results.
     sources: [S43]
     transition: dissolve
     scene:
       name: divergence
       params:
-        kicker: Sensitive to the start
-        heading: Two runs, almost the same start
+        kicker: Small changes can grow
+        heading: Nearly equal starts, very different results
         paths: 2
         seed: 4
         growth: 5
         spread: 0.9
-        start_label: nearly equal starts
+        start_label: almost the same starting values
         x_label: time
 
   - id: f3
-    say: So Europe's main weather centre runs its model fifty times from slightly altered starts. When the runs agree, the weather is predictable. When they scatter, no firm forecast is possible.
+    say: Europe's main weather center therefore runs its model fifty times with slightly different starting values. A tight group of runs supports a firmer forecast. A wide spread signals more uncertainty.
     sources: [S44]
     transition: dissolve
-    beats: ["fifty times", "runs agree", "scatter"]
+    beats: ["fifty times", "tight group", "wide spread"]
     sfx:
       - {cue: whoosh, at: "fifty times", gain_db: -8}
     scene:
       name: spaghetti_plot
       params:
-        heading: An ensemble, 50 altered runs and one control
+        heading: 50 model runs show the possible spread
         paths: 51
         seed: 5
         spread: 0.8
@@ -420,107 +420,107 @@ segments:
         image: "image:storm"
 
   - id: f4
-    say: A forecast starts from the present. A projection holds only if its assumption holds. And a scenario is a plausible story, with no probability attached.
+    say: Different future claims do different jobs. Forecasts start with current conditions. Projections depend on stated assumptions. Scenarios describe possible paths without assigning odds.
     sources: [S46]
     transition: wipe
-    beats: ["A forecast starts", "A projection", "a scenario"]
+    beats: ["Forecasts start", "Projections", "Scenarios"]
     scene:
       name: sort_table
       params:
-        kicker: Conditional on what?
-        heading: Three kinds of claim about the future
+        kicker: Name the kind of future claim
+        heading: Forecast, projection, or scenario?
         upto: 2
         by_beats: true
         rows:
-          - {term: Forecast, basis: "the present state", check: "yes, and scored"}
-          - {term: Projection, basis: "an assumed path", check: "only in part", tone: unknown}
-          - {term: Scenario, basis: "a plausible story", check: "no probability to check", tone: cool}
+          - {term: Forecast, basis: "current conditions", check: "can be scored"}
+          - {term: Projection, basis: "a stated assumption", check: "depends on that assumption", tone: unknown}
+          - {term: Scenario, basis: "a possible path", check: "has no assigned odds", tone: cool}
 
   - id: t4
-    say: A forecast leans on the past and on a model. Say which kind of claim it is, and show the spread.
+    say: Forecasting joins past evidence to a model. Name the kind of future claim, state its assumptions, and show the spread of possible results.
     transition: dissolve
     scene:
       name: takeaway_line
-      params: {text: "A forecast leans on the past and on a model. Say which kind of claim it is, and show the spread.", stop: 3, of: 5, label: The future}
+      params: {text: "Name the future claim, its model and assumptions. Show the spread.", stop: 3, of: 5, label: The future}
     hold: 0.6
 
   # ================================================================ stop 5: the score
   - id: b5
-    say: So a forecast is a claim, and a claim can be graded.
+    say: We now have a future claim with clear limits. The last step is to test many such claims.
     transition: dissolve
     scene:
       name: roadmap
       params: {kicker: "Stop 5 of 5", mode: travel, current: 4, stops: *stops}
 
   - id: k1
-    say: The Brier score, from 1950, is the squared gap between forecast and outcome, and lower is better. In the Good Judgment Project, ninety percent cost zero point zero two if right, one point six two if wrong.
+    say: The Brier score measures the gap between a forecast and what happened. Lower scores are better. A ninety-percent forecast earns a low cost when right and a high cost when wrong.
     sources: [S34, S33]
     transition: wipe
-    beats: ["zero point zero two", "one point six two"]
+    beats: ["low cost", "high cost"]
     direction: Brier rhymes with higher.
     scene:
       name: bars
       params:
-        kicker: The Brier score
-        heading: What saying 90% costs
+        kicker: The Brier score rewards careful odds
+        heading: The cost of saying 90%
         max: 2
         decimals: 2
         items:
-          - {label: "Said 90%, and it happened", value: 0.02, tone: known}
-          - {label: "Said 90%, and it did not", value: 1.62, tone: warn}
+          - {label: "90% forecast, event happened", value: 0.02, tone: known}
+          - {label: "90% forecast, event did not happen", value: 1.62, tone: warn}
           - {label: "The worst possible score", value: 2.0, tone: cool}
 
   - id: k2
-    say: "One miss can be bad luck. Over many forecasts the scores show calibration: the events you call seventy percent should happen seventy percent of the time."
+    say: "One result may be luck. Many results reveal calibration. A calibrated set of seventy-percent forecasts comes true about seventy percent of the time."
     sources: [S34]
     transition: dissolve
     scene:
       name: calibration
       params:
-        heading: Calibration
+        heading: Calibration compares stated odds with results
         points:
-          - {x: 70, y: 70, label: "Said 70%, happened 70%: calibrated", tone: known}
+          - {x: 70, y: 70, label: "70% forecasts happen 70% of the time", tone: known}
 
   - id: k3
-    say: People often are not. In studies reviewed by Tversky and Kahneman in 1974, ranges given as ninety-eight percent sure missed about thirty percent of the time.
+    say: People are often too sure. In studies reviewed in 1974, ranges that people said were ninety-eight percent certain missed the answer about thirty percent of the time.
     sources: [S32]
     transition: glide
-    beats: ["Tversky", "thirty percent"]
+    beats: ["reviewed in 1974", "thirty percent"]
     scene:
       name: bars
       params:
-        heading: Ranges given as 98% sure
+        heading: People said 98% sure but missed often
         max: 40
         unit: "%"
         items:
-          - {label: "How often they should miss", value: 2, tone: known}
-          - {label: "How often they missed", value: 30, tone: warn}
+          - {label: "Expected misses", value: 2, tone: known}
+          - {label: "Observed misses", value: 30, tone: warn}
 
   - id: t5
-    say: One outcome proves nothing. Many forecasts, scored, do.
+    say: One outcome cannot test a forecast. A long record of scored forecasts can.
     transition: dissolve
     scene:
       name: takeaway_line
-      params: {text: "One outcome proves nothing. Many forecasts, scored, do.", stop: 4, of: 5, label: The score}
+      params: {text: "One outcome cannot test a forecast. A long scored record can.", stop: 4, of: 5, label: The test}
     hold: 0.6
 
   # ================================================================ zoom out
   - id: z1
-    say: A probability counts over a group, so name the group. Evidence moves it by Bayes' rule, so start from the base rate. But thin evidence earns a range. A forecast adds a model, so say what kind of claim it is, and show the spread. And none of it is trusted until it is scored.
+    say: Name the group before giving a probability. Start with the base rate, then update it with new evidence. Use a range when evidence is thin. For a future claim, name the model and assumptions. Test your work across many forecasts.
     transition: dissolve
     direction: Bayes rhymes with days.
     scene:
       name: roadmap
       params:
-        kicker: Where we have been
-        heading: From evidence to forecast
+        kicker: The complete path
+        heading: From a group to a tested forecast
         mode: summary
         current: 5
         stops: *stops
     hold: 0.5
 
   - id: z2
-    say: Back to the positive test. Seven point eight percent counts a thousand women like her, moved by one test. It is one number because the evidence is good.
+    say: Return to the positive test. The answer begins with one thousand similar women, then uses the test result to update the base rate. That path leads to seven point eight percent.
     sources: [S59]
     transition: dissolve
     scene:
@@ -530,23 +530,23 @@ segments:
         step: 2
 
   - id: z3
-    say: So where does a probability come from, and how can you tell whether it is any good? From a named group, moved by evidence. And by scoring many like it.
+    say: Where does a probability come from? It comes from a named group and evidence that changes what we know. How do we test it? We score many forecasts, not one result.
     transition: dissolve
     scene:
       name: title_card
       params:
         label: The answer
-        title: A named group, moved by evidence
-        subtitle: and scored, many times over
+        title: Name the group. Update with evidence.
+        subtitle: State the limits. Score many forecasts.
     hold: 0.5
 
   - id: z4
-    say: "A scored number can still fail. The next video shows how: the listener hears a number other than the one you meant."
+    say: "Even a well-built number can fail after we say it. The final video asks whether the listener heard the same probability we meant."
     transition: dissolve
     scene:
       name: title_card
       params:
-        label: Uncertainty Explainers
-        title: Said, and heard
-        subtitle: A number is not shared until the listener holds it
+        label: Next question
+        title: Did the listener hear what you meant?
+        subtitle: A sound number can still be misunderstood
     hold: 0.8

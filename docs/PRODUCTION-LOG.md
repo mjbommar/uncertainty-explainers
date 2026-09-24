@@ -3,6 +3,49 @@
 What was built, what worked, what in `bc-modules` was missing or broken and
 how each was handled, and what it cost. Newest first.
 
+## 2026-09-24: thumbnails
+
+The title-card posters were too quiet to work as thumbnails and did not show
+the order. `pipeline/thumbnail.py` now draws one per video: gpt-image-2.5 hero
+art ($0.042 each), "PART n of 3", and a hook from the narration's own
+numbers: "Not all unknowns are equal"; "Doctors said 70–80%. It was 8%"
+(S59); "“A fair chance” meant 30%" (the officer's "about three chances in
+ten"). The first layout let video 1's three-row hook run into the footer; the
+hook is now sized to fit both width and height.
+
+## 2026-09-24: Da Vinci Math bookends and upload sheets
+
+All three videos now open with the Da Vinci Math intro and close with its
+outro (`@DaVinciMath`, `math.davincilearner.com`), joined by the new
+`package` stage, and each has a paste-ready `publish/youtube.txt`.
+
+- **Idents.** Built in `../davinci-math/brand/idents`, vendored to
+  `assets/brand/davinci-math/`. Intro 4.2 s: a lute climbs partials 1 to 8
+  of low D (exact ratios, the seventh partial included), one logo spoke per
+  pluck, landing on a pure 4:5:6 chord under a bowed viola as the gold centre
+  lands. Outro 7.0 s: Pythagoras' chain of 3:2 fifths (D, A, E, B), each note
+  a gold point stepping around the logo ring, settling on an open 2:3:4.
+  Instruments are fieldscore's Lyria-sampled bank, each measured at its notes
+  to within 12 cents of the ratio; ElevenLabs page, quill and notebook sounds
+  sit under them. Each ident is -18 LUFS on its own.
+- **Joins.** The first outro build dissolved the end card straight into the
+  incoming logo and the two sets of type crossed for a quarter second; the
+  outro now opens on 0.5 s of held ground, which the dissolve fills.
+- **Checks on the packaged files.** 8,160 / 13,555 / 17,884 frames, each
+  exactly intro + programme + outro - dissolve; -16.11 / -16.09 / -16.07
+  LUFS; every narration segment re-transcribed at its shifted time, worst WER
+  0.062 / 0.071 / 0.067; captions shifted by 4.2 s and valid. Human review of
+  the bookends with sound: pending.
+- **Video 3 end card.** The note listing all three new titles ran off both
+  edges of the frame (the containment gate checks scenes, not the end card).
+  It is now "Uncertainty Explainers, video 3 of 3"; the outro carries the
+  channel. Video 3 was reassembled and passed `qa` before packaging.
+- **Upload sheets.** The previous `youtube.md` files predated the retitling and
+  the red-thread rebuild (old titles, old chapter times). They are now
+  rendered from `publish/youtube.yaml` by `pipeline/youtube.py`, with chapter
+  times computed from the timeline plus the intro. Source lists shorten three
+  or more authors to "et al." so video 3 stays under 5,000 characters (4,878).
+
 ## 2026-09-23: video 1 rebuilt to the red-thread structure
 
 `videos/01-two-kinds-of-not-knowing` rewritten to `docs/STRUCTURE.md`: opening
