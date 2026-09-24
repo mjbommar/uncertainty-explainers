@@ -645,3 +645,5 @@
 {"ts": "2026-09-23T22:03:51+00:00", "kind": "verify", "slug": "knight-1921-econlib-pt1-ch1", "found_in_markdown": true, "pdf_pages": [], "quote": "It is this “true” uncertainty"}
 {"ts": "2026-09-23T22:03:51+00:00", "kind": "verify", "slug": "marchau-2019-dmdu-book", "found_in_markdown": true, "pdf_pages": [7], "quote": "Deciding on which line to join in a supermarket would be a Level 2 problem."}
 {"ts": "2026-09-23T22:03:52+00:00", "kind": "verify", "slug": "sep-imprecise-probabilities", "found_in_markdown": true, "pdf_pages": [], "quote": "A prospect is ambiguous if the outcomes occur with unknown or only partially known probabilities."}
+{"ts": "2026-09-24T01:58:33+00:00", "kind": "verify", "slug": "keynes-1937-general-theory-employment", "found_in_markdown": true, "pdf_pages": [], "quote": "The game of roulette is not subject, in this sense, to uncertainty"}
+{"ts": "2026-09-24T01:58:34+00:00", "kind": "verify", "slug": "walker-2003-defining-uncertainty", "found_in_markdown": true, "pdf_pages": [9], "quote": "we do not even know that we do not know"}
